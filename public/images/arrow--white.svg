@@ -1,0 +1,12 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		polyline {
+			fill: none;
+			stroke: #fcfcfc;
+			stroke-miterlimit: 10;
+			stroke-width: 2;
+		}
+	</style>
+
+	<polyline points="40, 32 24, 16 8, 32"/>
+</svg>

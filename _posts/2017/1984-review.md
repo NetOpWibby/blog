@@ -1,0 +1,32 @@
+---
+title:      1984 review
+date:       2017-09-03
+tags:       book, review
+tldr:       A nightmarish vision of the future.
+color:      red
+published:  true
+---
+
+The first half of this book was gripping and the second half was unpleasant to me, but I had to see how it ended.
+
+1984 is an oft-referenced book when tech writers and privacy-conscious people talk about governmental encroachment upon citizens' privacy and abuses of power to obtain private information. And Facebook (haven't been a fan for some time). By the way, there's going to be slight spoilers moving forward...
+
+<br/><br/><br/>
+
+Get ready!
+
+<br/><br/><br/>
+
+The story follows a man, Winston Smith, living in what could only be called a "negative utopia" in the year 1984 (the book was published in 1950). The country he lives in, Oceania, is controlled by the Party and the Party quite literally rewrites history. As far as anyone knows, the Party invented steamboats and airplanes and everything else. Those born before the formation of the Party know the truth but it doesn't matter. Questioning otherwise results in sure death. Winston's only purpose in life is to rewrite facts whenever the Party deems it necessary. If there was a speech in which the Party claimed something and recorded facts said otherwise, those recorded facts (in the form of newspapers, books, video, &c) were subsequently destroyed and teams of people would recreate the aforementioned media to "prove" the Party was and always is right in all things.
+
+Prime example: in the beginning of the story, Oceania was at war with Eurasia and Eastasia was their ally...only, the opposite was declared later at a war rally *mid-speech* and the populace went with it. "The enemy" tricked people into putting up posters of their enemy instead of their ally and that "proved" just how diabolical they were (nevermind the fact that thousands of people were *just* cheering for Oceania and Eastasia). Winston and everyone else in the Outer Party worked several 16 hour days to remove any mention of prior facts. Knowing something to be false, yet believing in it anyway is referred to as *doublethink*. If the Party said 2 + 2 = 5, **you'd better believe it, or else**.
+
+Citizens caught by the Thought Police for *crimethink* (anything remotely negative about or opposing the principles of the Party or "Big Brother") get sent to a building called "Ministry of Love", where they are tortured and starved before being mentally broken down so brainwashing can take hold. Once these people are released, they "live" out their lives doing menial work before eventually getting a bullet in the back of their head.
+
+<br/>
+
+I don't think I'm doing a good job selling you on this book, especially considering how I mentioned how unpleasant I found the second half. Bear with me here. There was **one** neat thing and that was the creation of a new language, *[Newspeak](https://en.wikipedia.org/wiki/Newspeak "Newspeak article on Wikipedia")*, which dealt with the merging of words (and eradication of others) to simplify English. Of course, any words that might inspire a revolution of some sort were abolished (as well as the concept of freedom). Can't have people using a language created by the Party to overthrow them. Talk about a slap in the face!
+
+Similarities of American society today and the dystopia of Oceania weren't difficult to see. In fact, they jumped out at me. Fake news, alternative facts, and blind followers of [Drumpf](https://youtu.be/DnpO_RTSNmQ?t=20m53s "Make Donald Drumpf Again") who regularly engage in doublethink. Quite frankly, I found it terrifying. Thankfully, we don't live in a world where the depressing society of Oceania could thrive. No one entity has control over data and knowledge (doesn't stop 'em from trying though). If nothing else, 1984 serves as a cautionary tale of what *could* happen if everyone lost their damn minds and subsequently decided they didn't care.
+
+If you like reading about oppressive dystopias, [1984](http://amzn.to/2vUVoiH "Buy 1984 on Amazon") is the book for you. 🕸

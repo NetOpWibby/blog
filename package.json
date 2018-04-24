@@ -1,0 +1,47 @@
+{
+  "name": "theWebb.blog",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.2",
+    "chewit": "./server/modules/chewit",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "express-minify-html": "^0.12.0",
+    "feed": "^1.1.1",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "hbs": "^4.0.1",
+    "hbs-utils": "0.0.4",
+    "js-yaml": "^3.11.0",
+    "markdown-it": "^8.4.1",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.17.2"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "scripts": {
+    "build": "npm install && npm run clean && npm run build-server",
+    "build-server": "babel -d build server",
+    "clean": "rm -rf build && mkdir build",
+    "deploy": "vagrant push",
+    "dev": "NODE_ENV=development nodemon server/index.js --ignore 'public/' --exec babel-node --presets env,stage-2",
+    "sass": "sass --watch sass:public/css --style compressed",
+    "start": "npm run build && NODE_ENV=production node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

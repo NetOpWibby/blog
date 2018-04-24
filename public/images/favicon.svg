@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+	<style>
+		.st0 {
+			fill: none;
+			stroke: #000;
+			stroke-miterlimit: 10;
+			stroke-width: 2;
+		}
+	</style>
+
+	<path class="st0" d="M7, 45h34c3.3, 0, 6-2.7, 6-6V3H13v36C13, 42.3, 10.3, 45, 7, 45L7, 45c-3.3, 0-6-2.7-6-6V24c0-1.7, 1.3-3, 3-3l0, 0 c1.7, 0, 3, 1.3, 3, 3v13"/>
+	<rect x="21" y="11" class="st0" width="18" height="12"/>
+	<line class="st0" x1="20" y1="29" x2="40" y2="29"/>
+	<line class="st0" x1="20" y1="35" x2="35" y2="35"/>
+</svg>

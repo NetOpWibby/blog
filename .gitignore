@@ -1,0 +1,21 @@
+# OS garbage
+.DS_Store
+Thumbs.db
+
+
+
+# Folders
+.nvm
+.sass-cache
+.vagrant
+documents.
+node_modules
+build
+
+
+
+# Files
+*.css.map
+*.lock
+*.log
+package-lock.json

@@ -1,0 +1,50 @@
+@mixin center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+@mixin sans {
+  font-family: "Webb Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@mixin serif {
+  font-family: "Webb Serif", Heuristica, Georgia, serif;
+}
+
+@mixin mono {
+  font-family: "Webb Mono", "Roboto Mono", "Courier New", Courier, monospace;
+}
+
+
+
+@mixin clearfix {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@mixin hide-text {
+  border: 0;
+  color: transparent;
+  font-size: 0;
+  text-shadow: none;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+.clear {
+  @include clearfix;
+}
+
+.hide-text {
+  @include hide-text;
+}
