@@ -7,7 +7,6 @@
 import bodyParser from "body-parser";
 import chalk from "chalk";
 import chew from "chewit";
-// import cookieSession from "cookie-session";
 import compression from "compression";
 import cookieParser from "cookie-parser";
 import express from "express";
@@ -18,7 +17,6 @@ import hbsutils from "hbs-utils";
 import http from "http";
 import logger from "morgan";
 import minifyHTML from "express-minify-html";
-// import userAgent from "express-useragent";
 
 const debug = findErrors("Noto:server");
 const handlebars = hbsutils(hbs);
