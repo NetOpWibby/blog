@@ -4,8 +4,8 @@
 
 //  P A C K A G E S
 
-import fs from "fs";
-import jsYaml from "js-yaml";
+const fs = require("fs");
+const jsYaml = require("js-yaml");
 
 
 
