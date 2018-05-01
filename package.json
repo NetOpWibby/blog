@@ -6,28 +6,28 @@
   "dependencies": {
     "app-root-path": "^2.0.1",
     "body-parser": "^1.18.2",
-    "chalk": "^2.3.2",
-    "chewit": "^1.0.1",
+    "chalk": "^2.4.1",
+    "chewit": "^1.0.3",
     "compression": "^1.7.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "express-minify-html": "^0.12.0",
     "feed": "^1.1.1",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^6.0.0",
     "glob": "^7.1.2",
     "hbs": "^4.0.1",
     "hbs-utils": "0.0.4",
     "js-yaml": "^3.11.0",
     "markdown-it": "^8.4.1",
     "morgan": "^1.9.0",
-    "serve-favicon": "^2.4.5"
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
-    "nodemon": "^1.17.2"
+    "nodemon": "^1.17.3"
   },
   "babel": {
     "presets": [
