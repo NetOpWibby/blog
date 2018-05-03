@@ -9,7 +9,6 @@ _
 .nvm
 .sass-cache
 .vagrant
-documents.
 node_modules
 build
 

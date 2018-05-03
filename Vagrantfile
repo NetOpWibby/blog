@@ -10,7 +10,6 @@ Vagrant.configure("2") do |config|
     push.exclude = ".DS_Store"
     push.exclude = ".git"
     push.exclude = ".sass-cache"
-    push.exclude = "documents."
     push.exclude = "node_modules"
     push.exclude = "Vagrantfile"
   end
