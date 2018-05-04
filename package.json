@@ -7,7 +7,7 @@
     "app-root-path": "^2.0.1",
     "body-parser": "^1.18.2",
     "chalk": "^2.4.1",
-    "chewit": "^1.0.6",
+    "chewit": "^1.0.7",
     "compression": "^1.7.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
