@@ -30,7 +30,7 @@ hr {
 .inner-wrap {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1500px;
+  min-width: 320px; max-width: 1500px;
 
   @media (max-width: 1550px) {
     padding-right: 2rem;

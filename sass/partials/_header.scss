@@ -2,7 +2,7 @@
   top: 0; left: 0;
 
   position: fixed;
-  width: 100%;
+  min-width: 320px; width: 100%;
   transition: all 0.2s;
   z-index: 3;
 
