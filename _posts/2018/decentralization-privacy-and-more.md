@@ -1,8 +1,8 @@
 ---
 title:      Decentralization, Privacy, and Everything Between
-date:       2018-05-16
+date:       2018-05-17
 tags:       decentralization, life, privacy
-tldr:       Rah rah, fight the power!
+tldr:       Rah rah, fight the powah!
 color:      purple
 published:  true
 ---
