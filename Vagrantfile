@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "base"
+  config.vm.box = "bento/ubuntu-16.10"
 
   config.push.define "ftp" do |push|
     push.host = "thewebb.blog"
