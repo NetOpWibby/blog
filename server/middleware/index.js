@@ -2,10 +2,12 @@
 
 
 
-//  P A C K A G E S
+//  P A C K A G E
 
 // import chew from "chewit";
 import hbs from "hbs";
+
+//  V A R I A B L E
 
 const log = console.log; // eslint-disable-line
 
@@ -40,16 +42,15 @@ module.exports = (app) => {
     }
 
     operators = {
-      "==":   (l, r) => l == r,
-      "===":  (l, r) => l === r,
-      "!=":   (l, r) => l != r,
-      "!==":  (l, r) => l !== r,
-      "<":    (l, r) => l < r,
-      ">":    (l, r) => l > r,
-      "<=":   (l, r) => l <= r,
-      ">=":   (l, r) => l >= r,
-
-      "typeof": (l, r) => typeof l == r
+      "==":     (l, r) => l == r,
+      "===":    (l, r) => l === r,
+      "!=":     (l, r) => l != r,
+      "!==":    (l, r) => l !== r,
+      "<":      (l, r) => l < r,
+      ">":      (l, r) => l > r,
+      "<=":     (l, r) => l <= r,
+      ">=":     (l, r) => l >= r,
+      "typeof": (l, r) => typeof l === typeof r
     };
 
     if (!operators[operator]) throw new Error(`Handlerbars Helper "compare" does not know the operator "${operator}"`);

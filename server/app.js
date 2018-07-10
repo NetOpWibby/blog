@@ -18,6 +18,11 @@ import http from "http";
 import logger from "morgan";
 import minifyHTML from "express-minify-html";
 
+//  V A R I A B L E S
+
+import notoMiddleware from "./middleware";
+import notoRoutes from "./routes";
+
 const debug = findErrors("Noto:server");
 const handlebars = hbsutils(hbs);
 const log = console.log; // jshint ignore:line
@@ -92,14 +97,12 @@ handlebars.registerWatchedPartials("./views/partials");
 
 //  M I D D L E W A R E
 
-import notoMiddleware from "./middleware";
 notoMiddleware(app);
 
 
 
 //  R O U T E S
 
-import notoRoutes from "./routes";
 notoRoutes(app);
 
 
