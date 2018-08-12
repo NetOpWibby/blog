@@ -25,5 +25,4 @@ As an aside, before I left Facebook I sent out a plea to my favorite group (for 
 
 Anyhoo, aside from Facebook's network effect being so damn powerful ("everyone is using it!"), the other major barrier to deleting Facebook is the question of where to _go_ and how to entice people to do so. I have not (yet) figured this out.
 
-
 🕸

@@ -5,7 +5,7 @@
 //  P A C K A G E S
 
 import bodyParser from "body-parser";
-import chalk from "chalk";
+import chalk from "turbocolor";
 import chew from "chewit";
 import compression from "compression";
 import cookieParser from "cookie-parser";
