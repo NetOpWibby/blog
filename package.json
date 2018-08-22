@@ -1,9 +1,11 @@
 {
-  "name": "theWebb.blog",
-  "description": "Official blog of Paul Anthony Webb",
   "author": "Paul Anthony Webb <paul@inc.sh>",
-  "version": "0.0.0",
-  "private": true,
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2"
+    ]
+  },
   "dependencies": {
     "app-root-path": "^2.1.0",
     "body-parser": "^1.18.3",
@@ -24,6 +26,7 @@
     "serve-favicon": "^2.5.0",
     "turbocolor": "^3.0.0"
   },
+  "description": "Official blog of Paul Anthony Webb",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -35,20 +38,11 @@
     "standardx": "^2.1.0",
     "updates": "^4.1.2"
   },
-  "babel": {
-    "presets": [
-      "env",
-      "stage-2"
-    ]
-  },
   "engines": {
     "node": ">=10.0.0"
   },
-  "standardx": {
-    "ignore": [
-      "public"
-    ]
-  },
+  "name": "theWebb.blog",
+  "private": true,
   "scripts": {
     "build": "npm install && npm run clean && npm run build-server",
     "build-server": "babel -d build server",
@@ -62,5 +56,11 @@
     "watch": "run-p watch:*",
     "watch:sass": "sass --watch sass:public/css --style compressed",
     "watch:server": "NODE_ENV=development nodemon server/index.js --ignore 'public/' --exec babel-node --presets env,stage-2"
-  }
+  },
+  "standardx": {
+    "ignore": [
+      "public"
+    ]
+  },
+  "version": "0.0.0"
 }

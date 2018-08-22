@@ -17,7 +17,7 @@ const yaml = require(`${root}/server/modules/yaml-front-matter`);
 
 //  P R O G R A M
 
-module.exports = (req, res) => {
+module.exports = exports = (req, res) => {
 
   fs.readFile(`./_posts/${req.params.year}/${req.params.page}.md`, "utf8", (err, data) => {
     if (err) res.redirect("/");
@@ -73,7 +73,7 @@ module.exports = (req, res) => {
     for (let i = 0; i < tags.length; i++) postTags = tags[i].split(":")[1].trim().split(/[\s,]+/);
 
     postTags.forEach(tag => {
-      postTagsFormatted += `<a href="/tags/${tag}" title="Tag archive for '${tag}'" class="article__header__tag">${tag}</a>`;
+      postTagsFormatted += `<a href="/tags/${tag}" title="Tag archive for '${tag}'" class="article__header__tag">${tag.replace(/-/g, " ")}</a>`;
     });
 
 
