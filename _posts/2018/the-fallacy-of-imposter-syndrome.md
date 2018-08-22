@@ -25,7 +25,7 @@ Our fast-paced society and the scripted nature of social media where we only dis
 
 Let's think about this another way.
 
-Imagine someone riding a horse with a long stick in hand. On that stick is an equally long string with a carrot tied to the end. The horse sees the carrot and starts to trot towards it. The horse jockey moves the carrot when s/he wants the horse to change direction. Now, replace the carrot with everything you saw on that plateau and the horse with yourself. PLOT TWIST, you are _also_ the horse jockey.
+Imagine someone riding a horse with a long stick in hand. On that stick is an equally long string with a carrot tied to the end. The horse sees the carrot and starts to trot towards it. The horse jockey moves the carrot when they want the horse to change direction. Now, replace the carrot with everything you saw on that plateau and the horse with yourself. PLOT TWIST, you are _also_ the horse jockey.
 
 _WHUUUUUH?!_
 

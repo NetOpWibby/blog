@@ -24,7 +24,7 @@
     "markdown-it": "^8.4.2",
     "morgan": "^1.9.0",
     "serve-favicon": "^2.5.0",
-    "turbocolor": "^3.0.0"
+    "turbocolor": "^2.6.1"
   },
   "description": "Official blog of Paul Anthony Webb",
   "devDependencies": {
