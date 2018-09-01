@@ -187,4 +187,4 @@ function onListening() {
 
 //  E X P O R T
 
-module.exports = app;
+module.exports = exports = app;
