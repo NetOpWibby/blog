@@ -18,10 +18,10 @@ Of the 39 projects I have contributed money to, 10 are delayed (some are delayed
 
 This [game](https://www.kickstarter.com/projects/cig/star-citizen "Star Citizen on Kickstarter"), by Cloud Imperium Games Corporation, was successfully funded on November 19th, 2012. I backed at the $37 tier (Digital Scout) for:
 
-- a digital copy of the finished game (PC)
+- Digital copy of the finished game (PC)
 - RSI Aurora spaceship ready to fly
 - 1,000 Galactic Credits
-- exclusive access to the Alpha + Beta
+- Exclusive access to the Alpha + Beta
 
 The estimated delivery date for this was November 2014. Of the unfulfilled projects I backed, I am the _least_ sore about Star Citizen because 1) I can play the Alpha when I get a PC (I have a Mac) and 2) there are regular updates. Not just, "Oh hey guys, here's a wall of text and a pic or two", it's actual gameplay and something I can interact with.
 
@@ -34,9 +34,9 @@ I think the CEO got overly ambitious but at least it's not No Man's Sky-tier of 
 
 This [game](https://www.kickstarter.com/projects/mightyno9/mighty-no-9 "Mighty No. 9 on Kickstarter"), by comcept, is currently the laughing stock of the gaming world and a cautionary tale for game developers looking to create a Kickstarter for their game. It was successfully funded on October 1st, 2013. I backed at the $60 tier for:
 
-- a physical game box (Western/Japanese style)
-- printed retro-style game manual (English/Japanese)
-- exclusive in-game golden hero (backer-exclusive color variation of Beck, the game's hero)
+- A physical game box (Western/Japanese style)
+- Printed retro-style game manual (English/Japanese)
+- Exclusive in-game golden hero (backer-exclusive color variation of Beck, the game's hero)
 
 The estimated delivery date for this was April 2015. I just got the physical rewards a week or two ago. The Nintendo 3DS version? Still waiting for it. I have a Switch now...
 
@@ -47,15 +47,19 @@ The estimated delivery date for this was April 2015. I just got the physical rew
 
 This [umbrella](https://www.kickstarter.com/projects/860103721/satm-the-umbrella-reimagined "The Sa umbrella on Kickstarter"), by Justin Nagelberg and Matthew Waldman, was successfully funded on December 1st, 2014. I backed at the $69 tier for:
 
-- one Sa (early limited special)
+- One Sa (early limited special)
 
 The estimated delivery date was March 2015. Since being successfully funded, backers have gotten ~~updates~~ essays twice a year about why shipping has been delayed two years. Basically, because the umbrella is so different that factories have to be taught how to work on components. Factories is plural because they've gone through a couple because of shutdowns. Who the hell knows when I'm gonna get this thing.
 
 - 2017/09/14 update
-  - another essay, but with TL;DR version!
-  - fully functioning prototype
-  - noticed weird things with prototype, fixes for those things is in progress
-  - shipping has been pushed back to Winter/Spring 2018
+  - Another essay, but with TL;DR version!
+  - Fully functioning prototype
+  - Noticed weird things with prototype, fixes for those things is in progress
+  - Shipping has been pushed back to Winter/Spring 2018
+
+- 2018/08/18 update
+  - New development team, from Korea
+  - Tentative release by the end of this year
 
 To quote a backer, "Great to see that after nearly 3 years you nearly have a working prototype".
 
@@ -85,12 +89,12 @@ The end of the Indiegogo campaign is scheduled to end April 2019. The Kickstarte
 
 
 
-### Das Keyboard 5Q
+### ~~Das Keyboard 5Q~~ GOT IT
 ![Das Keyboard 5Q on Kickstarter](🖼05.jpg)
 
 This [keyboard](https://www.kickstarter.com/projects/1229573443/das-keyboard-5q-the-cloud-connected-keyboard "Das Keyboard 5Q on Kickstarter"), by Das Keyboard, was successfully funded on July 30th, 2016. I backed at the $139 (early bird) tier for:
 
-- one Das Keyboard 5Q for $90 off the $229 retail price.
+- One Das Keyboard 5Q for $90 off the $229 retail price.
 
 The estimated delivery date was January 2017. I have a regular Das Keyboard (Mac version) at home and I love it. What drew me to the 5Q was the ability to write scripts to mod the keyboard. You can create light shows, make certain keys change color due to a specified event, and so on. Super customizable! Anyhoo, people are pissed off because the company makes keyboards for a living and we **still** don't have ours.
 
@@ -98,25 +102,29 @@ Welp.
 
 - 2017/08/25 update
   - Typhoon Hato damaged a factory in Hong Kong
-  - no injuries
-  - raw materials and critical production equipment were protected from damage
+  - No injuries
+  - Raw materials and critical production equipment were protected from damage
 
 - 2017/08/31 update
   - 5Q pilot production will begin in a couple days
-  - full production schedule for the end of September
+  - Full production schedule for the end of September
   - Kickstarter fulfillment in October, barring any pilot production issues
 
 - 2017/09/25 update
-  - solder quality for mechanical switches failed QA
-  - incorrect product packaging
+  - Solder quality for mechanical switches failed QA
+  - Incorrect product packaging
   - National Day in China for the first week of October
-  - production will start the week of October 30th
+  - Production will start the week of October 30th
 
 - 2018/02/28 update
-  - keyboards are shipping!
+  - Keyboards are shipping!
   - Mac/Linux support is nonexistent...seriously
   - 105-key layout (international) keyboards have damaged switches
-  - according to a Superbacker and another backer who got theirs already, the keyboard is straight **trash** from the hardware to the software
+  - According to a Superbacker and another backer who got theirs already, the keyboard is straight **trash** from the hardware to the software
+
+- 2018/06/04
+  - 22 MONTHS LATER one of my best friends has received the keyboard. I decided I didn't want it anymore and changed the delivery address to his.
+    - While the keyboard _looks_ nice, it's not in practice. Software is buggy and he went back to his previous keyboard after a few weeks.
 
 With each update, backers become less enthusiastic or get angry. I think it's safe to say that the Das Keyboard team isn't going to make another crowdfunded product for a long time, if ever. ~~Earlier this summer, I joked about getting my 5Q in time for Christmas. At this rate, that looks to be the case.~~ Keep in mind that these people are in the business of producing keyboards and have been doing so since 2005.
 
@@ -134,16 +142,16 @@ The estimated delivery date was May 2017. AIAIAI's TMA-2 is a modular headphone 
 I'm tired of using Apple's shitty ear buds and I've gone through two aux dongles already.
 
 - 2017/08/21 update
-  - mass production has been moved to September 11th
+  - Mass production has been moved to September 11th
   - Kickstarter orders (1436 of 'em) will ship out September 18th - October 6th
   - I've already confirmed with them that orders will ship in order of pledges (I'm backer 46)
 
 - 2017/09/13 update
-  - mass production started but minor things needed to change on assembly line
+  - Mass production started but minor things needed to change on assembly line
   - 7-10 day delay
 
 - 2017/09/27 update
-  - headphones are shipping ~~(hope to update this post in a couple days)!~~
+  - Headphones are shipping ~~(hope to update this post in a couple days)!~~
 
 - 2017/10/18 update
   - I got it! 5 MONTHS LATER
@@ -175,7 +183,7 @@ The estimated delivery date was March 2017. Like Star Citizen, I'm not sore abou
 
 This [Jack adapter](https://www.kickstarter.com/projects/podolabs/make-any-headphones-wireless-jack-by-podo-labs "Jack on Kickstarter"), by Podo Labs, was successfully funded on February 25th, 2017. I backed at the $25 (early bird) tier for:
 
-- one Jack adapter
+- One Jack adapter
 
 The estimated delivery date was June 2017. The latest update promises that I'll get this by the end of October at the latest. You might be wondering why I backed two Kickstarters that are headphone-focused. I like music and I'm beginning to despise wires. Should the battery on my H05 run out, I can attach a cable to it and that cable to the Jack. I'll have to stuff the cord in my bag or someplace but it'll still be wireless!
 
@@ -197,17 +205,17 @@ This includes:
 - Steadicam Volt Stabilizer
 - 5x magnetic and 1x starter balance weight
 - 2x batteries
-- battery charger
+- Battery charger
 - Micro-USB cable
-- quickstart guide
-- carrying pouch
+- Quickstart guide
+- Carrying pouch
 
 The estimated delivery date was June 2017. Because retailers like B&H received Steadicam Volts before backers, we all get a premium carrying case for free. Not bad, but I expected to get the Volt before this month so I could get awesome beach footage of my kids. It's now the middle of August so that plan was ruined. When companies show prototypes that are *super* close to the finished product and show they have years of experience doing things, and yadda x3, I expect to get rewards in a relatively short timeframe. Like the Das Keyboard, this is not the case here. Apparently, shipping is supposed to start this month.
 
 - 2017/09/08 update
-  - shipping warehouse is overbooked
-  - shipping will start on the 11th
-  - everyone should get tracking information shortly
+  - Shipping warehouse is overbooked
+  - Shipping will start on the 11th
+  - Everyone should get tracking information shortly
 
 - 2017/09/14 update
   - I don't have tracking info
@@ -226,9 +234,9 @@ This [film](https://www.kickstarter.com/projects/1750747889/black-ink-people-of-
 
 This includes:
 
-- movie ticket code for advance online screening
-- my name listed in the "Thank You" section of the film
-- link to the 2nd trailer for the film when it's completed
+- Movie ticket code for advance online screening
+- My name listed in the "Thank You" section of the film
+- Link to the 2nd trailer for the film when it's completed
 - BLACK INK computer wallpaper
 
 The estimated delivery date was May 2017 (for the t-shirt, not the film) and Craig has been unresponsive.
@@ -248,6 +256,9 @@ With the exception of Star Citizen and Indie Microblogging (and as of October 11
 ![MiTo Canvas XDA Custom Keycap Set on Massdrop](🖼11.jpg)
 
 The estimated ship date was June 2nd, 2017 and the new one is now October. _Kanye shrug_ I plan on putting these awesome keys on my existing Das Keyboard...I just noticed I'll need to purchase _additional_ keys for my number pad.
+
+- 2018/08/20 update
+  - With my Kickstarter Das Keyboard in the ownership of a buddy and my other Das Keyboard in my garage, I've been using a super awesome and sturdy [keyboard from WASD](http://www.wasdkeyboards.com/index.php/products/code-keyboard/code-104-key-mechanical-keyboard-2919.html) for a couple months. I have replaced the keys with the ones I got from Massdrop. I'm missing a couple and just backed the return of those same keysets so I could complete the look (so, no pics of my keyboard _yet_, but it feels great).
 
 
 
