@@ -118,7 +118,7 @@ function pageGenerator(state) {
   const wildcard = state.params.wildcard;
 
   switch(true) {
-    case (wildcard.length > 0):
+    case (wildcard && wildcard.length > 0):
       return getTag(state);
 
     default:
