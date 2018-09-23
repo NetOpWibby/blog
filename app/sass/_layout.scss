@@ -1,0 +1,114 @@
+html,
+body {
+  width: 100%; height: 100%;
+}
+
+html {
+  background-color: $white;
+}
+
+body {
+  @include font-sans;
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+
+
+main {
+  // padding: constant(safe-area-inset-top) constant(safe-area-inset-bottom);
+  // padding: constant(safe-area-inset-right) constant(safe-area-inset-left);
+}
+
+
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba($silver, 0.7);
+  margin: 1rem auto;
+}
+
+
+
+.error-page {
+  @include center;
+  width: 100vw; height: 100vh;
+
+  background-color: $white;
+  cursor: default;
+  position: fixed;
+  z-index: 50;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+
+    span {
+      top: 0.6rem; left: -4rem;
+      position: absolute;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.33;
+    max-width: 600px;
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.inner-wrap {
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 320px; max-width: 1500px;
+
+  @media (max-width: 1550px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+
+
+.__top {
+  width: 2rem; height: 2rem;
+  bottom: 2rem; right: 2rem;
+
+  background-color: $white;
+  background-image: url("../assets/images/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  box-shadow: 0 0 1px 0 rgba($black, 0.3);
+  display: block;
+  padding: 1.5rem;
+  position: fixed;
+  z-index: 2;
+
+  &:not(.active) {
+    display: none;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px; height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $black;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $silver;
+}
+
+::selection {
+  background-color: rgba($yellow, 0.3);
+  color: rgba($black, 0.85);
+}

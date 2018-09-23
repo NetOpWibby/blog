@@ -1,0 +1,301 @@
+.header {
+  top: 0; left: 0;
+
+  position: fixed;
+  min-width: 320px; width: 100%;
+  transition: all 0.2s;
+  z-index: 3;
+
+  &:not(.scrolled) {
+    @media (min-width: 451px) {
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 450px) {
+      padding-top: 3rem;
+    }
+
+    .header__logo {
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+
+      a {
+        @media (min-width: 751px) {
+          width: 20rem; height: 8rem;
+        }
+
+        @media (max-width: 750px) {
+          height: 4rem;
+        }
+
+        @media (min-width: 451px) and (max-width: 750px) {
+          width: 11rem;
+        }
+
+        @media (min-width: 451px) {
+          background-size: cover;
+        }
+
+        @media (max-width: 450px) {
+          background-size: contain;
+          width: 100%;
+        }
+      }
+    }
+
+    .header__edition {
+      @media (min-width: 751px) {
+        top: 2rem;
+      }
+
+      @media (min-width: 451px) and (max-width: 750px) {
+        top: 0.5rem;
+      }
+
+      @media (min-width: 451px) {
+        right: 2rem;
+        transform: rotate(-15deg);
+      }
+
+      @media (max-width: 450px) {
+        top: 0; right: 0;
+
+        background-color: $black;
+        color: $white;
+        line-height: 2;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+      }
+
+
+
+      &::before,
+      &::after {
+        @media (max-width: 450px) {
+          @include font-serif;
+          font-style: italic;
+          font-weight: 200;
+          letter-spacing: 0.2rem;
+          text-align: center;
+          text-transform: lowercase;
+          width: 50%;
+        }
+      }
+
+      &::before {
+        @media (max-width: 450px) {
+          top: 0; left: 0;
+        }
+      }
+
+      &::after {
+        @media (max-width: 450px) {
+          top: 0; right: 0;
+        }
+      }
+
+
+
+      span {
+        @media (max-width: 450px) {
+          font-size: 1rem;
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+
+
+
+    &.light {
+      .header__logo {
+        a {
+          background-image: url("./images/logo--white.svg");
+
+          &::after {
+            bottom: -2px; right: -2px;
+            background-image: url("./images/logo.svg");
+          }
+        }
+      }
+
+      .header__edition {
+        color: $white;
+
+        &::before,
+        &::after {
+          text-shadow: 1px 1px 1px rgba($black, 0.3);
+        }
+
+        span::after {
+          color: rgba($black, 0.3);
+        }
+      }
+    }
+  }
+
+  &.scrolled {
+    background-color: rgba($white, 0.95);
+    border-bottom: 2px solid rgba($silver, 0.7);
+    padding-top: 0.5rem;
+
+    @media (max-width: 750px) {
+      padding-bottom: 0.5rem;
+    }
+
+    .header__logo a {
+      width: 6rem; height: 3rem;
+      background-size: cover;
+    }
+
+    .header__edition {
+      right: -1.5rem;
+      transform: rotate(-15deg) scale(0.5);
+
+      @media (min-width: 751px) {
+        top: -0.5rem;
+      }
+
+      @media (max-width: 750px) {
+        top: 0;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 2.5rem;
+        position: relative;
+        width: 50%;
+
+        &::before,
+        &::after {
+          width: 100%;
+        }
+
+        &::before {
+          text-align: left;
+          top: -0.6rem;
+        }
+
+        &::after {
+          bottom: -1rem;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .inner-wrap::after {
+    @include clearfix;
+  }
+}
+
+
+
+.header__logo {
+  float: left;
+
+  &:not(.white) {
+    a {
+      background-image: url("./images/logo.svg");
+
+      &::after {
+        bottom: -1px; right: -1px;
+        background-image: url("./images/logo--white.svg");
+      }
+    }
+  }
+
+  a {
+    @include hide-text;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+
+    &::after {
+      width: inherit; height: inherit;
+
+      background-position: inherit;
+      background-repeat: inherit;
+      background-size: inherit;
+      content: "";
+      opacity: 0.3;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+
+
+.header__edition {
+  cursor: default;
+  float: right;
+
+  @media (min-width: 451px) {
+    position: relative;
+  }
+
+  &:not(.white) {
+    &::before,
+    &::after {
+      text-shadow: 1px 1px 1px rgba($white, 0.3);
+    }
+
+    span:after {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &::before,
+  &::after {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    position: absolute;
+
+    @media (min-width: 451px) {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: "The";
+
+    @media (min-width: 451px) {
+      text-align: left;
+      top: -0.6rem;
+    }
+  }
+
+  &::after {
+    content: "Issue";
+
+    @media (min-width: 451px) {
+      bottom: -1rem;
+      text-align: right;
+    }
+  }
+
+  span {
+    @include font-serif;
+    display: block;
+    position: relative;
+
+    @media (min-width: 751px) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: 451px) and (max-width: 750px) {
+      font-size: 2.5rem;
+    }
+
+    &::after {
+      width: 100%; height: 100%;
+      top: 1px; left: 1px;
+
+      content: attr(data-edition);
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}

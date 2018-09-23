@@ -1,66 +1,75 @@
 {
-  "name": "theWebb.blog",
-  "description": "Official blog of Paul Anthony Webb",
-  "author": "Paul Anthony Webb <paul@inc.sh>",
-  "version": "0.0.0",
-  "private": true,
+  "author": {
+    "email": "paul@inc.sh",
+    "name": "Paul Anthony Webb"
+  },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "app-root-path": "^2.1.0",
-    "body-parser": "^1.18.3",
-    "chewit": "^1.0.10",
-    "compression": "^1.7.3",
-    "cookie-parser": "^1.4.3",
-    "debug": "^3.1.0",
-    "express": "^4.16.3",
-    "express-minify-html": "^0.12.0",
-    "feed": "^2.0.1",
+    "chewit": "^2.0.1",
+    "choo": "^6.13.0",
+    "choo-async": "^0.1.1",
+    "choo-devtools": "^2.5.1",
+    "choo-ssr": "^0.2.1",
+    "colorette": "^1.0.4",
+    "dedent": "^0.7.0",
+    "fastify": "^1.11.2",
+    "fastify-compress": "^0.7.0",
+    "fastify-helmet": "^2.1.0",
+    "fastify-static": "^0.14.0",
     "fs-extra": "^7.0.0",
-    "glob": "^7.1.2",
-    "hbs": "^4.0.1",
-    "hbs-utils": "0.0.4",
+    "glob": "^7.1.3",
+    "graceful-fs": "^4.1.11",
     "js-yaml": "^3.12.0",
-    "markdown-it": "^8.4.2",
-    "morgan": "^1.9.0",
-    "serve-favicon": "^2.5.0",
-    "turbocolor": "^3.0.0"
+    "marked": "^0.5.0",
+    "raw-body": "^2.3.3",
+    "xtend": "^4.0.1"
   },
+  "description": "Official blog of Paul Anthony Webb",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "nodemon": "^1.18.3",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-external-helpers": "7.0.0",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-decorators": "7.1.0",
+    "@babel/plugin-proposal-export-namespace-from": "7.0.0",
+    "@babel/plugin-proposal-function-sent": "7.1.0",
+    "@babel/plugin-proposal-json-strings": "7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0",
+    "@babel/plugin-syntax-import-meta": "7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "nodemon": "^1.18.4",
     "npm-run-all": "^4.1.3",
-    "sass": "^1.10.4",
-    "snazzy": "^7.1.1",
-    "standardx": "^2.1.0",
-    "updates": "^4.1.2"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "stage-2"
-    ]
+    "sass": "^1.14.0",
+    "snazzy": "^8.0.0",
+    "standardx": "^3.0.1",
+    "updates": "^4.3.0"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=10.3.0"
+  },
+  "homepage": "https://inc.sh",
+  "main": "server.js",
+  "name": "theWebb.blog",
+  "private": true,
+  "scripts": {
+    "css": "sass --update app/sass:app/dist --style compressed",
+    "deploy": "vagrant push",
+    "start": "npm i && npm run css && NODE_ENV=production node server",
+    "test": "run-s test:*",
+    "test:dependencies": "updates --update ./",
+    "test:lint": "standardx --verbose | snazzy",
+    "watch": "run-p watch:*",
+    "watch:sass": "sass --watch app/sass:app/dist --style compressed",
+    "watch:server": "NODE_ENV=development nodemon server"
   },
   "standardx": {
     "ignore": [
-      "public"
+      "app/dist"
     ]
   },
-  "scripts": {
-    "build": "npm install && npm run clean && npm run build-server",
-    "build-server": "babel -d build server",
-    "clean": "rm -rf build && mkdir build",
-    "deploy": "vagrant push",
-    "sass": "sass --watch sass:public/css --style compressed",
-    "start": "npm run build && NODE_ENV=production node build/index.js",
-    "test": "run-p test:*",
-    "test:dependencies": "updates -u ./",
-    "test:lint": "standardx --verbose | snazzy",
-    "watch": "run-p watch:*",
-    "watch:sass": "sass --watch sass:public/css --style compressed",
-    "watch:server": "NODE_ENV=development nodemon server/index.js --ignore 'public/' --exec babel-node --presets env,stage-2"
-  }
+  "version": "2.0.0"
 }

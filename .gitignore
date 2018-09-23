@@ -4,18 +4,18 @@ Thumbs.db
 
 
 
+# Files
+.env
+*.css.map
+*.lock
+bundle.css
+package-lock.json
+type.css
+
+
+
 # Folders
-_
-.nvm
 .sass-cache
 .vagrant
 node_modules
-build
-
-
-
-# Files
-*.css.map
-*.lock
-*.log
-package-lock.json
+—
