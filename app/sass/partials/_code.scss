@@ -9,10 +9,10 @@ pre {
   position: relative;
 
   @media (max-width: 800px) {
+    width: calc(100% + 4rem);
     left: -2rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    width: calc(100% + 4rem);
   }
 
   code {
@@ -21,9 +21,9 @@ pre {
     line-height: 1.5;
 
     @media (min-width: 801px) {
+      width: 600px;
       margin-right: auto;
       margin-left: auto;
-      width: 600px;
     }
 
     @media (max-width: 800px) {

@@ -3,7 +3,6 @@
   background-image: url("./images/backgrounds/grid.png");
   background-repeat: repeat;
   background-size: 32px;
-
   margin-bottom: 50px; // footer height
   padding-top: 2rem;
   position: relative;
@@ -18,13 +17,20 @@
     position: relative;
 
     @media (min-width: 751px) {
-      min-height: 50vh;
-      width: 50%;
+      width: 50%; min-height: 50vh;
     }
 
     @media (max-width: 750px) {
       width: 100%;
     }
+  }
+
+  .right {
+    float: right;
+  }
+
+  .left {
+    float: left;
   }
 }
 
@@ -77,22 +83,22 @@
     font-weight: 600;
     position: relative;
 
-    &:not(:hover):after {
+    &:not(:hover)::after {
       bottom: -0.5rem;
       opacity: 0;
     }
 
-    &:hover:after {
+    &:hover::after {
       bottom: -0.2rem;
       opacity: 0.7;
     }
 
     &::after {
       width: 100%; height: 1px;
+      left: 0;
 
       background-color: currentColor;
       content: "";
-      left: 0;
       position: absolute;
       transition: all 0.2s;
     }
@@ -100,13 +106,13 @@
 }
 
 .foreward__note__portrait {
+  width: 150px;
   float: left;
   margin-right: 2rem;
-  width: 150px;
 
   img {
-    box-shadow: 5px 5px 0 $brand-black;
     width: 100%;
+    box-shadow: 5px 5px 0 $brand-black;
   }
 }
 
@@ -168,8 +174,9 @@
   }
 
   &:not(:first-of-type) {
-    margin-bottom: 1rem; padding-left: 4rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
+    padding-left: 4rem;
 
     @media (min-width: 451px) {
       font-size: 1.25rem;
@@ -188,6 +195,7 @@
 
     &::before {
       @include font-serif;
+      width: 3rem;
       top: 0; left: 0;
 
       content: counter(item);
@@ -197,7 +205,6 @@
       position: absolute;
       text-align: center;
       transition: opacity 0.2s;
-      width: 3rem;
     }
 
     a {

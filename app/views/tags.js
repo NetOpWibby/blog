@@ -47,6 +47,7 @@ function getTag(state) {
     }
 
     let posts = "<ul class=\"archive__list\">";
+
     for (const key in matches) {
       if (
         matches[key].title !== undefined &&
@@ -80,12 +81,14 @@ function getTags(state) {
 
     for (const file of files) {
       const entry = yaml.loadFront(file);
+
       if (entry.published === true) matches.push(entry);
     }
 
     for (const key in matches) {
       if (matches[key].title !== undefined) {
         const tags = matches[key].tags.split(/[\s,]+/);
+
         for (let t = 0; t < tags.length; t++) foundTags.push(tags[t]);
       }
     }
@@ -101,6 +104,7 @@ function getTags(state) {
     const finalTagArray = uniq(foundTags);
 
     let posts = "<ul class=\"archive__list\">";
+
     for (const finalTag in finalTagArray) {
       posts += html`
         <li class="archive__list__item" itemprop="name headline">

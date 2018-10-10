@@ -74,10 +74,10 @@
 }
 
 .archive__list__item {
-  margin-bottom: 1rem; padding-left: 4rem;
-
   font-size: 1.25rem;
   line-height: 1.5;
+  margin-bottom: 1rem;
+  padding-left: 4rem;
   position: relative;
 
   &:not(:hover) {
@@ -89,6 +89,7 @@
 
   &::before {
     @include font-serif;
+    width: 3rem;
     top: 0; left: 0;
 
     content: counter(item);
@@ -98,7 +99,6 @@
     position: absolute;
     text-align: center;
     transition: opacity 0.2s;
-    width: 3rem;
   }
 
   a {

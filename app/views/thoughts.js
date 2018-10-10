@@ -207,7 +207,7 @@ function getPost(state, emit) {
         let set = multipleImages[i].split("\n");
 
         for (const individualImage of set) {
-          let dstPath, imageCaption, imagePath, image, srcPath;
+          let dstPath, image, imageCaption, imagePath, srcPath;
 
           if (
             individualImage.split("![")[1] !== undefined &&
@@ -353,6 +353,7 @@ function getPost(state, emit) {
 
       for (const file of files) {
         const entry = yaml.loadFront(file);
+
         entry.url = "/thoughts/" + file.split(/.\/posts\//g)[1].replace(/.md/g, "");
 
         if (entry.published === true) matches.push(entry);

@@ -1,4 +1,5 @@
 .footer {
+  width: 100%;
   bottom: 0; left: 0;
 
   background-color: $black;
@@ -9,7 +10,6 @@
   overflow-y: hidden;
   position: fixed;
   white-space: nowrap;
-  width: 100%;
   z-index: -1;
 
   a {
