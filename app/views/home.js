@@ -59,7 +59,7 @@ module.exports = exports = () => {
           <p>The quickest way to contact me is usually Socii <a href="https://hub.socii.network/NetOpWibby" title="&there4;&thinsp;NetOpWibby on Socii">@NetOpWibby</a>. This blog also has a Socii and it's <a href="https://hub.socii.network/wbbblg" title="&there4;&thinsp;wbbblg on Socii">@wbbblg</a>. I commssioned the awesome piece of art at the beginning of this foreward from <a href="https://www.instagram.com/p/BWIHVbCA5Hg" title="Holly Sullo on Instagram">Holly Sullo</a>.</p>
 
           <figure class="foreward__note__signature">
-            <img src="/images/signature.png" alt="Signature of the most fantabulous Paul Anthony Webb"/>
+            <img src="/assets/images/signature.png" alt="Signature of the most fantabulous Paul Anthony Webb"/>
           </figure>
         </aside>
 
