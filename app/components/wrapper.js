@@ -28,7 +28,7 @@ module.exports = exports = children => (state, emit) => asyncHtml`
       </h1>
 
       <h2 class="header__edition">
-        <span data-edition="Nouveau">Nouveau</span>
+        <span data-edition="🕸💪🏾😤🤙🏾🕸">🕸💪🏾😤🤙🏾🕸</span>
       </h2>
     </div>
   </header>
