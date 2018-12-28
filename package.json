@@ -9,7 +9,6 @@
     "chewit": "^2.0.2",
     "choo": "^6.13.1",
     "choo-async": "^0.1.1",
-    "choo-devtools": "^2.5.1",
     "choo-ssr": "^0.2.1",
     "colorette": "^1.0.7",
     "dedent": "^0.7.0",

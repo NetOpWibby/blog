@@ -7,7 +7,6 @@
 import async from "choo-async";
 import asyncHtml from "choo-async/html";
 import choo from "choo";
-import devtools from "choo-devtools";
 import raw from "choo/html/raw";
 import ssr from "choo-ssr";
 
@@ -22,8 +21,6 @@ import wrapper from "./components/wrapper";
 
 function main() {
   const app = async(choo());
-
-  if (process.env.NODE_ENV !== "production") app.use(devtools());
 
   const page = view => (
     shell(
