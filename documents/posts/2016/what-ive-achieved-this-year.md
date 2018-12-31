@@ -7,7 +7,7 @@ color:      red
 published:  true
 ---
 
-Last year, I decided to [look back](https://dsgn.io/thoughts/post/what-ive-achieved-in-2015 "What I've achieved in 2015") on everything I've learned/achieved and it was a great reflective experience. So, here it is again for 2016!
+Last year, I decided to [look back](https://2016.dsgn.io/thoughts/post/what-ive-achieved-in-2015 "What I've achieved in 2015") on everything I've learned/achieved and it was a great reflective experience. So, here it is again for 2016!
 
 
 
