@@ -7,7 +7,7 @@
 import fs from "graceful-fs";
 import jsYaml from "js-yaml";
 
-//  V A R I A B L E
+//  U T I L
 
 const yamlRegex = /^(-{3}(?:\n|\r)([\w\W]+?)(?:\n|\r)-{3})?([\w\W]*)*/;
 

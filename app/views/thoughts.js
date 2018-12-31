@@ -12,7 +12,7 @@ import marked from "marked";
 import raw from "choo/html/raw";
 import { require as local } from "app-root-path";
 
-//  V A R I A B L E S
+//  U T I L S
 
 const date = local("/app/modules/relative-date");
 const digitSlugRegex = /^(\d)*$/g;
@@ -51,51 +51,51 @@ module.exports = exports = (state, emit) =>
 
 function createShareLinks(postDetails) {
   return `
-    <nav class="article__footer__share">
+    <nav class="article__share">
       <a
-        class="article__footer__share__item email"
+        class="article__share-item email"
         href="mailto:?subject=${postDetails.title}&amp;body=Check out this article: https://thewebb.blog${postDetails.url}"
         title="Share “${postDetails.title}” via email"
       >Email</a>
 
       <a
-        class="article__footer__share__item buffer"
+        class="article__share-item buffer"
         href="http://bufferapp.com/add?text=${postDetails.title}&amp;url=https://thewebb.blog${postDetails.url}"
         title="Share “${postDetails.title}” via Buffer"
       >Buffer</a>
 
       <a
-        class="article__footer__share__item hackernews"
+        class="article__share-item hackernews"
         href="http://news.ycombinator.com/submitlink?u=https://thewebb.blog${postDetails.url}&amp;t=${postDetails.title}"
         title="Share “${postDetails.title}” via Hacker News"
       >Hacker News</a>
 
       <a
-        class="article__footer__share__item linkedin"
+        class="article__share-item linkedin"
         href="https://www.linkedin.com/shareArticle?mini=true&url=https://thewebb.blog${postDetails.url}&title=${postDetails.title}&summary=${encodeURIComponent(postDetails.excerpt)}source=https://thewebb.blog"
         title="Share “${postDetails.title}” via LinkedIn"
       >LinkedIn</a>
 
       <a
-        class="article__footer__share__item pocket"
+        class="article__share-item pocket"
         href="https://getpocket.com/save?url=https://thewebb.blog${postDetails.url}&amp;title${postDetails.title}"
         title="Share “${postDetails.title}” via Pocket"
       >Pocket</a>
 
       <a
-        class="article__footer__share__item reddit"
+        class="article__share-item reddit"
         href="http://www.reddit.com/submit?url=https://thewebb.blog${postDetails.url}&amp;title=${postDetails.title}"
         title="Share “${postDetails.title}” via Reddit"
       >Reddit</a>
 
       <a
-        class="article__footer__share__item tumblr"
+        class="article__share-item tumblr"
         href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://thewebb.blog${postDetails.url}&amp;title=${postDetails.title}&amp;caption=${encodeURIComponent(postDetails.excerpt)}"
         title="Share “${postDetails.title}” via tumblr"
       >tumblr</a>
 
       <a
-        class="article__footer__share__item twitter"
+        class="article__share-item twitter"
         href="https://twitter.com/intent/tweet?text=${postDetails.title}%20🕸&amp;url=https://thewebb.blog${postDetails.url}"
         title="Share “${postDetails.title}” via Twitter"
       >Twitter</a>
@@ -131,7 +131,7 @@ function getArchive(state) {
     for (const key in matches) {
       if (matches[key].title !== undefined) {
         posts += html`
-          <li class="archive__list__item" itemprop="name headline">
+          <li class="archive__list-item" itemprop="name headline">
             <a href="${matches[key].url}" itemprop="url">${matches[key].title}</a>
           </li>
         `;
@@ -176,16 +176,18 @@ function getPost(state, emit) {
 
 
     //  T A G S
-    for (const tag of metadata.tags.split(/[\s,]+/)) {
-      postTagsFormatted += html`
-        <a
-          class="article__header__tag"
-          href="/tags/${tag}"
-          title="Tag archive for '${tag}'"
-        >
-          ${tag.replace(/-/g, " ")}
-        </a>
-      `;
+    if (metadata.tags) {
+      for (const tag of metadata.tags.split(/[\s,]+/)) {
+        postTagsFormatted += html`
+          <a
+            class="article__tag"
+            href="/tags/${tag}"
+            title="Tag archive for '${tag}'"
+          >
+            ${tag.replace(/-/g, " ")}
+          </a>
+        `;
+      }
     }
 
 
@@ -226,7 +228,7 @@ function getPost(state, emit) {
             });
 
             individualImageHTML = dedent`
-              <figure class="article__content__slide">
+              <figure class="article__slide">
                 <img alt="${imageCaption}" src="/assets${imagePath}"/>
                 <figcaption>${imageCaption}</figcaption>
               </figure>
@@ -261,7 +263,7 @@ function getPost(state, emit) {
         });
 
         const figure = dedent`
-          <figure class="article__content__image">
+          <figure class="article__image">
             <img alt="${imageCaption}" src="/assets${imagePath}"/>
             <figcaption>${imageCaption}</figcaption>
           </figure>
@@ -281,7 +283,7 @@ function getPost(state, emit) {
         const audioLink = a.split("(🎵")[1].replace(/\)/g, "");
 
         const iframe = html`
-          <div class="article__content__audio">
+          <div class="article__audio">
             <iframe src="${audioLink}"></iframe>
           </div>
         `;
@@ -313,7 +315,7 @@ function getPost(state, emit) {
         const videoLink = v.split("(📼")[1].replace(/\)/g, "");
 
         const iframe = html`
-          <div class="article__content__video">
+          <div class="article__video">
             <iframe allowfullscreen mozallowfullscreen src="/assets${videoLink}" webkitallowfullscreen></iframe>
           </div>
         `;
@@ -345,11 +347,16 @@ function getPost(state, emit) {
       // if (err) log(`Error getting related posts:\n${err}`);
 
       const matches = [];
-      let relatedTags = metadata.tags.split(/[\s,]+/);
+      let relatedTags;
       let relatedTag;
       let relatedCount = 0;
 
-      for (const tag of relatedTags) relatedTag = tag;
+      if (metadata.tags) {
+        relatedTags = metadata.tags.split(/[\s,]+/);
+
+        for (const tag of relatedTags)
+          relatedTag = tag;
+      }
 
       for (const file of files) {
         const entry = yaml.loadFront(file);
@@ -366,11 +373,11 @@ function getPost(state, emit) {
       for (const key in matches) { // TODO: Fix this shit
         const post = matches[key];
 
-        if (post.title !== undefined) {
+        if (post.title !== undefined && post.tags) {
           const tags = post.tags.split(/[\s,]+/);
 
           if (
-            ~tags.indexOf(relatedTag) &&
+            ~tags.indexOf(relatedTag) > -1 &&
             post.title !== metadata.title &&
             post.published !== false
           ) {
@@ -454,27 +461,27 @@ function pageTemplatePost(postDetails) {
   }
 
   return html`
-    <article class="article ${postDetails.color}" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="article ${postDetails.color ? ("theme-" + postDetails.color) : ""}" itemscope itemtype="http://schema.org/BlogPosting">
       <header class="article__header">
         <div class="article__header-wrap">
           <div class="inner-wrap">
-            <small class="article__header__tags">${raw(postDetails.tags)}</small>
+            <small class="article__tags">${raw(postDetails.tags)}</small>
 
-            <h2 class="article__header__title" itemprop="name headline">
+            <h2 class="article__title" itemprop="name headline">
               <a href="${postDetails.url}" itemprop="url">${postDetails.title}</a>
             </h2>
 
-            <time class="article__header__date" datetime="${postDetails.date}" class="post-block_date" itemprop="datePublished">${postDetails.date}</time>
+            <time class="article__date" datetime="${postDetails.date}" class="post-block_date" itemprop="datePublished">${postDetails.date}</time>
           </div>
         </div>
 
-        <figure class="article__header__hero">
+        <figure class="article__hero">
           <!--/ <img src="${postDetails.hero}" alt="Lead image for '${postDetails.title}'"/> /-->
         </figure>
       </header>
 
       <section class="article__content" itemprop="articleBody">
-        <p class="article__content__tldr inner-wrap">${raw(postDetails.tldr)}</p>
+        <p class="article__tldr inner-wrap">${raw(postDetails.tldr)}</p>
 
         <div class="inner-wrap">
           ${raw(postDetails.content)}
@@ -494,10 +501,10 @@ function slider(content) {
   const rand = Math.floor(Math.random() * 25);
 
   return dedent`
-    <div id="slider_${rand}" class="article__content__slides">
-      <div class="article__content__slides-wrap">${content}</div>
-      <a class="article__content__nav prev" href="#" id="prev_${rand}">Prev</a>
-      <a class="article__content__nav next" href="#" id="next_${rand}">Next</a>
+    <div id="slider_${rand}" class="article__slides">
+      <div class="article__slides-wrap">${content}</div>
+      <a class="article__nav prev" href="#" id="prev_${rand}">Prev</a>
+      <a class="article__nav next" href="#" id="next_${rand}">Next</a>
     </div>
 
     <script>
@@ -517,7 +524,7 @@ function slider(content) {
         transitionEnd: (index, element) => {}
       });
 
-      $(".article__content__nav").on("click", e => e.preventDefault());
+      $(".article__nav").on("click", e => e.preventDefault());
 
       $("#prev_${rand}").on("click", () => mySwipe_${rand}.prev());
       $("#next_${rand}").on("click", () => mySwipe_${rand}.next());

@@ -15,13 +15,6 @@ body {
 
 
 
-// main {
-// padding: constant(safe-area-inset-top) constant(safe-area-inset-bottom);
-// padding: constant(safe-area-inset-right) constant(safe-area-inset-left);
-// }
-
-
-
 hr {
   margin: 1rem auto;
   border: none;
@@ -112,4 +105,32 @@ hr {
 ::selection {
   background-color: rgba($yellow, 0.3);
   color: rgba($black, 0.85);
+
+  .article.theme-blue & {
+    background-color: rgba($brand-blue, 0.3);
+  }
+
+  .article.theme-gold & {
+    background-color: rgba($brand-gold, 0.3);
+  }
+
+  .article.theme-green & {
+    background-color: rgba($green, 0.3);
+  }
+
+  .article.theme-orange & {
+    background-color: rgba($brand-orange, 0.3);
+  }
+
+  .article.theme-pink & {
+    background-color: rgba($brand-pink, 0.3);
+  }
+
+  .article.theme-purple & {
+    background-color: rgba($brand-purple, 0.3);
+  }
+
+  .article.theme-red & {
+    background-color: rgba($brand-red, 0.3);
+  }
 }

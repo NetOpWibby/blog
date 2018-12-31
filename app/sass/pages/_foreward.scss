@@ -105,7 +105,7 @@
   }
 }
 
-.foreward__note__portrait {
+.foreward__portrait {
   width: 150px;
   float: left;
   margin-right: 2rem;
@@ -116,7 +116,7 @@
   }
 }
 
-.foreward__note__signature {
+.foreward__signature {
   width: 100px; height: auto;
   float: right;
 
@@ -149,7 +149,7 @@
   }
 }
 
-.foreward__toc__story {
+.foreward__toc-item {
   position: relative;
 
   &:first-of-type {

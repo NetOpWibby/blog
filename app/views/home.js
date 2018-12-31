@@ -9,7 +9,7 @@ import html from "choo/html";
 import raw from "choo/html/raw";
 import { require as local } from "app-root-path";
 
-//  V A R I A B L E
+//  U T I L
 
 const yaml = local("/app/modules/yaml-front-matter");
 
@@ -36,7 +36,7 @@ module.exports = exports = () => {
         <aside class="foreward__note left">
           <h3>From the Editor</h3>
 
-          <figure class="foreward__note__portrait">
+          <figure class="foreward__portrait">
             <img src="/assets/images/spaceman-fresh.jpg" alt="Me, riding a space Dragonair"/>
           </figure>
 
@@ -58,13 +58,13 @@ module.exports = exports = () => {
 
           <p>The quickest way to contact me is usually Socii <a href="https://hub.socii.network/NetOpWibby" title="&there4;&thinsp;NetOpWibby on Socii">@NetOpWibby</a> (or Twitter at the same name). This blog also has a Socii and it's <a href="https://hub.socii.network/wbbblg" title="&there4;&thinsp;wbbblg on Socii">@wbbblg</a>. I commssioned the awesome piece of art at the beginning of this foreward from <a href="https://www.instagram.com/p/BWIHVbCA5Hg" title="Holly Sullo on Instagram">Holly Sullo</a>.</p>
 
-          <figure class="foreward__note__signature">
+          <figure class="foreward__signature">
             <img src="/assets/images/signature.png" alt="Signature of the most fantabulous Paul Anthony Webb"/>
           </figure>
         </aside>
 
         <ul class="foreward__toc right">
-          <li class="foreward__toc__story">Contents</li>
+          <li class="foreward__toc-item">Contents</li>
           ${raw(response.tableOfContents)}
         </ul>
       </div>
@@ -120,7 +120,7 @@ function getPosts() {
         post.published !== false
       ) {
         toc += `
-<li class="foreward__toc__story">
+<li class="foreward__toc-item">
   <a href="${post.url}" itemprop="name headline" title="Read '${post.title}'">
     ${post.title}
     <span>${post.tldr}</span>

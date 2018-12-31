@@ -49,7 +49,7 @@ const start = async() => {
     process.exit(1);
   }
 
-  process.stdout.write(`\n— ${color.green("🕸")} ${fastify.server.address().port}\n\n`);
+  process.stdout.write(`\n— ${color.green("🕸")}  ${fastify.server.address().port}\n\n`);
 };
 
 start();

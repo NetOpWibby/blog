@@ -6,7 +6,7 @@
 
 import html from "choo/html";
 
-//  V A R I A B L E
+//  U T I L
 
 let title = "";
 

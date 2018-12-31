@@ -10,7 +10,7 @@ import choo from "choo";
 import raw from "choo/html/raw";
 import ssr from "choo-ssr";
 
-//  V A R I A B L E S
+//  U T I L S
 
 import head from "./components/head";
 import wrapper from "./components/wrapper";

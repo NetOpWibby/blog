@@ -18,13 +18,13 @@
     }
   }
 
-  section:first-of-type {
-    border-top: 3px solid $black;
-    padding-top: 0.5rem;
-  }
-
   section {
     padding-bottom: 3rem;
+
+    &:first-of-type {
+      border-top: 3px solid $black;
+      padding-top: 0.5rem;
+    }
   }
 }
 
@@ -73,7 +73,7 @@
   position: relative;
 }
 
-.archive__list__item {
+.archive__list-item {
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 1rem;

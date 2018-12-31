@@ -1,19 +1,17 @@
 @charset "utf-8";
 
-@import
-"init/colours",
-"init/mixins",
-"init/base",
+@import "init/colours";
+@import "init/mixins";
+@import "init/base";
 
-"partials/code",
-"partials/header",
-"partials/footer",
-"partials/related",
+@import "partials/code";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/related";
 
-"pages/cover",
-"pages/foreward",
-"pages/archive",
-"pages/article",
+@import "pages/cover";
+@import "pages/foreward";
+@import "pages/archive";
+@import "pages/article";
 
-"layout"
-;
+@import "layout";

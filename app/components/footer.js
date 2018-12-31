@@ -39,16 +39,18 @@ module.exports = exports = (state, emit) => { // eslint-disable-line
         navigator.userAgent &&
         !navigator.userAgent.match("CriOS");
 
-      if (isSafari) document.getElementsByClassName("no-safari").style.display = "none";
+      if (isSafari) {
+        if (document.querySelector(".no-safari"))
+          document.getElementsByClassName("no-safari").style.display = "none";
+      }
 
       //
 
       const links = document.querySelectorAll("a[href]");
 
       for (const link of links) {
-        if (link.href.indexOf(location.hostname) === -1) {
+        if (link.href.indexOf(location.hostname) === -1)
           link.target = "_blank";
-        }
       }
 
       //
@@ -56,7 +58,7 @@ module.exports = exports = (state, emit) => { // eslint-disable-line
       document.addEventListener("scroll", scroll => {
         if (window.innerWidth < 1500) {
           switch(true) {
-            case (scroll.pageY >= 125):
+            case (scroll.pageY >= 125 || window.scrollY >= 125):
               document.getElementsByClassName("header")[0].classList.add("scrolled");
               break;
 
@@ -67,7 +69,7 @@ module.exports = exports = (state, emit) => { // eslint-disable-line
         }
 
         switch(true) {
-          case (scroll.pageY >= 50):
+          case (scroll.pageY >= 50 || window.scrollY >= 50):
             document.getElementsByClassName("header")[0].classList.add("scrolled");
             break;
 
@@ -77,7 +79,7 @@ module.exports = exports = (state, emit) => { // eslint-disable-line
         }
 
         switch(true) {
-          case (scroll.pageY >= 350):
+          case (scroll.pageY >= 350 || window.scrollY >= 350):
             document.getElementsByClassName("__top")[0].classList.add("active");
             break;
 

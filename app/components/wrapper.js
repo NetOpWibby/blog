@@ -6,13 +6,9 @@
 
 import asyncHtml from "choo-async/html";
 
-//  V A R I A B L E
+//  U T I L
 
 import footer from "./footer";
-
-// import Navigation from "./navigation";
-// const navigation = new Navigation();
-// ${navigation.render({ href: state.href || "/" })}
 
 
 
@@ -28,7 +24,7 @@ module.exports = exports = children => (state, emit) => asyncHtml`
       </h1>
 
       <h2 class="header__edition">
-        <span data-edition="🕸💪🏾😤🤙🏾🕸">🕸💪🏾😤🤙🏾🕸</span>
+        <span data-edition="🕸💪🏾😤🤙🏾">🕸💪🏾😤🤙🏾</span>
       </h2>
     </div>
   </header>

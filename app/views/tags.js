@@ -9,7 +9,7 @@ import html from "choo/html";
 import raw from "choo/html/raw";
 import { require as local } from "app-root-path";
 
-//  V A R I A B L E
+//  U T I L
 
 const yaml = local("/app/modules/yaml-front-matter");
 
@@ -57,7 +57,7 @@ function getTag(state) {
 
         if (~tags.indexOf(wildcard)) {
           posts += html`
-            <li class="archive__list__item" itemprop="name headline">
+            <li class="archive__list-item" itemprop="name headline">
               <a href="${matches[key].url}" itemprop="url">${matches[key].title}</a>
             </li>
           `;
@@ -107,7 +107,7 @@ function getTags(state) {
 
     for (const finalTag in finalTagArray) {
       posts += html`
-        <li class="archive__list__item" itemprop="name headline">
+        <li class="archive__list-item" itemprop="name headline">
           <a href="/tags/${finalTagArray[finalTag]}" itemprop="url">${finalTagArray[finalTag]}</a>
         </li>
       `;

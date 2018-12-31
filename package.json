@@ -6,7 +6,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "app-root-path": "^2.1.0",
-    "chewit": "^2.0.2",
+    "chewit": "^2.1.1",
     "choo": "^6.13.1",
     "choo-async": "^0.1.1",
     "choo-ssr": "^0.2.1",
@@ -54,7 +54,7 @@
     "updates": "^6.0.3"
   },
   "engines": {
-    "node": ">=10.3.0"
+    "node": ">=11.0.0"
   },
   "homepage": "https://inc.sh",
   "husky": {
@@ -68,7 +68,7 @@
   "scripts": {
     "css": "sass --update app/sass:app/dist --style compressed",
     "deploy": "vagrant push",
-    "format": "eslint '**/*.js' --fix",
+    "format": "eslint '**/*.js' --fix --ignore-pattern '/app/dist/'",
     "start": "npm i && npm run css && NODE_ENV=production node server",
     "test": "run-s test:*",
     "test:dependencies": "updates --update ./ --exclude fastify",
