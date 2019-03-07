@@ -1,13 +1,13 @@
 ---
 title:      The Bullshit of Facebook
-date:       2019-03-06
+date:       2019-03-07
 tags:       privacy, project, rant
 tldr:       Platitudes, promises, and piss-poor policies
 color:      blue
 published:  true
 ---
 
-Today, Facebook founder and CEO Mark Zuckerberg [published an article](https://www.facebook.com/notes/mark-zuckerberg/a-privacy-focused-vision-for-social-networking/10156700570096634) where he promises a "A Privacy-Focused Vision for Social Networking". The optimist would say he's learned the error of his/Facebook's ways, the pessimist would write the entire thing off, and the realist would assume this is reactionary posturing due to the fact that Facebook is experiencing "an estimated 15 million fewer users in the United States compared to 2017" (according to [Edison Research](https://www.marketplace.org/2019/03/06/tech/exclusive-look-numbers-showing-users-leaving-facebook-by-the-millions)).
+Yesterday, Facebook founder and CEO Mark Zuckerberg [published an essay](https://www.facebook.com/notes/mark-zuckerberg/a-privacy-focused-vision-for-social-networking/10156700570096634) where he promises a "A Privacy-Focused Vision for Social Networking". The optimist would say he's learned the error of his/Facebook's ways, the pessimist would write the entire thing off, and the realist would assume this is reactionary posturing due to the fact that Facebook is experiencing "an estimated 15 million fewer users in the United States compared to 2017" (according to [Edison Research](https://www.marketplace.org/2019/03/06/tech/exclusive-look-numbers-showing-users-leaving-facebook-by-the-millions)).
 
 I am in the latter two camps but I'm particularly incensed about how brazen the Zuck continues to be in his lying. It _is_ a new era so maybe this is his new normal. Let's dissect his several "promises" (bold text inside quotes represent emphasis I've added).
 
@@ -25,13 +25,13 @@ How long is "necessary"? Facebook stores what you've typed in the post box but y
 
 > People should expect that **we will do everything we can to keep them safe on our services** within the limits of what's possible in an encrypted service.
 
-They did expect this and some hope that Facebook tries harder. Making private information availble to third-parties in order to make money isn't how you protect people. In Facebook's case, protecting users in this way comes into direct conflict with their desire to make money.
+People *did* expect this and some hope that Facebook tries harder. Making private information availble to third-parties in order to make money isn't how you protect people. In Facebook's case, protecting users in this way comes into direct conflict with their desire to make money. This is why they are so conflicted about it.
 
 > At the same time, there are real safety concerns to address before we can implement end-to-end encryption across all of our messaging services. **Encryption is a powerful tool for privacy, but that includes the privacy of people doing bad things.** When billions of people use a service to connect, some of them are going to misuse it for truly terrible things like child exploitation, terrorism, and extortion. We have a responsibility to work with law enforcement and to help prevent these wherever we can. **We are working to improve our ability to identify and stop bad actors across our apps by detecting patterns of activity or through other means**, even when we can't see the content of the messages, and we will continue to invest in this work. But we face an inherent tradeoff because we will never find all of the potential harm we do today when our security systems can see the messages themselves.
 
-There are a couple things to unpack here. Of course, the tried and true argument of why [insert tech here] should not be used is because criminals exist. This is a straw man argument. The mere _existence_ of a particular technology isn't going to make law enforcement's jobs impossible, just like it isn't going to allow criminals to be untouchable. Criminals and law enforcement are locked in a perpetual arms race and will continue to be until the heat death of the Universe and then some.
+There are a couple things to unpack here. Zuckerberg delivered the flawed argument of [insert tech here] should not be used because criminals exist. This is a straw man argument. The mere _existence_ of a particular technology isn't going to make law enforcement's jobs impossible, just like it isn't going to enable criminals to be untouchable. Criminals and law enforcement are locked in a perpetual arms race (sometimes literally) and will continue to be until the heat death of the Universe and then some.
 
-Sounds like Facebook is planning on figuring out how to create a secure back door and we all know that doesn't exist. And then, we'll get an apology and a "pledge to do better". 😴
+Sounds like Facebook is trying to figure out how to create a "secure back door" and we all know that doesn't exist. At which point we'll get an apology and a "pledge to do better" when the inevitable data hack and resulting leak occurs. 😴
 
 
 
@@ -44,13 +44,13 @@ WeChat is what Facebook aspires to be, but like any company that wants to do bus
 
 Apple recently had to put servers in China _just_ for their mainland customers. However, Apple has a proven track record in regards to privacy and end-to-end encryption so I am less worried about Chinese dissidents using iPhones than I am about them using Facebook for literally anything.
 
-Like Zuckerberg stated in his post, encryption has saved countless dissidents from being murdered but I am not confident in Facebook's ability to protect them.
+Like Zuckerberg stated in his essay, encryption has saved countless dissidents from being murdered but I am not confident in Facebook's ability to protect them.
 
 
 
 ### Conclusion
 
-Facebook's profits are up but positive public perception is plummeting. It's difficult not to think of Zuckerberg's "candidness" as sweet talk to entice Gen Z'ers and millennials back to the platform and to make your auntie feel safe because "the guy who made the site said so".
+Facebook's profits are up but positive public perception is *plummeting*. It's difficult not to think of Zuckerberg's "candidness" as sweet talk to entice Gen Z'ers and millennials back to the platform and to make your auntie feel safe because "the guy who made the site said so".
 
 However, Mark Zuckerberg does a great job of stressing the importance of social networks:
 
