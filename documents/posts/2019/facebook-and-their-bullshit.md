@@ -9,7 +9,7 @@ published:  true
 
 Today, Facebook founder and CEO Mark Zuckerberg [published an article](https://www.facebook.com/notes/mark-zuckerberg/a-privacy-focused-vision-for-social-networking/10156700570096634) where he promises a "A Privacy-Focused Vision for Social Networking". The optimist would say he's learned the error of his/Facebook's ways, the pessimist would write the entire thing off, and the realist would assume this is reactionary posturing due to the fact that Facebook is experiencing "an estimated 15 million fewer users in the United States compared to 2017" (according to [Edison Research](https://www.marketplace.org/2019/03/06/tech/exclusive-look-numbers-showing-users-leaving-facebook-by-the-millions)).
 
-I am in the latter two camps but I'm particularly incensed in how brazen the Zuck continues to be in his lying. It _is_ a new era so maybe this is his new normal. Let's dissect his several "promises".
+I am in the latter two camps but I'm particularly incensed about how brazen the Zuck continues to be in his lying. It _is_ a new era so maybe this is his new normal. Let's dissect his several "promises" (bold text inside quotes represent emphasis I've added).
 
 
 
@@ -17,7 +17,7 @@ I am in the latter two camps but I'm particularly incensed in how brazen the Zuc
 
 > People should be comfortable being themselves, and should not have to worry about what they share coming back to hurt them later. So **we won't keep messages or stories around for longer than necessary** to deliver the service or longer than people want them.
 
-How long is "necessary"? Facebook stores what you've typed in the post box but you've _have not sent_ or _you deleted_. It is completely unnecessary to store that information in the first place, let alone for an indeterminate amount of time.
+How long is "necessary"? Facebook stores what you've typed in the post box but you've _[have not sent](https://www.washingtonpost.com/technology/2018/12/14/facebook-says-new-bug-allowed-apps-access-private-photos-up-million-users)_ or _[you deleted](https://slate.com/technology/2013/12/facebook-self-censorship-what-happens-to-the-posts-you-dont-publish.html)_. It is completely unnecessary to store that information in the first place, let alone for an indeterminate amount of time.
 
 
 
@@ -44,7 +44,7 @@ WeChat is what Facebook aspires to be, but like any company that wants to do bus
 
 Apple recently had to put servers in China _just_ for their mainland customers. However, Apple has a proven track record in regards to privacy and end-to-end encryption so I am less worried about Chinese dissidents using iPhones than I am about them using Facebook for literally anything.
 
-Like Zuckerberg stated in his post, encryption has saved countless dissidents from being murdered.
+Like Zuckerberg stated in his post, encryption has saved countless dissidents from being murdered but I am not confident in Facebook's ability to protect them.
 
 
 
@@ -52,7 +52,7 @@ Like Zuckerberg stated in his post, encryption has saved countless dissidents fr
 
 Facebook's profits are up but positive public perception is plummeting. It's difficult not to think of Zuckerberg's "candidness" as sweet talk to entice Gen Z'ers and millennials back to the platform and to make your auntie feel safe because "the guy who made the site said so".
 
-However, Mark Zuckerberg does a great job of stressing the importance of social networks (emphasis mine):
+However, Mark Zuckerberg does a great job of stressing the importance of social networks:
 
 > Public social networks will continue to be very important in people's lives -- for connecting with everyone you know, discovering new people, ideas and content, and giving people a voice more broadly. People find these valuable every day, and there are still a lot of useful services to build on top of them. But now, **with all the ways people also want to interact privately, there's also an opportunity to build a simpler platform that's focused on privacy first.**
 
