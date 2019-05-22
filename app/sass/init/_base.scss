@@ -114,7 +114,7 @@ img {
   // Intelligent print styles
   pre,
   blockquote {
-    border: 1px solid #999 !important;
+    border: 1px solid $gray !important;
     page-break-inside: avoid !important;
   }
 

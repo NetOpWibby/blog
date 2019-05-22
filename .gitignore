@@ -2,20 +2,12 @@
 .DS_Store
 Thumbs.db
 
-
-
 # Files
-.env
-*.css.map
+*.css
+*.map
 *.lock
-bundle.css
 package-lock.json
-type.css
-
-
 
 # Folders
 .sass-cache
-.vagrant
 node_modules
-—

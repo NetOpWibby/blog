@@ -2,7 +2,7 @@
 
 
 
-//  P A C K A G E S
+//  I M P O R T S
 
 import fs from "graceful-fs";
 import jsYaml from "js-yaml";
@@ -19,10 +19,20 @@ jsYaml.parse = text => {
   const results = text.match(yamlRegex);
   let conf, yamlOrJson;
 
-  yamlOrJson = results[2]; // yamlOrJson = results.input;
+  yamlOrJson = results[2];
 
-  if (yamlOrJson.charAt(0) === "{") conf = JSON.parse(yamlOrJson);
-  else conf = jsYaml.load(yamlOrJson);
+  switch(true) {
+    case !yamlOrJson:
+      return;
+
+    case yamlOrJson.charAt(0) === "{":
+      conf = JSON.parse(yamlOrJson);
+      break;
+
+    default:
+      conf = jsYaml.load(yamlOrJson);
+      break;
+  }
 
   return conf;
 };
@@ -31,12 +41,15 @@ jsYaml.loadFront = context => {
   let contents;
 
   switch(true) {
-    case (fs.existsSync(context)):
+    case fs.existsSync(context):
       contents = fs.readFileSync(context, "utf8");
-      if (contents instanceof Error) return contents;
+
+      if (contents instanceof Error)
+        return contents;
+
       return jsYaml.parse(contents);
 
-    case (Buffer.isBuffer(context)):
+    case Buffer.isBuffer(context):
       return jsYaml.parse(context.toString());
 
     default:
@@ -48,4 +61,4 @@ jsYaml.loadFront = context => {
 
 //  E X P O R T
 
-module.exports = exports = jsYaml;
+export default jsYaml;

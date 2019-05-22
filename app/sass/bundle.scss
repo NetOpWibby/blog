@@ -4,14 +4,7 @@
 @import "init/mixins";
 @import "init/base";
 
-@import "partials/code";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/related";
-
-@import "pages/cover";
-@import "pages/foreward";
-@import "pages/archive";
-@import "pages/article";
+@import "components/footer";
+@import "components/navigation";
 
 @import "layout";

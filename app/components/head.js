@@ -2,76 +2,78 @@
 
 
 
-//  P A C K A G E
+//  N A T I V E
 
-import html from "choo/html";
+import { readFileSync } from "fs"; // TODO: Use async version
 
-//  U T I L
+//  I M P O R T
 
-let title = "";
+import cwd from "cwd";
+
+//  U T I L S
+
+import {
+  defaultMetadata,
+  isDevelopment
+} from "~util";
+
+const criticalStyles = readFileSync(cwd() + "/app/dist/css/critical.css", "utf8")
+  .replace("/*# sourceMappingURL=critical.css.map */", "");
 
 
 
 //  E X P O R T
 
-module.exports = exports = (state, emit) => {
-  // if (state.route !== "/" && state.params.wildcard) title = `${state.params.wildcard.capitalize()} ∙ theWebb.blog`;
-  if (state.pageTitle) title = `${state.pageTitle} ∙ theWebb.blog`;
-  else title = "theWebb.blog";
+export default metadata => {
+  if (metadata && metadata.length)
+    metadata = metadata[0];
 
-  if (state.title !== title) emit(state.events.DOMTITLECHANGE, title);
-  state.page = state.page || { };
+  const description = metadata && metadata.description ?
+    metadata.description :
+    defaultMetadata.description;
 
-  // TODO:
-  // - Support custom metadata (descriptions and whatnot)
+  const title = metadata && metadata.title ?
+    metadata.title :
+    defaultMetadata.title + defaultMetadata.separator + defaultMetadata.tagline;
 
-  return html`
-    <meta charset="utf-8"/>
-    <title>${title}</title>
+  const url = metadata && metadata.url ?
+    metadata.url :
+    defaultMetadata.url;
 
-    <!--/ THE WEBB BLOG IS DOPE AF /-->
-
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="author" content="Paul Anthony Webb"/>
-    <meta name="description" content="theWebb.blog is Paul Anthony Webb's corner of the 'Net where he regales you with info about whatever he finds interesting."/> <!--/ TODO: If excerpt, replace /-->
-    <meta name="title" content="${title}"/>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
-
-    <!--/ Open Graph /-->
-    <meta property="og:image" content="/assets/og.jpg"/>
-    <meta property="og:image:height" content="1200"/>
-    <meta property="og:image:width" content="675"/>
-    <meta property="og:locale" content="en_US"/>
-    <meta property="og:site_name" content="theWebb.blog"/>
-    <meta property="og:title" content="${title}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://thewebb.blog${state.href}"/>
-
-    <!--/ Social/App Stuff /-->
-    <meta name="apple-mobile-web-app-title" content="theWebb.blog"/>
-    <meta name="application-name" content="theWebb.blog"/>
-    <meta name="msapplication-TileColor" content="#2e353d"/>
-    <meta name="msapplication-TileImage" content="/assets/images/apple-touch-icon.png"/>
-    <meta name="theme-color" content="#2e353d"/>
-    <meta name="socii:site" content="∴ wbbblg"/>
-
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
-    <link rel="mask-icon" href="/assets/favicon.svg" color="#2e353d"/>
-    <link rel="shortcut icon" href="/assets/favicon.ico"/>
-
-    <link href="/assets/type.css" rel="stylesheet"/>
-    <link href="/assets/bundle.css" rel="stylesheet"/>
-
-    <script src="/assets/scripts/vendor/zepto.js"></script>
-    <script src="/assets/scripts/plugins/swipe.js"></script>
-  `;
-};
-
-
-
-//  H E L P E R
-
-String.prototype.capitalize = function() {
-  return this.charAt(0).toUpperCase() + this.slice(1);
+  return [
+    "<meta charset='utf-8'/>",
+    isDevelopment ?
+      "" :
+      "<meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests'/>",
+    `<title>${title}</title>`,
+    "<meta content='yes' name='apple-mobile-web-app-capable'/>",
+    `<meta content="${defaultMetadata.author}" name="author"/>`,
+    `<meta content="${description}" name="description"/>`,
+    `<meta content="${title}" name="title"/>`,
+    "<meta content='width=device-width, height=device-height, initial-scale=1, maximum-scale=5, viewport-fit=cover' name='viewport'/>",
+    // Open Graph
+    `<meta content="${description}" property="og:description"/>`,
+    "<meta content='/assets/og.png' property='og:image'/>",
+    "<meta content='800' property='og:image:height'/>",
+    "<meta content='1280' property='og:image:width'/>",
+    "<meta content='en_US' property='og:locale'/>",
+    `<meta content="${title}" property="og:site_name"/>`,
+    `<meta content="${title}" property="og:title"/>`,
+    "<meta content='website' property='og:type'/>",
+    `<meta content="${url}" property="og:url"/>`,
+    // Social/App Stuff
+    `<meta content="${title}" name="apple-mobile-web-app-title"/>`,
+    `<meta content="${title}" name="application-name"/>`,
+    "<meta content='&there4;&thinsp;NetOpWibby' name='socii:site'/>",
+    `<meta content="${defaultMetadata.color}" name="theme-color"/>`,
+    // Critical CSS
+    "<link href='https://cdn.jsdelivr.net/gh/tonsky/FiraCode@master/distr/fira_code.css' rel='stylesheet'/>",
+    `<style>${criticalStyles}</style>`,
+    // The Rest
+    "<link href='/assets/apple-touch-icon.png' rel='apple-touch-icon'/>",
+    `<link href="${url}" rel="canonical"/>`,
+    "<link color='#111' href='/assets/favicon.svg' rel='mask-icon'/>",
+    "<link href='/assets/favicon.svg' rel='shortcut icon'/>",
+    "<link href='/assets/css/bundle.css' rel='stylesheet'/>"
+  ];
 };

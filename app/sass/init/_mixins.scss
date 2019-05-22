@@ -11,15 +11,15 @@
 }
 
 @mixin font-mono {
-  font-family: "Webb Mono", "Roboto Mono", "Courier New", Courier, monospace;
+  font-family: "Fira Code", "Courier New", Courier, monospace;
 }
 
 @mixin font-sans {
-  font-family: "Webb Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @mixin font-serif {
-  font-family: "Webb Serif", Heuristica, Georgia, serif;
+  font-family: Georgia, serif;
 }
 
 @mixin hide-text {
