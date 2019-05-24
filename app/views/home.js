@@ -25,12 +25,13 @@ export default async() => {
   return new Promise(resolve => getPosts().then(result => {
     resolve(`
       <main>
-        <header class="inner-wrap">
-          <h1>the Webb.blog</h1>
-        </header>
-
-        <section class="inner-wrap">
-          ${result}
+        <section
+          class="wrapper-scroll"
+          id="wrapper"
+        >
+          <posts class="content">
+            ${result}
+          </posts>
         </section>
       </main>
     `);
@@ -39,7 +40,7 @@ export default async() => {
 
 
 
-//  H E L P E R
+//  H E L P E R S
 
 function getPosts() {
   return new Promise(resolve => glob(`${docsPath}/*.md`, (err, files) => {
@@ -47,6 +48,18 @@ function getPosts() {
       resolve("");
 
     const matches = [];
+    const shapes = [
+      "circle-center",
+      "circle-left",
+      "circle-right",
+      "rectangle-bottom",
+      "rectangle-top",
+      "triangle-bottom-left",
+      "triangle-bottom-right",
+      "triangle-top-left",
+      "triangle-top-right"
+    ];
+
     let html = "";
 
     // files.sort((a, b) => compare(a, b, "en")); // basic sort
@@ -65,16 +78,24 @@ function getPosts() {
         matches.push(entry);
     });
 
-    matches.map(match => html += `
-      <li data-color="${match.color}">
-        <a href="${match.url}">
-          ${match.title}<br/>
-          <small>${match.tldr}</small><br/>
-          <time datetime="${match.date}">${match.date}</time>
-        </a>
-      </li>
-    `);
+    matches.map(match => {
+      const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+
+      html += `
+        <post data-color="${match.color}" data-shape="${randomShape}" style="top: ${randomNumber(-20, 20)}%;">
+          <a href="${match.url}">
+            <post-title>${match.title}</post-title>
+            <post-tldr>${match.tldr}</post-tldr>
+            <time datetime="${match.date}">${match.date}</time>
+          </a>
+        </post>
+      `;
+    });
 
     resolve(html);
   }));
+}
+
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }

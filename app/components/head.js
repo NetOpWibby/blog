@@ -14,7 +14,8 @@ import cwd from "cwd";
 
 import {
   defaultMetadata,
-  isDevelopment
+  isDevelopment,
+  siteVersion
 } from "~util";
 
 const criticalStyles = readFileSync(cwd() + "/app/dist/css/critical.css", "utf8")
@@ -74,6 +75,7 @@ export default metadata => {
     `<link href="${url}" rel="canonical"/>`,
     "<link color='#111' href='/assets/favicon.svg' rel='mask-icon'/>",
     "<link href='/assets/favicon.svg' rel='shortcut icon'/>",
-    "<link href='/assets/css/bundle.css' rel='stylesheet'/>"
+    `<link href="/assets/css/bundle.css?v=${siteVersion}" rel="stylesheet"/>`, // cache-busting
+    "<script src='/assets/scripts/plugins/horwheel.js'></script>"
   ];
 };

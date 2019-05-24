@@ -14,6 +14,7 @@ export default () => {
   return [
     "<footer class='footer inner-wrap'>",
     `v${siteVersion}`,
-    "</footer>"
+    "</footer>",
+    "<script src='/assets/scripts/app.js'></script>"
   ].join("");
 };

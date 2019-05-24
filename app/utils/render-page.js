@@ -11,6 +11,7 @@ import viper from "viperhtml";
 
 import footer from "~component/footer";
 import head from "~component/head";
+import header from "~component/header";
 import { minifyOptions } from "~util";
 import wrapper from "~component/wrapper";
 
@@ -52,12 +53,14 @@ async function collectBody(requestObject, bodyContent) {
 
   if (typeof bodyContent === "function") {
     return [
+      header(),
       await bodyContent(requestObject),
       footer()
     ];
   }
 
   return [
+    header(),
     bodyContent,
     footer()
   ];

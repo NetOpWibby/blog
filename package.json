@@ -57,6 +57,7 @@
     "sass-lint": "^1.13.1",
     "snazzy": "^8.0.0",
     "standardx": "^3.0.1",
+    "tiny-relative-date": "^1.3.0",
     "updates": "^8.0.3",
     "viperhtml": "^2.17.0"
   },
@@ -96,5 +97,5 @@
       "app/dist"
     ]
   },
-  "version": "2019.05.22"
+  "version": "2019.05.24"
 }

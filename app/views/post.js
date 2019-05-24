@@ -2,9 +2,10 @@
 
 
 
-//  I M P O R T
+//  I M P O R T S
 
 import marked from "marked";
+import relativeDate from "tiny-relative-date";
 
 //  U T I L S
 
@@ -31,12 +32,15 @@ export default suppliedData => {
 
     resolve(`
       <main>
-        <header class="inner-wrap">
-          <h1>${metadata.title}</h1>
-        </header>
-
-        <section class="inner-wrap">
-          ${marked(markdown)}
+        <section
+          class="wrapper-scroll--post"
+          id="wrapper"
+        >
+          <div class="test">
+            <h2>${metadata.title}</h2>
+            <time datetime="${metadata.date}">${relativeDate(metadata.date)}</time>
+            ${marked(markdown)}
+          </div>
         </section>
       </main>
     `);
