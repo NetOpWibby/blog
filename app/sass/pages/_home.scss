@@ -46,8 +46,7 @@
 
 
 post,
-post-title,
-post-tldr {
+post-title {
   display: block;
 }
 
@@ -66,7 +65,8 @@ post {
   }
 
   time {
-    display: none;
+    opacity: 0.3;
+    padding-left: 1rem;
   }
 }
 

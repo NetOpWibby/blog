@@ -6,6 +6,7 @@
 
 import compare from "alphabetic-compare";
 import glob from "glob";
+import relativeDate from "tiny-relative-date";
 
 //  U T I L S
 
@@ -86,7 +87,7 @@ function getPosts() {
           <a href="${match.url}">
             <post-title>${match.title}</post-title>
             <post-tldr>${match.tldr}</post-tldr>
-            <time datetime="${match.date}">${match.date}</time>
+            <time datetime="${match.date}">${relativeDate(match.date)}</time>
           </a>
         </post>
       `;
