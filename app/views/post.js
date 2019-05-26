@@ -9,6 +9,7 @@ import relativeDate from "tiny-relative-date";
 
 //  U T I L S
 
+import getReadTime from "~module/estimated-read-time";
 import { markedOptions } from "~util";
 
 marked.setOptions({
@@ -30,17 +31,25 @@ export default suppliedData => {
     if (!markdown || !metadata)
       return resolve("");
 
+    const estimatedReadingTime = getReadTime.text(markdown);
+
+    // const tags = metadata.tags.split(/[\s,]+/);
+    // shareLinks(metadata)
+
     resolve(`
       <main>
         <section
           class="wrapper-scroll--post"
           id="wrapper"
         >
-          <div class="test">
+          <post data-color="${metadata.color}">
             <h2>${metadata.title}</h2>
-            <time datetime="${metadata.date}">${relativeDate(metadata.date)}</time>
+            <post-metadata>
+              <time datetime="${metadata.date}">${relativeDate(metadata.date)}</time>
+              ${Math.floor(estimatedReadingTime.seconds / 60)} minute read
+            </post-metadata>
             ${marked(markdown)}
-          </div>
+          </post>
         </section>
       </main>
     `);

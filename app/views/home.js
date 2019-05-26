@@ -30,7 +30,7 @@ export default async() => {
           class="wrapper-scroll"
           id="wrapper"
         >
-          <posts class="content">
+          <mini-posts class="content">
             ${result}
           </posts>
         </section>
@@ -83,13 +83,17 @@ function getPosts() {
       const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
 
       html += `
-        <post data-color="${match.color}" data-shape="${randomShape}" style="top: ${randomNumber(-20, 20)}%;">
+        <mini-post
+          data-color="${match.color}"
+          data-shape="${randomShape}"
+          style="top: ${randomNumber(-20, 20)}%;"
+        >
           <a href="${match.url}">
-            <post-title>${match.title}</post-title>
-            <post-tldr>${match.tldr}</post-tldr>
+            <mini-post-title>${match.title}</mini-post-title>
+            <mini-post-tldr>${match.tldr}</mini-post-tldr>
             <time datetime="${match.date}">${relativeDate(match.date)}</time>
           </a>
-        </post>
+        </mini-post>
       `;
     });
 

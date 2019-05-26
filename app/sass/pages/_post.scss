@@ -1,0 +1,200 @@
+.wrapper-scroll--post {
+  flex-wrap: nowrap;
+  // TODO: The padding...
+  padding-top: 15rem;
+  padding-bottom: 7rem;
+  padding-left: 3rem;
+  white-space: normal;
+
+  [data-scroll="no"] & {
+    margin-bottom: 3rem;
+    padding-bottom: unset;
+  }
+}
+
+post {
+  width: max-content;
+
+  column-fill: auto;
+  column-gap: 4rem;
+  column-rule: 1px solid rgba($gray, 0.15);
+  column-width: 500px;
+  flex: 0 0 auto;
+
+  &[data-color] {
+    pre {
+      code {
+        background-image: none;
+      }
+    }
+  }
+
+  &[data-color="blue"] {
+    ::selection {
+      background-color: rgba($blue, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($blue, 0.7), $blue 100%);
+    }
+
+    a {
+      color: $blue;
+    }
+  }
+
+  &[data-color="gold"] {
+    ::selection {
+      background-color: rgba($gold, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($gold, 0.7), $gold 100%);
+    }
+
+    a {
+      color: $gold;
+    }
+  }
+
+  &[data-color="green"] {
+    ::selection {
+      background-color: rgba($green, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($green, 0.7), $green 100%);
+    }
+
+    a {
+      color: $green;
+    }
+  }
+
+  &[data-color="null"] {
+    ::selection {
+      background-color: rgba($black, 0.3);
+    }
+
+    pre {
+      ::selection {
+        background-color: $white;
+      }
+    }
+
+    a {
+      color: $black;
+    }
+  }
+
+  &[data-color="orange"] {
+    ::selection {
+      background-color: rgba($orange, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($orange, 0.7), $orange 100%);
+    }
+
+    a {
+      color: $orange;
+    }
+  }
+
+  &[data-color="pink"] {
+    ::selection {
+      background-color: rgba($pink, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($pink, 0.7), $pink 100%);
+    }
+
+    a {
+      color: $pink;
+    }
+  }
+
+  &[data-color="purple"] {
+    ::selection {
+      background-color: rgba($purple, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($purple, 0.7), $purple 100%);
+    }
+
+    a {
+      color: $purple;
+    }
+  }
+
+  &[data-color="red"] {
+    ::selection {
+      background-color: rgba($red, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($red, 0.7), $red 100%);
+    }
+
+    a {
+      color: $red;
+    }
+  }
+
+  &[data-color="yellow"] {
+    ::selection {
+      background-color: rgba($yellow, 0.3);
+    }
+
+    code,
+    pre {
+      background-image: linear-gradient(150deg, rgba($yellow, 0.7), $yellow 100%);
+    }
+
+    a {
+      color: $yellow;
+    }
+  }
+
+  [data-scroll="no"] & {
+    width: 100%;
+    max-width: 800px;
+    column-width: unset;
+
+    *:last-child {
+      margin-bottom: 3rem;
+    }
+  }
+
+  h2,
+  h3 {
+    @include font-serif;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+post-metadata {
+  border-top: 1px solid rgba($gray, 0.15);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}

@@ -10,6 +10,31 @@
   display: block;
 }
 
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Smart font include
+// Simply pass in the font-weight you want to use and the normal/italicized versions will be added
+// No more weighing down the front-end with references to unused weights
+@mixin font-face($font-weight, $relative-font-path, $font-name) {
+  @font-face {
+    font-family: $font-name;
+    font-style: normal;
+    font-weight: $font-weight;
+    src: url("#{$relative-font-path}/#{$font-weight}.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: $font-name;
+    font-style: italic;
+    font-weight: $font-weight;
+    src: url("#{$relative-font-path}/#{$font-weight}i.woff2") format("woff2");
+  }
+}
+
 @mixin font-mono {
   font-family: "Fira Code", "Courier New", Courier, monospace;
 }
@@ -19,7 +44,7 @@
 }
 
 @mixin font-serif {
-  font-family: Georgia, serif;
+  font-family: "Webb Serif", Georgia, serif;
 }
 
 @mixin hide-text {
@@ -27,10 +52,4 @@
   color: transparent;
   font-size: 0;
   text-shadow: none;
-}
-
-@mixin ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

@@ -9,6 +9,7 @@ import markdownParser from "./parse-markdown";
 import readDocsDirectory from "./read-docs-dir";
 import readMarkdownFile from "./read-markdown-file";
 import renderPage from "./render-page";
+import shareLinks from "./share-links";
 
 import {
   analyticsId,
@@ -54,5 +55,6 @@ export {
   readDocsDirectory,
   readMarkdownFile,
   renderPage,
+  shareLinks,
   siteVersion
 };

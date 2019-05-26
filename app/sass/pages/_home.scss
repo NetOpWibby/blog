@@ -8,6 +8,15 @@
   position: absolute;
 
   -webkit-overflow-scrolling: touch;
+
+  [data-scroll="no"] & {
+    height: 100%;
+    top: initial; right: initial;
+    bottom: initial; left: initial;
+
+    overflow: unset;
+    position: relative;
+  }
 }
 
 .wrapper-scroll {
@@ -15,46 +24,50 @@
   justify-content: flex-start;
 }
 
-.wrapper-scroll--post {
-  flex-wrap: nowrap;
-  // TODO: The padding...
-  padding-top: 15rem;
-  padding-bottom: 7rem;
-  padding-left: 3rem;
-  white-space: normal;
-
-  .test {
-    width: max-content;
-
-    column-fill: auto;
-    column-gap: 4rem;
-    column-rule: 1px solid rgba($gray, 0.15);
-    column-width: 500px;
-    flex: 0 0 auto;
-  }
-}
-
-.content {
+mini-posts {
   width: max-content; height: 100%;
 
   align-items: center;
+  background-attachment: fixed;
+  background-image: url("../images/bg-a.jpg");
+  background-size: 600px;
   display: flex;
   padding-right: 3rem;
   padding-left: 3rem;
+  position: relative;
+
+  [data-scroll="no"] & {
+    width: 100%;
+    display: block;
+  }
+
+  &::before {
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+
+    background-image: repeating-linear-gradient(-9deg, $silver, $silver 30vw, transparent 30vw, transparent 60vw);
+    content: "";
+    position: absolute;
+  }
 }
 
 
 
-post,
-post-title {
+mini-post,
+mini-post-title {
   display: block;
 }
 
-post {
+mini-post {
   min-width: 500px;
   padding-top: 5rem;
   padding-right: 2rem;
   padding-left: 5rem;
+  z-index: 1;
+
+  [data-scroll="no"] & {
+    top: initial !important; // sass-lint:disable-line no-important
+  }
 
   a {
     padding: 0.5rem 0.75rem 0.75rem 1.5rem;
@@ -70,11 +83,11 @@ post {
   }
 }
 
-post-title {
+mini-post-title {
   font-size: 2rem;
 }
 
-post-tldr {
+mini-post-tldr {
   font-size: 1rem;
 }
 
@@ -93,58 +106,40 @@ post-tldr {
 
 [data-shape^="circle-"],
 [data-shape^="rectangle-"] {
-  &[data-color="blue"] {
-    &::before {
-      background-color: $blue;
-    }
+  &[data-color="blue"]::before {
+    background-color: $blue;
   }
 
-  &[data-color="gold"] {
-    &::before {
-      background-color: $gold;
-    }
+  &[data-color="gold"]::before {
+    background-color: $gold;
   }
 
-  &[data-color="green"] {
-    &::before {
-      background-color: $green;
-    }
+  &[data-color="green"]::before {
+    background-color: $green;
   }
 
-  &[data-color="null"] {
-    &::before {
-      background-color: $black;
-    }
+  &[data-color="null"]::before {
+    background-color: $black;
   }
 
-  &[data-color="orange"] {
-    &::before {
-      background-color: $orange;
-    }
+  &[data-color="orange"]::before {
+    background-color: $orange;
   }
 
-  &[data-color="pink"] {
-    &::before {
-      background-color: $pink;
-    }
+  &[data-color="pink"]::before {
+    background-color: $pink;
   }
 
-  &[data-color="purple"] {
-    &::before {
-      background-color: $purple;
-    }
+  &[data-color="purple"]::before {
+    background-color: $purple;
   }
 
-  &[data-color="red"] {
-    &::before {
-      background-color: $red;
-    }
+  &[data-color="red"]::before {
+    background-color: $red;
   }
 
-  &[data-color="yellow"] {
-    &::before {
-      background-color: $yellow;
-    }
+  &[data-color="yellow"]::before {
+    background-color: $yellow;
   }
 }
 
@@ -176,7 +171,7 @@ post-tldr {
 
 [data-shape^="rectangle-"] {
   &::before {
-    width: 200px; height: 100px;
+    width: 250px; height: 100px;
   }
 }
 

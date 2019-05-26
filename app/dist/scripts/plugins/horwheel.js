@@ -1,2 +1,44 @@
-(function(e){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=e()}else if(typeof define==="function"&&define.amd){define([],e)}else{var n;if(typeof window!=="undefined"){n=window}else if(typeof global!=="undefined"){n=global}else if(typeof self!=="undefined"){n=self}else{n=this}n.horwheel=e()}})(function(){var e,n,r;return function t(e,n,r){function f(i,u){if(!n[i]){if(!e[i]){var l=typeof require=="function"&&require;if(!u&&l)return l(i,!0);if(o)return o(i,!0);var d=new Error("Cannot find module '"+i+"'");throw d.code="MODULE_NOT_FOUND",d}var s=n[i]={exports:{}};e[i][0].call(s.exports,function(n){var r=e[i][1][n];return f(r?r:n)},s,s.exports,t,e,n,r)}return n[i].exports}var o=typeof require=="function"&&require;for(var i=0;i<r.length;i++)f(r[i]);return f}({1:[function(e,n,r){function t(e){if(e.preventDefault){e.preventDefault()}this.scrollLeft+=e.deltaY}function f(e){if(e===undefined){return false}e.addEventListener("wheel",t,false);return e}n.exports=f},{}]},{},[1])(1)});
-//# sourceMappingURL=./dist/horwheel.min.js.map
+"use strict";
+
+
+
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.horwheel = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){ // eslint-disable-line
+
+  /**
+   * Change the scroll axis.
+   * @param {Node Event} [eve]
+   */
+  function horizontalWheel(eve) {
+    if ( // This allows for horizontal scrolling on code snippets...kind of a hack but whatevs
+      eve.target.tagName.toLowerCase() === "pre" ||
+      eve.target.parentElement.tagName.toLowerCase() === "pre"
+    ) return true;
+
+    if (eve.preventDefault)
+      eve.preventDefault();
+
+    this.scrollLeft += eve.deltaY;
+  }
+
+  /**
+   * Scroll horizontally with mouse wheel over a given Node Element.
+   * @param {Node Element} [node] - A Node Element.
+   * @returns {Node Element}
+   */
+  function horwheel(node) {
+    if (node === undefined)
+      return false;
+
+    node.addEventListener("wheel", horizontalWheel, false);
+    return node;
+  }
+
+  /**
+   * Expose horwheel
+   */
+  module.exports = horwheel;
+},{}]
+},{},[1])(1);
+});
+
+// via https://github.com/pazguille/horwheel
