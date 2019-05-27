@@ -9,7 +9,7 @@ export default (render, model) => {
     <!DOCTYPE html>
     <html lang="en">
       <head>${model.head}</head>
-      <body data-scroll="no">${model.body}</body>
+      <body data-scroll="yes">${model.body}</body>
     </html>
   `;
 };

@@ -1,14 +1,25 @@
 .wrapper-scroll--post {
   flex-wrap: nowrap;
-  // TODO: The padding...
   padding-top: 15rem;
   padding-bottom: 7rem;
   padding-left: 3rem;
   white-space: normal;
 
   [data-scroll="no"] & {
+    padding: 14rem 2.5rem 0;
     margin-bottom: 3rem;
-    padding-bottom: unset;
+
+    &::after {
+      top: 0; right: 0;
+      bottom: 0; left: 0;
+
+      background-image: radial-gradient(circle, $black 1px, rgba($black, 0) 1px);
+      background-size: 40px 40px;
+      content: "";
+      opacity: 0.15;
+      position: absolute;
+      z-index: -2;
+    }
   }
 }
 
@@ -168,11 +179,12 @@ post {
   [data-scroll="no"] & {
     width: 100%;
     max-width: 800px;
+    column-fill: unset;
+    column-gap: unset;
+    column-rule: unset;
     column-width: unset;
-
-    *:last-child {
-      margin-bottom: 3rem;
-    }
+    display: block;
+    flex: unset;
   }
 
   h2,

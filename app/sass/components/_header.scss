@@ -1,7 +1,7 @@
 .header {
   top: 1rem; left: 3rem;
 
-  position: fixed;
+  position: absolute;
   z-index: 10;
 }
 
@@ -15,6 +15,10 @@
   background-size: contain;
   position: relative;
   transform: skew(-9deg, -9deg);
+
+  @media screen and (orientation: landscape) {
+    left: 3rem;
+  }
 
   &::before,
   &::after {

@@ -2,10 +2,17 @@
 
 
 
-const isTouchDevice = (("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch);
-let horizontalScrollEnabler = document.querySelector("body").dataset.scroll;
-
 enableScrollChecker();
+
+
+
+// Variables
+const horizontalScrollEnabler = document.querySelector("body").dataset.scroll;
+
+const isTouchDevice = (
+  "ontouchstart" in document.documentElement ||
+  window.DocumentTouch && document instanceof DocumentTouch
+);
 
 // Automatically open external links in new tabs
 document.querySelectorAll("a[href^=http]").forEach(anchor => {
@@ -17,26 +24,17 @@ document.querySelectorAll("a[href^=http]").forEach(anchor => {
 
 // Initialize horizontal scrolling
 function enableScrollChecker() {
-  let wrapper;
+  const wrapper = document.querySelector("#wrapper");
 
   switch(true) {
     case horizontalScrollEnabler === "no":
     case isTouchDevice:
-      horizontalScrollEnabler = "no";
+      document.querySelector("body").dataset.scroll = "no";
       return;
 
     default:
-      wrapper = document.querySelector("#wrapper");
-      horwheel(wrapper); // eslint-disable-line padding-line-between-statements
+      document.querySelector("body").dataset.scroll = "yes";
+      horwheel(wrapper);
       return;
   }
-
-  // add event listener `resize` > enableScrollChecker();
-  // console.log("sdgf");
-  // if (window.innerWidth >= 1001)
-  //   horwheel(wrapper);
-  // else
-  //   ("#wrapper").replaceWith(("#wrapper").clone());
-
-  // else wrapper.removeEventListener("wheel", horwheel, false)
 }

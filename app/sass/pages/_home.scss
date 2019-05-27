@@ -11,8 +11,8 @@
 
   [data-scroll="no"] & {
     height: 100%;
-    top: initial; right: initial;
-    bottom: initial; left: initial;
+    top: unset; right: unset;
+    bottom: unset; left: unset;
 
     overflow: unset;
     position: relative;
@@ -32,14 +32,9 @@ mini-posts {
   background-image: url("../images/bg-a.jpg");
   background-size: 600px;
   display: flex;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
   position: relative;
-
-  [data-scroll="no"] & {
-    width: 100%;
-    display: block;
-  }
 
   &::before {
     top: 0; right: 0;
@@ -48,6 +43,20 @@ mini-posts {
     background-image: repeating-linear-gradient(-9deg, $silver, $silver 30vw, transparent 30vw, transparent 60vw);
     content: "";
     position: absolute;
+  }
+
+  [data-scroll="no"] & {
+    width: 100%;
+    background-image: none;
+    display: block;
+    padding-top: 12rem;
+    padding-bottom: 3rem;
+
+    &::before {
+      background-image: radial-gradient(circle, $black 1px, rgba($black, 0) 1px);
+      background-size: 40px 40px;
+      opacity: 0.15;
+    }
   }
 }
 
@@ -66,15 +75,140 @@ mini-post {
   z-index: 1;
 
   [data-scroll="no"] & {
-    top: initial !important; // sass-lint:disable-line no-important
+    top: unset !important; // sass-lint:disable-line no-important
+    padding-top: 2rem;
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (max-width: 600px) {
+      min-width: unset;
+    }
+
+    &[data-color="blue"] {
+      &:hover {
+        a { // sass-lint:disable-line nesting-depth
+          background-color: rgba($blue, 0.05);
+        }
+      }
+
+      a {
+        border-color: $blue;
+      }
+    }
+
+    &[data-color="gold"] {
+      &:hover {
+        a {
+          background-color: rgba($gold, 0.05);
+        }
+      }
+
+      a {
+        border-color: $gold;
+      }
+    }
+
+    &[data-color="green"] {
+      &:hover {
+        a {
+          background-color: rgba($green, 0.05);
+        }
+      }
+
+      a {
+        border-color: $green;
+      }
+    }
+
+    &[data-color="null"] {
+      &:hover {
+        a {
+          background-color: rgba($black, 0.05);
+        }
+      }
+
+      a {
+        border-color: $black;
+      }
+    }
+
+    &[data-color="orange"] {
+      &:hover {
+        a {
+          background-color: rgba($orange, 0.05);
+        }
+      }
+
+      a {
+        border-color: $orange;
+      }
+    }
+
+    &[data-color="pink"] {
+      &:hover {
+        a {
+          background-color: rgba($pink, 0.05);
+        }
+      }
+
+      a {
+        border-color: $pink;
+      }
+    }
+
+    &[data-color="purple"] {
+      &:hover {
+        a {
+          background-color: rgba($purple, 0.05);
+        }
+      }
+
+      a {
+        border-color: $purple;
+      }
+    }
+
+    &[data-color="red"] {
+      &:hover {
+        a {
+          background-color: rgba($red, 0.05);
+        }
+      }
+
+      a {
+        border-color: $red;
+      }
+    }
+
+    &[data-color="yellow"] {
+      &:hover {
+        a {
+          background-color: rgba($yellow, 0.05);
+        }
+      }
+
+      a {
+        border-color: $yellow;
+      }
+    }
   }
 
   a {
-    padding: 0.5rem 0.75rem 0.75rem 1.5rem;
+    padding: 0.5rem 1.5rem 0.75rem;
 
     background-color: rgba($white, 0.7);
     display: inline-block;
     line-height: 1.33;
+
+    [data-scroll="no"] & {
+      border-style: solid;
+      border-width: 2px;
+      transition: background-color 0.2s;
+
+      @media (max-width: 800px) {
+        display: block;
+      }
+    }
   }
 
   time {
@@ -101,6 +235,13 @@ mini-post-tldr {
     content: "";
     position: absolute;
     z-index: -1;
+  }
+
+  [data-scroll="no"] & {
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }
 

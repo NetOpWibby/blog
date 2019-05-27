@@ -76,6 +76,7 @@ export default metadata => {
     "<link color='#111' href='/assets/favicon.svg' rel='mask-icon'/>",
     "<link href='/assets/favicon.svg' rel='shortcut icon'/>",
     `<link href="/assets/css/bundle.css?v=${siteVersion}" rel="stylesheet"/>`, // cache-busting
+    "<script src='/assets/scripts/plugins/bg-check.js'></script>",
     "<script src='/assets/scripts/plugins/horwheel.js'></script>"
   ];
 };
