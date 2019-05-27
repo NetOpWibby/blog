@@ -4,16 +4,6 @@
 
 enableScrollChecker();
 
-
-
-// Variables
-const horizontalScrollEnabler = document.querySelector("body").dataset.scroll;
-
-const isTouchDevice = (
-  "ontouchstart" in document.documentElement ||
-  window.DocumentTouch && document instanceof DocumentTouch
-);
-
 // Automatically open external links in new tabs
 document.querySelectorAll("a[href^=http]").forEach(anchor => {
   if (anchor.href.indexOf(location.hostname) === -1) {
@@ -24,7 +14,13 @@ document.querySelectorAll("a[href^=http]").forEach(anchor => {
 
 // Initialize horizontal scrolling
 function enableScrollChecker() {
+  const horizontalScrollEnabler = document.querySelector("body").dataset.scroll;
   const wrapper = document.querySelector("#wrapper");
+
+  const isTouchDevice = (
+    "ontouchstart" in document.documentElement ||
+    window.DocumentTouch && document instanceof DocumentTouch
+  );
 
   switch(true) {
     case horizontalScrollEnabler === "no":
