@@ -12,7 +12,7 @@ For the past month I've been hard at work, developing basic social network featu
 
 
 ### Profile
-![First look at your profile](🖼01.jpg)
+![First look at your profile](/assets/images/2018/socii-dispatch-01-a.jpg)
 
 On your profile, you'll see your avatar in whatever shape you choose from available options which are a triangle (the default), circle (classic), square (old-school), diamond, and inverted triangle. Below your avatar in the first sidebar, you'll find your name and username.
 
@@ -29,9 +29,9 @@ And of course you'll find your personal stream of posts. Within each post block 
 
 
 ### Post creation
-![Post creator, clean](🖼02.jpg)
-![Post creator with a code snippet](🖼03.jpg)
-![That rendered code snippet...wish it had color](🖼04.jpg)
+![Post creator, clean](/assets/images/2018/socii-dispatch-01-b.jpg)
+![Post creator with a code snippet](/assets/images/2018/socii-dispatch-01-c.jpg)
+![That rendered code snippet...wish it had color](/assets/images/2018/socii-dispatch-01-d.jpg)
 
 Socii supports Markdown! I'm using a customized version of [Showdown](https://github.com/showdownjs/showdown "Showdown repo on GitHub") to enable it. The eye icon in the footer of the post creator allows for previewing what your post will look like when it's live. The character limit is 150 for reasons that will become apparent in a couple months, after I ship a major (secret) feature.
 
@@ -39,7 +39,7 @@ However, your post can be up to **5,000 characters** long if you so choose! 😰
 
 If you'd like to read a long post but don't have time at the moment, you can save that post for future reading.
 
-![Respond to your own post to create a thread](🖼07.jpg)
+![Respond to your own post to create a thread](/assets/images/2018/socii-dispatch-01-e.jpg)
 
 For the moment, only one post status type is available and that is "publish". Forthcoming updates will bring three more: drafts, queues, and schedule. Similarly, the only post creator mode available is "text" but future updates will bring photo, audio, and video options.
 

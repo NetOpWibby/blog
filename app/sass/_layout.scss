@@ -133,6 +133,13 @@ a {
 
 
 
+iframe {
+  &.bandcamp--single {
+    width: 100%; height: 42px;
+    margin-bottom: 1rem;
+  }
+}
+
 .inner-wrap {
   max-width: 800px; min-width: 320px;
 

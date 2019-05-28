@@ -71,9 +71,15 @@ It was during this time that Keisha gave me her phone number (holla!) and I hear
 
 Years later, I would reminisce about those conversations and create music. Here's a sampling of those tracks:
 
-(🎵https://bandcamp.com/EmbeddedPlayer/album=512177084/size=small/bgcol=010000/linkcol=c8af60/track=3614882051/transparent=true)
+<iframe
+  class="bandcamp--single"
+  src="https://bandcamp.com/EmbeddedPlayer/album=512177084/size=small/bgcol=010000/linkcol=c8af60/track=3614882051/transparent=true"
+></iframe>
 
-(🎵https://bandcamp.com/EmbeddedPlayer/album=955213907/size=small/bgcol=010000/linkcol=c8af60/track=918133906/transparent=true)
+<iframe
+  class="bandcamp--single"
+  src="https://bandcamp.com/EmbeddedPlayer/album=955213907/size=small/bgcol=010000/linkcol=c8af60/track=918133906/transparent=true"
+></iframe>
 
 **Dusty Stars** is from [Music from the Love Lounge, Vol. 01](https://thewibby.bandcamp.com/album/music-from-the-love-lounge-vol-01 "Music from the Love Lounge, Vol. 01 on Bandcamp") (this cuts off early for some reason, probably data corruption) and **Remember When** is from [Vol. 02](https://thewibby.bandcamp.com/album/music-from-the-love-lounge-vol-02 "Music from the Love Lounge, Vol. 02 on Bandcamp"). I sometimes find music a better conduit to express my thoughts than simply talking.
 
@@ -146,7 +152,10 @@ How weird is that?
 ### P.S.
 During one of Keisha's early visits to Massachusetts, I asked her to appear on that year's release of Music from the Love Lounge. It's a fitting end to a post like this, check it out (beats by me)! 🕸
 
-(🎵https://bandcamp.com/EmbeddedPlayer/album=4219807572/size=small/bgcol=010000/linkcol=c8af60/track=635396433/transparent=true)
+<iframe
+  class="bandcamp--single"
+  src="https://bandcamp.com/EmbeddedPlayer/album=4219807572/size=small/bgcol=010000/linkcol=c8af60/track=635396433/transparent=true"
+></iframe>
 
 
 

@@ -579,6 +579,6 @@ If you have a Switch and want to see these results for yourself, here are the st
 ### Extra stuff
 The useragent Nintendo is going with is `Mozilla/5.0 (Nintendo Switch; WifiWebAuthApplet) AppleWebKit/601.6 (KHTML, like Gecko) NF/4.0.0.7.9 NintendoBrowser/5.1.0.15785`. I am SO glad their useragent isn't the usual fugly spaghetti soup that most browsers come up with. The screen size is 1280 by 720.
 
-I remember when people made websites for the Nintendo DS, back when the browser (made by Opera) came in a _[cartridge](https://en.wikipedia.org/wiki/Nintendo_DS_%26_DSi_Browser "Nintendo DS Browser, on Wikipedia")_. I still have mine btw. It also came with RAM ("Memory Expansion Pak") you put in the GBA slot for a whopping 8MB. IGN gave it a 3.5 out of 10. HAHAHAHAHAHA
+I remember when people made websites for the Nintendo DS, back when the browser (made by Opera) came in a _[cartridge](https://www.nintendo.co.jp/ds/browser/index.html "Nintendo DS Browser's official site")_. I still have mine btw. It also came with RAM ("Memory Expansion Pak") you put in the GBA slot for a whopping 8MB. IGN gave it a 3.5 out of 10. HAHAHAHAHAHA
 
 Good times. 🕸
