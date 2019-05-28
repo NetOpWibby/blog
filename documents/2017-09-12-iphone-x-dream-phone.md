@@ -90,7 +90,7 @@ I was confused about Apple Watch and AirPod cases charging on Apple's pad becaus
 
 
 ### Animoji
-![](/assets/images/2017/iphone-x-dream-phone/animoji.mp4)
+<video autoplay controls loop muted playsinline src="/assets/videos/2017/iphone-x-dream-phone-a.mp4"></video>
 
 The TrueDepth camera on the X (in conjunction with the A11 Bionic chip) analyzes 50 different muscle movements on your face and then applies them to one of 12 pre-selected ~~emoji~~ Animoji. You can record video messages with Animoji (and your voice!) and share them inside of Messages. It should be possible to export these videos outside of Messages too. I hope there's a way to create your own Animoji (if you're a developer). I'd create a 3D version of myself and use that Animoji exclusively.
 
