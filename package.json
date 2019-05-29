@@ -13,7 +13,7 @@
     "site": "https://webb.page"
   },
   "dependencies": {
-    "chewit": "^2.1.3",
+    "chewit": "^2019.5.28",
     "fastify": "2.4.1",
     "fastify-compress": "^0.10.0",
     "fastify-helmet": "^3.0.0",
@@ -97,5 +97,5 @@
       "app/dist"
     ]
   },
-  "version": "2019.05.27.3"
+  "version": "2019.05.28"
 }
