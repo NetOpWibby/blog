@@ -13,7 +13,7 @@
     "site": "https://webb.page"
   },
   "dependencies": {
-    "chewit": "^2019.5.28",
+    "chewit": "^2019.6.4",
     "fastify": "2.4.1",
     "fastify-compress": "^0.10.0",
     "fastify-helmet": "^3.0.0",
@@ -40,25 +40,25 @@
     "@inc/eslint-config": "^1.1.3",
     "@inc/sasslint-config": "^2019.5.7",
     "alphabetic-compare": "^1.1.4",
-    "colorette": "^1.0.7",
+    "colorette": "^1.0.8",
     "cwd": "^0.10.0",
     "eslint": "^5.16.0",
     "glob": "^7.1.4",
     "graceful-fs": "^4.1.15",
     "html-minifier": "^4.0.0",
-    "husky": "^2.3.0",
+    "husky": "^2.4.0",
     "js-yaml": "^3.13.1",
     "link-module-alias": "^1.2.0",
     "nodemon": "^1.19.1",
     "npm-run-all": "^4.1.5",
     "pino-pretty": "^3.1.0",
     "recursive-readdir": "^2.2.2",
-    "sass": "^1.20.1",
+    "sass": "^1.20.3",
     "sass-lint": "^1.13.1",
     "snazzy": "^8.0.0",
     "standardx": "^3.0.1",
     "tiny-relative-date": "^1.3.0",
-    "updates": "^8.0.3",
+    "updates": "^8.1.0",
     "viperhtml": "^2.17.0"
   },
   "engines": {
@@ -97,5 +97,5 @@
       "app/dist"
     ]
   },
-  "version": "2019.06.05"
+  "version": "2019.06.06"
 }
