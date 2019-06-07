@@ -1,10 +1,10 @@
 ---
 title:      The Future of the Operating System: Revisited
-date:       2019-06-06
+date:       2019-06-07
 tags:       hikari
 tldr:       Where we're going is...fascinating and unknown.
 color:      green
-published:  false
+published:  true
 ---
 
 [Back in 2013](https://2016.dsgn.io/thoughts/post/the-future-of-the-operating-system "The Future of the Operating System") I penned an essay titled, "The Future of the Operating System." In it, I attempted to predict where the operating system paradigm was headed based on what was obvious to me at the time: cloud services were taking off and mobile devices were seeing greater usage than personal computers. Logically, this meant the concept of a responsive OS was upon us. Some of the cited examples were [Firefox OS](https://en.m.wikipedia.org/wiki/Firefox_OS "Wikipedia article for Firefox OS") and [Ubuntu Edge](https://en.m.wikipedia.org/wiki/Ubuntu_Edge "Wikipedia article for Ubuntu Edge"), products that were designed to be a highly mobile primary computing device that would dock to an apparatus on one's desk to become a full-fledged workstation. The essay was also an opportunity to plug my OS _in-progress_ (now dormant), [hikari](https://hikar.io "hikari OS"), built around the responsive OS concept.
@@ -71,11 +71,23 @@ Also Urbit:
 >
 > So we built a new platform. A clean-slate stack simple enough that ordinary **people can run their own servers**.
 
-Confusing selling points aside, it's actually a neat concept but still too jargon-y to fully comprehend
+Confusing selling points aside, it's actually a neat concept but still too jargon-y (for me) to fully comprehend.
 
-—
 
-A common thread that brings these concepts together is, _focus_.
+
+### Thoughts
+
+A key issue I have with every UI concept is the lack of real work being done. Outside of a email or text prompt, you rarely see how a coder would use it. Or an analyst. Or a designer. Or anyone being productive, period.
+
+A common thread that brings these concepts together is, _focus_. Another one is _change_. After all, the [desktop metaphor](https://en.m.wikipedia.org/wiki/Desktop_metaphor) as we know it was created in **1970**. What you are reading right now was written in 2019, nearly 50 _years_ later and...not much has changed.
+
+As I am wont to do, I think about lapsed projects of mine and wonder what would warrant further development. In hikari's case, it doesn't make sense to simply recreate the tried-and-true desktop metaphor. If my aim is to solve problems inherent to a dated paradigm, keeping with the status quo is _not_ the way to go.
+
+One of the reasons Apple's iOS is massively popular is because users don't have to think about files and folders, a chief tenant of the desktop paradigm.
+
+I don't pretend to have the answer but I think we're _slowly_ going in the right direction.
+
+So...where do we go from here?
 
 
 
