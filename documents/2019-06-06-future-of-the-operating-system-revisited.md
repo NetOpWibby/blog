@@ -7,9 +7,9 @@ color:      green
 published:  true
 ---
 
-[Back in 2013](https://2016.dsgn.io/thoughts/post/the-future-of-the-operating-system "The Future of the Operating System") I penned an essay titled, "The Future of the Operating System." In it, I attempted to predict where the operating system paradigm was headed based on what was obvious to me at the time: cloud services were taking off and mobile devices were seeing greater usage than personal computers. Logically, this meant the concept of a responsive OS was upon us. Some of the cited examples were [Firefox OS](https://en.m.wikipedia.org/wiki/Firefox_OS "Wikipedia article for Firefox OS") and [Ubuntu Edge](https://en.m.wikipedia.org/wiki/Ubuntu_Edge "Wikipedia article for Ubuntu Edge"), products that were designed to be a highly mobile primary computing device that would dock to an apparatus on one's desk to become a full-fledged workstation. The essay was also an opportunity to plug my OS _in-progress_ (now dormant), [hikari](https://hikar.io "hikari OS"), built around the responsive OS concept.
+[Back in 2013](https://2016.dsgn.io/thoughts/post/the-future-of-the-operating-system "The Future of the Operating System") I penned an essay titled, "The Future of the Operating System." In it, I attempted to predict where the operating system paradigm was headed based on what was obvious to me at the time: cloud services were taking off and mobile devices were seeing greater usage than personal computers. Logically (to me), this meant the concept of a responsive OS was upon us. Some of the cited examples were [Firefox OS](https://en.m.wikipedia.org/wiki/Firefox_OS "Wikipedia article for Firefox OS") and [Ubuntu Edge](https://en.m.wikipedia.org/wiki/Ubuntu_Edge "Wikipedia article for Ubuntu Edge"), products that were designed to be a highly mobile primary computing device that would dock to an apparatus on one's desk to become a full-fledged workstation. The essay was also an opportunity to plug my OS _in-progress_ (now dormant), [hikari](https://hikar.io "hikari OS"), built around the responsive OS concept.
 
-For now, a rectangular slab of glass that more or less fits in the palm of an adult hand appears to be the preferred size of a mobile computing device. Specific details and component internals can always change but the external probably isn't going to change much so I won't spend time talking about that. Instead, I'll go over my favorite UI concepts that inventive minds have created in the half-decade since my original essay.
+For now, a rectangular slab of glass and metal that more or less fits in the palm of an adult hand appears to be the preferred format for a mobile computing device. Specific details and component internals can always change but the external probably won't change much so I no time will be spent talking about that. Instead, I'll go over my favorite UI concepts that inventive minds have created in the half-decade since my inital opus.
 
 
 
@@ -25,7 +25,11 @@ For now, a rectangular slab of glass that more or less fits in the palm of an ad
 [![eDEX-UI screenshot](/assets/images/2019/future-of-the-os-b.png)](/assets/images/2019/future-of-the-os-b.png)
 [![eDEX-UI screenshot](/assets/images/2019/future-of-the-os-c.png)](/assets/images/2019/future-of-the-os-c.png)
 
-The on-screen keyboard suggests the use of this UI on a large touchscreen table (like [Microsoft PixelSense](https://en.m.wikipedia.org/wiki/Microsoft_PixelSense "Wikipedia article for Microsoft PixelSense")) or at least the 12" iPad Pro. Despite what some would consider "visual noise", this UI has almost everything one would need for text entry and multitasking. If nothing else, it is fun to look at and pretend you're in a future where hoverboards are actually real and not batteries on wheels.
+The on-screen keyboard suggests the use of this UI on a large touchscreen table (like [Microsoft's PixelSense](https://en.m.wikipedia.org/wiki/Microsoft_PixelSense "Wikipedia article for Microsoft PixelSense") or [Oblivion's Light Table](https://duckduckgo.com/?q=oblivion+table&iax=images&ia=images "DuckDuckGo image search for 'oblivion table'")) or at least the 12" iPad Pro. Despite what some would consider "visual noise", this UI has almost everything one would need for text entry and multitasking.
+
+I personally don't see myself using a UI like this because of limited color palette. It looks wonderful for focus though.
+
+If nothing else, it is fun to look at and pretend you're in a future where hoverboards are actually real and not batteries on wheels.
 
 
 
@@ -37,13 +41,13 @@ The on-screen keyboard suggests the use of this UI on a large touchscreen table 
 [![Desktop Neo screenshot](/assets/images/2019/future-of-the-os-e.jpg)](/assets/images/2019/future-of-the-os-e.jpg)
 [![Desktop Neo screenshot](/assets/images/2019/future-of-the-os-f.png)](/assets/images/2019/future-of-the-os-f.png)
 
-This UI is all about fullscreen _everything_. The folks on [/r/unixporn](https://www.reddit.com/r/unixporn "unixporn subreddit...this is not *actual* porn, just UI inspiration") and anyone who uses window managers would be into this. Heck, *I* am into this! All day every day I am constantly resizing/swiping/moving windows around.
+This UI is all about fullscreen _everything_. Window manager loves would be so into this (looking at you, [/r/unixporn](https://www.reddit.com/r/unixporn "unixporn subreddit...this is not *actual* porn, just UI inspiration") community). Heck, *I* am into this! All day every day I am constantly resizing/swiping/moving windows around.
 
-The panel concept of this UI is nice as well. I am currently on the beta for macOS Catalina and it _almost_ has the concept down but I can only split two windows, max.
+The panel concept of this UI is nice and the search functionality sounds like something I **need**. I am currently on the beta for macOS Catalina and it _almost_ has the concept down but I can only split two windows, max.
 
 [![macOS Catalina, splitscreen](/assets/images/2019/future-of-the-os-g.png)](/assets/images/2019/future-of-the-os-g.png)
 
-I do like how productive it makes me feel so maybe I'll become a heavy user of it. Of the UI concepts showcased here, Desktop Neo is my favorite.
+I do like how productive it makes me feel so maybe I'll become a heavy user of it (and hope Apple expands on the feature). Of the UI concepts showcased here, Desktop Neo is my favorite.
 
 
 
