@@ -31,6 +31,6 @@ Chantal Panozzo wrote a [great article for Vox](https://www.vox.com/2015/7/21/89
 
 I could continue, but you get the gist.
 
-With self-imposed deadlines, I find that I am more creative in my problem-solving and often find better solutions than if I was working on problems without a time-sensitive goal attached. I believe the same thing would be applied to a shorter work day. A six-hour work day would also discourage long meetings without focus (well, long meetings *period*). I don't see big American companies making these quote drastic changes but startups? Hell yeah, definitely. Instead of focusing on “perks” like beer on tap, foosball tables, and game systems, &c, why not focus on improving the lives of your employees so they can make dope shit?
+With self-imposed deadlines, I find that I am more creative in my problem-solving and often find better solutions than if I was working on problems without a time-sensitive goal attached. I believe the same thing would be applied to a shorter work day. A six-hour work day would also discourage long meetings without focus (well, long meetings *period*). I don't see big American companies making these quote drastic changes but startups? Hell yeah, definitely. Instead of focusing on "perks" like beer on tap, foosball tables, and game systems, &c, why not focus on improving the lives of your employees so they can make dope shit?
 
 Happy employees will reward you with their absolute best work. Simple. 🕸

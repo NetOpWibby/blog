@@ -11,7 +11,7 @@ TL;DR: If you aren't already a Mac user in the market for a new laptop, then thi
 
 
 
-### The adapter “problem”
+### The adapter "problem"
 
 I can understand why a lot of people are complaining about the dongles, [plugadoo](https://theoutline.com/post/682/in-which-we-try-to-rebrand-the-dongle "The origin of my new favorite word")s, throughports, &c, but I don't understand why I'm seeing these complaints from people who would **never** buy a computer from Apple. Quite frankly, it reads as bullshit and an excuse to complain on the Internet.
 
@@ -67,7 +67,7 @@ Before I've experienced this for myself, I heard developers (who also didn't hav
 
 ### The Touch Bar and Function keys
 
-This thing is neat. My most-used “keys” are volume up/down. Sliding the volume level is much more satisfying than repeatedly tapping a button. I know, that sounds weird to say but it's true! There's more granularity too. I've slid the volume down to where the on-screen display says the volume is effectively off but I can still hear audio. With the old function keys, volume was changeable in steps.
+This thing is neat. My most-used "keys" are volume up/down. Sliding the volume level is much more satisfying than repeatedly tapping a button. I know, that sounds weird to say but it's true! There's more granularity too. I've slid the volume down to where the on-screen display says the volume is effectively off but I can still hear audio. With the old function keys, volume was changeable in steps.
 
 Something to get used to is doing hard refreshes in my browser. I have Vivaldi setup to do a hard refresh to clear the cache sometimes and that keyboard shortcut is `Shift + F5`. Well, I don't have my Touch Bar setup to show me the function row by default so my shortcut (when not using an external keyboard) is `Fn + Shift + F5`.
 

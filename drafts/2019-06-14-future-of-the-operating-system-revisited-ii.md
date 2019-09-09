@@ -1,6 +1,6 @@
 ---
 title:      The Future of the Operating System: Revisited, Part 1
-date:       2019-06-14
+date:       2020-06-14
 tags:       hikari
 tldr:       Where we're going is...fascinating and unknown.
 color:      green

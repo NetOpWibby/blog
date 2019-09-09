@@ -50,10 +50,10 @@ function getWPM(options) {
 
 export default {
   getReadTime: (content, options) => {
-    const word_count = countWords(content, options);
-    const seconds = countSeconds(word_count, options);
+    const wordCount = countWords(content, options);
+    const seconds = countSeconds(wordCount, options);
 
-    return { word_count, seconds };
+    return { wordCount, seconds };
   },
   text: function(content, options) {
     options = !options ? {} : options;
