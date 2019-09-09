@@ -73,16 +73,13 @@
   "main": "index.js",
   "name": "Blog",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://git.inc.sh/NetOperatorWibby/Blog.git"
-  },
+  "repository": "https://code.webb.page/Blog",
   "scripts": {
     "css": "sass --load-path=node_modules --update app/sass:app/dist/css --style compressed",
     "deploy": "vagrant push",
-    "format": "eslint '**/*.js' --fix --ignore-pattern '/app/dist/'",
+    "format": "eslint . --fix --ignore-pattern '/app/dist/'",
     "postinstall": "link-module-alias",
-    "preinstall": "command -v link-module-alias; link-module-alias clean || true",
+    "preinstall": "command -v link-module-alias;link-module-alias clean || true",
     "start": "export NODE_ENV=production;npm i;npm run css;node index.js",
     "test": "run-s test:*",
     "test:dependencies": "updates --update ./",
@@ -97,5 +94,5 @@
       "app/dist"
     ]
   },
-  "version": "2019.09.08"
+  "version": "2019.09.08.1"
 }
