@@ -30,6 +30,7 @@ function enableScrollChecker() {
 
     default:
       document.querySelector("body").dataset.scroll = "yes";
+      document.querySelector("post > *:last-child").classList.add("last-element");
       horwheel(wrapper);
       return;
   }

@@ -125,17 +125,3 @@ No matter what life-changing product you embark on or assist with creating, you 
 3. A word I hate more than almost anything (the taste of asparagus will be difficult to unseat) is "impossible" and to hear professionals in the web/tech space use this word so casually is **frustrating**. We literally have supercomputers in our pockets to share *memes* but it's "impossible" to make text with a drop shadow expand across the screen before flipping into an explosion of color with emoji rain. **Impossible is not a word, it's an excuse.**
 
 4. I really wanted to underscore how much of a jackass I was prior to that post being published but was advised against it by leadership. This most likely had something to do with editorial voice of the company but few words exist to exemplify negative behavior with such conciseness.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
