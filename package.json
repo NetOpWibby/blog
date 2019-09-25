@@ -22,8 +22,8 @@
   },
   "description": "Blog of Paul Anthony Webb",
   "devDependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
     "@babel/plugin-external-helpers": "7.2.0",
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/plugin-proposal-decorators": "7.6.0",
@@ -35,14 +35,14 @@
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
     "@babel/polyfill": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/register": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
     "@inc/eslint-config": "^2019.7.23",
     "@inc/sasslint-config": "^2019.7.23",
     "alphabetic-compare": "^1.1.4",
     "colorette": "^1.1.0",
     "cwd": "^0.10.0",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "glob": "^7.1.4",
     "graceful-fs": "^4.2.2",
     "html-minifier": "^4.0.0",
@@ -76,7 +76,6 @@
   "repository": "https://code.webb.page/Blog",
   "scripts": {
     "css": "sass --load-path=node_modules --update app/sass:app/dist/css --style compressed",
-    "deploy": "vagrant push",
     "format": "eslint . --fix --ignore-pattern '/app/dist/'",
     "postinstall": "link-module-alias",
     "preinstall": "command -v link-module-alias;link-module-alias clean || true",
@@ -94,5 +93,5 @@
       "app/dist"
     ]
   },
-  "version": "2019.09.08.1"
+  "version": "2019.09.24"
 }
