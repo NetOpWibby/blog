@@ -58,7 +58,7 @@ The following scenarios are situations I've been on the receiving end of.
 
 - CEO loves your work and mindset and tasks you with unleashing your creativity on core properties. Then come caveats. You create something cool, you guess, with caveats because core users would be "confused" by drastic changes. A month or so later, CEO okays a developer *not* hired for their design sensibilities to drastically redesign the core product. CEO reiterates your importance while restricting your expression.
 
-- You notice there's someone on the platform you are helping develop who has has advocated for harm and negative energy towards people who share your creed/likeness/ethnicity. You get on a call with the CEO and he not only downplays the matter but he disregards how you feel about it. He also claims organizations like [SPLC](https://www.splcenter.org) are disengenous and blow things out of proportion.
+- You notice there's someone on the platform you are helping develop who has advocated for harm and negative energy towards people who share your creed/likeness/ethnicity. You get on a call with the CEO and he not only downplays the matter but he disregards how you feel about it. He also claims organizations like [SPLC](https://www.splcenter.org) are disengenous and blow things out of proportion.
 
 These scenarios are situations I've witnessed and/or stepped in to defend/protect.
 
