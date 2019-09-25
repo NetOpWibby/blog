@@ -93,7 +93,7 @@ For people in the web/tech space, the aforementioned scenarios are quite common.
 > If you don't build your dream, someone will hire you to help build theirs.
 > — Tony Gaskin
 
-I reflect upon this quote often as I help people build their dreams (startups) while also building my own. I do believe there's been a sea change in the industry around employee happiness and retention. Have a look at job postings and you will see work satisfaction and happiness as a perk.
+I reflect upon this quote often as I help people build their dreams (startups) while also building [my own](https://socii.network). I do believe there's been a sea change in the industry around employee happiness and retention. Have a look at job postings and you will see work satisfaction and happiness as a perk.
 
 No one wants to work in a hostile environment and after a while, people realize they don't have to put up with bullshit and they quit (or are fired before they get the chance, lol). To echo the tone of Gaskin's quote but modified for business leadership:
 
