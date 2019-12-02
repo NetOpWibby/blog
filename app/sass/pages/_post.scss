@@ -23,7 +23,7 @@
   }
 }
 
-post {
+post { // stylelint-disable-line selector-type-no-unknown
   width: max-content;
 
   column-fill: auto;
@@ -32,11 +32,13 @@ post {
   column-width: 500px;
   flex: 0 0 auto;
 
+  a {
+    text-decoration: underline;
+  }
+
   &[data-color] {
-    pre {
-      code {
-        background-image: none;
-      }
+    pre code { // stylelint-disable-line selector-max-type
+      background-image: none;
     }
   }
 
@@ -82,22 +84,6 @@ post {
 
     a {
       color: $green;
-    }
-  }
-
-  &[data-color="null"] {
-    ::selection {
-      background-color: rgba($black, 0.3);
-    }
-
-    pre {
-      ::selection {
-        background-color: $white;
-      }
-    }
-
-    a {
-      color: $black;
     }
   }
 
@@ -176,6 +162,22 @@ post {
     }
   }
 
+  &[data-color="null"] {
+    ::selection {
+      background-color: rgba($black, 0.3);
+    }
+
+    pre {
+      ::selection {
+        background-color: $white;
+      }
+    }
+
+    a {
+      color: $black;
+    }
+  }
+
   [data-scroll="no"] & {
     width: 100%;
     max-width: 800px;
@@ -189,8 +191,8 @@ post {
 
   h2,
   h3 {
-    @include font-serif;
     margin-bottom: 1rem;
+    @include font-serif;
   }
 
   h2 {
@@ -199,10 +201,6 @@ post {
 
   h3 {
     font-size: 2rem;
-  }
-
-  a {
-    text-decoration: underline;
   }
 
   .last-element {

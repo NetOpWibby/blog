@@ -1,0 +1,6 @@
+{
+  extends: "@inc/stylelint-config",
+  plugins: [
+    "stylelint-order"
+  ]
+}

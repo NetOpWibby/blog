@@ -1,3 +1,8 @@
+.wrapper-scroll {
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .wrapper-scroll,
 .wrapper-scroll--post {
   top: 0; right: 0;
@@ -5,9 +10,8 @@
 
   display: flex;
   overflow: auto;
-  position: absolute;
-
   -webkit-overflow-scrolling: touch;
+  position: absolute;
 
   [data-scroll="no"] & {
     height: 100%;
@@ -17,11 +21,6 @@
     overflow: unset;
     position: relative;
   }
-}
-
-.wrapper-scroll {
-  align-items: center;
-  justify-content: flex-start;
 }
 
 mini-posts {
@@ -74,125 +73,6 @@ mini-post {
   padding-left: 5rem;
   z-index: 1;
 
-  [data-scroll="no"] & {
-    top: unset !important; // sass-lint:disable-line no-important
-    padding-top: 2rem;
-    padding-right: 0;
-    padding-left: 0;
-
-    @media (max-width: 600px) {
-      min-width: unset;
-    }
-
-    &[data-color="blue"] {
-      &:hover {
-        a { // sass-lint:disable-line nesting-depth
-          background-color: rgba($blue, 0.05);
-        }
-      }
-
-      a {
-        border-color: $blue;
-      }
-    }
-
-    &[data-color="gold"] {
-      &:hover {
-        a {
-          background-color: rgba($gold, 0.05);
-        }
-      }
-
-      a {
-        border-color: $gold;
-      }
-    }
-
-    &[data-color="green"] {
-      &:hover {
-        a {
-          background-color: rgba($green, 0.05);
-        }
-      }
-
-      a {
-        border-color: $green;
-      }
-    }
-
-    &[data-color="null"] {
-      &:hover {
-        a {
-          background-color: rgba($black, 0.05);
-        }
-      }
-
-      a {
-        border-color: $black;
-      }
-    }
-
-    &[data-color="orange"] {
-      &:hover {
-        a {
-          background-color: rgba($orange, 0.05);
-        }
-      }
-
-      a {
-        border-color: $orange;
-      }
-    }
-
-    &[data-color="pink"] {
-      &:hover {
-        a {
-          background-color: rgba($pink, 0.05);
-        }
-      }
-
-      a {
-        border-color: $pink;
-      }
-    }
-
-    &[data-color="purple"] {
-      &:hover {
-        a {
-          background-color: rgba($purple, 0.05);
-        }
-      }
-
-      a {
-        border-color: $purple;
-      }
-    }
-
-    &[data-color="red"] {
-      &:hover {
-        a {
-          background-color: rgba($red, 0.05);
-        }
-      }
-
-      a {
-        border-color: $red;
-      }
-    }
-
-    &[data-color="yellow"] {
-      &:hover {
-        a {
-          background-color: rgba($yellow, 0.05);
-        }
-      }
-
-      a {
-        border-color: $yellow;
-      }
-    }
-  }
-
   a {
     padding: 0.5rem 1.5rem 0.75rem;
 
@@ -215,6 +95,135 @@ mini-post {
     opacity: 0.3;
     padding-left: 1rem;
   }
+
+  [data-scroll="no"] & {
+    top: unset !important; // stylelint-disable-line declaration-no-important
+    padding-top: 2rem;
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (max-width: 600px) {
+      min-width: unset;
+    }
+
+    // stylelint-disable selector-max-specificity
+
+    &:not(:hover) {
+      &[data-color="blue"] {
+        a {
+          border-color: $blue;
+        }
+      }
+
+      &[data-color="gold"] {
+        a {
+          border-color: $gold;
+        }
+      }
+
+      &[data-color="green"] {
+        a {
+          border-color: $green;
+        }
+      }
+
+      &[data-color="null"] {
+        a {
+          border-color: $black;
+        }
+      }
+
+      &[data-color="orange"] {
+        a {
+          border-color: $orange;
+        }
+      }
+
+      &[data-color="pink"] {
+        a {
+          border-color: $pink;
+        }
+      }
+
+      &[data-color="purple"] {
+        a {
+          border-color: $purple;
+        }
+      }
+
+      &[data-color="red"] {
+        a {
+          border-color: $red;
+        }
+      }
+
+      &[data-color="yellow"] {
+        a {
+          border-color: $yellow;
+        }
+      }
+    }
+    // stylelint-enable
+
+    // stylelint-disable selector-max-specificity
+
+    &:hover {
+      &[data-color="blue"] {
+        a {
+          background-color: rgba($blue, 0.05);
+        }
+      }
+
+      &[data-color="gold"] {
+        a {
+          background-color: rgba($gold, 0.05);
+        }
+      }
+
+      &[data-color="green"] {
+        a {
+          background-color: rgba($green, 0.05);
+        }
+      }
+
+      &[data-color="null"] {
+        a {
+          background-color: rgba($black, 0.05);
+        }
+      }
+
+      &[data-color="orange"] {
+        a {
+          background-color: rgba($orange, 0.05);
+        }
+      }
+
+      &[data-color="pink"] {
+        a {
+          background-color: rgba($pink, 0.05);
+        }
+      }
+
+      &[data-color="purple"] {
+        a {
+          background-color: rgba($purple, 0.05);
+        }
+      }
+
+      &[data-color="red"] {
+        a {
+          background-color: rgba($red, 0.05);
+        }
+      }
+
+      &[data-color="yellow"] {
+        a {
+          background-color: rgba($yellow, 0.05);
+        }
+      }
+    }
+    // stylelint-enable
+  }
 }
 
 mini-post-title {
@@ -224,8 +233,6 @@ mini-post-title {
 mini-post-tldr {
   font-size: 1rem;
 }
-
-
 
 [data-shape] {
   position: relative;
@@ -382,7 +389,7 @@ mini-post-tldr {
 [data-shape="triangle-bottom-left"],
 [data-shape="triangle-top-left"] {
   &::before {
-    border-right-color: transparent !important; // sass-lint:disable-line no-important
+    border-right-color: transparent !important; // stylelint-disable-line declaration-no-important
     border-right-style: solid;
   }
 }
@@ -399,7 +406,7 @@ mini-post-tldr {
 [data-shape="triangle-bottom-right"] {
   &::before {
     right: 10rem;
-    border-left-color: transparent !important; // sass-lint:disable-line no-important
+    border-left-color: transparent !important; // stylelint-disable-line declaration-no-important
     border-left-style: solid;
   }
 }

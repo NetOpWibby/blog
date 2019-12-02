@@ -25,6 +25,7 @@ function enableScrollChecker() {
   switch(true) {
     case horizontalScrollEnabler === "no":
     case isTouchDevice:
+    case window.innerWidth < 1000:
       document.querySelector("body").dataset.scroll = "no";
       return;
 

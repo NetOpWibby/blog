@@ -8,20 +8,19 @@
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   position: sticky;
-  position: -webkit-sticky; // sass-lint:disable-line no-duplicate-properties
   z-index: 1;
 
   a {
     color: inherit;
 
-    &:not(:last-of-type) {
-      margin-right: 1rem;
-    }
-
     @media (min-width: 1551px) {
       &:first-of-type {
         margin-left: 2rem;
       }
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
     }
   }
 }

@@ -1,11 +1,8 @@
-// sass-lint:disable no-important
-
 html {
   box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 *,
@@ -14,7 +11,7 @@ html {
   margin: 0; padding: 0;
 
   box-sizing: inherit;
-  outline: 0 !important;
+  outline: 0;
 }
 
 *[disabled] {
@@ -71,9 +68,6 @@ textarea {
   font-family: inherit;
   font-size: inherit;
 
-  -moz-appearance: none;
-  -webkit-appearance: none;
-
   &:focus {
     outline: none;
   }
@@ -115,8 +109,12 @@ img {
   }
 }
 
-@media print {
-  // Intelligent print styles
+@media print { // Intelligent print styles
+  // stylelint-disable declaration-no-important
+  @page {
+    margin: 0.5cm !important;
+  }
+
   pre,
   blockquote {
     border: 1px solid $gray !important;
@@ -130,10 +128,6 @@ img {
 
   img {
     max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm !important;
   }
 
   p,
@@ -153,9 +147,10 @@ img {
   }
 
   // Faster, more stable printing
+
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     filter: none !important;
     text-shadow: none !important;
   }
@@ -186,6 +181,7 @@ img {
       word-wrap: break-word !important;
     }
   }
+  // stylelint-enable
 }
 
 input::-moz-focus-inner,
@@ -194,14 +190,11 @@ button::-moz-focus-inner {
 }
 
 // Get rid of yellow autofill background
+
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px $white inset !important;
+  -webkit-box-shadow: 0 0 0 1000px $white inset !important; // stylelint-disable-line
 
   &:focus {
     outline: none;
   }
-}
-
-::-webkit-input-placeholder {
-  color: $silver;
 }
