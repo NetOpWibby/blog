@@ -1,6 +1,6 @@
 ---
 title:      A personal API
-date:       2019-12-01
+date:       2019-12-02
 tags:       digtal sharecropping, ownership, self-host
 tldr:       You are the operating system
 color:      red

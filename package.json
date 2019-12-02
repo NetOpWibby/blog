@@ -86,7 +86,6 @@
     "test": "run-s test:*",
     "test:dependencies": "updates --update ./",
     "test:lint": "standardx --verbose | snazzy",
-    "-test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose --no-exit",
     "test:sass": "stylelint '**/*.scss'",
     "watch": "npm run css;run-p watch:*",
     "watch:sass": "sass --load-path=node_modules --watch app/sass:app/dist/css --style compressed",
@@ -97,5 +96,5 @@
       "app/dist"
     ]
   },
-  "version": "2019.12.02"
+  "version": "2019.12.02.1"
 }
