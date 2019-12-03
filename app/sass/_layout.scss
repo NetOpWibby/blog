@@ -166,6 +166,21 @@ iframe {
   }
 }
 
+.scroll-toggle {
+  padding: 0.5rem 0.75rem;
+  bottom: 2rem; left: 2rem;
+
+  background-color: rgba($gray, 0.9);
+  border: 1px solid $gray;
+  color: $white;
+  position: fixed;
+  z-index: 5;
+
+  @media (max-width: 999px) {
+    display: none;
+  }
+}
+
 ::selection {
   background-color: rgba($yellow, 0.3);
   color: rgba($black, 0.85);

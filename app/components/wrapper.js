@@ -9,7 +9,12 @@ export default (render, model) => {
     <!DOCTYPE html>
     <html lang="en">
       <head>${model.head}</head>
-      <body data-scroll="yes">${model.body}</body>
+      <body data-scroll="yes">
+        ${model.body}
+        <button class="scroll-toggle" id="toggle">
+          Disable ↔ scrolling
+        </button>
+      </body>
     </html>
   `;
 };

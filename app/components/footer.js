@@ -15,6 +15,6 @@ export default () => {
     "<footer class='footer inner-wrap'>",
     `v${siteVersion}`,
     "</footer>",
-    "<script src='/assets/scripts/app.js'></script>"
+    `<script src="/assets/scripts/app.js?v=${siteVersion}"></script>`
   ].join("");
 };
