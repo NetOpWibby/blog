@@ -76,6 +76,10 @@ export default metadata => {
     "<link color='#111' href='/assets/favicon.svg' rel='mask-icon'/>",
     "<link href='/assets/favicon.svg' rel='shortcut icon'/>",
     `<link href="/assets/css/bundle.css?v=${siteVersion}" rel="stylesheet"/>`, // cache-busting
-    "<script src='/assets/scripts/plugins/horwheel.js'></script>"
+    "<script src='/assets/scripts/plugins/horwheel.js'></script>",
+    // Feeds
+    `<link href="/feed/index.atom" rel="alternate" title="${title}" type="application/atom+xml"/>`,
+    `<link href="/feed/index.json" rel="alternate" title="${title}" type="application/json"/>`
+    // `<link href="/feed/index.xml" rel="alternate" title="${title}" type="application/rss+xml"/>`
   ];
 };

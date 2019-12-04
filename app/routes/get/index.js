@@ -5,6 +5,7 @@
 //  U T I L S
 
 import { handleRoute } from "~util";
+import feed from "./feed";
 import root from "./root";
 import page from "./page";
 
@@ -23,6 +24,12 @@ export default server => {
     ...defaultParams,
     path: "/",
     routeRules: root
+  });
+
+  handleRoute({
+    ...defaultParams,
+    path: "/feed/:feed",
+    routeRules: feed
   });
 
   handleRoute({

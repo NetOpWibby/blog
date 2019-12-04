@@ -70,7 +70,7 @@
   "homepage": "https://blog.webb.page",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run test:sass && npm run increment && git add -A :/"
+      "pre-commit": "npm run format && npm run test:sass && npm run increment && npm run generate-feed && git add -A :/"
     }
   },
   "main": "index.js",
@@ -80,10 +80,11 @@
   "scripts": {
     "css": "sass --load-path=node_modules --update app/sass:app/dist/css --style compressed",
     "format": "eslint . --fix",
+    "generate-feed": "node generate-feed.js",
     "increment": "chronver --increment package",
     "postinstall": "link-module-alias",
     "preinstall": "command -v link-module-alias && link-module-alias clean || true",
-    "start": "export NODE_ENV=production;npm i;npm run css;node index.js",
+    "start": "export NODE_ENV=production;npm i;npm run css;npm run generate-feed;node index.js",
     "test": "run-s test:*",
     "test:dependencies": "updates --update ./",
     "test:lint": "standardx --verbose | snazzy",
@@ -97,5 +98,5 @@
       "app/dist"
     ]
   },
-  "version": "2019.12.03"
+  "version": "2019.12.03.1"
 }
