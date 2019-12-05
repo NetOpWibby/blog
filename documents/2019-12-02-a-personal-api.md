@@ -69,6 +69,20 @@ There's a company named Urbit who's mission is quite similar:
 
 Only problem is, their official site makes their mission [quite](https://news.ycombinator.com/item?id=21672481) [confusing](https://news.ycombinator.com/item?id=18908051) [to many](https://news.ycombinator.com/item?id=6438320). I don't know about you but if I'm entrusting my data to something I run, I want to have more than a *general idea* of how it works.
 
+**EDIT (2019.12.05):** This post has generated lively discussion on [HackerNews](https://news.ycombinator.com/item?id=21684949) and as a result we now have more examples of prior art!
+
+- [cjdns](https://github.com/cjdelisle/cjdns)
+- [Dogsheep](https://dogsheep.github.io), by Simon Willisons
+- [Islet](https://www.infoq.com/presentations/strong-types-actor-iot), by Carl Hewitt
+- [libp2p](https://libp2p.io)
+- [me-api](https://github.com/danfang/me-api), by Daniel Fang
+- [my](https://github.com/karlicoss/my), by Dmitrii Gerasimov
+- [Perkeep](https://perkeep.org)
+- [SOLID (Social Linked Data)](https://solid.mit.edu), by Tim Berners-Lee
+- [Syte2](https://github.com/rigoneri/Syte2) / [Syte2 for Zeit Now v2](https://github.com/jake-101/Syte2-4-Zeit2.0), by Rodrigo Neri and Jake Peterson
+- [Unwalled Garden](https://unwalled.garden)
+- [Yggdrasil Network](https://github.com/yggdrasil-network/yggdrasil-go)
+
 ## FIN
 
 Elsewhere, there exists portions of the personalOS concept of various development maturation levels. To me, this is proof of the worthwhile nature of this idea. Will this likely end up sitting in a repo for years after months of initial work? Probably. Hopefully not...we'll see how it goes. 🕸

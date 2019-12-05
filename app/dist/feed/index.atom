@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.webb.page/</id>
     <title>the Webb blog</title>
-    <updated>2019-12-04T03:59:28.472Z</updated>
+    <updated>2019-12-05T19:57:52.632Z</updated>
     <generator>The 'Net</generator>
     <author>
         <name>Paul Anthony Webb</name>
@@ -60,6 +60,20 @@
 <p>When you’re ready.<br/>— <a href="https://twitter.com/urbitlive/status/1192262246384230400" title="&#39;urbit live&#39; account on Twitter">urbit live</a></p>
 </blockquote>
 <p>Only problem is, their official site makes their mission <a href="https://news.ycombinator.com/item?id=21672481">quite</a> <a href="https://news.ycombinator.com/item?id=18908051">confusing</a> <a href="https://news.ycombinator.com/item?id=6438320">to many</a>. I don&#39;t know about you but if I&#39;m entrusting my data to something I run, I want to have more than a <em>general idea</em> of how it works.</p>
+<p><strong>EDIT (2019.12.05):</strong> This post has generated lively discussion on <a href="https://news.ycombinator.com/item?id=21684949">HackerNews</a> and as a result we now have more examples of prior art!</p>
+<ul>
+<li><a href="https://github.com/cjdelisle/cjdns">cjdns</a></li>
+<li><a href="https://dogsheep.github.io">Dogsheep</a>, by Simon Willisons</li>
+<li><a href="https://www.infoq.com/presentations/strong-types-actor-iot">Islet</a>, by Carl Hewitt</li>
+<li><a href="https://libp2p.io">libp2p</a></li>
+<li><a href="https://github.com/danfang/me-api">me-api</a>, by Daniel Fang</li>
+<li><a href="https://github.com/karlicoss/my">my</a>, by Dmitrii Gerasimov</li>
+<li><a href="https://perkeep.org">Perkeep</a></li>
+<li><a href="https://solid.mit.edu">SOLID (Social Linked Data)</a>, by Tim Berners-Lee</li>
+<li><a href="https://github.com/rigoneri/Syte2">Syte2</a> / <a href="https://github.com/jake-101/Syte2-4-Zeit2.0">Syte2 for Zeit Now v2</a>, by Rodrigo Neri and Jake Peterson</li>
+<li><a href="https://unwalled.garden">Unwalled Garden</a></li>
+<li><a href="https://github.com/yggdrasil-network/yggdrasil-go">Yggdrasil Network</a></li>
+</ul>
 <h2 id="fin">FIN</h2>
 <p>Elsewhere, there exists portions of the personalOS concept of various development maturation levels. To me, this is proof of the worthwhile nature of this idea. Will this likely end up sitting in a repo for years after months of initial work? Probably. Hopefully not...we&#39;ll see how it goes. 🕸</p>
 ]]></content>
