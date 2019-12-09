@@ -26,11 +26,9 @@ export default async(requestObject, requestResponse) => {
     case "index.json":
     default:
       requestResponse.type("application/json").send(createReadStream(`${feedDirectory}index.json`));
-      return;
 
     // case "index.xml":
     // default:
     //   requestResponse.type("application/xml").send(createReadStream(`${feedDirectory}index.xml`));
-    //   return;
   }
 };
