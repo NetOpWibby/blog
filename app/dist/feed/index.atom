@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.webb.page/</id>
     <title>the Webb blog</title>
-    <updated>2019-12-09T05:39:15.584Z</updated>
+    <updated>2019-12-13T05:23:57.130Z</updated>
     <generator>The 'Net</generator>
     <author>
         <name>Paul Anthony Webb</name>
@@ -54,7 +54,7 @@
 <p>Y&#39;know what would be nice? Having an easy way to share any files that you&#39;re hosting. Although, you may not want to expose your personal API server to the public. For this purpose, you could use a third-party site like <code>personal.sh</code> to generate shareable links (probably via <code>personal.sh/are</code>, I&#39;m a fan of <a href="https://en.wikipedia.org/wiki/Domain_hack" title="Explanation of &#39;Domain hack&#39; on Wikipedia">domain hacking</a>).</p>
 <p>Because the Internet is open to all, there will inevitably be disturbing/disgusting/morally-bankrupt content shared through <code>personal.sh</code>. If/when that happens, the offending user will have their IP address blacklisted and put on display at <code>personal.sh/it</code>. It&#39;s no secret that anonymity gives some people courage to behave in a way that&#39;s unbecoming.</p>
 <h2 id="prior-art">Prior Art</h2>
-<p>There&#39;s a company named Urbit who&#39;s mission is quite similar:</p>
+<p>There&#39;s a company named Urbit whose mission is quite similar:</p>
 <blockquote>
 <p>An Urbit is a networked personal server that runs your apps and stores your data, serves as your permanent online identity and puts you back in control of your digital life under a single login.</p>
 <p>When you’re ready.<br/>— <a href="https://twitter.com/urbitlive/status/1192262246384230400" title="&#39;urbit live&#39; account on Twitter">urbit live</a></p>
@@ -166,7 +166,7 @@
 <p>For people in the web/tech space, the aforementioned scenarios are quite common. Heck, I&#39;m quite sure they echo what happened <em>today</em> somewhere...and you witnessed it. A common thread that links the leadership mentioned (aside from the CTO) is apathy; a complete lack of empathy, social understanding/awareness, or just <em>care</em>. In the comment about my self analysis earlier, I linked a blog post where I realized I put my ego before the team I was hired to work with. I was, quite frankly, a jackass[4] and there&#39;s no room for one unless you work at a zoo. Self-reflection is a useful tool you should pull out every now and then and as you can probably tell, most people don&#39;t utilize it.</p>
 <h3 id="software-is-hard-relationships-are-easy">Software is hard, relationships are easy</h3>
 <blockquote>
-<p>If you don&#39;t build your dream, someone will hire you to help build theirs.<br/>— Tony Gaskin</p>
+<p>If you don&#39;t build your dream, someone will hire you to help build theirs.<br/>— Tony Gaskin</p>
 </blockquote>
 <p>I reflect upon this quote often as I help people build their dreams (startups) while also building <a href="https://socii.network">my own</a>. I do believe there&#39;s been a sea change in the industry around employee happiness and retention. Have a look at job postings and you will see work satisfaction and happiness as a perk.</p>
 <p>No one wants to work in a hostile environment and after a while, people realize they don&#39;t have to put up with bullshit and they quit (or are fired before they get the chance, lol). To echo the tone of Gaskin&#39;s quote but modified for business leadership:</p>
@@ -2526,7 +2526,7 @@ end</code></pre>
         <link href="https://blog.webb.page/2017/black-privilege-review"/>
         <updated>2017-05-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Charlamagne Tha God can write a good book. Who knew?]]></summary>
-        <content type="html"><![CDATA[<p>Charlamagne Tha God is a radio personality of a nationally syndicated show called &quot;The Breakfast Club&quot; on Power 105.1. He&#39;s not well-liked by most people, especially the people he&#39;s interviewed and has disagreements with — this is because he speaks his mind. He doesn&#39;t like your latest album? He&#39;ll tell you. Are you embroiled in controversy? He&#39;ll ask about it. Basically, he asks the questions or says the things many listeners want to ask or are thinking. I count myself as one of his fans.</p>
+        <content type="html"><![CDATA[<p>Charlamagne Tha God is a radio personality of a nationally syndicated show called &quot;The Breakfast Club&quot; on Power 105.1. He&#39;s not well-liked by most people, especially the people he&#39;s interviewed and has disagreements with — this is because he speaks his mind. He doesn&#39;t like your latest album? He&#39;ll tell you. Are you embroiled in controversy? He&#39;ll ask about it. Basically, he asks the questions or says the things many listeners want to ask or are thinking. I count myself as one of his fans.</p>
 <p>When Charlamagne mentioned he was writing a book, I knew I had to check it because...<strong>who the hell would give this man a book deal</strong> (<a href="http://www.simonandschusterpublishing.com/touchstone" title="Touchstone Books">Touchstone Books</a>, apparently)?</p>
 <p>While reading, I found myself nodding in agreement when he arrived at the conclusion of a life lesson or when he realized he had to change his thought process. I also couldn&#39;t help noticing similarities in our lives. We loved getting those Pizza Hut coupons for free personal pizzas when we read lots of books in elementary school. Music was a means of both inspiration and escape in our teens. We never finished college. Despite that, we&#39;ve been able to succeed.</p>
 <p>I was reminded that I used to live out my &quot;hood dreams&quot; vicariously through artists like <a href="https://en.wikipedia.org/wiki/Clipse" title="The Clipse on Wikipedia">Clipse</a>. While glamorizing the gangsta life, they also rapped about the obvious downsides. This was at a time when my peers listened to <a href="https://en.wikipedia.org/wiki/Jay_Z">Jay Z</a>, <a href="https://en.wikipedia.org/wiki/The_Lox">The Lox</a>, <a href="https://en.wikipedia.org/wiki/The_Diplomats">Dipset</a>, &amp;c. I was almost exclusively <a href="https://en.wikipedia.org/wiki/The_Neptunes">Neptunes</a> and Will Smith. Yes, <em>I know</em>. I was clowned for liking Big Willie&#39;s music throughout all of middle and high school.</p>
@@ -2624,7 +2624,7 @@ end</code></pre>
 <p>Don&#39;t even get me started on how inconsistent TLD operators are with listing registrar names. In my testing, I found <a href="https://twitter.com/BeachfrontD/status/848404426557673472" title="Screenshot of the hot mess that = TLD operators">three variations</a> of the business name for Tucows. Like, why? Lucky for you, I asked customer support at both Tucows and Hover and was told this:</p>
 <blockquote>
 <p>The variations in the Tucows name for different domains is simply how it was inputted at the Registry level (each domain extension or tld has a governing entity known as a Registry), and since that is a human&#39;s job normally, it gets added to their system slightly different each time.</p>
-<p>— Jordan Q</p>
+<p>— Jordan Q</p>
 </blockquote>
 <p>In addition, domains purchased through Hover will list the registrar in WHOIS searches as Tucows. Gandi will show EPAG Domainservices GmbH, iwantmyname will show 1API GmbH, and so on. It would be <em>ideal</em> to show the actual reseller you purchased your domains from but that&#39;s not how WHOIS works. Oh well.</p>
 <h3 id="new-features">New features</h3>
@@ -2771,10 +2771,10 @@ end</code></pre>
 <p>Lunchtime is sacred time in Switzerland. When I was on maternity leave, my husband came home for lunch to help me care for our daughter. This strengthened our marriage. Many families still reunite during weekdays over the lunch hour.</p>
 </blockquote>
 <blockquote>
-<p>Swiss law mandates a 14-week maternity leave at a minimum of 80 percent pay.</p>
+<p>Swiss law mandates a 14-week maternity leave at a minimum of 80 percent pay.</p>
 </blockquote>
 <blockquote>
-<p>People in Europe took vacation seriously. Once, when I only took 10 days for a trip to Spain, my colleagues chastised me for taking so little time off. I learned to take vacation chunks in two-week intervals. Well rested, I noticed that I felt more productive and creative when I returned to work. Recent <a href="https://www.nytimes.com/2013/02/10/opinion/sunday/relax-youll-be-more-productive.html?pagewanted=all&amp;_r=1&amp;&amp;gwh=AC034D10F64239B961A6E1CDE12C9332&amp;gwt=pay&amp;assetType=opinion" title="Link to an article by the New York Times">American research</a> confirms what I was feeling: Relaxing can make you <a href="http://www.vox.com/2014/7/22/5912369/creativity-vacation-work-office" title="Link to an article by Vox">more productive</a>.</p>
+<p>People in Europe took vacation seriously. Once, when I only took 10 days for a trip to Spain, my colleagues chastised me for taking so little time off. I learned to take vacation chunks in two-week intervals. Well rested, I noticed that I felt more productive and creative when I returned to work. Recent <a href="https://www.nytimes.com/2013/02/10/opinion/sunday/relax-youll-be-more-productive.html?pagewanted=all&amp;_r=1&amp;&amp;gwh=AC034D10F64239B961A6E1CDE12C9332&amp;gwt=pay&amp;assetType=opinion" title="Link to an article by the New York Times">American research</a> confirms what I was feeling: Relaxing can make you <a href="http://www.vox.com/2014/7/22/5912369/creativity-vacation-work-office" title="Link to an article by Vox">more productive</a>.</p>
 </blockquote>
 <p>I could continue, but you get the gist.</p>
 <p>With self-imposed deadlines, I find that I am more creative in my problem-solving and often find better solutions than if I was working on problems without a time-sensitive goal attached. I believe the same thing would be applied to a shorter work day. A six-hour work day would also discourage long meetings without focus (well, long meetings <em>period</em>). I don&#39;t see big American companies making these quote drastic changes but startups? Hell yeah, definitely. Instead of focusing on &quot;perks&quot; like beer on tap, foosball tables, and game systems, &amp;c, why not focus on improving the lives of your employees so they can make dope shit?</p>
@@ -2862,42 +2862,42 @@ end</code></pre>
 <p>As you can see, I have a <strong>lot</strong> going on. Eagle-eyed observers will see that some books have red dot stickers on them. Those are there to symbolize which books I have not read yet, or <em>started</em> but haven&#39;t finished. In alphabetical order, they are:</p>
 <ul>
 <li><del><em>1984</em> — George Orwell</del> <a href="/2017/1984-review">review</a></li>
-<li><em>The 48 Laws of Power</em> — Robert Greene</li>
-<li><em>A Culture of Innovation: Insider accounts of computing and life at BBN</em> — David Walden and Raymond Nickerson</li>
-<li><em>The Art of Profitability</em> — Adrian Slywotzky</li>
+<li><em>The 48 Laws of Power</em> — Robert Greene</li>
+<li><em>A Culture of Innovation: Insider accounts of computing and life at BBN</em> — David Walden and Raymond Nickerson</li>
+<li><em>The Art of Profitability</em> — Adrian Slywotzky</li>
 <li><em>The Art of the Start</em> — Guy Kawasaki</li>
 <li><em>Astronomy 101</em> — Carolyn Collins Petersen</li>
 <li><em>Brave New World</em> — Aldous Huxley</li>
 <li><em>Bring the Outdoors In</em> — Shane Powers and Gentl &amp; Hyers</li>
-<li><em>Business Model Generation</em> — Alexander Osterwalder and Yves Pigneur</li>
-<li><em>The Cold Between</em> — Elizabeth Bonesteel</li>
-<li><em>Connectography</em> — Parag Khanna</li>
-<li><em>Cosmos</em> — Carl Sagan</li>
-<li><del><em>Count Zero</em> — William Gibson</del> <a href="/2017/count-zero-review">review</a></li>
-<li><em>Designing News</em> — Francesco Franchi</li>
+<li><em>Business Model Generation</em> — Alexander Osterwalder and Yves Pigneur</li>
+<li><em>The Cold Between</em> — Elizabeth Bonesteel</li>
+<li><em>Connectography</em> — Parag Khanna</li>
+<li><em>Cosmos</em> — Carl Sagan</li>
+<li><del><em>Count Zero</em> — William Gibson</del> <a href="/2017/count-zero-review">review</a></li>
+<li><em>Designing News</em> — Francesco Franchi</li>
 <li><em>Easy Origami</em> — John Montroll</li>
 <li><em>The Fabric of the Cosmos</em> — Brian Greene</li>
 <li><em>Getting Things Done</em> — David Allen</li>
 <li><em>HOLO 2</em> — Various Artists/Writers</li>
 <li><em>Humans Of New York stories</em> — Brandon Stanton</li>
 <li><em>Illuminations: Wisdom From This Planet&#39;s Greatest Minds</em> — Illuminatiam</li>
-<li><em>Isaac Newton&#39;s Principia Mathematica Reissue</em> — Kronecker Wallis</li>
-<li><em>The Mandibles: A Family, 2029-2047</em> — Lionel Shriver</li>
-<li><em>The Mission Chinese Food Cookbook</em> — Danny Bowien and Chris Ying</li>
-<li><em>Mona Lisa Overdrive</em> — William Gibson</li>
+<li><em>Isaac Newton&#39;s Principia Mathematica Reissue</em> — Kronecker Wallis</li>
+<li><em>The Mandibles: A Family, 2029-2047</em> — Lionel Shriver</li>
+<li><em>The Mission Chinese Food Cookbook</em> — Danny Bowien and Chris Ying</li>
+<li><em>Mona Lisa Overdrive</em> — William Gibson</li>
 <li><em>NASA Graphic Standards Manual reissue</em> — Jesse Reed &amp; Hamish Smyth</li>
 <li><em>The Nature of Code</em> — Daniel Shiffman</li>
-<li><em>NES/Famicom: a visual compendium</em> — Sam Dyer</li>
+<li><em>NES/Famicom: a visual compendium</em> — Sam Dyer</li>
 <li><em>NLP: The New Technology of Achievement</em> — NLP Comprehensive and Steve Andreas</li>
 <li><em>Operating Systems: Design and Implementation</em> — Andrew S Tanenbaum and Albert S Woodhull</li>
-<li><em>A People&#39;s History of the United States</em> — Howard Zinn</li>
-<li><em>Physics of the Future</em> — Michio Kaku</li>
-<li><em>Rayla 2212</em> — Ytasha L Womack</li>
-<li><em>The Remnants of Trust</em> — Elizabeth Bonesteel</li>
+<li><em>A People&#39;s History of the United States</em> — Howard Zinn</li>
+<li><em>Physics of the Future</em> — Michio Kaku</li>
+<li><em>Rayla 2212</em> — Ytasha L Womack</li>
+<li><em>The Remnants of Trust</em> — Elizabeth Bonesteel</li>
 <li><em>The Secret Recipes</em> — Dominique Ansel</li>
-<li><em>Selling the Invisible</em> — Harry Beckwith</li>
-<li><em>Snowcrash</em> — Neal Stephenson</li>
-<li><em>Space Chronicles</em> — Neil deGrasse Tyson</li>
+<li><em>Selling the Invisible</em> — Harry Beckwith</li>
+<li><em>Snowcrash</em> — Neal Stephenson</li>
+<li><em>Space Chronicles</em> — Neil deGrasse Tyson</li>
 <li><em>Universal Principles of Design</em> — William Lidwell and Kritina Holden</li>
 </ul>
 <p>That&#39;s 38 books in total. Of those, two of them aren&#39;t actually in my possession <em>yet</em>. <em>Isaac Newton&#39;s Principia Mathematica Reissue</em> and <em>NES/Famicom: a visual compendium</em> are both Kickstarter-backed books that should be delivered sometime this year.</p>

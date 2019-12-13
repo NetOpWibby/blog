@@ -1,5 +1,10 @@
+# EditorConfig configuration for netop:// ウエハ's projects
+# http://editorconfig.org
+
+# Top-most EditorConfig file
 root = true
 
+# Unix-style newlines with a newline ending every file, utf-8 charset
 [*]
 charset = utf-8
 end_of_line = lf
@@ -7,3 +12,10 @@ indent_size = 2
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+# Match diffs, avoid to trim trailing whitespace
+[*.{diff,patch}]
+trim_trailing_whitespace = false

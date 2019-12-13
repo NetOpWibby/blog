@@ -60,7 +60,7 @@ Because the Internet is open to all, there will inevitably be disturbing/disgust
 
 ## Prior Art
 
-There's a company named Urbit who's mission is quite similar:
+There's a company named Urbit whose mission is quite similar:
 
 > An Urbit is a networked personal server that runs your apps and stores your data, serves as your permanent online identity and puts you back in control of your digital life under a single login.
 >
