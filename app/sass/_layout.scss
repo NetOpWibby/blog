@@ -76,6 +76,11 @@ ul {
 ol,
 ul {
   padding-left: 2rem;
+
+  ol,
+  ul {
+    margin-bottom: 0; // override
+  }
 }
 
 ol {
