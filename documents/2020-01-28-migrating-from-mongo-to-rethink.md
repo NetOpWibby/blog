@@ -158,3 +158,13 @@ And there you have it! A super easy guide to move from MongoDB to RethinkDB. I'v
 Contrast that with RethinkDB's Data Explorer, clear error messages, and clean documentation and it's not difficult to imagine why I'd make the switch. 🕸
 
 P.S. New year, [new projects](https://socii.network/NetOpWibby/status/e3HWCaoqTZYzZvZ47RXfp "Sneak peek at codebase"), and now I feel like I need a new design for this blog. And then I remembered that first I need to create a [personal API](/2019/a-personal-api "A Personal API") so this blog can just become the presentation layer for the content.
+
+
+***2020.01.30 update***
+
+> Another reason to migrate is the license of MongoDB: SSPL vs. Apache 2 of RethinkDB.
+> — [af](https://lobste.rs/u/af)
+
+For others who may not know what [SSPL](https://lukasatkinson.de/2019/mongodb-no-longer-seeks-osi-approval-for-sspl) entails (like me until I read the linked post):
+
+Basically, SSPL means one cannot offer MongoDB as a hosted service. That makes sense from their end as they offer hosting. However, it's a bit of a punk move because they are preventing potential competition from forcing them to improve their product.

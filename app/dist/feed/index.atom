@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.webb.page/</id>
     <title>the Webb blog</title>
-    <updated>2020-01-28T23:05:52.026Z</updated>
+    <updated>2020-01-30T21:58:29.550Z</updated>
     <generator>The 'Net</generator>
     <author>
         <name>Paul Anthony Webb</name>
@@ -109,6 +109,12 @@ r.db(&quot;dawebb&quot;).table(&quot;visits&quot;).update({
 <p>And there you have it! A super easy guide to move from MongoDB to RethinkDB. I&#39;ve been using RethinkDB for several months now and I am way happier than I was with MongoDB. While super easy to get into, once you get in too deep it becomes an exercise in frustration to find solutions to ambiguous errors and the MongoDB docs are not user-friendly.</p>
 <p>Contrast that with RethinkDB&#39;s Data Explorer, clear error messages, and clean documentation and it&#39;s not difficult to imagine why I&#39;d make the switch. 🕸</p>
 <p>P.S. New year, <a href="https://socii.network/NetOpWibby/status/e3HWCaoqTZYzZvZ47RXfp" title="Sneak peek at codebase">new projects</a>, and now I feel like I need a new design for this blog. And then I remembered that first I need to create a <a href="/2019/a-personal-api" title="A Personal API">personal API</a> so this blog can just become the presentation layer for the content.</p>
+<p><strong><em>2020.01.30 update</em></strong></p>
+<blockquote>
+<p>Another reason to migrate is the license of MongoDB: SSPL vs. Apache 2 of RethinkDB.<br/>— <a href="https://lobste.rs/u/af">af</a></p>
+</blockquote>
+<p>For others who may not know what <a href="https://lukasatkinson.de/2019/mongodb-no-longer-seeks-osi-approval-for-sspl">SSPL</a> entails (like me until I read the linked post):</p>
+<p>Basically, SSPL means one cannot offer MongoDB as a hosted service. That makes sense from their end as they offer hosting. However, it&#39;s a bit of a punk move because they are preventing potential competition from forcing them to improve their product.</p>
 ]]></content>
         <author>
             <name>Paul Anthony Webb</name>
