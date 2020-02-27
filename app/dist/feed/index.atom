@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.webb.page/</id>
     <title>the Webb blog</title>
-    <updated>2020-01-30T21:58:29.550Z</updated>
+    <updated>2020-02-27T07:32:34.371Z</updated>
     <generator>The 'Net</generator>
     <author>
         <name>Paul Anthony Webb</name>
@@ -15,6 +15,69 @@
     <logo>https://blog.webb.page/assets/og.png</logo>
     <icon>https://blog.webb.page/assets/favicon.svg</icon>
     <rights>All Rights Reserved, Paul Anthony Webb</rights>
+    <entry>
+        <title type="html"><![CDATA[In favor of small modules and plumbing]]></title>
+        <id>https://blog.webb.page/2020/small-modules-and-plumbing</id>
+        <link href="https://blog.webb.page/2020/small-modules-and-plumbing"/>
+        <updated>2020-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Don't you want a beautiful chest of drawers?]]></summary>
+        <content type="html"><![CDATA[<p>In the JavaScript/Node.js community there have been fiery debates over whether publishing super-focused modules to npm is a positive thing or not. Installing a module that consists of maybe 50 lines of code or so but does a specific thing you need <strong>well</strong> is a good thing. No need to copy/paste the same lines of code in all of your projects. Then again, does publishing such modules pollute the world&#39;s most popular JavaScript package manager and snatch awesome package names away from multi-faceted modules? As with most things, it boils down to <em>perspective</em>. This post examines how I used to be of the mindset that publishing a plethora of &quot;focused&quot; modules is a waste of time but now think is a fantastic idea.</p>
+<h2 id="the-left-pad-incident-c">The <code>left-pad</code> incident, &amp;c</h2>
+<p>Azer Koçulu, the developer of a module called <code>left-pad</code>, <a href="https://github.com/left-pad/left-pad/issues/4" title="npmjs.org tells me that left-pad is not available (404 page)">unpublished</a> this and the other 200+ modules he wrote from npm. It was a retaliatory move due to the fact that npm (the company) reverted ownership of another module of his, <code>kik</code>, to a company of the same name. To <a href="https://kodfabrik.com/journal/i-ve-just-liberated-my-modules" title="I&#39;ve Just Liberated My Modules">quote</a> the man himself:</p>
+<blockquote>
+<p>This situation made me realize that NPM is someone&#39;s private land where corporate is more powerful than the people, and I do open source because, Power To The People.</p>
+</blockquote>
+<p>To be honest, I don&#39;t blame him. The <code>kik</code> situation was rather messed up in my opinion but when there are patent trolls involved, <em>someone</em> is getting fucked (see npm&#39;s <a href="https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm" title="kik, left-pad, and npm">response</a>). Unfortunately, Azer&#39;s actions broke a significant amount of larger modules that depended upon the existence of <code>left-pad</code> and the Internet seemed to quite literally blow up for a day. Pundits published think pieces to Medium, Twitter threads proliferated, and insults/disdain toward Azer flew online for days. I&#39;ll admit, I got caught up in the frenzy and did a lot of <a href="https://www.urbandictionary.com/define.php?term=SMDH" title="Urband Dictionary definition for SMDH">SMDH</a> towards Azer, npm, and kik.</p>
+<p>At the time I was fully content with finding small utility modules like <code>left-pad</code> for inclusion within my projects and rather than installing them, I opted to extract the source code and place them in my projects directly. I did this for a few reasons:</p>
+<ol>
+<li>Prevent potential fallout from an unpublish from happening to me.</li>
+<li>Protection against a module creator giving up ownership to a spammer/hacker.</li>
+<li>Quality control. Seriously, there is almost too much code out there that mixes tabs/spaces, single/double quotes, semi-colon/no semi-colon, snake/camel casing, and so on. Often in the same damn file! Gross.</li>
+</ol>
+<p>This is not to say that my own code is flawless. I&#39;ll look back on my old code and think it&#39;s shit but at least it&#39;s <em>consistent</em> shit.</p>
+<h2 id="turning-point">Turning Point</h2>
+<p>A couple weeks ago I was returning to work on an API rewrite in progress and something would not compile. I was befuddled because I have several API projects that more or less share the same core. That&#39;s when I thought, &quot;Why <strong>aren&#39;t</strong> most of the these utility functions their own modules?&quot; This question stuck in my mind as I browsed the web and I remembered to look up a rather prolific JavaScript developer by the name of Sindre Sorhus. The man has over one <strong><em>thousand</em></strong> modules published on npm and all of them are small and/or focused (does one thing well, no bells and whistles). <a href="https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328" title="One-line node modules">Here</a> is his rationale for creating them:</p>
+<blockquote>
+<p>You make small focused modules for reusability and to make it possible to build larger more advanced things that are easier to reason about.</p>
+</blockquote>
+<p>This made perfect sense to me and I had a chat with <a href="https://jesseyoungblood.com" title="Jesse&#39;s homepage">Jesse</a> about it. He&#39;d the same thought a year prior and started working on publishing modules from the code he was constantly copy/pasting between projects. Jesse&#39;s affirmation, coupled with Sindre&#39;s node module <a href="https://github.com/sindresorhus/node-module-boilerplate" title="Boilerplate to kickstart creating a Node.js module">boilerplate</a> and <a href="https://www.tsmean.com/articles/how-to-write-a-typescript-library" title="How to write a typescript library">this tutorial</a> on creating TypeScript libraries encouraged me to get started with publishing more focused modules than I had previously.</p>
+<p>I am in the process of (hopefully) obtaining ownership of an unused (and empty) scope/organization on npm and once that happens, the nine focused modules I&#39;ve written since my chat with Jesse will be live (these modules are currently published on my personal package registry). I see a couple advantages to <a href="https://docs.npmjs.com/misc/scope" title="npm documentation on scopes">scoping</a> one&#39;s modules:</p>
+<ul>
+<li>Any cool name you can think of for your module is available</li>
+<li>At a glance, anyone can tell (roughly) who is responsible for the module</li>
+<li>Reputation building - become known for creating useful modules</li>
+<li>Doesn&#39;t &quot;pollute&quot; the npm namespace since everything&#39;s under an umbrella, so to speak</li>
+</ul>
+<p>Some <em>disadvantages</em> to this approach:</p>
+<ul>
+<li>Developers have to type extra to install your module<ul>
+<li><code>npm i @yourScope/packageName</code> versus</li>
+<li><code>npm i packageName</code></li>
+</ul>
+</li>
+<li>If you have a truly unique package name and it&#39;s available, you&#39;d be a fool to not take it</li>
+</ul>
+<p>It&#39;s basically like choosing a gTLD over a classic TLD. If <code>webb.com</code> was available, I would have purchased that domain. It was not, so I purchased <code>webb.page</code>. These are both great but I was lucky that mine is a neat domain hack.</p>
+<h2 id="the-bigger-picture">The Bigger Picture</h2>
+<p>There&#39;s another reason I&#39;ve decided to go through with all this. To quote Steve Jobs (emphasis mine):</p>
+<blockquote>
+<p>When you&#39;re a carpenter making a beautiful chest of drawers, you&#39;re not going to use a piece of plywood on the back, even though it faces the wall and nobody will ever see it. You&#39;ll know it&#39;s there, so you&#39;re going to use a beautiful piece of wood on the back. <strong>For you to sleep well at night, the aesthetic, the quality, has to be carried all the way through.</strong></p>
+</blockquote>
+<p>You remember that API project I mentioned earlier? I could not escape the nagging suspicion that my project could be, nay, <em>feel</em> a helluva lot better if I knew the components used to create it were stronger. One way to ensure that is to write tests. Another way is to use a typed language...like TypeScript. And, that&#39;s exactly what I did for every module I&#39;ve created leading up to this post. I suppose I just made the case for writing tests, period. 🤔</p>
+<p>Regarding Jobs&#39; quote, here&#39;s another way to look at it: the most beautiful hotel in the world wouldn&#39;t feel like such if all the toilets overflowed when flushed. I&#39;m a serial creator but I&#39;ve grown to enjoy working on the plumbing. 🕸</p>
+<h2 id="c">&amp;c</h2>
+<ul>
+<li>My personal package registry is currently running on <a href="https://github.com/verdaccio/verdaccio" title="A lightweight private npm proxy registry">Verdaccio</a> but I&#39;m thinking of checking out <a href="https://github.com/entropic-dev/entropic" title="a package registry for anything, but mostly javascript">Entropic</a>. We&#39;ll see.</li>
+<li>There&#39;s an <a href="https://github.com/parro-it/awesome-micro-npm-packages" title="A curated list of small, focused npm packages.">awesome</a> list of other focused modules to get inspired by or use in your own projects.</li>
+<li>This new love of plumbing is at odds with my impatience to get at least three products I have out of beta (and to make money from them). The end goal is for these products to be as automated and fault-tolerant as possible so I can focus on customer experience. No amount of code can replace the human connection.</li>
+</ul>
+]]></content>
+        <author>
+            <name>Paul Anthony Webb</name>
+            <email>paul+blog@webb.page</email>
+            <uri>https://webb.page</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Migrating from MongoDB to RethinkDB]]></title>
         <id>https://blog.webb.page/2020/migrating-from-mongo-to-rethink</id>
