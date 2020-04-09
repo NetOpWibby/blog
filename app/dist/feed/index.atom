@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.webb.page/</id>
     <title>the Webb blog</title>
-    <updated>2020-02-27T07:32:34.371Z</updated>
+    <updated>2020-04-09T18:10:12.191Z</updated>
     <generator>The 'Net</generator>
     <author>
         <name>Paul Anthony Webb</name>
@@ -154,19 +154,18 @@ r.db(&quot;dawebb&quot;).table(&quot;posts&quot;).index_create(&quot;slug&quot;)
 <p>Now let&#39;s update our time-based fields:</p>
 <pre><code class="language-js">// Command
 r.db(&quot;DATABASE_NAME&quot;).table(&quot;TABLE_NAME&quot;).update({
-  created: r.iso8601(r.row[&quot;created&quot;]).to_iso8601(),
-  updated: r.iso8601(r.row[&quot;updated&quot;]).to_iso8601()
+  created: r.ISO8601(r.row(&quot;created&quot;)),
+  updated: r.ISO8601(r.row(&quot;updated&quot;))
 });
 
 // Examples
 r.db(&quot;dawebb&quot;).table(&quot;users&quot;).update({
-  created: r.iso8601(r.row[&quot;created&quot;]).to_iso8601(),
-  updated: r.iso8601(r.row[&quot;updated&quot;]).to_iso8601()
+  created: r.ISO8601(r.row(&quot;created&quot;)),
+  updated: r.ISO8601(r.row(&quot;updated&quot;))
 });
 
 r.db(&quot;dawebb&quot;).table(&quot;visits&quot;).update({
-  created: r.iso8601(r.row[&quot;created&quot;]).to_iso8601(),
-  timestamp: r.iso8601(r.row[&quot;timestamp&quot;]).to_iso8601()   
+  timestamp: r.ISO8601(r.row(&quot;timestamp&quot;))
 });</code></pre>
 <h2 id="fin">FIN</h2>
 <p>And there you have it! A super easy guide to move from MongoDB to RethinkDB. I&#39;ve been using RethinkDB for several months now and I am way happier than I was with MongoDB. While super easy to get into, once you get in too deep it becomes an exercise in frustration to find solutions to ambiguous errors and the MongoDB docs are not user-friendly.</p>

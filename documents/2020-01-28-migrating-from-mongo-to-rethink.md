@@ -133,19 +133,18 @@ Now let's update our time-based fields:
 ```js
 // Command
 r.db("DATABASE_NAME").table("TABLE_NAME").update({
-  created: r.iso8601(r.row["created"]).to_iso8601(),
-  updated: r.iso8601(r.row["updated"]).to_iso8601()
+  created: r.ISO8601(r.row("created")),
+  updated: r.ISO8601(r.row("updated"))
 });
 
 // Examples
 r.db("dawebb").table("users").update({
-  created: r.iso8601(r.row["created"]).to_iso8601(),
-  updated: r.iso8601(r.row["updated"]).to_iso8601()
+  created: r.ISO8601(r.row("created")),
+  updated: r.ISO8601(r.row("updated"))
 });
 
 r.db("dawebb").table("visits").update({
-  created: r.iso8601(r.row["created"]).to_iso8601(),
-  timestamp: r.iso8601(r.row["timestamp"]).to_iso8601()   
+  timestamp: r.ISO8601(r.row("timestamp"))
 });
 ```
 
