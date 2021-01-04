@@ -60,6 +60,11 @@ polka()
 
     res.end(await getFileContents(slug));
   })
+  .get("/:slug/:part", async(req, res) => {
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    const { part, slug } = req.params;
+    res.end(movedMessage(slug, part));
+  })
   .listen(port, err => {
     if (err)
       throw err;
@@ -392,4 +397,32 @@ function logPrompt() {
     `${print.bold(print.white(environment))}`,
     "\n\n"
   ].join("");
+}
+
+function movedMessage(first, second) {
+  let cleanedUrlFragment1 = "";
+  let cleanedUrlFragment2 = "";
+  let message = "something on the homepage";
+
+  if (String(first).length === 4 && Number(first))
+    cleanedUrlFragment1 = String(first);
+
+  if (String(second).indexOf("-") > -1)
+    cleanedUrlFragment2 = String(second);
+
+  if (cleanedUrlFragment1 && cleanedUrlFragment2)
+    message = `https://blog.webb.page/${cleanedUrlFragment1}-XX-XX-${cleanedUrlFragment2}.txt`;
+
+  return dedent`
+    ---
+    title: Page (most likely) moved
+    date:  20XX-XX-XX
+    tags:  error
+    tldr:  What you are looking for probably moved
+    ---
+
+    I have not setup redirects for old blog posts to map to the new
+    layout. My apologies. For now, you are probably looking for
+    ${message}.
+  `;
 }
