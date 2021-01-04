@@ -2,12 +2,8 @@
 .DS_Store
 Thumbs.db
 
-# Files
-*.css
-*.map
-*.lock
+# File
 package-lock.json
 
-# Folders
-.sass-cache
+# Folder
 node_modules

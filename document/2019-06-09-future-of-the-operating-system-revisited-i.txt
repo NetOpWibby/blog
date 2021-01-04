@@ -1,0 +1,174 @@
+---
+title: The Future of the Operating System: Revisited, Part 1
+date:  2019-06-09
+tags:  hikari
+tldr:  Where we're going is…fascinating and unknown.
+---
+
+Back in 2013[1] I penned an essay titled, "The Future of the Operating
+System." In it, I attempted to predict where the operating system paradigm was
+headed based on what was obvious to me at the time: cloud services were taking
+off and mobile devices were seeing greater usage than personal computers.
+Logically (to me), this meant the concept of a responsive OS was upon us. Some
+of the cited examples were Firefox OS[2] and Ubuntu Edge[3], products that
+were both designed to be highly mobile primary computing devices that would
+dock to an apparatus on one's desk to become a full-fledged workstation. The
+essay was also an opportunity to plug my OS in-progress (now dormant),
+hikari[4], built around the responsive OS concept.
+
+For now, a rectangular slab of glass and metal that more or less fits in the
+palm of an adult hand appears to be the preferred format for a mobile
+computing device. Specific details and component internals can and will change
+but the external *probably* won't change much so no time will be spent talking
+about that. Instead, I'll go over my favorite UI concepts that inventive minds
+have created in the half-decade since my inital opus.
+
+
+
+## eDEX-UI[5]
+
+> eDEX-UI is a fullscreen, cross-platform terminal emulator and system monitor
+> that looks and feels like a sci-fi computer interface.
+>
+> Heavily inspired from the TRON Legacy movie effects[6] (especially the Board
+> Room sequence[7]), the eDEX-UI project was originally meant to be
+> "DEX-UI[8] with less « art » and more « distributable software »". While
+> keeping a futuristic look and feel, it strives to maintain a certain level
+> of functionality and to be usable in real-life scenarios, with the larger
+> goal of bringing science-fiction UXs to the mainstream.
+>
+> It might or might not be a joke taken too seriously.
+
+📸[eDEX-UI screenshot][IMG1]
+📸[eDEX-UI screenshot][IMG2]
+📸[eDEX-UI screenshot][IMG3]
+
+The on-screen keyboard suggests the use of this UI on a large touchscreen
+table (like Microsoft's PixelSense[9] or Oblivion's Light Table[10]) or at
+least the 12" iPad Pro. Despite what some would consider "visual noise", this
+UI has almost everything one would need for text entry and multitasking.
+
+I personally don't see myself using a UI like this because of limited color
+palette. It looks wonderful for focus though.
+
+If nothing else, it is fun to look at and pretend you're in a future where
+hoverboards are actually real and not 🤬 batteries on wheels.
+
+
+
+## Desktop Neo[11]
+
+> Neo is a conceptual desktop operating system interface that is built for
+> todays people, needs and technologies.
+
+📸[Desktop Neo screenshot][IMG4]
+📸[Desktop Neo screenshot][IMG5]
+📸[Desktop Neo screenshot][IMG6]
+
+This UI is all about fullscreen EVERYTHING. Window manager lovers would be
+so into this (looking at you, /r/unixporn[12] community). Heck, *I* am into
+this! All day every day I am CONSTANTLY resizing/swiping/moving windows
+around.
+
+The panel concept of this UI is nice and the search functionality sounds like
+something I *need*. I am currently on the beta for macOS Catalina and it
+*almost* has the concept down but you can only split two windows, max.
+
+📸[macOS Catalina, splitscreen][IMG7]
+
+I do like how productive it makes me feel so maybe I'll become a heavy user of
+it (and hope Apple expands on the feature). Of the UI concepts showcased here,
+Desktop Neo is my favorite.
+
+
+
+## Mercury[13]
+
+> Mercury is a speculative reimagining of the operating system as a fluid
+> experience driven by human intent.
+
+> No Apps or Folders. Mercury fluidly assembles content and actions based on
+> your intentions. So you can focus on the destination, not the many ways to
+> get there.
+
+📸[Mercury screenshot][IMG8]
+📸[Mercury screenshot][IMG9]
+📸[Mercury screenshot][IMG10]
+📸[Mercury screenshot][IMG11]
+
+This is interesting because it completely strips away the desktop paradigm and
+creates something that aims to intuit what you'll do based on previous
+interactions. Basically, local machine learning to help you be more
+productive.
+
+Mercury makes *heavy* use of shortcuts and search to get around, so this isn't
+the UI for the faint of heart.
+
+The mockups show email messages and some neat things around that but nothing
+else. It'd be interesting to see how a web browser would look. How do I see
+all my apps? The creator of Mercury says there aren't any apps but come on,
+OF COURSE there are.
+
+I'm excited to see where Mercury heads but for now, it just looks like a nice
+email app.
+
+
+
+## Thoughts
+
+A key issue I have with every UI concept mentioned here (and nearly every one
+on the Internet) is the lack of real work being done within them. Outside of
+an email or text prompt, you rarely see how a coder would use it. Or an
+analyst. Or a designer. Or anyone being productive, period.
+
+A common thread that brings these concepts together is, *focus*. Another is
+change (obviously). After all, the desktop metaphor[14] as we know it was
+created in 1970. *Nineteen seventy*. What you are reading right now was
+written in 2019, nearly 50 YEARS later and…not much has changed.
+
+As I am wont to do, I think about lapsed projects of mine and wonder what
+would warrant further development. In hikari's case, it doesn't make sense to
+simply recreate the tried-and-true desktop metaphor. If my aim is to solve
+problems inherent to a dated paradigm, keeping with the status quo is NOT the
+way to go.
+
+One of the reasons Apple's iOS is massively popular is because users don't
+have to think about files and folders, a chief tenant of the desktop paradigm.
+
+So…where do we go from here?
+
+I don't pretend to have the answer but I think we're *slowly* going in the
+right direction.
+
+
+
+---
+
+[1]: https://2016.dsgn.io/thoughts/post/the-future-of-the-operating-system
+[2]: https://en.m.wikipedia.org/wiki/Firefox_OS
+[3]: https://en.m.wikipedia.org/wiki/Ubuntu_Edge
+[4]: https://hikar.io
+[5]: https://github.com/GitSquared/edex-ui
+[6]: https://web.archive.org/web/20170511000410/http://jtnimoy.com/blogs/projects/14881671
+[7]: https://gmunk.com/TRON-Board-Room
+[8]: https://github.com/seenaburns/dex-ui
+[9]: https://en.m.wikipedia.org/wiki/Microsoft_PixelSense
+[10]: https://duckduckgo.com/?q=oblivion+table&iax=images&ia=images
+[11]: https://desktopneo.com
+[12]: https://www.reddit.com/r/unixporn
+[13]: https://www.mercuryos.com
+[14]: https://en.m.wikipedia.org/wiki/Desktop_metaphor
+
+---
+
+[IMG1]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-a.png
+[IMG2]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-b.png
+[IMG3]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-c.png
+[IMG4]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-d.png
+[IMG5]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-e.png
+[IMG6]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-f.png
+[IMG7]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-g.png
+[IMG8]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-h.png
+[IMG9]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-i.png
+[IMG10]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-j.png
+[IMG11]: https://🔥.pixels.wtf/blog/image/2019/future-of-the-os-k.png

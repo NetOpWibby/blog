@@ -1,0 +1,172 @@
+---
+title: Neat npm modules - Vol 1
+date:  2019-01-02
+tags:  neato, review
+tldr:  The modules you wish you used
+---
+
+This is the first post in what will become a series of posts about interesting
+and useful npm modules I come across and/or use in my projects.
+
+Over the past year, small modules that got to the point and had close to zero
+dependencies (dependency-free is even better!) became more appealing to me for
+a few reasons.
+
+1. Big modules are slow to update. When a vulnerability is found in one of
+   their dependencies the module maintainers are notified and then…nothing.
+   Sometimes the maintainers never respond so someone forks the project,
+   updates the dependencies, and pushes that project under a new name. When
+   security issues are discovered, I want them resolved ASAP. Smaller modules
+   have less attack area, obviously. Fewer moving parts, &c.
+2. The left-pad incident[1] and similarly befuddling things happening in the
+   npm ecosphere give me pause about relying on a module with a bajillion
+   moving parts. TL;DR: A popular module used by *thousands* of other modules
+   was unpublished (removed) from npm and that caused QUITE the fuss when
+   routine `npm install`s went off the rails across the Internet.
+
+Please note that `package.json` examples below only have the necessary
+parameters regarding the section its in. This is for brevity. New developers
+come into being every day I'd like to help them out by removing possible
+confusion.
+
+
+
+## colorette
+
+> Colorette is a Node.js library for colorizing text in terminals.
+
+Most people just use chalk[2] to style terminal text and I did too. When I saw
+I could get the same functionality in a smaller dependency-free package, I
+jumped at the chance to use it. chalk does and supports a lot more but for
+*my* needs, colorette is juuuuust fine.
+
+Find it on npm[3] | GitHub[4]
+
+
+
+## husky
+
+> Husky can prevent bad git commit, git push and more 🐶 woof!
+
+I'm honestly *embarrassed* that I haven't used something like husky earlier in
+life. Husky saves you from *yourself* and what a beautiful job it does. Here's
+how I use it in my `package.json`:
+
+```json
+"husky": {
+  "hooks": {
+    "pre-commit": "npm run format && npm run test:sass && git add -A :/"
+  }
+},
+"scripts": {
+  "format": "eslint '*/*.js' --fix --ignore-pattern '/app/dist/'",
+  "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose --no-exit"
+}
+```
+
+What my pre-commit hook does is:
+
+1. Use eslint to automatically format issues in JavaScript files found in the
+   codebase, except for JavaScript files in the folder `/app/dist/`.
+2. Use sass-lint and a custom configuration file to find issues in Sass files
+   found in the codebase.
+3. Stage (prepare) the changed files, if any, to be committed to my git server
+   (I self-host with Gitea but this works with any git server).
+
+Find it on npm[5] | GitHub[6]
+
+
+
+## npm-run-all
+
+> A CLI tool to run multiple npm-scripts in parallel or sequential.
+
+Here's how I use it in my `package.json`:
+
+```json
+"scripts": {
+  "test": "run-s test:*",
+  "test:dependencies": "updates --update ./ --exclude fastify",
+  "test:lint": "standardx --verbose | snazzy",
+  "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose --no-exit",
+  "watch": "run-p watch:*",
+  "watch:sass": "sass --watch app/sass:app/dist --style compressed",
+  "watch:server": "NODE_ENV=development nodemon server"
+}
+```
+
+`run-s` runs scripts sequentially, whereas `run-p` runs scripts in parallel.
+You've probably guessed by now but `run-s test:*` tells npm-run-all to run any
+script with "test:", one after the other. `run-p watch:*` tells it run any
+script with "watch:", side by side. I like it a lot.
+
+Find it on npm[7] | GitHub[8]
+
+
+
+## updates
+
+> Fast npm dependency updating tool
+
+I found updates after being frustrated with npm-check-updates[9]. One of the
+maintainers of the latter was uninterested[10] in updating the dependencies.
+Forking and working on npm-check-updates myself proved to be annoying so I
+went looking for solutions elsewhere.
+
+Here's how I use it in my `package.json` (fastify is working on their next
+version and it's messing with this script so I ignore updating it for now):
+
+```json
+"scripts": {
+  "test:dependencies": "updates --update ./ --exclude fastify"
+}
+```
+
+Find it on npm[11] | GitHub[12]
+
+
+
+## ver
+
+> Increment semantic versions across your project. Intended for projects with
+> a package.json, but works with other files too. Will create a git commit and
+> tag by default. By default, only the nearest package.json file is modified.
+
+Before ver, I never cared about "semantic versioning", let alone versioning
+*itself*. ver makes it super low effort to do. I just run
+`ver patch|minor|major` and chain it with other commands. It will
+automatically update the "version" field in your `package.json` file.
+Pretty sweet.
+
+My typical usage is something like:
+
+```bash
+ver patch && git push && npm publish
+```
+
+Find it on npm[13] | GitHub[14]
+
+
+
+## FIN
+
+And there you have it! Five neat modules I find incredibly useful. I hope you do too! 🕸
+
+
+
+---
+
+[1]: https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm
+[2]: https://www.npmjs.com/package/chalk
+[3]: https://www.npmjs.com/package/colorette
+[4]: https://github.com/jorgebucaran/colorette
+[5]: https://www.npmjs.com/package/husky
+[6]: https://github.com/typicode/husky
+[7]: https://www.npmjs.com/package/npm-run-all
+[8]: https://github.com/mysticatea/npm-run-all
+[9]: https://www.npmjs.com/package/npm-check-updates
+[10]: https://github.com/tjunnone/npm-check-updates/issues/432
+[11]: https://www.npmjs.com/package/updates
+[12]: https://github.com/silverwind/updates
+[13]: https://www.npmjs.com/package/ver
+[14]: https://github.com/silverwind/ver

@@ -1,0 +1,41 @@
+---
+title: And so, it begins
+date:  2016-12-26
+tags:  announcement
+tldr:  Introduction to this humble blog.
+---
+
+Welcome to theWebb.blog[1]! I am your host, the *most fantabulous* Paul Anthony
+Webb a/k/a NetOperator Wibby (virtually everywhere else on the vast Internet).
+What can you expect from theWebb.blog? Basically anything that comes out of my
+head and holds my attention long enough to be written about.
+
+I thought about porting the posts from my previous blog[2], but I'd rather
+start fresh. After all, after the *tumultuous* year that was 2016, I think we
+could *all* use a fresh start.
+
+As a professional front-end web designer and developer, I thought about
+creating a beautiful theme to showcase my dope skills but I tend to go
+overboard and never release things. I'm aiming to change that. I was also going
+to write my own blogging platform after my frustration and false start with
+Ghost[3] but then I found Hexo[4] (shoutout to the creator of NX framework[5]
+for the recommendation)!
+
+Long story short, I intend to stick around with this blog for quote some time.
+Fancy upgrades and whatnot will happen over the next year and years after that.
+Kottke[6] has been blogging since 2008. I graduated high school in 2006!
+*Crazy*.
+
+I hope you'll find my little area on the Internet of interest at least a few
+times. 🕸
+
+
+
+---
+
+[1]: https://thewebb.blog
+[2]: https://dsgn.io/thoughts
+[3]: https://ghost.org
+[4]: https://hexo.io
+[5]: https://github.com/solkimicreb
+[6]: http://kottke.org

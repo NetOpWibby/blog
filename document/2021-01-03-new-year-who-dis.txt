@@ -1,0 +1,60 @@
+---
+title: New year, who dis?
+date:  2021-01-03
+tags:  announcement
+tldr:  Time is a flat circle
+---
+
+I'm not going to mention last year in number, I don't even want to hear people
+with perfect vision talk about their eyes. We're in a new year, Drumpf is going
+to be out of office in less than three weeks, and I have a new design for my
+blog...more like, LACK of design.
+
+
+
+## Why
+
+I published a grand total of two posts last year. TWO. I was busy working on
+personal projects, dealing with this general malaise of uncertainty, and didn't
+feel like dealing with the annoying process of updating my blog. Yuk. As a
+result though, I have several half-finished posts I can/will upload this year
+since my blog setup is extremely pared down.
+
+Being an architech (a designer who codes and vice-versa) is hella annoying. I
+am displeased by my design AND my code after a period of time, and then I
+detest it far too much. Maybe my experience and age has brought me to the point
+of realizing I don't need the latest fancy UI b̶l̶e̶m̶i̶s̶h̶e̶s̶ features and tooling to
+get something online. I *may* update this to support TypeScript and `import`s
+because I quite enjoy that.
+
+This blog is also missing analytics. They were never on the front-end, but in
+the server. One of my many tasks this year is to overhaul my analytics
+platform[1] to make it robust enough to charge money for.
+
+
+
+## What (now)
+
+I think adding automated deployments would be a nice quality-of-life feature
+and would definitely encourage me to write more. Currently, I have to upload a
+new text file to my server and refresh the pm2 job. In any event, this blog is
+the first step in realizing my personalOS[2] concept in concrete forms and I
+suppose this is the year to document everything as I go through it.
+
+You can check out the previous[3] incarnation of this blog if you're curious to
+see what it was like.
+
+I think 2021 is gonna be big for data portability and flat files are the
+easiest way to do it. The fact that this blog is just a single JavaScript file
+and a folder full of text files (okay AND a couple Node.js modules 😒) is kind
+of neat...actually, that wouldn't be a bad idea for socii[4] to implement.
+Maybe I'll relaunch that soon. We'll see. 🕸
+
+
+
+---
+
+[1]: https://chew.sh
+[2]: </2019-12-02-a-personal-api.txt>
+[3]: https://github.com/NetOperatorWibby/blog/tree/2020
+[4]: https://socii.network
