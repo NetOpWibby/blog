@@ -170,17 +170,26 @@ function createContent(suppliedContent) {
 
           /*————— grid */
 
-          @media (min-width: 801px) {
+          .grid {
+            width: 100%;
+          }
+
+          @media (min-width: 901px) {
             .grid {
               display: table;
               table-layout: fixed;
-              width: 100%;
             }
           }
 
-          @media (max-width: 800px) {
+          @media (max-width: 900px) {
             .grid:first-of-type {
               display: none;
+            }
+
+            .grid {
+              display: flex;
+              flex-direction: column-reverse;
+              padding: 0.75rem 1rem 0.75rem 0;
             }
 
             .grid:nth-child(2) {
@@ -221,22 +230,22 @@ function createContent(suppliedContent) {
             overflow: hidden;
           }
 
-          .col:first-child {
-            padding-right: 3rem;
-            text-align: right;
-            width: 10rem;
-          }
-
-          @media (min-width: 801px) {
+          @media (min-width: 901px) {
             .col {
               display: table-cell;
               padding: 0.75rem 1rem 0.75rem 0;
               vertical-align: middle;
             }
+
+            .col:first-child {
+              padding-right: 3rem;
+              text-align: right;
+              width: 10rem;
+            }
           }
 
           .col a {
-            white-space: nowrap;
+            white-space: pre-line;
           }
         </style>
       </head>
