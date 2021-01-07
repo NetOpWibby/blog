@@ -8,7 +8,7 @@ tldr:  Time is a flat circle
 I'm not going to mention last year in number, I don't even want to hear people
 with perfect vision talk about their eyes. We're in a new year, Drumpf is going
 to be out of office in less than three weeks, and I have a new design for my
-blog...more like, LACK of design.
+blog…more like, LACK of design.
 
 
 
@@ -47,7 +47,7 @@ see what it was like.
 I think 2021 is gonna be big for data portability and flat files are the
 easiest way to do it. The fact that this blog is just a single JavaScript file
 and a folder full of text files (okay AND a couple Node.js modules 😒) is kind
-of neat...actually, that wouldn't be a bad idea for socii[4] to implement.
+of neat…actually, that wouldn't be a bad idea for socii[4] to implement.
 Maybe I'll relaunch that soon. We'll see. 🕸
 
 
