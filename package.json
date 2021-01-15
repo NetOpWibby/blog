@@ -12,8 +12,8 @@
   "devDependencies": {
     "@webb/console": "^2020.8.4",
     "chronver": "^2020.6.18",
-    "husky": "^4.3.6",
-    "nodemon": "^2.0.6",
+    "husky": "^4.3.7",
+    "nodemon": "^2.0.7",
     "updates": "^11.4.2"
   },
   "engines": {
@@ -35,5 +35,5 @@
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2021.01.06"
+  "version": "2021.01.15"
 }

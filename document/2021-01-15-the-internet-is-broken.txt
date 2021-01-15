@@ -1,0 +1,144 @@
+---
+title: The Internet is (not) broken
+date:  2021-01-15
+tags:  culture, internet
+tldr:  Resistence is f̶u̶t̶i̶l̶e̶ effectual
+---
+
+You will find no shortage of "tweet storms" or articles decrying the current
+state of the Internet using adjectives like "doomed", "broken", "ruined", &c.
+While I tend to agree with many of the points shared in such posts, I stop
+short of feeling defeated. Maybe it is because I am an optimist and I recognize
+my own power to create what I wish to see. Maybe it is my decade-plus
+experience and work within the tech industry and absorbing stories of those
+older than I who saw success/failure in the dotcom boom. Whatever it is, a few
+things are made clear to me:
+
+1. People are not going down without a fight. The work happening in the
+   decentralization and cryptocurrency fields are proof of this. Will these
+   avenues catch on? Certainly not immediately, maybe even ever. However, the
+   exercise of creating/discovering solutions is worthwhile regardless,
+   IMHO (failures lead to advancement of new, potentially better ideas).
+2. These big evil tech companies? They did not start out that way.
+   "Mo' money mo' problems," shout-out to Biggie Smalls. If money really is the
+   root of all/most evil, maybe every company should have an in-house ethics
+   committee that is actually empowered to DO THEIR JOB (Dr Timnit Gebru and
+   countless other people of color in the ethics space know this all too well).
+3. Baseline technical IQ is rising — this means our bumbling politicians who
+   have immense difficulty deciphering non-answers from facetious tech CEOs
+   wearing shit-eating grins will finally see what we see and shut that shit
+   down. Well, AOC does not seem to have a problem grasping technical
+   concepts…she is also not 70+ years old so there is that.
+
+Before continuing, it would be useful to recap what ails the Internet as seen
+by enthusiasts of this wonderous platform. Rather than enumerate, I will share
+a list off the top of my head:
+
+* Too much of today's Internet is dependent upon a handful of tech companies.
+  * Most of "FAANG": Facebook, Apple, Amazon, Netflix, Google
+* All these companies are based in the United States, and various law
+  enforcement agencies routinely subpoena (order) said companies to hand over
+  data in the interest of "national security." Half-truths are technically the
+  truth, right?
+* The data brokerage economy, which is a fancy way to say your personal data is
+  sold and traded around the world for cheap, was enabled by Facebook, Google,
+  and a LOT of smaller companies you have never heard the name of
+  (but the investors you follow on Twitter? Oh, *they* know).
+  * In all fairness you *did* agree to the terms and conditions of these
+  services you use so they can *legally* do whatever they want with the data
+  you give them…but does that make it right? Ethics apparently has no place
+  in law.
+
+For fans of capitalism (like myself), this seems like not-that-big-a-deal in
+the grand scheme of things. The best companies became successful and just
+pivoted to what makes the most money. Maximizing profits while keeping margins
+low? That's Business 101, babeee! Pull yourself up by the bootstraps! No pain
+no gain! Working hard or hardly working? ARE YA WINNIN' SON?!
+
+But I digress.
+
+Any time a major service like Google Analytics, YouTube, or
+Amazon Web Services (AWS) is down, a couple technical people get on Twitter and
+say "SEEEEE?! We shouldn't rely on them!" but the fact of the matter is,
+software is created by humans, humans are fallible, and shit happens. And,
+servers falling over? Nobody wants to deal with that, it's annoying! For those
+of us who aren't technical enough to perform DevOps, the idea of managing a
+server (let alone setting one *up*) is intimidating at best. So…the alternative
+is to quit using/paying for one service in favor of a less "evil" or
+problematic one. For example, the people who leave their grandparents behind
+on Facebook in favor of Twitter. It is alarming that Twitter only *started* to
+reign in the President's fear-/hate-mongering and lies in the weeks leading up
+to the election…not one time prior to 2020. 10 days left of the presidency
+he's managed to hold onto and that's when Twitter FINALLY finds the guts to
+boot him off their platform. Anyhoo…
+
+Where do we go from here?
+
+The pessimists of the tech crowd will say there's no point in
+creating alternatives.
+
+- "No one will sign up for your service, what makes it better
+  than <MAJOR SERVICE>?"
+- "<MAJOR SERVICE> has existed for years, you're not just gonna eat
+  their lunch."
+- "Normies want free, they won't pay for your dumb idea"
+- "How are you gonna handle moderation, if <MAJOR SERVICE> can't do it?"
+
+I'm old enough to remember what is commonly referred to as the "Wild West" of
+the Internet. Internet access speeds were excruciatingly slow by today's
+standards and web browsers were not capable of what we take for granted now.
+Developers favored XML over HTML! Because the Internet was still fairly new,
+there were no established norms nor preconceptions. "Data harvesting" sounded
+more like a malicious act some corporation in a cyberpunk novel would engage
+in. But, when people wish the Internet was back to how it used to be, I
+believe they are (usually) talking about the *feeling* of it, rather than the
+limited functionality (interestingly, Gopher has seen a resurgence lately
+along with Gemini).
+
+When I was in middle school in the year 2000 I got an account on homestead.com
+and was able to play around with the free website space they gave me. I
+downloaded a website theme from some place and learned CSS and HTML by
+tweaking parameters in Notepad and re-uploading the changed files. As archaic
+as that process was, it blew my mind that I could create a Megaman Battle
+Network fan-site and have it reachable by a URL to show my friends at school
+in the computer lab. As I got older I wanted a site without ads and more
+storage space so I moved onto mediatemple and continued my web development
+explorations there.
+
+This level of access seems to be gone these days. Services are still free, of
+course, but mostly services where you can be siloed in. This is how brand
+recognition/loyalty occurs. Apple, Microsoft, and Google are not giving
+schools free laptops and tablets out of (just) kindness, it is a long-term
+play that usually pans out. Bah, I feel pessimism settling in so onto
+solutions, as I see them.
+
+YOU CANNOT PUT THE GENIE BACK IN THE BOTTLE
+
+Tech companies have tasted the delicious nectar of wealth that is user data
+and it is the gift that keeps on giving. Well, maybe it should not be called a
+gift. The companies are spending investor dollars to pay their employees to
+build features that will get you to sign up and use their product in exchange
+for your usage habits and keywords within your memes and online rants.
+You…well, *they* get what they pay for. You get a nice park to play in and
+garden to eat from while the wolves watch from behind that tree over there. To
+reduce our reliance on said companies, we need new ones with our best
+interests at heart to tackle:
+
+- analytics
+- blogs and free websites
+- collaborative documents
+- DNS and domains
+- email
+- search
+- social
+
+The easiest way to handle free services is to offer a more capable paid
+service alongside it. Google currently has a monopoly over most of this list
+and best believe, they want *more*. Poor Facebook just cannot stop being
+creepy long enough for people to foolishly trust them again and that is
+crushing their dreams of becoming American WeChat.
+
+As for me? Well, I am just one guy on the Internet with a voice and a plan for
+every item on this list. I am also not afraid of not knowing what I do not
+know so 2021 should be an informative year for me (us, if you want to follow
+along). Watch this space. 🕸
