@@ -11,8 +11,14 @@
   "description": "Blog of Paul Anthony Webb",
   "devDependencies": {
     "@webb/console": "^2020.8.4",
+    "alphabetic-compare": "^1.1.4",
     "chronver": "^2020.6.18",
+    "feed": "^4.2.1",
+    "glob": "^7.1.6",
+    "graceful-fs": "^4.2.4",
     "husky": "^4.3.7",
+    "js-yaml": "^4.0.0",
+    "make-dir": "^3.1.0",
     "nodemon": "^2.0.7",
     "updates": "^11.4.2"
   },
@@ -22,7 +28,7 @@
   "homepage": "https://blog.webb.page",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run increment && git add -A :/"
+      "pre-commit": "npm run feed && npm run increment && git add -A :/"
     }
   },
   "main": "index.js",
@@ -30,10 +36,11 @@
   "private": true,
   "repository": "https://github.com/NetOperatorWibby/blog",
   "scripts": {
+    "feed": "node feed.js",
     "increment": "chronver --increment package",
     "start": "npm i;export NODE_ENV=production;node index.js",
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2021.01.15"
+  "version": "2021.01.17"
 }

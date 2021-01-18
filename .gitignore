@@ -6,4 +6,5 @@ Thumbs.db
 package-lock.json
 
 # Folder
+feed
 node_modules

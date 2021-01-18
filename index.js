@@ -17,6 +17,7 @@ const print = require("@webb/console").default;
 ///  U T I L
 
 const directory = path.join(__dirname, "document");
+const feed = path.join(__dirname, "feed");
 const environment = process.env.NODE_ENV || "development";
 const pkg = require("./package.json");
 const port = process.env.PORT || 3465;
@@ -48,6 +49,14 @@ polka()
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     const listings = await getPostListings();
     res.end(createContent(createTable(listings)));
+  })
+  .get("/feed/atom", async(req, res) => {
+    res.setHeader("Content-Type", "application/atom+xml; charset=utf-8");
+    res.end(await getFeedContents("index.xml"));
+  })
+  .get("/feed/json", async(req, res) => {
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.end(await getFeedContents("index.json"));
   })
   .get("/:slug", async(req, res) => {
     res.setHeader("Content-Type", "text/plain; charset=utf-8");
@@ -264,7 +273,7 @@ function createContent(suppliedContent) {
           ${suppliedContent}
 
           <footer>
-            <em><a href="/2019-12-02-a-personal-api.txt" title="blog post introducing the personalOS concept">personalOS</a><sup>α</sup> server running @ blog.webb.page &middot; <a href="https://github.com/NetOperatorWibby/blog" title="source code for this blog">source</a></em>
+            <em><a href="/2019-12-02-a-personal-api.txt" title="blog post introducing the personalOS concept">personalOS</a><sup>α</sup> server running @ blog.webb.page &middot; <a href="https://github.com/NetOperatorWibby/blog" title="source code for this blog">source</a><br/>feeds: <a href="/feed/atom" title="Atom feed for the webb blog">atom</a> &middot; <a href="/feed/json" title="JSON feed for the webb blog">json</a></em>
           </footer>
         </main>
       </body>
@@ -299,6 +308,20 @@ function createTable(suppliedArray) {
               <div class="col">filename</div>
             </div>
             ${tableItems.join("")}</section>`;
+}
+
+function getFeedContents(suppliedFile) {
+  const fileData = path.join(feed, suppliedFile);
+
+  return new Promise((resolve, reject) => {
+    fs.readFile(fileData, "utf8", (err, contents) => {
+      try {
+        resolve(contents);
+      } catch (err) {
+        reject(err);
+      }
+    });
+  });
 }
 
 function getFileContents(suppliedFile) {
