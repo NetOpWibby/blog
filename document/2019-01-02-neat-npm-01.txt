@@ -150,7 +150,8 @@ Find it on npm[13] | GitHub[14]
 
 ## FIN
 
-And there you have it! Five neat modules I find incredibly useful. I hope you do too! 🕸
+And there you have it! Five neat modules I find incredibly useful. I hope you
+do too! 🕸
 
 
 

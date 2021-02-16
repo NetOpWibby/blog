@@ -17,6 +17,7 @@ const createDirectory = require("make-dir");
 const { Feed } = require("feed");
 const fs = require("graceful-fs");
 const glob = require("glob");
+const marked = require("marked");
 const yaml = require("js-yaml");
 
 ///  U T I L
@@ -140,7 +141,7 @@ glob(`${directory}/*.txt`, (err, files) => {
           name: "Paul Anthony Webb"
         }
       ],
-      content: yaml.loadBack(file),
+      content: marked(yaml.loadBack(file)),
       date: new Date(entry.date),
       description: entry.tldr,
       id: `https://blog.webb.page${entry.url}.txt`,

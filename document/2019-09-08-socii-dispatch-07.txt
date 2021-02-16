@@ -230,7 +230,7 @@ more profile customization, groups, iOS app, re-enabled JSON Feed for
 profiles, end-to-end encryption, &c. I don't have experience with CI/CD
 (Continuous Integration/Development) workflows so maybe that'll be the next
 thing major thing I tackle. Of course, I'll share my experiences along the
-way.
+way. 🕸
 
 
 

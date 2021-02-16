@@ -1,0 +1,78 @@
+---
+title: An update on socii
+date:  2021-02-15
+tags:  rant, socii
+tldr:  Yeah, I'm still working on this thing.
+---
+
+Social network fatigue is at an all-time high. Last year leading into the first
+couple weeks of this year resulted in me "doomscrolling" more than I'd like and
+presumably like you, I've lacked motivation after spending hours doing that.
+Despite the tone of this intro, socii is not dead. Quite the contrary,
+development on 2.0 has been underway for a while and unlike last year I'm
+seeing 2021 with 20/20 vision. Let me explain.
+
+It is my belief that Big Social lacks the resolve and moral tack to do what is
+objectively correct…even in the face of **overwhelming evidence** that refusing
+to take action could result in catastrophic events.
+
+Corporations are not people and must move slowly by the very nature of massive
+companies. A raft turns a lot faster than a sailboat or freight-liner after
+all, right? Well, Big Social has shown time and time again their ability to
+move swiftly when it serves financial interest to do so. I don't buy the
+oft-given example I started this paragraph with, it's clearly a
+load of excrement.
+
+Here is how socii is shaping up:
+
+1. It is a paid service with a decent free tier.
+2. There is a strict anti-harassment policy that WILL be exercised.
+3. Communities are private by default and come with extensive moderation tools.
+4. Remember customization? You are unique, your profile will act like it
+   (if you want).
+
+Per points 2 and 3, freedom of speech does NOT mean freedom of *reach*. This
+nuance is clearly lost on a subset of the American populace so here it is,
+upfront. Radicalization and violence stemming from disinformation has no place
+on socii. Or anywhere else, it seems. Anyhoo…
+
+You may have noticed that "socii" lost its capitalization. It occurred to me
+that too often, services try to get ahead of themselves and attempt becoming
+brand-like before their service takes off. Startup wisdom says to
+"become a tribe" and your fans will buy anything you sell. But, how is your
+service more important than the people you are serving? How are you an
+"ecosystem" when your only claim to fame is the Product Hunt hype machine? Too
+many services with that mindset are mere tools that will be acqui-hired into a
+bigger company and be shut down internally (or just shut down).
+
+You wouldn't capitalize "hammer" or "scissors" (unless you started a sentence
+with them). In the same vein, socii is a tool. socii is not meant to be the
+forefront of your mind, your life. Just…a place to connect with a community
+(or communities!) that you care about and that cares about you.
+
+Until sometime last year I'd been coding socii in the open because I bought
+into the MVP (minimal viable product) hoopla the tech community spouts. As a
+result, no one used it because it lacked features people expected or wanted.
+Turns out, if something is too *minimal* it ends up not being *viable* and
+well, no one will use your *product*.
+
+New year, new moves.
+
+1.0 of socii is closed to new signups as work continues on 2.0. I may
+occasionally share updates on my Twitter @NetopWibby[1] so follow me there if
+you don't mind sporadic updates. For those of you on this mailing list that
+already had an account on socii, y'all are grandfathered in. Something special
+may be waiting in your account once 2.0 is ready (please remind me).
+
+Stay tuned. 🕸
+
+
+
+P.S. If you were subscribed to the feed before this point, please delete and
+re-add it! I've added Markdown support to the feed so that you get formatting.
+
+
+
+---
+
+[1]: https://twitter.com/NetOpWibby

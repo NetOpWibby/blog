@@ -18,7 +18,8 @@ order, they are:
 
 - 1̶9̶8̶4̶ ̶—̶ ̶G̶e̶o̶r̶g̶e̶ ̶O̶r̶w̶e̶l̶l̶ [1]
 - The 48 Laws of Power — Robert Greene
-- A Culture of Innovation: Insider accounts of computing and life at BBN — David Walden and Raymond Nickerson
+- A Culture of Innovation: Insider accounts of computing and life at BBN — David
+  Walden and Raymond Nickerson
 - The Art of Profitability — Adrian Slywotzky
 - The Art of the Start — Guy Kawasaki
 - Astronomy 101 — Carolyn Collins Petersen
@@ -44,7 +45,8 @@ order, they are:
 - The Nature of Code — Daniel Shiffman
 - NES/Famicom: a visual compendium — Sam Dyer
 - NLP: The New Technology of Achievement — NLP Comprehensive and Steve Andreas
-- Operating Systems: Design and Implementation — Andrew S Tanenbaum and Albert S Woodhull
+- Operating Systems: Design and Implementation — Andrew S Tanenbaum and Albert
+  S Woodhull
 - A People's History of the United States — Howard Zinn
 - Physics of the Future — Michio Kaku
 - Rayla 2212 — Ytasha L Womack

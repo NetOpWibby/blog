@@ -116,6 +116,10 @@ Ensures the browser only sends the cookie over HTTPS.
 
 
 
+Hope this helps! 🕸
+
+
+
 ---
 
 [1]: https://hub.socii.network

@@ -138,7 +138,7 @@ have to think about files and folders, a chief tenant of the desktop paradigm.
 So…where do we go from here?
 
 I don't pretend to have the answer but I think we're *slowly* going in the
-right direction.
+right direction. 🕸
 
 
 

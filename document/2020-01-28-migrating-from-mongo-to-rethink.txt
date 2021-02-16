@@ -220,7 +220,7 @@ linked post):
 Basically, SSPL means one cannot offer MongoDB as a hosted service. That makes
 sense from their end as they offer hosting. However, it's a bit of a punk move
 because they are preventing potential competition from forcing them to improve
-their product.
+their product. 🕸
 
 
 

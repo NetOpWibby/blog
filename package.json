@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "dedent": "^0.7.0",
+    "marked": "^2.0.0",
     "polka": "^0.5.2",
     "pretty-bytes": "^5.5.0"
   },
@@ -42,5 +43,5 @@
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2021.01.17"
+  "version": "2021.02.15"
 }
