@@ -142,9 +142,9 @@ glob(`${directory}/*.txt`, (err, files) => {
       content: marked(yaml.loadBack(file)),
       date: new Date(entry.date),
       description: entry.tldr,
-      id: `https://blog.webb.page${entry.url}.txt`,
+      id: `https://blog.webb.page${entry.url}`,
       image: "https://blog.webb.page/assets/og.png",
-      link: `https://blog.webb.page${entry.url}.txt`,
+      link: `https://blog.webb.page${entry.url}`,
       title: entry.title
     });
   });
