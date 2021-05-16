@@ -1,0 +1,83 @@
+---
+title: How to setup a Handshake site with Caddy
+date:  2021-05-15
+tags:  handshake
+tldr:  Easiest tutorial for adding TLS to a Handshake site, with Caddy.
+---
+
+For the uninitiated, Handshake[1] is a protocol intended to
+embrace (and ideally extinguish) legacy DNS. If that statement scares you, it
+makes sense. Drastic change is alarming. Yes, there is a blockchain involved
+but we're not going to get into that. You came here because
+you 1) have a Handshake TLD and 2) you have a site you want to use on it.
+
+Caddy[2], by default, automatically issues TLS certificates via LetsEncrypt but
+LE is a centralized certificate authority and doesn't know what Handshake is.
+Not to worry, we'll generate our own secure certificates with
+OUR OWN CA (via light-ca[3])! After that we'll update our Caddyfile and
+reload/restart the server to test and finalize our changes. Easy-peasy.
+
+For this tutorial I'll be using my TLD starbase/. Rather than make the root
+domain resolve to a site, I'm opting to use an SLD (second-level domain)
+instead (so, welcome.starbase in this example). You should be familiar with DNS
+and managing servers before continuing. Without further ado, let's begin!
+
+01. SFTP your site content to your VPS
+
+02. SSH into VPS and install light-ca
+```sh
+curl -sL https://github.com/light-river/light-ca/releases/download/latest/light-ca.tar.gz | tar zx && sudo mv ./light-ca /usr/bin/light-ca
+```
+
+03. Create certs
+```sh
+light-ca --domains "welcome.starbase"
+```
+
+04. Update Caddyfile
+```txt
+welcome.starbase {
+  # This is the path to a folder on my server that holds the site code
+  root * /var/www/starbase/
+  encode gzip
+  file_server
+  # This is the path to the certs created by light-ca
+  # The paths I chose are not the defaults.
+  # Syntax: tls <path to cert.pem> <path to key.pem>
+  tls /var/custom-certs/welcome.starbase/cert.pem /var/custom-certs/welcome.starbase/key.pem
+}
+```
+
+05. Reload Caddy and check for issues
+```sh
+systemctl reload caddy
+# If there are no issues, run next command
+systemctl restart caddy
+```
+
+06. Finally, add A record to TLD DNS (via Namebase[4]) with VPS' IP address.
+
+I'm assuming you're using NextDNS[5], hDNS[6], or some other method of natively
+viewing Handshake domains on your device. If so, enter https://<your-site> in
+your favorite browser to view your "hard" work.
+
+Seriously, this was so easy. 🕸
+
+
+
+P.S. I'm building a registry AND a registrar for my collection of
+Handshake TLDs. If you want updates on when they launch, follow @neuenet[7] and
+@beachfront_[8] respectively. The launch is slated for end of summer.
+
+
+
+---
+
+[1]: https://handshake.org
+[2]: https://caddyserver.com
+[3]: https://github.com/light-river/light-ca
+[4]: https://namebase.io
+[5]: https://nextdns.io
+[6]: https://hdns.io
+[7]: https://twitter.com/neuenet
+[8]: https://twitter.com/beachfront_

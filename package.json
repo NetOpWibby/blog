@@ -5,33 +5,28 @@
   },
   "dependencies": {
     "dedent": "^0.7.0",
-    "marked": "^2.0.0",
+    "marked": "^2.0.3",
     "polka": "^0.5.2",
-    "pretty-bytes": "^5.5.0"
+    "pretty-bytes": "^5.6.0"
   },
   "description": "Blog of Paul Anthony Webb",
   "devDependencies": {
     "@webb/console": "^2020.8.4",
     "alphabetic-compare": "^1.1.4",
     "chronver": "^2020.6.18",
-    "feed": "^4.2.1",
-    "glob": "^7.1.6",
-    "graceful-fs": "^4.2.4",
-    "husky": "^4.3.7",
-    "js-yaml": "^4.0.0",
+    "feed": "^4.2.2",
+    "glob": "^7.1.7",
+    "graceful-fs": "^4.2.6",
+    "husky": "^6.0.0",
+    "js-yaml": "^4.1.0",
     "make-dir": "^3.1.0",
     "nodemon": "^2.0.7",
-    "updates": "^11.4.2"
+    "updates": "^12.1.0"
   },
   "engines": {
     "node": ">=15.0.0"
   },
   "homepage": "https://blog.webb.page",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run feed && npm run increment && git add -A :/"
-    }
-  },
   "main": "index.js",
   "name": "netopwibby-blog",
   "private": true,
@@ -39,9 +34,11 @@
   "scripts": {
     "feed": "node feed.js",
     "increment": "chronver --increment package",
+    "pre-commit": "npm run feed && npm run increment && git add -A :/",
+    "prepare": "husky install",
     "start": "npm i;export NODE_ENV=production;node index.js",
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2021.02.15"
+  "version": "2021.05.15"
 }
