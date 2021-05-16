@@ -125,11 +125,9 @@ glob(`${directory}/*.txt`, (err, files) => {
   files.map(async(file) => {
     const entry = yaml.loadFront(file);
     const filenameFull = file.split("/").pop();
-    const fileUrl = filenameFull.replace(regexFilenameDate, "").replace(/.txt/g, "");
-    const fileYear = filenameFull.match(regexFilenameYear);
 
     entry.date = entry.date.toString();
-    entry.url = `/${fileYear}/${fileUrl}`;
+    entry.url = `/${filenameFull}`;
 
     posts.push(entry);
 
