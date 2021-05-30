@@ -1,0 +1,145 @@
+---
+title: Being Brave: a Handshake retrospective
+date:  2021-05-30
+tags:  handshake
+tldr:  What a mess
+---
+
+Earlier this week (2021.05.27), Michael Michelini of SkyInclude published[1] a
+blog post where he laid claim that "Brave is asking for 3 to 3.5 million USD
+for a 2 year of having Handshake names to work on their browser…It seems we
+can 'bargain' it down to 3 million US dollars from the 3.5 million."
+
+This information is not first-hand from Brave but rather "from multiple
+sources that are high in the Handshake community."
+
+The Handshake community is rather flat by nature so I can only surmise he
+means 1) a group of people and 2) this group has big pockets. That only leaves
+us with dWeb Foundation[2] and HNS Fund[3] as potential sources. I won't bury
+the lede here. Over the last couple days, Micheal has continuously refused to
+answer direct questions. He has instead relied upon proxies in the form of a
+link to a Twitter thread[4] that supports his actions and various cheerleaders
+in the Namebase Discord that have "seen the conversations."
+
+Those direct questions?
+
+- Where did you get your information from?
+- Who put you up to this?
+
+From my perspective, if some deal was being discussed between Brave and
+some "high" members of the community, why was Micheal made privy to these
+details? What was the motive of the participants to make details of the deal
+public?
+
+For his part, Brendan Eich (CEO of Brave) has rebuked the story[5] and asserts
+the amount claimed was fake news[6].
+
+From the Handshake Community[7] page:
+
+> Every single person is a genuine and authorized Director of The Handshake
+Project. If someone has given you a document or business card representing
+themselves as a Director of The Handshake Project, they have full authority to
+represent as Director of The Handshake Project with their own personal
+viewpoint, So Please Treat Them Right. You, the reader, are also a Director of
+The Handshake Project and have equal claim on authority, action,
+and viewpoints.
+
+> Any claims made by anyone on what Handshake does (or will do) does not
+necessarily have the agreement of other participants in the community and
+should not be seen as a definite certainty.
+
+**As a Director of Handshake, I do not condone the actions of
+Michael Michelini and I, quite frankly, do not trust him.** In fact, I deem
+anything he publishes in the future as tabloid-esque bait to further his own
+idealized position in the greater Handshake community.
+
+To his credit, Michael published an update to the debacle he started and…well,
+he didn't take ownership or explain himself. He instead recapped the situation
+along with what Brendan shared on Twitter. I'll take that credit back.
+
+From his update:
+
+> But from all of this - Brendan, the co-founder and CEO of Brave has made an
+amazing way to help us all deal with this awkward situation.
+
+I don't like the framing of this. He tried to absolve himself of
+responsibility. The situation is awkward because he made it that way.
+
+His update also had this:
+
+> There are groups trying to HELP the community - and some are not sure
+when/if/how to communicate that information to the community at large.
+
+More bullshit, IMHO. If I'm actively working to help a protocol gain traction,
+what reason would I have to be secretive about it? This entire situation is
+just about browser integration. Totally not high stakes at ALL. *Especially*
+if I have "fuck you" amounts of money.
+
+Yesterday he claimed[8] that "so many" have asked him "to step aside from the
+HNS community" and that he'd step down if that's what it took to resolve this
+situation. What's our favorite word? **Bullshit**.
+
+There are three sides to every story: your side, their side, and the truth.
+
+Brendan has already shared his side, amidst the digital shit thrown his way.
+Michael has abused his goodwill with the community to get a mini army to do
+his dirty work. Everyone involved should feel disrespected. Micahel caused
+this situation and the community’s trust in him made us all look like petulant
+children. What it takes to resolve this situation is to take accountability
+but what does he do instead? Try to garner sympathy, and it actually worked!
+
+Last bit from Michael's update:
+
+> Sorry if I divided the community on this. I love Handshake.
+
+If? IF?! 🤡
+
+The amount of sympathy/support Michael is getting in the Namebase Discord is
+baffling. Truly, my mind is boggled. It is my belief that ignoring such
+behavior only serves to legitimize it and encourage further breaches of trust.
+
+Did we get an explicit acknowledge of what needs to be done to get native
+Handshake resolution within Brave browser? Sure[9]. Did we have to harass a
+CEO to get there? I think not. It is shameful that someone in our community
+decided to implement a surreptitious marketing technique of the far right to
+get a desired outcome, when a simple ask would've sufficed. Fake news? Really?
+
+This post has mostly been a rant but I'm not a fan of complaining without at
+least mentioning solutions, so here's where the productive part of the post
+comes in. What can we (you) do moving forward?
+
+- Don't believe everything you read on the Internet. Not even this post. *I*
+  have good intentions but *you* don't know that. Luckily, I have link
+  sources below.
+- Hold people accountable. This is tricky because the Namebase Discord IS for
+  Namebase, not Handshake directly but I dislike how people have decided to
+  give Michael a pass.
+- Educate yourself. From the comments directed towards Brendan it's clear to
+  see that non-coders have a warped perspective on what it takes to build
+  software, much less a browser. Balking at the idea that a browser maker
+  would want, nay, EXPECT compensation for ongoing work (and maintenance) to
+  integrate a new protocol is silly. Software has roadmaps and the one
+  currency we all pay is time. Be patient and while you're waiting, do some
+  reading to gain appreciation for the complexity involved.
+
+Obviously, researching *everything* you read on the Internet is impractical to
+do on a regular basis and hindsight is 20/20 but boy…we'd have a lot less egg
+on our face. 🕸
+
+P.S. Here's proof of various community members (along with myself) looking for
+answers and finding nothing[10].
+
+
+
+---
+
+[1]: https://skyinclude.com/brave
+[2]: https://www.decentralizedinter.net
+[3]: https://hnsfund.titansofdata.org
+[4]: https://twitter.com/R86185448/status/1398401126668464131
+[5]: https://twitter.com/BrendanEich/status/1398298668847943689
+[6]: https://twitter.com/BrendanEich/status/1398305355000541189
+[7]: https://handshake.org/community
+[8]: https://discord.com/channels/664247448469897267/664247448902041612/848384137613017139
+[9]: https://twitter.com/BrendanEich/status/1398420651023634434
+[10]: https://imgur.com/a/8uj4Qn1

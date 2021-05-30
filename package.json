@@ -5,13 +5,13 @@
   },
   "dependencies": {
     "dedent": "^0.7.0",
-    "marked": "^2.0.3",
+    "marked": "^2.0.6",
     "polka": "^0.5.2",
     "pretty-bytes": "^5.6.0"
   },
   "description": "Blog of Paul Anthony Webb",
   "devDependencies": {
-    "@webb/console": "^2020.8.4",
+    "@webb/console": "^2021.5.28",
     "alphabetic-compare": "^1.1.4",
     "chronver": "^2020.6.18",
     "feed": "^4.2.2",
@@ -35,10 +35,10 @@
     "feed": "node feed.js",
     "increment": "chronver --increment package",
     "pre-commit": "npm run feed && npm run increment && git add -A :/",
-    "prepare": "husky install",
     "start": "npm i;export NODE_ENV=production;node index.js",
+    "test": "updates --update ./",
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2021.05.15.2"
+  "version": "2021.05.30"
 }
