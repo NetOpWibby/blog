@@ -129,6 +129,11 @@ on our face. 🕸
 P.S. Here's proof of various community members (along with myself) looking for
 answers and finding nothing[10].
 
+Update: I just saw that after demanding details of the deal from Brendan,
+Michael apologized to him and took ownership[11]. This was my main sticking
+point. I only found this out by getting a link to the Handshake DNS Discord.
+It would've been nice if Michael updated his blog post with this information.
+
 
 
 ---
@@ -143,3 +148,4 @@ answers and finding nothing[10].
 [8]: https://discord.com/channels/664247448469897267/664247448902041612/848384137613017139
 [9]: https://twitter.com/BrendanEich/status/1398420651023634434
 [10]: https://imgur.com/a/8uj4Qn1
+[11]: https://twitter.com/michelini/status/1398831662880804866

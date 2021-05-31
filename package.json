@@ -40,5 +40,5 @@
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2021.05.30"
+  "version": "2021.05.30.1"
 }
