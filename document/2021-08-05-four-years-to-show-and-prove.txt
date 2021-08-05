@@ -1,0 +1,73 @@
+---
+title: Four years to prove ourselves
+date:  2021-08-05
+tags:  handshake
+tldr:  What an incredible opportunity
+---
+
+The ICA (Internet Commerce Association) recently hosted a free webinar where
+they discussed the second round of gTLD applications via ICANN. For reference,
+the year is 2021 at this time of writing. The first and last round of gTLD
+applications happened in the anagram for this year: 2012; nearly a **decade**
+ago. As noted by one of the panel experts (Jeff Neuman, Jothan Frakes,
+Phil Buckingham, and Christa Taylor were in attendance), the world was MUCH
+different then. A notable example of such change was the mention of .crypto.
+Apparently, it was considered but seeing as how the crypto space was still in
+its infancy, ICANN brushed it off. Depending on who you speak to today, crypto
+is EVERYWHERE; much to the chagrin of one of my security buddies. "Crypto" as
+shorthand used to mean "cryptography" but now it's been co-opted
+by cryptocurrency.
+
+The panelists think there will be even more interest in the next batch of
+applications, especially if ICANN reduces the cost of admission. Some
+suggstions they discussed:
+
+- knocking off $70,000…of the $185,000 entry price
+- application fee floor
+- eventual refunds from failed bids
+
+These are decent changes but ICANN is plagued by bueracracy and the snail-like
+pace that typically commands. An oft-repeated refrain was, "Yes, they (ICANN)
+can move faster and implement what the community wants…but WILL they?"
+According to someone in the chat:
+
+> ICANN doesn't have significant numbers of registrars in underserved regions.
+> They keep putting obstacles in the way for registrars in those regions.
+
+And, another notable quote:
+
+> ICANN working with community (members) requires a change in philosophy.
+
+ICANN's current way of making decisions is obviously long and drawn out and
+away from the public eye, until they've decided something.
+
+As I was listening to the discussion, I couldn't help but feel that Handshake
+handled a lot of the problems the panelists discussed. Namely (hah), rolling
+applications and not letting other applicants aware of which names you intend
+to bid on. When Handshake was revealed to the public, a handful of names were
+released over the course of several weeks. Also, the way you bid on names is
+via a Vickrey-style auction. In short, Vickrey-style auctions are anonymous and
+the amounts bid can be a mixture of a true bid and a blind bid. You can find
+more information here. In short, it aims to make auctions feel more fair.
+
+The conservative estimate for the launch of the secound round of gTLD
+applications is 2025. Four years from now. 13 years since the last round.
+To me, this sounds a bit nutty. Insane even.
+
+The panelists suggested that anyone looking to get their own TLD via ICANN
+should keep their expectations in check and be realistic. It takes a war chest
+of funds to keep going back and forth with ICANN to approve your application.
+With that also comes an immense time commitment. They expect any name to take
+between 4-5 years to develop, but gave .music as an example that took nearly
+10 years to finalize.
+
+I see opportunity here.
+
+If you're an HNS maximalist/shill like myself, pro ENS, or a combination of the
+two, we have four years to kick ass and develop our ecosystems. Crypto took a
+decade to get big, we can *easily* do it in half the time. We are in a unique
+position to not only discover brilliant use cases unheard of on
+the legacy ‘Net, but to also bring these experiences to the masses and
+gain that sweet traction.
+
+Four years to show and prove. Let's get it. 🕸
