@@ -5,40 +5,55 @@
   },
   "dependencies": {
     "dedent": "^0.7.0",
-    "marked": "^2.1.3",
+    "marked": "^4.0.14",
     "polka": "^0.5.2",
-    "pretty-bytes": "^5.6.0"
+    "pretty-bytes": "^6.0.0"
   },
   "description": "Blog of Paul Anthony Webb",
   "devDependencies": {
+    "@webb/config-prettier": "*",
     "@webb/console": "^2021.5.28",
+    "@webb/test": "*",
     "alphabetic-compare": "^1.1.4",
-    "chronver": "^2020.6.18",
+    "chronver": "*",
+    "del-cli": "^4.0.1",
     "feed": "^4.2.2",
-    "glob": "^7.1.7",
-    "graceful-fs": "^4.2.6",
-    "husky": "^7.0.1",
+    "glob": "^8.0.1",
+    "graceful-fs": "^4.2.10",
+    "husky": "^7.0.4",
     "js-yaml": "^4.1.0",
     "make-dir": "^3.1.0",
-    "nodemon": "^2.0.12",
-    "updates": "^12.1.0"
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "updates": "^13.0.5"
   },
   "engines": {
-    "node": ">=15.0.0"
+    "node": ">=17.0.0"
   },
   "homepage": "https://blog.webb.page",
-  "main": "index.js",
+  "main": "src/index.ts",
   "name": "netopwibby-blog",
   "private": true,
-  "repository": "https://github.com/NetOperatorWibby/blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NetOpWibby/blog"
+  },
   "scripts": {
-    "feed": "node feed.js",
+    "build": "npm run cleanup && npm run feed && tsc",
+    "cleanup": "del './dist'",
+    "feed": "ts-node src/feed.ts",
     "increment": "chronver --increment package",
-    "pre-commit": "npm run feed && npm run increment && git add -A :/",
-    "start": "npm i;export NODE_ENV=production;node index.js",
-    "test": "updates --update ./",
+    "pre-commit": "npm run build && npm run pretty && npm run increment && git add -A :/",
+    "pretty": "prettier --write 'dist/**/*.js' 'dist/**/*.ts'",
+    "start": "npm i && npm run build && export NODE_ENV=production;ts-node src/index.ts",
+    "test": "run-s test:*",
+    "test:dependencies": "updates --update ./",
+    "test:lint": "tsc",
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2021.08.05"
+  "version": "2022.04.18"
 }

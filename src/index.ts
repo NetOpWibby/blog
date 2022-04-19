@@ -1,27 +1,30 @@
+/// <reference path="../@types/index.d.ts"/>
 
 
 
 ///  N A T I V E
 
-const fs = require("fs");
-const path = require("path");
-const { promisify } = require("util");
+import { readdir, readFile, stat } from "fs";
+import { join, resolve } from "path";
+import { promisify } from "util";
 
 ///  I M P O R T
 
-const dedent = require("dedent");
-const prettyBytes = require("pretty-bytes");
-const polka = require("polka");
-const print = require("@webb/console").default;
+import dedent from "dedent";
+import polka from "polka";
+import { print } from "@webb/console";
 
 ///  U T I L
 
-const directory = path.join(__dirname, "document");
-const feed = path.join(__dirname, "feed");
+import { name } from "../package.json";
+import { prettyBytes } from "./utility/pretty-bytes";
+
+const baseDirectory = resolve(__dirname, "..");
+const directory = join(baseDirectory, "document");
+const feed = join(baseDirectory, "feed");
 const environment = process.env.NODE_ENV || "development";
-const pkg = require("./package.json");
+const info = promisify(stat);
 const port = process.env.PORT || 3465;
-const stat = promisify(fs.stat);
 
 const errorMessage = dedent`
   ---
@@ -45,36 +48,37 @@ const siteUrl = "https://blog.webb.page";
 ///  P R O G R A M
 
 polka()
-  .get("/", async(req, res) => {
+  .get("/", async(req: any, res: any) => {
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     const listings = await getPostListings();
     res.end(createContent(createTable(listings)));
   })
-  .get("/feed/atom", async(req, res) => {
+  .get("/feed/atom", async(req: any, res: any) => {
     res.setHeader("Content-Type", "application/atom+xml; charset=utf-8");
     res.end(await getFeedContents("index.xml"));
   })
-  .get("/feed/json", async(req, res) => {
+  .get("/feed/json", async(req: any, res: any) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
     res.end(await getFeedContents("index.json"));
   })
-  .get("/:slug", async(req, res) => {
+  .get("/:slug", async(req: any, res: any) => {
     res.setHeader("Content-Type", "text/plain; charset=utf-8");
 
     const posts = await getPosts();
     const { slug } = req.params;
 
+    // @ts-ignore TS2345
     if (posts.indexOf(slug) < 0)
       res.end(errorMessage);
 
     res.end(await getFileContents(slug));
   })
-  .get("/:slug/:part", async(req, res) => {
+  .get("/:slug/:part", async(req: any, res: any) => {
     res.setHeader("Content-Type", "text/plain; charset=utf-8");
     const { part, slug } = req.params;
     res.end(movedMessage(slug, part));
   })
-  .listen(port, err => {
+  .listen(port, (err: any) => {
     if (err)
       throw err;
 
@@ -85,7 +89,7 @@ polka()
 
 ///  H E L P E R
 
-function createContent(suppliedContent) {
+function createContent(suppliedContent: string) {
   return dedent`
     <!DOCTYPE html>
     <html lang="en">
@@ -273,7 +277,7 @@ function createContent(suppliedContent) {
           ${suppliedContent}
 
           <footer>
-            <em><a href="/2019-12-02-a-personal-api.txt" title="blog post introducing the personalOS concept">personalOS</a><sup>α</sup> server running @ blog.webb.page &middot; <a href="https://github.com/NetOperatorWibby/blog" title="source code for this blog">source</a><br/>feeds: <a href="/feed/atom" title="Atom feed for the webb blog">atom</a> &middot; <a href="/feed/json" title="JSON feed for the webb blog">json</a></em>
+            <em><a href="/2019-12-02-a-personal-api.txt" title="blog post introducing the personalOS concept">personalOS</a><sup>α</sup> server running @ blog.webb.page &middot; <a href="https://github.com/NetOpWibby/blog" title="source code for this blog">source</a><br/>feeds: <a href="/feed/atom" title="Atom feed for the webb blog">atom</a> &middot; <a href="/feed/json" title="JSON feed for the webb blog">json</a></em>
           </footer>
         </main>
       </body>
@@ -281,15 +285,15 @@ function createContent(suppliedContent) {
   `;
 }
 
-function createTable(suppliedArray) {
+function createTable(suppliedArray: any): string {
   /// The funky indentation in the backticks is just so the rendered HTML
   /// looks good when viewing source. There really ought to be a module that
   /// does this for you but the web industry only cares about build pipelines
   /// and littering your front-end with endless amounts of <div>s. YUK.
 
-  const tableItems = suppliedArray.map(arrayItem => {
+  const tableItems = suppliedArray.map((arrayItem: { file: string, size: number }) => {
     if (!arrayItem)
-      return;
+      return "";
 
     const { file, size } = arrayItem;
 
@@ -310,73 +314,58 @@ function createTable(suppliedArray) {
             ${tableItems.join("")}</section>`;
 }
 
-function getFeedContents(suppliedFile) {
-  const fileData = path.join(feed, suppliedFile);
+function getFeedContents(suppliedFile: string) {
+  const fileData = join(feed, suppliedFile);
 
   return new Promise((resolve, reject) => {
-    fs.readFile(fileData, "utf8", (err, contents) => {
+    readFile(fileData, "utf8", (err, contents) => {
       try {
         resolve(contents);
-      } catch (err) {
-        reject(err);
+      } catch(err) {
+        resolve("");
       }
     });
   });
 }
 
-function getFileContents(suppliedFile) {
-  const fileData = path.join(directory, suppliedFile);
+function getFileContents(suppliedFile: string) {
+  const fileData = join(directory, suppliedFile);
 
   return new Promise((resolve, reject) => {
-    fs.readFile(fileData, "utf8", (err, contents) => {
+    readFile(fileData, "utf8", (err, contents) => {
       try {
         resolve(contents);
-      } catch (err) {
-        reject(err);
+      } catch(err) {
+        resolve("");
       }
     });
-  });
-}
-
-function getFileStats(suppliedFilePath) {
-  return new Promise((resolve, reject) => {
-    try {
-      const fileStats = stat(suppliedFilePath);
-      resolve(fileStats);
-    } catch(err) {
-      reject(err);
-    }
   });
 }
 
 function getPostListings() {
   return new Promise((resolve, reject) => {
-    fs.readdir(directory, async(err, files) => {
+    readdir(directory, async(err, files) => {
       if (err)
         resolve([]);
 
-      files = files.reverse().map(async(file) => {
+      const processedFiles = files.reverse().map(async(file: string) => {
         if (file.startsWith("."))
           return;
 
-        const { size } = await getFileStats(path.join(directory, file));
-
-        const data = {
-          file,
-          size: prettyBytes(size)
-        };
+        const { size } = await info(join(directory, file));
+        const data = { file, size: prettyBytes(size) };
 
         return data;
       });
 
       // TODO
       // : there is probably a simpler way of doing this
-      const postListings = await Promise.all(files.filter(file => file !== undefined));
+      const postListings = await Promise.all(processedFiles.filter(file => file !== undefined));
 
       try {
         resolve(postListings);
       } catch(err) {
-        reject(err);
+        resolve([]);
       }
     });
   });
@@ -384,11 +373,11 @@ function getPostListings() {
 
 function getPosts() {
   return new Promise((resolve, reject) => {
-    fs.readdir(directory, async(err, files) => {
+    readdir(directory, async(err, files) => {
       if (err)
         resolve([]);
 
-      files = files.map(file => {
+      const processedFiles = files.map(file => {
         if (file.startsWith("."))
           return;
 
@@ -397,12 +386,12 @@ function getPosts() {
 
       // TODO
       // : there is probably a simpler way of doing this
-      const posts = files.filter(file => file !== undefined);
+      const posts = processedFiles.filter(file => file !== undefined);
 
       try {
         resolve(posts);
       } catch(err) {
-        reject(err);
+        resolve([]);
       }
     });
   });
@@ -415,14 +404,14 @@ function logPrompt() {
     `${print.green("⚡")} `,
     `${print.bold(print.white(port))} `,
     `${print.gray("|")} `,
-    `${print.bold(print.white(pkg.name))} `,
+    `${print.bold(print.white(name))} `,
     `${print.gray("|")} `,
     `${print.bold(print.white(environment))}`,
     "\n\n"
   ].join("");
 }
 
-function movedMessage(first, second) {
+function movedMessage(first: string, second: string) {
   let cleanedUrlFragment1 = "";
   let cleanedUrlFragment2 = "";
   let message = "something on the homepage";

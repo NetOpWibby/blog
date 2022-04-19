@@ -1,44 +1,46 @@
+/// <reference path="../@types/index.d.ts"/>
 
 
 
 ///  N A T I V E
 
-const {
-  readFileSync,
-  writeFileSync
-} = require("fs");
-
-const { join } = require("path");
+import { join, resolve } from "path";
+import { readFileSync, writeFileSync } from "fs";
 
 ///  I M P O R T
 
-const compare = require("alphabetic-compare").default;
-const createDirectory = require("make-dir");
-const { Feed } = require("feed");
-const fs = require("graceful-fs");
-const glob = require("glob");
-const marked = require("marked");
-const yaml = require("js-yaml");
+import { default as compare } from "alphabetic-compare";
+import createDirectory from "make-dir";
+import { Feed } from "feed";
+import fs from "graceful-fs";
+import glob from "glob";
+import { marked } from "marked";
+import yaml from "js-yaml";
 
 ///  U T I L
 
-const directory = join(__dirname, "document");
+const baseDirectory = resolve(__dirname, "..");
+const directory = join(baseDirectory, "document");
 const regexFilenameDate = /^(\d{4}-\d{2}-\d{2}-)/g;
 const regexFilenameYear = /^(\d{4})/g;
 const regexTitle = /title:.*/g;
 const regexYaml = /^(-{3}(?:\n|\r)([\w\W]+?)(?:\n|\r)-{3})/;
 
-yaml.parse = text => {
+type LooseObject = {
+  [key: string]: any;
+};
+
+yaml.parse = (text: string) => {
   const results = text.match(regexYaml);
   let conf;
   let yamlOrJson;
 
-  yamlOrJson = results[2];
+  yamlOrJson = results ? results[2] : "";
 
-  const titleData = yamlOrJson.match(regexTitle)[0];
+  const titleData = yamlOrJson.match(regexTitle)![0];
   const title = titleData.split(/title:/)[1];
 
-  /// Dynamically escape ":" in titles
+  /// escape ":" in titles
   yamlOrJson = yamlOrJson.replace(titleData, `title: ${title.replace(":", "&#58;")}`);
 
   switch(true) {
@@ -57,7 +59,7 @@ yaml.parse = text => {
   return conf;
 };
 
-yaml.loadBack = context => {
+yaml.loadBack = (context: string) => {
   if (!context)
     return "";
 
@@ -69,7 +71,7 @@ yaml.loadBack = context => {
   }
 };
 
-yaml.loadFront = context => {
+yaml.loadFront = (context: string) => {
   let contents;
 
   switch(true) {
@@ -93,7 +95,7 @@ yaml.loadFront = context => {
 
 ///  P R O G R A M
 
-glob(`${directory}/*.txt`, (err, files) => {
+glob(`${directory}/*.txt`, (err: any, files: []) => {
   if (err)
     return;
 
@@ -118,20 +120,21 @@ glob(`${directory}/*.txt`, (err, files) => {
     title: "the webb blog"
   });
 
-  const posts = [];
+  const posts: LooseObject[] = [];
 
   files.sort((a, b) => compare(b, a, "en")); /// reverse sort
 
-  files.map(async(file) => {
+  files.map(async(file: string) => {
     const entry = yaml.loadFront(file);
     const filenameFull = file.split("/").pop();
 
     entry.date = entry.date.toString();
     entry.url = `/${filenameFull}`;
-
     posts.push(entry);
 
-    feed.addItem({
+    const post = yaml.loadBack(file);
+
+    post && feed.addItem({
       author: [
         {
           email: "paul+blog@webb.page",
@@ -139,7 +142,7 @@ glob(`${directory}/*.txt`, (err, files) => {
           name: "Paul Anthony Webb"
         }
       ],
-      content: marked(yaml.loadBack(file)),
+      content: marked.parse(post),
       date: new Date(entry.date),
       description: entry.tldr,
       id: `https://blog.webb.page${entry.url}`,
@@ -149,12 +152,12 @@ glob(`${directory}/*.txt`, (err, files) => {
     });
   });
 
-  feed.updated = new Date(posts[0].date);
+  (feed as any).updated = new Date(posts[0].date);
 
   /// create feeds
   createDirectory("feed");
-  writeFileSync("./feed/index.xml", feed.atom1(), "utf8");
-  writeFileSync("./feed/index.json", feed.json1(), "utf8");
+  writeFileSync(join(baseDirectory, "feed", "index.xml"), feed.atom1(), "utf8");
+  writeFileSync(join(baseDirectory, "feed", "index.json"), feed.json1(), "utf8");
 
   console.log("Feeds written");
 });
@@ -163,15 +166,15 @@ glob(`${directory}/*.txt`, (err, files) => {
 
 ///  H E L P E R
 
-function getFileContents(suppliedFile) {
+function getFileContents(suppliedFile: string) {
   if (!suppliedFile)
     return "";
 
   return new Promise((resolve, reject) => {
-    fs.readFile(suppliedFile, "utf8", (err, contents) => {
+    fs.readFile(suppliedFile, "utf8", (err: any, contents: any) => {
       try {
         resolve(contents);
-      } catch (err) {
+      } catch(err) {
         reject(err);
       }
     });
