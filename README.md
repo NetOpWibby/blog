@@ -23,11 +23,11 @@ port the site is running on (3465 by default).
 # run the site in production mode
 npm start
 
-# checks for module updates
-npm run update
-
 # run the site locally
 npm run watch
+
+# checks dependencies and lints TypeScript
+npm test
 ```
 
 The following command is not run manually, rather via a pre-commit hook. It

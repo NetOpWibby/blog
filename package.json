@@ -55,5 +55,5 @@
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2022.04.18"
+  "version": "2022.04.18.1"
 }
