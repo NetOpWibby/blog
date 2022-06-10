@@ -45,12 +45,12 @@ latter from being able to survive on non-communication and non-payment. Public
 attacks towards Johnny ensued, as he was the only public-facing employee of
 Namebase; the messenger.
 
-A few weeks ago, Namebase announces an upgrade to their registry program NOT
-backed by Gatway, and promises TLD owners back-payment. Gateway employees become
-increasingly irate due to yet another breach of contract; Namebase was not
-allowed to reverse-engineer the registry backend, which was apparently done to
-make the improved registry happen. James Stevens, one of the Gateway employees
-who built/helped build the original registry backend, proceeds to make his
+A few weeks ago, Namebase announced an upgrade to their registry program NOT
+backed by Gateway, and promised TLD owners back-payment. Gateway employees
+became increasingly irate due to yet another breach of contract; Namebase was
+not allowed to reverse-engineer the SLD data, which was apparently done to make
+the improved registry happen. James Stevens, one of the Gateway employees who
+built/helped build the original registry backend, proceeds to make his
 frustrations about the situation known to Johnny.
 
 Comments and screenshots about private conversations between the two are shared
@@ -71,7 +71,7 @@ His plans came with ultimatums:
    parts of the ecosystem
 
 These two points came with timeframes that changed later that day, confusing
-even those who enojoyed this "new Johnny" and were eager to join his team.
+even those who enjoyed this "new Johnny" and were eager to join his team.
 
 Amidst a wellness check by a community member, Johnny effectively took over the
 Namebase Discord and began to proclaim his dislike for anyone who disagreed with
@@ -87,7 +87,9 @@ semblance of guidance amidst uncertainty about Namebase. Long story short:
 - Johnny was fired, with a hefty severance payment
 - the Namebase Discord was never official and Richard deemed it "rogue"
 - the "Namebase" Discord is no more, it is now Johnny's personal Discord
-- Richard is currently figuring out next steps
+- Namebase support is now only possible via the Namebase site (if you have an
+  ad-blocker enabled, you may not see it) or via support@namebase.io
+- a new Namebase Discord, sanctioned by the company, is forthcoming
 
 ## My thoughts
 
