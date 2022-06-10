@@ -1,0 +1,161 @@
+---
+title: A hard fork in the Handshake community
+date:  2022-06-10
+tags:  handshake
+tldr:  What a mess
+---
+
+…I really don't want to write this post. **SIGH**
+
+The Handshake community is confused, divided, and looking for answers. As
+someone who has been engaged in the community since late 2019, I feel some sort
+of responsibility to document what's been happening to enlighten those who came
+into the Namebase Discord where digital fires and ad-hoc attacks were happening.
+Hopefully, this post will also serve as several cautionary tales.
+
+First, I will lay out the facts as I know them, objectively. Everything in this
+post can be verified by public Discord/Twitter messages/posts. My personal
+thoughts will follow.
+
+## The backstory
+
+Namebase is a convenient on-ramp for the Handshake blockchain. You can create
+auctions for TLDs and buy/sell them on the secondary market. About a year ago,
+they created a program called, "Namebase Registry." This registry allowed people
+to stake their TLDs with Namebase and sell domains on said TLDs through partners
+in the program; Encirca, Gateway, Porkbun, &c.
+
+A few months ago, Namecheap bought controlling interest in Namebase (51%).
+This was widely hailed as A Good Thing, and why wouldn't it? The second-largest
+registrar in the world is interested in helping grow an alternative namespace!
+We have growing legitimacy! Well…not everyone was happy.
+
+Gateway, one of Namebase's registry partners, built out and maintained the
+back-end for the registry. There was an agreed-upon contract between the two
+companies, signed, sealed, delivered. Either leading up to or shortly after
+Namebase was acquired by Namecheap, Namebase stopped paying Gateway for their
+continued work. In addition, TLD owners in the program weren't getting paid
+either. For whatever reason, Namebase wasn't talking to Gateway nor providing
+answers to TLD holders. The only representative for Namebase (and only community
+manager), Johnny Wu, repeatedly promised that answers were forthcoming.
+
+Finally, Gateway cut off access to Namebase due to non-payment. The exclusivity
+clause in the registry contract between Namebase and Gateway prevented the
+latter from being able to survive on non-communication and non-payment. Public
+attacks towards Johnny ensued, as he was the only public-facing employee of
+Namebase; the messenger.
+
+A few weeks ago, Namebase announces an upgrade to their registry program NOT
+backed by Gatway, and promises TLD owners back-payment. Gateway employees become
+increasingly irate due to yet another breach of contract; Namebase was not
+allowed to reverse-engineer the registry backend, which was apparently done to
+make the improved registry happen. James Stevens, one of the Gateway employees
+who built/helped build the original registry backend, proceeds to make his
+frustrations about the situation known to Johnny.
+
+Comments and screenshots about private conversations between the two are shared
+by them on Discord and then…things get even more uncomfortable.
+
+Johnny emerged the following day, a totally different person from what we've
+seen the past two years — he's more brash, posts rapidly, and dishes insults. He
+also outlined a plan/manifesto for his company via an multi-page Google Doc.
+It lists his ideal team, what he expects from his employees, and how he plans to
+run said company. Additionally, he attempted to galvanize the Handshake
+community by tweeting grandiose things and encouraged folks to retweet him for
+visibility. He seemed almost proud that he had not slept much in four days.
+
+His plans came with ultimatums:
+
+1) he would need $5 million to build his team
+2) he would cease his involvement in Handshake after his team built the missing
+   parts of the ecosystem
+
+These two points came with timeframes that changed later that day, confusing
+even those who enojoyed this "new Johnny" and were eager to join his team.
+
+Amidst a wellness check by a community member, Johnny effectively took over the
+Namebase Discord and began to proclaim his dislike for anyone who disagreed with
+him. In the Handshake Discord, folks were attempting to piece together what was
+going on. After hearing that Johnny called a community member who operates the
+Handshake Institute and demanded it be handed over to him, it became clear that
+Johnny was/is mentally unwell.
+
+Since Namebase's only public-facing employee was unreachable, several of us in
+the community reached out to Richard Kirkendall, CEO of Namecheap, for some
+semblance of guidance amidst uncertainty about Namebase. Long story short:
+
+- Johnny was fired, with a hefty severance payment
+- the Namebase Discord was never official and Richard deemed it "rogue"
+- the "Namebase" Discord is no more, it is now Johnny's personal Discord
+- Richard is currently figuring out next steps
+
+## My thoughts
+
+What a shitshow.
+
+Isn't it ironic that I @mention both Richard and Johnny about how much Johnny
+has been working these past two years and that he needs a break and a team...and
+then, all this happens? Quite frankly, I blame James for Johnny's mental break.
+Sure, he didn't send Johnny **to** the ledge but he sure as hell pushed him off.
+
+I never understood why James was so adamant about focusing his anger and
+frustrations on Johnny, of all people. He was the only Namebase employee but he
+wasn't the one making decisions. He wasn't the one reverse-engineering registry
+data. Dude was COMMUNITY. MANAGER. For TWO YEARS. He isn't able to code his way
+out of a translucent bag. So, why target Johnny? Bullying is not okay. CLEARLY.
+
+I repeatedly asked James why he didn't take his frustrations to Richard. THE GUY
+RUNNING THE COMPANY. But of course, that's when the tone changes and
+back-pedaling happens. I don't respect that. My mantra is KEEP THAT SAME ENERGY.
+
+To that end, I also blame the current and previous owners of Namebase. Although,
+for most of Namebase's life…I…only saw Johnny? There was a CTO and a designer at
+some point but they've since moved onto other projects and there never seemed to
+be ill will between anyone. Regardless, I've mentioned several times over the
+past two years that Johnny should not be taking on the task of community
+management by himself. I struggle with placing blame on Richard but I do not
+think he is absolved of blame. Inaction is just as bad.
+
+I've never been a CEO and I've never acquired a company but I've worked for
+enough startups to understand what "due diligence" is. That's essentially
+research you do before deciding to acquire a company. You look at the finances,
+the business model, the team, and you make a decision based on all of that (and
+other aspects). What happens next is, you formulate a plan (or several plans) to
+shore up deficiencies in that business.
+
+It is wild to me that what we thought was "the official Namebase Discord" was
+_actually_ an employee's personal Discord for company use.
+
+It blows my mind that a community manager was left being the human shield for a
+company and endured vicious mental/emotional onslaught from a business
+representative.
+
+The mind boggles. Seriously.
+
+## The Future
+
+I hope Johnny gets help. I hope his family/close friends can reel him in and let
+him know he's loved. I hope the Handshake community comes back from this,
+stronger and healthier than before. I hope I didn't make any typos, it's 1am as
+I type this. I hope everyone realizes that petty squabbles are distractions and
+do nothing good for your mental.
+
+For the newbies in the Handshake space who have TLDs on Namebase and are scared
+as hell (rightfully so), don't worry.
+
+1) Your TLDs are safe on Namebase.
+2) Bob Wallet is better though, send your TLDs there and secure with a Ledger.
+3) Namebase has no official Discord right now but if you need assistance there,
+   click the chat/support button.
+4) Johnny doesn't have access to Namebase's internals, he can't delete your
+   TLDs, despite what he may say on his Discord.
+
+For the OGs in the Handshake space, there's always opportunity in chaos.
+
+1) We've used Namebase for years, we could create another one if its desired.
+2) Keep building, the ecosystem need us.
+3) Connect with the newbies, they're impressionable
+
+I think we're outgrowing the word "community" to be quite honest.
+
+Handshake is a village now, let's build as such. 🕸
