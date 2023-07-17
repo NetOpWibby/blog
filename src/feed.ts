@@ -2,22 +2,22 @@
 
 
 
-///  N A T I V E
+/// native
 
 import { join, resolve } from "path";
 import { readFileSync, writeFileSync } from "fs";
 
-///  I M P O R T
+/// import
 
 import { default as compare } from "alphabetic-compare";
 import createDirectory from "make-dir";
 import { Feed } from "feed";
 import fs from "graceful-fs";
-import glob from "glob";
+import { glob } from "glob";
 import { marked } from "marked";
 import yaml from "js-yaml";
 
-///  U T I L
+/// util
 
 const baseDirectory = resolve(__dirname, "..");
 const directory = join(baseDirectory, "document");
@@ -93,7 +93,7 @@ yaml.loadFront = (context: string) => {
 
 
 
-///  P R O G R A M
+/// program
 
 glob(`${directory}/*.txt`, (err: any, files: []) => {
   if (err)
@@ -164,7 +164,7 @@ glob(`${directory}/*.txt`, (err: any, files: []) => {
 
 
 
-///  H E L P E R
+/// helper
 
 function getFileContents(suppliedFile: string) {
   if (!suppliedFile)

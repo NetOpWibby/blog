@@ -1,7 +1,7 @@
 
 
 
-///  U T I L
+/// util
 
 const BIBIT_UNITS = [ "b", "kibit", "Mibit", "Gibit", "Tibit", "Pibit", "Eibit", "Zibit", "Yibit" ];
 const BIBYTE_UNITS = [ "B", "kiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB" ];
@@ -10,7 +10,7 @@ const BYTE_UNITS = [ "B", "kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" ];
 
 
 
-///  E X P O R T
+/// export
 
 export default prettyBytes;
 
@@ -31,7 +31,7 @@ export function prettyBytes(number: number | string, options?: any) {
   if (options.signed && number === 0)
     return ` 0 ${UNITS[0]}`;
 
-  const isNegative = number < 0;
+  const isNegative = Number(number) < 0;
   const prefix = isNegative ? "-" : (options.signed ? "+" : "");
   let localeOptions;
 
@@ -48,7 +48,7 @@ export function prettyBytes(number: number | string, options?: any) {
     };
   }
 
-  if (number < 1) {
+  if (Number(number) < 1) {
     const numberString = toLocaleString(number, options.locale, localeOptions);
     return prefix + numberString + " " + UNITS[0];
   }
@@ -75,7 +75,7 @@ export function prettyBytes(number: number | string, options?: any) {
 
 
 
-///  H E L P E R
+/// helper
 
 /*
 Formats the given number using `Number#toLocaleString`.

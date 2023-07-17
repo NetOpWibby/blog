@@ -2,19 +2,19 @@
 
 
 
-///  N A T I V E
+/// native
 
 import { readdir, readFile, stat } from "fs";
 import { join, resolve } from "path";
 import { promisify } from "util";
 
-///  I M P O R T
+/// import
 
 import dedent from "dedent";
 import polka from "polka";
 import { print } from "@webb/console";
 
-///  U T I L
+/// util
 
 import { name } from "../package.json";
 import { prettyBytes } from "./utility/pretty-bytes";
@@ -45,7 +45,7 @@ const siteUrl = "https://blog.webb.page";
 
 
 
-///  P R O G R A M
+/// program
 
 polka()
   .get("/", async(req: any, res: any) => {
@@ -87,7 +87,7 @@ polka()
 
 
 
-///  H E L P E R
+/// helper
 
 function createContent(suppliedContent: string) {
   return dedent`
