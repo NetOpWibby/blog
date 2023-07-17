@@ -55,5 +55,5 @@
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2023.07.16"
+  "version": "2023.07.17"
 }

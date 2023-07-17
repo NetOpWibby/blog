@@ -1,0 +1,107 @@
+---
+title: Twitter
+date:  2023-07-17
+tags:  social
+tldr:  ...that's it?
+---
+
+I've been banned from Twitter.
+
+It happened suddenly, without warning. After dinner, I loaded up Twitter for
+something and saw:
+
+Your account is suspended
+After careful review, we determined your account broke the Twitter Rules.
+Your account is permanently in read-only mode, which means you can’t Tweet,
+Retweet, or Like content. You won’t be able to create new accounts. If you
+think we got this wrong, you can submit an appeal.
+
+The (indefinite) suspension email:
+Your account, NetOpWibby has been suspended for violating the Twitter Rules.
+Specifically, for: **Violating our rules against platform manipulation and
+spam.**
+You may not use Twitter’s services in a manner intended to artificially amplify
+or suppress information or engage in behavior that manipulates or disrupts
+people’s experience on Twitter. Note that if you attempt to evade a suspension
+by creating new accounts, we will suspend your new accounts. If you wish to
+appeal this suspension, please contact our support team.
+
+I've since sent two appeals, the first basically confused and the second,
+inquiring which tweets fell under "platform manipulation and spam."
+
+Twitter's reply to both appeals:
+Your account was suspended due to violations of our Terms of Service. After
+reviewing for reinstatement your account will not be restored.
+
+I have a couple ideas as to what Twitter could _possibly_ mean by "platform
+manipulation and spam." Bit of a reach IMHO, but hey.
+
+
+
+The first is my usage of the hashtag, "#StoppableDomains." If that sounds
+familiar, you're probably thinking of Unstoppable Domains.
+
+From DomainNameWire[1]:
+
+> Blockchain domain name company Unstoppable Domains has threatened to sue a
+Handshake domain name service for offering registrations under the .wallet
+Handshake domain name.
+
+Basically, Unstoppable thought they could use the might of their VC dollars to
+bully a company and the blockchain it's built on, into submission. I happen to
+enjoy that blockchain quite a bit, so that's where my beef comes in.
+
+Using the hashtag #StoppableDomains, I also exposed UD's sketchy W3DA, or,
+"Web3 Domain Alliance," which is actually just a vehicle for them to legitimize
+future lawsuits and protect pending trademarks. Did you know they filed for
+"Bitcoin"?[2][3] In five countries? A company, built on Ethereum, trying to
+trademark the **original** blockchain. These folks are nuts. But I digress, my
+initial blog post on the topic is here.[4] I just wish I took screenshots of
+all my tweets or put them on Wayback Machine.
+
+When you're suspended, all of your tweets disappear. All that investigative
+work, gone. GG
+
+
+
+My second theory is, maybe I mentioned too many other social networks in one
+tweet. I recently got an invite to Farcaster and have been loving it, so I
+tweeted about it, comparing it to Bluesky and Mastodon. Can you get banned over
+something like that? Who knows, it's Elon's world over there.
+
+
+
+In any event, this ban feels retaliatory. I'm unable to concieve how this could
+happen, accidentally. I didn't have a lot of followers and certainly never had
+viral tweets. I'm frustrated because I've been on the site since 2009...that's
+14 years ago. I'm unable to even export my data. It's gone, wiped.
+
+_spends a few minutes searching computer for possible exports_
+
+My last Twitter export is from November of last year so at least I have
+most of it.
+
+If nothing else, this experience highlights the need for cultivating your own
+space online. Thankfully, I'm technical, so writing this blog post and SFTP'ing
+(shh, I know I know) it to my server isn't a big deal. I'm also not enthused
+about using any of my other (14) Twitter accounts (most of them placeholders
+for future or postponed products). I've already intended to get back to working
+on my paid social network[5] after I launch the registry[6] and registrar[7]
+for my Handshake TLDs and now I'm motivated to work harder.
+
+SIGH.
+
+End of an era. 🕸️
+
+P.S. Oh good, my #StoppableDomains tweets were in my 2022 export.[8]
+
+---
+
+[1]: https://domainnamewire.com/2022/07/20/unstoppable-domains-threatens-rival-handshake-domain-name/
+[2]: https://twitter.com/_chjj/status/1565158353055145985
+[3]: https://tsdr.uspto.gov/#caseNumber=97095196&caseType=SERIAL_NO&searchType=statusSearch
+[4]: https://blog.neuenet.com/post/stoppable-domains
+[5]: https://socii.network
+[6]: https://neuenet.com
+[7]: https://twitter.com/beachfront_
+[8]: https://imgur.com/gallery/VhG3uC6
