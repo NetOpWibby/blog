@@ -4,8 +4,8 @@
     "url": "https://webb.page"
   },
   "dependencies": {
-    "dedent": "^1.0.2",
-    "marked": "^5.1.1",
+    "dedent": "^1.5.1",
+    "marked": "^11.1.1",
     "polka": "^0.5.2",
     "pretty-bytes": "^6.1.1"
   },
@@ -16,19 +16,19 @@
     "@webb/test": "*",
     "alphabetic-compare": "^1.1.4",
     "chronver": "*",
-    "del-cli": "^5.0.0",
+    "del-cli": "^5.1.0",
     "feed": "^4.2.2",
-    "glob": "^10.3.3",
+    "glob": "^10.3.10",
     "graceful-fs": "^4.2.11",
     "husky": "^8.0.3",
     "js-yaml": "^4.1.0",
     "make-dir": "^4.0.0",
-    "nodemon": "^3.0.1",
+    "nodemon": "^3.0.3",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.0.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6",
-    "updates": "^14.3.3"
+    "prettier": "^3.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "updates": "^15.1.1"
   },
   "engines": {
     "node": ">=17.0.0"
@@ -55,5 +55,5 @@
     "update": "updates --update ./",
     "watch": "export NODE_ENV=development;nodemon"
   },
-  "version": "2023.07.17"
+  "version": "2024.01.16"
 }

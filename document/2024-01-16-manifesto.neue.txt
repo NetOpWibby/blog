@@ -1,0 +1,83 @@
+---
+title: manifesto.neue
+date:  2024-01-16
+tags:  internet
+tldr:  Build your Neue Internet
+---
+
+We aren't getting our Internet back; the smol web, quiet web, 𝐟𝐫𝐮𝐭𝐢𝐠𝐞𝐫 𝐚𝐞𝐫𝐨 web,
+whatever you wanna call it. Pandora's Box has been opened, nay, wretched and
+held open by the data brokerage economy; empowered by unscrupulous advertisers,
+their lobbyists, and their political allies eager to make a quick buck at the
+expense (lol, get wrecked) of us all.
+
+No, that Internet is gone…pilfered and gutted for its good parts, redesigned and
+repackaged with dark patterns to keep us hooked on services we don't really
+like; digital cocaine, if you will.
+
+What we _can_ do is build a new Internet, together. We don't need permission.
+We can just…do it, in our own way.
+
+_screams internally_
+UGH. Why do *I* have to work for this? I HAD it and it got stolen!!
+
+I feel you. Truly. But if you can see the joy in tragedy, maybe you can be
+inspired to code, sketch, write, or otherwise contribute to a
+rebirth (renaissance?!) of the internet.
+
+However, a common mistake we collectively make about taking the internet back
+into our own hands is assuming everyone has the time and energy to code a blog
+or set up a server. Even opening a terminal is too much for most. You might be
+thinking, "you're hinting at creating platforms…isn't that how we got into this
+mess in the first place?"
+
+Platforms aren't inherently evil, they're just the vehicles through which our
+Internet was poisoned. How can we ensure that won't happen again? To quote my
+friend, Jordan Green:
+
+> The Internet amplified voices you could've easily ignored in the past.
+
+That is, aside from giving transgressors a judgmental eye, ignore them.
+Don't engage. Don't sign up for their service. Recommend comparable services to
+friends and family who may inquire. We know damn well that Facebook and Google
+ill catch on and try to ride the wave (see: Facebook threatening the Fediverse
+with Threads integration, and Google shutting down yet *another* service after
+gobbling up user data because "refocusing efforts").
+
+"Web3," a marketing term for Ethereum-based platforms and services, is supposed
+to save us…right? Or maybe it's "the dWeb," the lesser-known marketing term for
+blockchain-/community-based platforms and services. Their evangelists are
+certainly loud as fuck about how their favorite blockchain is THE key to
+unlocking a brighter future on the 'Net (greetings, I just roasted myself and am
+an avid evangelist of (for?) the Handshake blockchain and will talk your ear off
+if you let me).
+
+I think the _solutions_ are somewhere in the middle. Notice the plural? There is
+no singular salve for the blights upon our digital land, despite what anyone
+says (I especially despise absolutist rhetoric, go touch grass, breathe
+fresh air, or take a nap).
+
+So, where do you come in?
+
+If you're technical, write guides for normies (and for future you, who will
+forget details).
+
+If you're entrepreneurial, build platforms that make it super easy for anyone to
+jump into the next stage of the internet. You have a major responsibility to not
+get swayed by a billion-dollar check from these tech companies (idk your
+financial situation so do you, I guess).
+
+If you're artistic, draw, paint, and sculpt the idealized future you
+want to see.
+
+If you're a musician, become more experimental with your tunes and collaborate
+with visual artists for your cover art.
+
+If you're a creator, period, you have no idea just how powerful you are;
+everyone is inspired by art and depictions of what *could* be. Think of your art
+as a template for a new world.
+
+Create in whichever way you know how. We aren't getting our Internet back but we
+sure as hell can steward a new one.
+
+🕸️

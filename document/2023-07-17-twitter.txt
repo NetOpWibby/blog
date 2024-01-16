@@ -2,7 +2,7 @@
 title: Twitter
 date:  2023-07-17
 tags:  social
-tldr:  ...that's it?
+tldr:  …that's it?
 ---
 
 I've been banned from Twitter.
@@ -73,7 +73,7 @@ something like that? Who knows, it's Elon's world over there.
 
 In any event, this ban feels retaliatory. I'm unable to concieve how this could
 happen, accidentally. I didn't have a lot of followers and certainly never had
-viral tweets. I'm frustrated because I've been on the site since 2009...that's
+viral tweets. I'm frustrated because I've been on the site since 2009…that's
 14 years ago. I'm unable to even export my data. It's gone, wiped.
 
 _spends a few minutes searching computer for possible exports_
