@@ -1,0 +1,102 @@
+---
+title: A personal renaissance
+date:  2024-09-16
+tags:  life
+tldr:  Nah, imma do my own thing.
+---
+
+I tire of platforms. So of course, I'm building a platform.
+
+I think a major reason why dystopian games like Cyberpunk 2077, Deus Ex: Human
+Revolution and Mankkind Divided, and even the Watch Dogs series fascinates me so
+is because in these games, I am not a mere bystander. In these fantasies, I have
+the power to fight back against injustice. I can literally "stick it to the man"
+and in my own way, save the world. In other words, I can be the change I wish to
+see in these worlds AND have immediate effect for the betterment of most, if
+not all.
+
+When I power down my PS5 however, reality beckons and I see red orbs indicating
+activity from online friends and acquantices on platforms where I'm pigeonholed
+into the same box as everyone else; my expression and originality welcome as
+long as they fit into neat compartments designated by the platform. I do not
+particularly enjoy using these platforms as much as I enjoy communicating with
+humans who also feel the way I do. The term "necessary evil" gets thrown around
+a lot…why must evil be necessary? I don't have the stomach for such a rabbit
+hole, I'll let others investigate that topic further.
+
+Twitter is a cesspool. You hear that? A lot of grumbles in agreement,
+reverberating across the internet. No one is happy about it and even though many
+(most?) of the accounts we follow have since fled to Mastodon and Bluesky, they
+aren't replacements. I haven't posted gameplay clips to my gaming Twitter in a
+year but I keep the account because the amazing illustrators, game developers,
+and composers I follow there are very much active and will not move elsewhere.
+
+Remember Myspace? Pepperidge Farms remembers. I'm sure you do too (if you're
+younger than a millennial, get rekt). I was a teen when it was THE online place
+to be. Everyone I knew, even "cool" kids and jocks understood enough about HTML
+and CSS to customize their profiles. People gatekept themes sites so peers
+wouldn't have a better-looking profile. It was a point of pride when you could
+de-obfuscate CSS to replicate something or even customize it more to make some
+effect your own. Anecdotally, it seemed like the collective intelligence of the
+internet was higher when we had to use our minds more. We should get back to
+that. We COULD get back to that.
+
+Much has been said about how advertising ruined the web experience (by giving
+birth to the data brokerage economy) and while that's true, isn't it super
+fucking sad that Silicon Valley is spending all of its money and attention on
+m̶a̶s̶s̶i̶v̶e̶ i̶f̶/t̶h̶e̶n̶/e̶l̶s̶e̶ f̶a̶c̶t̶o̶r̶i̶e̶s̶ LLMs? Trick question, they got us into this
+mess, why fix it?
+
+This is where I tell you I'm saving the world with my platform. I mean, it could
+happen, right? My lil' social network could upend everything and I'll have VCs
+groveling at my feet. My TED Talk will feature me in muted hacker-wear (hoodie
+and jeans) and I'll pseudo-humbly recount my beginnings and half-smile while the
+slide behind me shows $1 billion in quarterly revenue.
+
+No, this is me being the change I wish to see in the world.
+
+I wish other people would build things I want to use so I can spend my free time
+playing Fortnite and watching shows. I mean, I do do those things but it's kinda
+like someone who learned what kerning is and then notices terrible kerning on
+every street corner. I know too much. I took the old "should designers code"
+meme seriously and did just that. Building is my verb it's what I *do*.
+
+The last post on this blog was literally eight months ago. I felt compelled to
+publish today for some reason. The funny thing is, the last time I posted about
+socii (the social network/platform I'm building) was several years ago[1]. I
+took a detour and did a lot of work for the Handshake blockchain in that time
+but quit due to ideological differences[2]. It turns out, perverse incentives
+are rampant everywhere and the only way to win is not to play.
+
+Quitting Handshake made me re-evaluate my life in whole. Where I am not
+fulfilled, I'm making changes. I'm reclaiming my space on the web, starting with
+my homepage. There's no reason why it cannot also be the testing ground for the
+personal OS concept[3] I published years ago. Music I intended to publish 15
+years ago will finally release (they were trapped in Acid Pro 6, I bought a
+basic Windows PC to free them). Sci-fi novels scribbled in notebooks will be
+scrutinized by the world. I don't care. I've been hoarding ideas and concepts
+for far too long. Not enough characters to share 'em? Who cares, I have a blog.
+
+This post is rambly but again, who cares? I am constantly inspired by others so
+the least I can do is put myself out there more.
+
+Okay, socii[4] (click the logo to hear the pronounciation: "sew-key") is a paid
+service. Not expensive, but not cheap either. Social networking with advanced
+anti-harassment tools and customization like you wouldn't believe (I mentioned
+Myspace for a reason). Small groups because large groups invoke trolls. The UI
+of Big Social becoming mere feature/theme toggles. True data ownership. I could
+go on but I'd rather get back to building. 2025.01.01 is the launch date.
+Newsletter signup is on the site if you're interested.
+
+All this to say, I think I'm gonna enjoy having my homepage be the source of
+truth for all the things I do online. And, I have an intense interest in making
+Big Social suffer. If I can get my favorite creators on socii too, I'm happy.
+
+🕸
+
+---
+
+[1]: </2021-02-15-an-update-on-socii.txt>
+[2]: https://blog.neuenet.com/post/devlog-014
+[3]: </2019-12-02-a-personal-api.txt>
+[4]: https://socii.network
