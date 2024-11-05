@@ -1,0 +1,32 @@
+---
+title: Breaking Change: `@import` and global built-in functions
+date:  2024-11-05
+---
+
+I updated dependencies of a SvelteKit project and was surprised to see it
+complain about the way I import my Sass files. I could've used the automatic
+migrator the Sass Lang team mentioned[1] but I don't like my project potentially
+getting mangled, so I turned this:
+
+```scss
+@import "sass/uchu/core/mixin";
+
+@include font(100, "/type/geist-mono", "socii sans");
+@include font-plus-italics(400, "/type/serif", "socii serif");
+```
+
+to this:
+
+```scss
+@use "sass/uchu/core/mixin" as mixin;
+
+@include mixin.font(100, "/type/geist-mono", "socii sans");
+@include mixin.font-plus-italics(400, "/type/serif", "socii serif");
+```
+
+I find that choosing a namespace makes this new import system feel better.
+
+---
+
+[1]: https://sass-lang.com/documentation/breaking-changes/import/
+[2]: https://sass-lang.com/documentation/at-rules/use/#choosing-a-namespace
