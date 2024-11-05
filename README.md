@@ -32,34 +32,6 @@ just feed
 just version
 ```
 
-
-
-## Scripts
-
-All of these are self-explanatory. Your command prompt will let you know which
-port the site is running on (3465 by default).
-
-```sh
-# run the site in production mode
-npm start
-
-# run the site locally
-npm run watch
-
-# checks dependencies and lints TypeScript
-npm test
-```
-
-The following command is not run manually, rather via a pre-commit hook. It
-automatically updates the version parameter in my `package.json`, using
-[ChronVer](https://chronver.org).
-
-```sh
-npm run increment
-```
-
-
-
 ## Notes
 
 - The text files have Markdown syntax for reasons:
