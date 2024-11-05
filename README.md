@@ -32,6 +32,30 @@ just feed
 just version
 ```
 
+## Production
+
+- ensure Deno is installed on your server
+- use `which deno` to find the path of your install
+- `nano /etc/systemd/system/blog.service`
+  ```txt
+  [Unit]
+  After=network.target
+  Description=My cool blog
+  Documentation=https://blog.webb.page
+
+  [Service]
+  ExecStart=/root/.deno/bin/deno run --allow-env --allow-net --allow-read main.ts
+  Restart=on-failure
+  Type=simple
+  User=root
+  WorkingDirectory=/var/www/blog
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+- `systemctl start blog`
+- `systemctl enable blog`
+
 ## Notes
 
 - The text files have Markdown syntax for reasons:
