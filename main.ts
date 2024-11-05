@@ -18,15 +18,18 @@ import {
   environment,
   feedDirectory,
   getVersion,
+  notesDirectory,
   port,
   postDirectory
 } from "src/utility/constant.ts";
 
 import createLayout from "src/helper/create-layout.ts";
+import createNotesLayout from "src/helper/create-notes-layout.ts";
 import getDirectoryContents from "src/helper/get-directory-contents.ts";
+import getDocuments from "src/helper/get-documents.ts";
 import getFileContents from "src/helper/get-file-contents.ts";
-import getPosts from "src/helper/get-posts.ts";
 import populateLayout from "src/helper/populate-layout.ts";
+import populateNotesLayout from "src/helper/populate-notes-layout.ts";
 
 const errorMessage = dedent`
   ---
@@ -40,6 +43,9 @@ const errorMessage = dedent`
   interesting though.
 `;
 
+const notePathRegex = /^\/(notes)\/\d{3}-[\w-]+\.txt$/;
+const postPathRegex = /^\/\d{4}-\d{2}-\d{2}-[\w-]+\.txt$/;
+
 
 
 //// program
@@ -51,12 +57,49 @@ const server = Deno.serve({
     const { pathname } = new URL(req.url);
 
     if (pathname === "/") {
-      const listings = await getDirectoryContents();
+      const listings = await getDirectoryContents(postDirectory);
 
       return new Response(
         createLayout(populateLayout(listings)), {
           headers: {
             "content-type": "text/html; charset=utf-8"
+          }
+        }
+      );
+    }
+
+    if (pathname === "/notes") {
+      const listings = await getDirectoryContents(notesDirectory);
+
+      return new Response(
+        createNotesLayout(populateNotesLayout(listings)), {
+          headers: {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      );
+    }
+
+    if (notePathRegex.test(pathname)) {
+      const slug = pathname.slice(1).replace("notes/", "");
+      const notes = await getDocuments(notesDirectory);
+
+      if (notes && notes.indexOf(slug) < 0) {
+        return new Response(
+          errorMessage, {
+            headers: {
+              "content-type": "text/plain; charset=utf-8"
+            }
+          }
+        );
+      }
+
+      const filePath = join(notesDirectory, slug);
+
+      return new Response(
+        await getFileContents(filePath), {
+          headers: {
+            "content-type": "text/plain; charset=utf-8"
           }
         }
       );
@@ -98,9 +141,9 @@ const server = Deno.serve({
       );
     }
 
-    if (pathname.startsWith("/") && pathname.endsWith(".txt")) {
+    if (postPathRegex.test(pathname)) {
       const slug = pathname.slice(1);
-      const posts = await getPosts();
+      const posts = await getDocuments(postDirectory);
 
       if (posts && posts.indexOf(slug) < 0) {
         return new Response(

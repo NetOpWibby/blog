@@ -18,7 +18,7 @@ export default (suppliedArray: Array<{ file: string, size: number }>): string =>
     return `
             <div class="grid">
               <div class="col">${size}</div>
-              <div class="col"><a href="/${file}">${file}</a></div>
+              <div class="col"><a href="/notes/${file}">${file}</a></div>
             </div>
           `;
   });

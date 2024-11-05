@@ -7,20 +7,19 @@ import { join } from "dep/std.ts";
 
 //// util
 
-import { postDirectory } from "src/utility/constant.ts";
 import prettyBytes from "src/utility/pretty-bytes.ts";
 
 
 
 //// export
 
-export default async() => {
+export default async(directory: string) => {
   const posts: { file: string; size: string; }[] = [];
 
   try {
     const files: Deno.DirEntry[] = [];
 
-    for await (const dirEntry of Deno.readDir(postDirectory)) {
+    for await (const dirEntry of Deno.readDir(directory)) {
       if (dirEntry.isFile)
         files.push(dirEntry);
     }
@@ -32,7 +31,7 @@ export default async() => {
         return;
 
       if (file.name.endsWith(".txt")) {
-        const filePath = join(postDirectory, file.name);
+        const filePath = join(directory, file.name);
         const { size } = await Deno.stat(filePath);
         const data = { file: file.name, size: prettyBytes(size) };
 

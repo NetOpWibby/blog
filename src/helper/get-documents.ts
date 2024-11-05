@@ -1,21 +1,15 @@
 
 
 
-//// util
-
-import { postDirectory } from "src/utility/constant.ts";
-
-
-
 //// export
 
-export default async() => {
+export default async(directory: string) => {
   const posts: string[] = [];
 
   try {
     const files: Deno.DirEntry[] = [];
 
-    for await (const dirEntry of Deno.readDir(postDirectory)) {
+    for await (const dirEntry of Deno.readDir(directory)) {
       if (dirEntry.isFile)
         files.push(dirEntry);
     }
