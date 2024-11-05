@@ -35,19 +35,21 @@ just version
 ## Production
 
 - ensure Deno is installed on your server
-- use `which deno` to find the path of your install
+- make note of `which deno` to find the path of your install
 - `nano /etc/systemd/system/blog.service`
-  ```txt
+  ```service
   [Unit]
   After=network.target
   Description=My cool blog
   Documentation=https://blog.webb.page
 
   [Service]
+  # your deno path
   ExecStart=/root/.deno/bin/deno run --allow-env --allow-net --allow-read main.ts
   Restart=on-failure
   Type=simple
   User=root
+  # the path of your blog
   WorkingDirectory=/var/www/blog
 
   [Install]
@@ -55,6 +57,7 @@ just version
   ```
 - `systemctl start blog`
 - `systemctl enable blog`
+- when making changes to your `blog.service` file, you'll need to run `systemctl daemon-reload`
 
 ## Notes
 
