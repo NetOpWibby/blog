@@ -35,6 +35,7 @@ just version
 ## Production
 
 - ensure Deno is installed on your server
+  - Deno also expects unzip or 7zip to be installed: `apt install unzip -y`
 - make note of `which deno` to find the path of your install
 - `nano /etc/systemd/system/blog.service`
   ```service
