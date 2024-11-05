@@ -3,13 +3,10 @@
 Thumbs.db
 
 # Folders
-.nyc_output
 dist
 feed
-node_modules
 
 # Files
 .env
 *.lock
 *.log
-package-lock.json

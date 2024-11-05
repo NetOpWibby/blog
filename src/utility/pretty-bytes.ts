@@ -1,7 +1,7 @@
 
 
 
-/// util
+//// util
 
 const BIBIT_UNITS = [ "b", "kibit", "Mibit", "Gibit", "Tibit", "Pibit", "Eibit", "Zibit", "Yibit" ];
 const BIBYTE_UNITS = [ "B", "kiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB" ];
@@ -10,11 +10,9 @@ const BYTE_UNITS = [ "B", "kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" ];
 
 
 
-/// export
+//// export
 
-export default prettyBytes;
-
-export function prettyBytes(number: number | string, options?: any) {
+export default (number: number | string, options?: any) => {
   if (!Number.isFinite(number))
     throw new TypeError(`Expected a finite number, got ${typeof number}: ${number}`);
 
@@ -75,14 +73,8 @@ export function prettyBytes(number: number | string, options?: any) {
 
 
 
-/// helper
+//// helper
 
-/*
-Formats the given number using `Number#toLocaleString`.
-- If locale is a string, the value is expected to be a locale-key (for example: `de`).
-- If locale is true, the system default locale is used for translation.
-- If no value for locale is specified, the number is returned unmodified.
-*/
 function toLocaleString(number: number | string, locale: string | boolean, options?: any) {
   let result = number;
 
@@ -96,4 +88,4 @@ function toLocaleString(number: number | string, locale: string | boolean, optio
 
 
 
-/// via https://github.com/sindresorhus/pretty-bytes
+//// via https://github.com/sindresorhus/pretty-bytes

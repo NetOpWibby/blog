@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false
+  },
+  "exclude": ["dbschema/"],
+  "importMap": "import_map.json",
+  "lint": {
+    "rules": {
+      "exclude": ["no-explicit-any"]
+    }
+  },
+  "lock": false,
+  "tasks": {
+    "dev": "deno run --allow-env --allow-net --allow-read --allow-run --allow-write main.ts development",
+    "start": "deno run --allow-env --allow-net --allow-read --allow-run --allow-write main.ts"
+  }
+}

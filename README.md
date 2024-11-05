@@ -5,11 +5,31 @@
 
 
 
+## Prerequisites
+
+- [Deno](https://deno.land/#installation)
+- [Just](https://just.systems/man/en)
+
 ## Setup
 
 ```sh
-git clone https://github.com/NetOperatorWibby/blog.git && cd blog
-npm i
+git clone https://github.com/NetOpWibby/blog.git && cd $_
+```
+
+## Commands
+
+```sh
+# run blog for local development
+just dev
+
+# run blog for production
+just start
+
+# generate feeds
+just feed
+
+# generate version.txt
+just version
 ```
 
 

@@ -1,0 +1,48 @@
+
+
+
+//// import
+
+import { join } from "dep/std.ts";
+
+//// util
+
+import { postDirectory } from "src/utility/constant.ts";
+import prettyBytes from "src/utility/pretty-bytes.ts";
+
+
+
+//// export
+
+export default async() => {
+  const posts: { file: string; size: string; }[] = [];
+
+  try {
+    const files: Deno.DirEntry[] = [];
+
+    for await (const dirEntry of Deno.readDir(postDirectory)) {
+      if (dirEntry.isFile)
+        files.push(dirEntry);
+    }
+
+    files.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+
+    for (const file of files) {
+      if (file.name.startsWith("."))
+        return;
+
+      if (file.name.endsWith(".txt")) {
+        const filePath = join(postDirectory, file.name);
+        const { size } = await Deno.stat(filePath);
+        const data = { file: file.name, size: prettyBytes(size) };
+
+        posts.push(data);
+      }
+    }
+  } catch(error) {
+    console.error("Error reading directory contents:", error);
+  } finally {
+    // deno-lint-ignore no-unsafe-finally
+    return posts;
+  }
+}
