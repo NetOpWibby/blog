@@ -24,7 +24,7 @@ to this:
 @include mixin.font-plus-italics(400, "/type/serif", "socii serif");
 ```
 
-I find that choosing a namespace makes this new import system feel better.
+I find that choosing a namespace[2] makes this new import system feel better.
 
 ---
 
