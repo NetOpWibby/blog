@@ -20,7 +20,7 @@ import {
   url
 } from "src/utility/constant.ts";
 
-import getPosts from "src/helper/get-posts.ts";
+import getDocuments from "src/helper/get-documents.ts";
 
 const atomFeed = new ATOM({
   authors: [
@@ -71,7 +71,7 @@ async function createFeeds() {
   await Deno.mkdir(feedDirectory, { recursive: true });
 
   const feedPosts = [];
-  const files = await getPosts();
+  const files = await getDocuments(postDirectory);
 
   for await (const file of files) {
     const filePath = join(postDirectory, file);
