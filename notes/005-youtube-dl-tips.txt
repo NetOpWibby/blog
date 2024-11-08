@@ -1,0 +1,48 @@
+---
+title: youtube-dl tips & tricks
+date:  2024-11-08
+---
+
+Everyone knows `yuotube-dl` doesn't really work these days. What **does** work is
+the successor, `yt-dlp`[1]. I install it via brew[2]:
+
+```sh
+brew install yt-dlp
+```
+
+Here's the contents of my `~/.config/yt-dlp/config` (it automatically titles
+videos I download):
+
+```plain
+--format-sort "ext"
+-o ~/Movies/%(title)s.%(ext)s
+```
+
+Finally, here's what's in my `~/.zshrc` (I use zsh[3]):
+
+```sh
+alias yt="yt-dlp"
+
+ig() {
+  yt $1 -f mp4
+}
+```
+
+Downloading YouTube videos is as easy as:
+
+```sh
+yt https://www.youtube.com/watch?v=_5zwYVh8i5w
+```
+
+And Instagram videos:
+
+```sh
+# this is an hour-long video and Instagram pauses playback if you dare multitask
+ig https://www.instagram.com/p/DCDRaRoxJYW/
+```
+
+---
+
+[1]: https://github.com/yt-dlp/yt-dlp
+[2]: https://brew.sh
+[3]: https://ohmyz.sh
