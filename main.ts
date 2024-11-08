@@ -197,13 +197,13 @@ Deno.addSignalListener("SIGTERM", gracefulShutdown);
 
 //// helper
 
-async function gracefulShutdown() {
-  await server.shutdown();
-}
-
 function fit(input: string) {
   const remainingSpace = 30 - input.length; /// 34 - 4 (border + one space each side)
   return input + " ".repeat(remainingSpace);
+}
+
+async function gracefulShutdown() {
+  await server.shutdown();
 }
 
 function repeatCharacter(input: string, repeatAmount: number): string {
