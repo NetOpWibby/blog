@@ -44,7 +44,7 @@ const errorMessage = dedent`
 `;
 
 const notePathRegex = /^\/(notes)\/\d{3}-[\w-]+\.txt$/;
-const postPathRegex = /^\/\d{4}-\d{2}-\d{2}-[\w-]+\.txt$/;
+const postPathRegex = /^\/\d{4}-\d{2}-\d{2}-[\w-.]+\.txt$/;
 
 
 
