@@ -1,0 +1,72 @@
+---
+title: Elon Musk mind virus
+date:  2024-11-12
+tags:  life
+tldr:  Voluntary retardation
+---
+
+Trying to find a suitable tagline for this post is challenging. At first I
+thought "emotional disability" would work. Or maybe, "empathetic disability" but
+the "disability" I'm talking about is voluntary, which would make it a choice.
+
+Voluntary retardation fits.
+
+Exhibit A[1] from dwr.eth, creator of the Farcaster[2] protocol[3] and CEO of the
+company that builds Warpcast[4], the major client of said protocol:
+
+> I’m anti-institutions. I think they are incompetent. Washington DC is at the
+> top of the stack.
+>
+> Plenty of coverage of Trump.
+>
+> I find mainstream liberals an easy target because they rationalize their
+> political beliefs to an absurd level.
+>
+> Whereas average conservative is honest: I’m voting for the non-liberal
+> candidate. I don’t care about the rationale or logic.
+>
+> If average liberal: I’m voting because it’s my team and I don’t care about
+> anything else, I would have more respect. Pure tribal affiliation. Politics is
+> to help those you like and hurt those you don’t. Very Lindy.
+
+Wait, what?
+
+> I’m voting for the non-liberal candidate. I don’t care about the rationale
+> or logic.
+
+Wild. There is no point in life that you make decisions in a vacuum but for some
+reason, politics is viable.
+
+I find mainstream conservatives an easy target because they rationalize their
+political beliefs to an absurd level.
+
+Now, Dan is a smart guy. Quite intelligent, actually. His inability or refusal to
+clarify his own comments is interesting. He'd rather troll[5] and gaslight. He
+raised $150 million at a $1 billion valuation just six months ago. SIGH.
+
+These are the kinds of people who hope to become the next Twitter. It's quite
+clear Dan's space is not the place for me, so I exported[6] my data and dipped.
+
+It's funny that just a few days ago I was questioning my continued usage of
+Farcaster and now my account's deleted (but my profile is still up, maybe a cache
+thing, idk). I still have many friends and acquantices over there and I won't
+judge them for staying; everyone's tipping point is different.
+
+What I will say though is that the future (and especially the next four years) is
+going to test your patience and resolve. Personally, I will no longer be tolerant
+of intolerant views. Nor will I stay in places that aren't for me, if I can help
+it. The web is so much bigger than any one person and is WAY bigger than any Elon
+stan. There are already reports of Trumpers realizing what they voted for and
+feeling immense regret. Let's see if it pays off for 'em[7].
+
+🕸
+
+---
+
+[1]: https://archive.is/UUK7A#15%25
+[2]: https://www.farcaster.xyz
+[3]: https://docs.farcaster.xyz/learn
+[4]: https://warpcast.com
+[5]: https://archive.is/19JCY#55%25
+[6]: </notes/006-export-farcaster.txt>
+[7]: https://www.youtube.com/watch?v=0gkC4i96QkA

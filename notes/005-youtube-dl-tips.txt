@@ -3,7 +3,7 @@ title: youtube-dl tips & tricks
 date:  2024-11-08
 ---
 
-Everyone knows `yuotube-dl` doesn't really work these days. What **does** work is
+Everyone knows `youtube-dl` doesn't really work these days. What **does** work is
 the successor, `yt-dlp`[1]. I install it via brew[2]:
 
 ```sh
