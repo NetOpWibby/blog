@@ -285,8 +285,8 @@ mofo!
 [3]: https://twitter.com/missandrealewis
 [4]: https://bandcamp.com/EmbeddedPlayer/album=512177084/size=small/bgcol=010000/linkcol=c8af60/track=3614882051/transparent=true
 [5]: https://bandcamp.com/EmbeddedPlayer/album=955213907/size=small/bgcol=010000/linkcol=c8af60/track=918133906/transparent=true
-[6]: https://thewibby.bandcamp.com/album/music-from-the-love-lounge-vol-01
-[7]: https://thewibby.bandcamp.com/album/music-from-the-love-lounge-vol-02
+[6]: https://wibby.bandcamp.com/album/music-from-the-love-lounge-vol-01
+[7]: https://wibby.bandcamp.com/album/music-from-the-love-lounge-vol-02
 [8]: https://bandcamp.com/EmbeddedPlayer/album=4219807572/size=small/bgcol=010000/linkcol=c8af60/track=635396433/transparent=true
 [9]: http://sincerelyshantelle.com/blog/how-i-met-my-husband
 
