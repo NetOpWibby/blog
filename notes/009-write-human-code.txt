@@ -1,5 +1,5 @@
 ---
-title: How to use your own domain on Blueksy!
+title: Write code for humans
 date:  2024-12-10
 ---
 
