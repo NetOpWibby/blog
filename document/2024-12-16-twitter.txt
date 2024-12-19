@@ -100,6 +100,32 @@ Rebirth of an era. 🕸️
 
 ---
 
+2024.12.19 UPDATE
+
+Remember me sending Twitter snail mail to get my data? They've responded:
+
+> Hello,
+>
+> We have received a request for certain information regarding an X account,
+> @netopwibby, via post.
+>
+> If you are still having issues downloading your X archive, please confirm in
+> your reply.
+>
+> Please note that all your X data is available directly via your X account, as
+> explained in the following Help Center Page: https://support.twitter.com/articles/20172679
+>
+> Sincerely,
+>
+> X Corp
+
+The top of the email says "Reply above this line." This is an interesting change
+from their usual, "this email is not monitored so don't reply" tagline. Maybe
+they're trying to be professional for once. If you're banned and trying to get
+your data, maybe try emailing dpo-support@x.com directly? YMMV
+
+---
+
 [1]: </2023-07-17-twitter.txt>
 [2]: https://docupost.com
 [3]: https://www.theguardian.com/media/2024/dec/11/from-x-to-bluesky-why-are-people-abandoning-twitter-digital-town-square
