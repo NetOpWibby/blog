@@ -5,7 +5,7 @@ Thumbs.db
 # Folders
 dist
 draft
-feed
+/feed
 
 # Files
 .env
