@@ -221,7 +221,7 @@ export default (suppliedContent: string) => {
             <em>
               <a href="/2019-12-02-a-personal-api.txt" title="blog post introducing the personalOS concept">personalOS</a><sup>α</sup> server running @ blog.webb.page &middot; <a href="https://github.com/NetOpWibby/blog" title="source code for this blog">source</a><br/>
               feeds: <a href="/feed/atom" title="Atom feed for the webb blog">atom</a> &middot; <a href="/feed/json" title="JSON feed for the webb blog">json</a> &middot; <a href="/feed/rss" title="RSS feed for the webb blog">rss</a><br/>
-              socials: <a href="https://social.coop/@netopwibby">mastodon</a> &middot; <a href="https://bsky.app/profile/netopwibby.bsky.social">bluesky</a> &middot;<a href="https://www.linkedin.com/in/paulanthonywebb/">linkedin</a>
+              socials: <a href="https://social.coop/@netopwibby">mastodon</a> &middot; <a href="https://bsky.app/profile/webb.page">bluesky</a> &middot;<a href="https://www.linkedin.com/in/paulanthonywebb/">linkedin</a>
             </em>
           </footer>
         </main>
