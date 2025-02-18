@@ -118,7 +118,6 @@ async function createFeeds() {
   const latestPostDate = feedPosts[0].date;
 
   atomFeed.updated = new Date(latestPostDate);
-  jsonFeed.updated = new Date(latestPostDate);
   rssFeed.updated = new Date(latestPostDate);
 
   Deno.writeTextFileSync(join(feedDirectory, "index.xml"), atomFeed.build());
