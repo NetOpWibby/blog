@@ -111,7 +111,7 @@ const server = Deno.serve({
       return new Response(
         await getFileContents(filePath), {
           headers: {
-            "content-type": "text/atom+xml; charset=utf-8"
+            "content-type": "application/atom+xml; charset=utf-8"
           }
         }
       );
@@ -123,7 +123,7 @@ const server = Deno.serve({
       return new Response(
         await getFileContents(filePath), {
           headers: {
-            "content-type": "text/feed+json; charset=utf-8"
+            "content-type": "application/feed+json; charset=utf-8"
           }
         }
       );
@@ -135,7 +135,7 @@ const server = Deno.serve({
       return new Response(
         await getFileContents(filePath), {
           headers: {
-            "content-type": "text/rss+xml; charset=utf-8"
+            "content-type": "application/rss+xml; charset=utf-8"
           }
         }
       );

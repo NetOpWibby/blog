@@ -3,7 +3,7 @@
 
 //// import
 
-import { ATOM, JSON, RSS } from "dep/x/feed.ts";
+import { ATOM, JSON, RSS } from "src/utility/feed/index.ts";
 import { join } from "dep/std.ts";
 import { marked } from "dep/x/marked.ts";
 import { yaml } from "dep/x/yaml.ts";
@@ -27,7 +27,7 @@ const atomFeed = new ATOM({
     {
       email,
       name: author
-    },
+    }
   ],
   description,
   id: `${url}/feed/atom`,
@@ -40,7 +40,7 @@ const jsonFeed = new JSON({
     {
       email,
       name: author
-    },
+    }
   ],
   description,
   feed: `${url}/feed/json`,
@@ -53,7 +53,7 @@ const rssFeed = new RSS({
     {
       email,
       name: author
-    },
+    }
   ],
   description,
   id: `${url}/feed/rss`,
@@ -88,10 +88,7 @@ async function createFeeds() {
       const renderedPost = marked.parse(post);
 
       atomFeed.addItem({
-        content: {
-          body: renderedPost,
-          type: "html"
-        },
+        content: { body: renderedPost },
         id: fullUrl,
         link: fullUrl,
         summary: postInfo.tldr,
@@ -108,10 +105,7 @@ async function createFeeds() {
       });
 
       rssFeed.addItem({
-        content: {
-          body: renderedPost,
-          type: "html"
-        },
+        content: { body: renderedPost },
         description: postInfo.tldr,
         id: fullUrl,
         link: fullUrl,
