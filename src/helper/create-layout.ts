@@ -48,6 +48,11 @@ export default (suppliedContent: string) => {
         <meta content="${title}" name="application-name"/>
         <meta content="∴NetOpWibby" name="socii:site"/>
 
+        <!--/ Feeds /-->
+        <link rel="alternate" href="/feed/atom" type="application/atom+xml"/>
+        <link rel="alternate" href="/feed/json" type="application/json+xml"/>
+        <link rel="alternate" href="/feed/rss" type="application/rss+xml"/>
+
         <!--/ The Rest /-->
         <link href="https://🔥.pixels.wtf/blog/asset/apple-touch-icon.png" rel="apple-touch-icon"/>
         <link href="${url}" rel="canonical"/>
