@@ -53,6 +53,7 @@ export default (suppliedContent: string) => {
         <link href="${urlNotes}" rel="canonical"/>
         <link color="#111" href="https://🔥.pixels.wtf/blog/asset/favicon.svg" rel="mask-icon"/>
         <link href="https://🔥.pixels.wtf/blog/asset/favicon.svg" rel="shortcut icon"/>
+        <link href="https://uchu.style/color_expanded.css" rel="stylesheet"/>
 
         <style>
           *,
@@ -60,14 +61,6 @@ export default (suppliedContent: string) => {
           *::after {
             margin: 0; padding: 0;
             box-sizing: inherit;
-          }
-
-          :root {
-            --color-black: #010000;
-            --color-blue: #4dabf7;
-            --color-gray: #ddd;
-            --color-purple: #9775fa;
-            --color-white: #fcfcfc;
           }
 
           html {
@@ -79,8 +72,8 @@ export default (suppliedContent: string) => {
           body {
             width: 100%; height: 100%;
 
-            background-color: var(--color-white);
-            color: var(--color-black);
+            background-color: var(--uchu-yang);
+            color: var(--uchu-yin-9);
             display: flex;
             flex-direction: column;
             font-family: monospace;
@@ -100,19 +93,20 @@ export default (suppliedContent: string) => {
           footer {
             margin-top: 4rem;
             margin-bottom: 2rem;
+
+            a {
+              color: inherit;
+              font-weight: 600;
+
+              &:hover {
+                color: var(--uchu-blue-3);
+              }
+            }
           }
 
           p {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
-          }
-
-          a {
-            color: var(--color-blue);
-          }
-
-          a:visited {
-            color: var(--color-purple);
           }
 
           /*————— grid */
@@ -167,7 +161,7 @@ export default (suppliedContent: string) => {
           }
 
           .grid:not(:first-of-type) {
-            border-bottom: 1px solid var(--color-gray);
+            border-bottom: 1px solid var(--uchu-gray-3);
           }
 
           /*————— column */
@@ -175,6 +169,30 @@ export default (suppliedContent: string) => {
           .col {
             cursor: default;
             overflow: hidden;
+
+            a {
+              white-space: pre-line;
+            }
+
+            &:not(:hover) {
+              a:not(:visited) {
+                color: var(--uchu-blue-3);
+              }
+
+              a:visited {
+                color: var(--uchu-purple-1);
+              }
+            }
+
+            &:hover {
+              a:not(:visited) {
+                color: var(--uchu-blue-6);
+              }
+
+              a:visited {
+                color: var(--uchu-purple-4);
+              }
+            }
           }
 
           @media (min-width: 901px) {
@@ -189,10 +207,6 @@ export default (suppliedContent: string) => {
               text-align: right;
               width: 10rem;
             }
-          }
-
-          .col a {
-            white-space: pre-line;
           }
         </style>
       </head>

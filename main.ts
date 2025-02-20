@@ -179,7 +179,7 @@ const server = Deno.serve({
     console.log(
       dedent`\n
      ┌${repeatCharacter("─", 32)}┐
-     │ ${fit("BLOG API")} │
+     │ ${fit("THE WEBB BLOG")} │
      │ ${fit(`→ ${environment}`)} │
      │ ${shellGreen(fit(version))} │
      └${repeatCharacter("─", 32)}┘
