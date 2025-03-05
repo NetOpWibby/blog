@@ -1,0 +1,72 @@
+---
+title: Why I won't touch React
+date:  2025-03-04
+tags:  programming
+tldr:  Outside of my $DAYJOB
+---
+
+JavaScript frameworks are a dime a dozen and everyone has their favorites. HTMX,
+Solid, Svelte/SvelteKit (my favorite), Next, Remix, &c. The industry has long
+decided on the framework to rule them all, React. Which is fine, I guess. Cool.
+
+My problem is when the industry decides on A Thing™, everyone gravitates to this
+and opposing that can sometimes be difficult.
+
+Remember "mobile‑first design/development"? This never made sense to me. We
+don't code on mobile devices, we code on desktop devices…so why not _start_
+coding for desktop and use media queries to to hide/remove elements from mobile
+views? Being a lowly entry‑level dev meant I had no power to push back so it was
+during this era that I decided to apply common sense (to me) coding practices to
+personal projects.
+
+The industry has since moved on and replaced that practice with proper
+responsive design.
+
+My reasons for being anti‑React isn't a knee‑jerk reaction to being a "hipster"
+(anti whatever's popular), I actually have a few reasons:
+
+1. My mental model doesn't mesh with how React works
+2. The way React manages state has always been weird
+3. The internet is rife with outdated/opinionated tutorials
+
+Keep in mind that I am not up‑to‑date on how React is nowadays so maybe my
+issues with it are expired.
+
+I'll contrast the reasons I don't like React with the reasons I like Svelte:
+
+1. Svelte is the closest to writing vanilla HTML/CSS/JS that I've found…and I
+can easily use Sass and TypeScript instead.
+2. Until Svelte 5, managing state in Svelte has been easier for me to grok than
+React. Svelte 5 is quite helpful in their typings when you try to mix the old
+way of managing state with their new way.
+3. I've never been confused with Svelte tutorials. It may help that Svelte
+hasn't had many drastic changes over the years and, being a smaller framework
+means there's no SEO stuffing or whatever it is people do to get more clicks on
+their ad‑riddled site.
+
+The last point is rectified these days by a good search engine. Google hasn't
+been good for quite some time but most people don't care so my last point still
+stands. Paying for Kagi makes sense for *me* though.
+
+I will say that React makes sense to use if you have need for React Native. From
+what I understand, React Native is fantastic and comes with less headaches than
+using literally anything else for building Android and Apple mobile apps from
+the same codebase.
+
+Every "Who's Hiring" thread on HackerNews is littered with React experience of
+at least a few years. Sometimes a poster will append, "or relevant experience"
+but let's be real, experience in another framework probably doesn't matter. Job
+postings on LinkedIn are the same but I'd wager HN is better because at least
+you can contact a real person to inquire further.
+
+This isn't a bitter blog post btw! I'm more than happy to stubbornly wait this
+phase out just like I did with "mobile‑first design", "should designers code?"
+(designers should absolutely code, it's awesome), and so on. Did you know I was
+actually chastised for spending my lunch breaks as a lowly designer turned
+developer to read up on design trends? Why is what I'm doing bothering YOU?
+
+Anyhoo, learn React if you gotta (or geniunely want to), I don't care. I'll be
+here in 10 years ranting about the next tech industry darling that doesn't make
+sense to me.
+
+🕸️
