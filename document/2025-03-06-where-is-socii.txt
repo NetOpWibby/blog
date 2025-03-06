@@ -1,0 +1,56 @@
+---
+title: Where's socii?
+date:  2025-03-06
+tags:  project
+tldr:  Social media is decent
+---
+
+TL;DR: social media is starting to feel like a **solved problem**. Thanks to the
+Tapbots team's excellent Mastodon[1] (and soon Bluesky[2]) clients, I no longer
+feel the burning need to create the perfect social network…Mastodon and Bluesky
+are Good Enough™.
+
+I recently released a color palette[3] I've been using for almost a year and the
+response has been nuts. 600+ points on Hacker News[4], 1k+ stars on GitHub[5], a
+feature[6] in Codrops' weekly newsletter, and inclusion in Bjango's Pinwheel[7]
+app…WTF!! Mind you, my only expectation was a _handful_ of people would find it
+neat and I'd continue on to another project.
+
+Anyhoo, I like the process of scratching an itch and then releasing something
+fairly quickly, similar to what elle[8] does with her dope isometric Megaman
+Battle Network‑inspired homepage. At the end of last year I quit working[9] on a
+massive project (domain registry/registrar) and moved to another one
+(socii)[10]. Coupled with my general satisfaction with Mastodon, my motivation
+to work on socii dwindled. Is this the end? For now, sure. What will I do in the
+meantime then?
+
+I'm making a paid video platform that'll be a cross between Vimeo, YouTube, and
+something else I don't wish to divulge just yet. Isn't a platform massive
+though? It's kinda in the name. Well, yes and no. It's massive if it's open to
+the public. If it's just open to my friends and I, it's manageable.
+
+My use case is that I want to share my sick Fortnite and No Man's Sky clips, and
+I don't wanna use Google platforms. Vimeo is full‑on enterprise focused these
+days and what else is out there? Dailymotion? Worldstar? IG? No thanks.
+
+The web has ossified and options for hosting blogs, email, homepages, and video
+are limited. I feel that we (designers, builders, enthusiasts) owe it to the
+internet we love so much to build these options.
+
+I apologize to everyone hoping to use socii but I gotta work on things that move
+me. On the plus side, some socii features will make their way over to ▓▒░▓▒▓.
+
+🕸️
+
+---
+
+[1]: https://tapbots.com/ivory
+[2]: https://tapbots.com/phoenix
+[3]: https://uchu.style
+[4]: https://news.ycombinator.com/item?id=43072338
+[5]: https://github.com/NeverCease/uchu
+[6]: https://thecollectivenewsletter.beehiiv.com/p/the-collective-900
+[7]: https://bjango.com/mac/pinwheel
+[8]: https://ellesho.me/page
+[9]: https://blog.neuenet.com/post/devlog-014
+[10]: https://social.coop/@netopwibby/113329030542527807
