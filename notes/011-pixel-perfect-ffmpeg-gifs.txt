@@ -28,9 +28,13 @@ Now I gotta figure out where to put other peoples banners on my homepage…
 
 Oh fun fact, AVIF is terrible for pixel-perfect animations, GIF remains king.
 
+Thanks to Hank[5] I learned that putting `image-rendering: pixelated;` on
+your pixel images via CSS make them look crisp.
+
 ---
 
 [1]: https://ellesho.me/page
 [2]: https://webb.page/88x31/a.gif
 [3]: https://webb.page/88x31/b.gif
 [4]: https://webb.page/88x31/c.gif
+[5]: https://mastodon.design/@hank
