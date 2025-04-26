@@ -311,6 +311,11 @@ where to find and correct me. Hope this helps!
 
 🕸️
 
+EDIT: Made my file upload limit 200MB because 100MB wasn't enough. Also learned
+that you need to close and re‑open your Element client so it syncs the new
+limit. You'd think `service conduit restart` would actually restart but it seems
+to hang for me…or maybe I'm just impatient so I end up rebooting my server.
+
 ---
 
 [1]: https://element.io/pricing
