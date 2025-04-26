@@ -1,0 +1,323 @@
+---
+title: Enter the Matrix
+date:  2025-04-25
+tags:  self-host
+tldr:  When all else fails, DIY!
+---
+
+When Element decided to change their cloud hosting pricing last year, I had a
+decision to make; pay more money[1] per user on my account (€60 per user/year,
+paid annually), setup my own server using Synapse (the only Matrix software that
+was out at the time), or go with some third‑party. Synapse was hella complicated
+to deal with so I decided to go with the latter.
+
+Long story short, this third‑party (Federated Computer) is not good. Just this
+past weekend, they performed an unannounced server upgrade which broke my
+instance and I was gaslit by someone on their support team until I mentioned I
+only experienced issues over the weekend.
+
+They refused to answer my very direct question ("how can I export my data?")
+three times before pointing me to the room chat export feature of Element, which
+was not what I asked for. EMS (Element Matrix Services) provided everyone on
+their platform with a dashboard where they could export the database and other
+files necessary to import to a new host. When I approached FC (who were listed
+as hosts recommended by EMS), they instructed me to upload to SwissTransfer[2]
+so they could concierge the process.
+
+You'd think the folks at Federated Computer would remember/understand that, no?
+
+They've also got quite the lackluster dashboard UI. I've designed better when I
+got my start coding in 2008. Anyhoo, YMMV but FC is not for me. This experience
+was enough impetus to explore if the Matrix self‑host landscape changed and
+luckily, it has!
+
+After some quick research, I decided to go with Conduit[3] as my Matrix server.
+It's written in Rust, is in beta at the time of this post, and its instructions
+are slightly wrong so I'm writing this post for future me and friends.
+
+Before I get into it, a few things:
+
+Sliding Sync[4] is not implemented yet. The fancy Element X client uses it for
+quick syncing of Matrix rooms and I wanna use it.
+
+I asked about SS in Conduit's Matrix room:
+
+> The current sliding sync implementation is not working as we need simple
+> sliding sync now. And that is not ready in conduit yet.
+
+The developer leading this feature has said it is high on his list
+of priorities.
+
+Also, when I invited my friends to my new server I wasn't able to see their
+messages decrypted, even after verifying my sessions. I still can't see those
+initial messages but the syncing has been fine for the past few days so maybe
+that was just some setup weirdness.
+
+
+
+## Installing Conduit
+
+I'll assume you're installing Conduit on Linux. I prefer Ubuntu LTS for my
+servers. The Conduit install tutorial gives you three types of binaries to
+install: statically linked Debian package, statically linked binary, and
+OCI image.
+
+I didn't realize the Debian package didn't work for me until much later. The
+statically linked binary worked though. Unless you are on an ARM platform, you
+should choose one of the `x86_64` options. I used `x86_64-unknown-linux-musl`:
+
+```sh
+# download binary to your system
+wget -O /usr/local/bin/matrix-conduit https://gitlab.com/api/v4/projects/famedly%2Fconduit/jobs/artifacts/master/raw/x86_64-unknown-linux-musl?job=artifacts
+
+# make binary executable
+chmod +x /usr/local/bin/matrix-conduit
+
+# add a user that will handle the Conduit process
+adduser --system conduit --group --disabled-login --no-create-home
+```
+
+Next, we'll set up the systemd service:
+
+```sh
+nano /etc/systemd/system/conduit.service
+```
+
+```toml
+[Unit]
+Description=Conduit Matrix Server
+After=network.target
+
+[Service]
+Environment="CONDUIT_CONFIG=/etc/matrix-conduit/conduit.toml"
+User=conduit
+Group=conduit
+Restart=always
+ExecStart=/usr/local/bin/matrix-conduit
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Reload systemd so it knows about Conduit:
+
+```sh
+systemctl daemon-reload
+```
+
+Now it's the fun part, creating the Conduit configuration file so you can
+customize (like increasing the file upload limit past the default 20MB)!
+
+```sh
+# create directory
+mkdir -p /etc/matrix-conduit
+
+nano /etc/matrix-conduit/conduit.toml
+```
+
+The only things I've changed are `max_request_size` (so I can share gaming clips
+with my friends, 20MB is NOT enough), `enable_lightning_bolt`,
+`registration_token`, and `server_name`. I thought I needed to give my friends
+the token but I just sent invites to their Matrix addresses instead. I wonder if
+I can set `allow_registration` to false and still invite people to my server…
+
+```toml
+[global]
+# This makes sure Conduit can only be reached using the reverse proxy
+address = "127.0.0.1"
+
+allow_check_for_updates = true
+allow_federation = true
+
+# Enables registration. If set to false, no users can register on this server.
+allow_registration = true
+
+database_backend = "rocksdb"
+
+# This is the only directory where Conduit will save its data
+database_path = "/var/lib/matrix-conduit/"
+
+# Enable the display name lightning bolt on registration.
+enable_lightning_bolt = false
+
+# Max size for uploads in bytes (100MB)
+max_request_size = 100_000_000
+
+# The port Conduit will be running on. You need to set up a reverse proxy in
+# your web server (e.g. apache or nginx), so all requests to /_matrix on port
+# 443 and 8448 will be forwarded to the Conduit instance running on this port
+port = 6167
+
+# A static registration token that new users will have to provide when creating
+# an account. YOU NEED TO EDIT THIS.
+# - Insert a password that users will have to enter on registration
+# - Start the line with "#" to remove the condition
+registration_token = "your-generated-token"
+
+server_name = "matrix.webb.page"
+
+# Servers listed here will be used to gather public keys of other servers.
+trusted_servers = ["matrix.org"]
+```
+
+Now we've gotta set file permissions. Almost done!
+
+```sh
+chown -R root:root /etc/matrix-conduit
+
+chmod 755 /etc/matrix-conduit
+
+# gotta make more directories
+mkdir -p /var/lib/matrix-conduit/
+
+chown -R conduit:conduit /var/lib/matrix-conduit/
+
+chmod 700 /var/lib/matrix-conduit/
+```
+
+I already had Caddy setup from my new server install script[6], but here's the
+relevant portion:
+
+```sh
+apt install debian-keyring debian-archive-keyring apt-transport-https curl -y
+
+curl -1sLf "https://dl.cloudsmith.io/public/caddy/stable/gpg.key" | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+
+curl -1sLf "https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt" | tee /etc/apt/sources.list.d/caddy-stable.list
+
+apt update -y
+
+apt install caddy -y
+```
+
+The Conduit tutorial mentions making a particular directory for the Caddy config
+but that didn't work for me. Instead, do this:
+
+```sh
+nano /etc/caddy/Caddyfile
+```
+
+Obviously you'll swap my domains for yours.
+
+```
+matrix.webb.page, matrix.webb.page:8448 {
+  reverse_proxy /_matrix/* 127.0.0.1:6167
+}
+```
+
+Reload Caddy and enable Conduit!
+
+```sh
+service caddy reload
+
+systemctl start conduit
+
+systemctl enable conduit
+```
+
+To ensure your Matrix server works, run these locally (not on your server). Oh,
+and if you don't have `jq`[7] installed…why not? Just remove "| jq" to get raw
+JSON (jq is a pretty formatter).
+
+```sh
+curl https://matrix.webb.page/_matrix/client/versions | jq
+
+# if using port 8448
+curl https://matrix.webb.page:8448/_matrix/client/versions | jq
+```
+
+Your response should look like this:
+
+```json
+{
+  "versions": [
+    "r0.5.0",
+    "r0.6.0",
+    "v1.1",
+    "v1.2",
+    "v1.3",
+    "v1.4",
+    "v1.5"
+  ],
+  "unstable_features": {
+    "org.matrix.e2e_cross_signing": true,
+    "org.matrix.msc3916.stable": true
+  }
+}
+```
+
+
+
+## Install Element
+
+Getting Elememt installed[8] is quite simple.
+
+```sh
+apt install -y wget apt-transport-https
+
+wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list
+
+apt update -y
+
+apt install -y element-web
+
+nano /etc/element-web/config.json
+```
+
+Here is the relevant portion that I changed in my Element config:
+
+
+```json
+  "default_server_config": {
+    "m.homeserver": {
+      "base_url": "https://matrix.webb.page",
+      "server_name": "webb.page"
+    },
+    "m.identity_server": {
+      "base_url": "https://vector.im"
+    }
+  },
+```
+
+You're gonna add something new to your Caddyfile as well:
+
+```sh
+nano /etc/caddy/Caddyfile
+```
+
+```
+# again, swap my domain for yours
+
+element.webb.page {
+  file_server
+  root * /usr/share/element-web
+}
+```
+
+You made another change so refresh Caddy.
+
+```sh
+service caddy reload
+```
+
+
+
+## FIN
+
+That should be it! I hope I didn't leave anything out and if I did, you know
+where to find and correct me. Hope this helps!
+
+🕸️
+
+---
+
+[1]: https://element.io/pricing
+[2]: https://www.swisstransfer.com
+[3]: https://conduit.rs
+[4]: https://ems-docs.element.io/books/element-server-suite-documentation-lts-2310/page/setting-up-sliding-sync
+[5]: https://docs.conduit.rs/deploying/generic.html#installing-conduit
+[6]: https://gist.github.com/NetOpWibby/4b8c4729b18171a1c3d322837835cf68
+[7]: https://formulae.brew.sh/formula/jq
+[8]: https://github.com/element-hq/element-web/blob/develop/docs/install.md

@@ -84,6 +84,13 @@ I am powered by delulu and a tireless LLM that validates my wild ideas.
 
 🕸️
 
+2025.04.17 EDIT: Someone DM'd me about an issue the Vivaldi browser has with my
+homepage and ended it with a request to not use our convo within an LLM, based
+on my enthusiasm in this blog post and I gotta ask…WTF do y'all be on? I
+understand the inherent distrust around the training of LLMs but why would I use
+my online communications VERBATIM as training fodder? I need y'all to relax and
+take off the tinfoil hat to let your brain breathe. Good grief.
+
 ---
 
 [1]: https://claude.ai
