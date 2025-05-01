@@ -348,6 +348,10 @@ Obviously this feature is suited for work/enterprise.
 Much thanks to Maurus[20] for spending years working on Stalwart, it's pretty
 sweet. I'll most likely be using this for another 10 years.
 
+EDIT: Knew I'd remember something else as soon as I pushed this to my server!
+When creating new accounts in Stalwart, you should make "Login name" and "Email"
+be the same, it'll make things less confusing.
+
 🕸️
 
 ---
