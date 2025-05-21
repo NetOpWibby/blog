@@ -42,11 +42,11 @@ export default (suppliedContent: string) => {
         <meta content="${title}" property="og:title"/>
         <meta content="website" property="og:type"/>
         <meta content="${url}" property="og:url"/>
+        <meta content="@netopwibby@social.coop" name="fediverse:creator"/>
 
         <!--/ Social/App Stuff /-->
         <meta content="${title}" name="apple-mobile-web-app-title"/>
         <meta content="${title}" name="application-name"/>
-        <meta content="∴NetOpWibby" name="socii:site"/>
 
         <!--/ Feeds /-->
         <link rel="alternate" href="/feed/atom" type="application/atom+xml"/>
@@ -57,6 +57,7 @@ export default (suppliedContent: string) => {
         <link href="https://🔥.pixels.wtf/blog/asset/apple-touch-icon.png" rel="apple-touch-icon"/>
         <link href="${url}" rel="canonical"/>
         <link color="#111" href="https://🔥.pixels.wtf/blog/asset/favicon.svg" rel="mask-icon"/>
+        <link href="https://social.coop/@netopwibby" rel="me"/>
         <link href="https://🔥.pixels.wtf/blog/asset/favicon.svg" rel="shortcut icon"/>
         <link href="https://uchu.style/color_expanded.css" rel="stylesheet"/>
 
