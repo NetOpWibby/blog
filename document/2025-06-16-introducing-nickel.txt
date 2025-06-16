@@ -1,0 +1,126 @@
+---
+title: Introducing Nickel
+date:  2025-06-16
+tags:  project, video
+tldr:  I just want my own YouTube, but sustainable.
+---
+
+Long story short, there aren't any video platforms that I want to use or that
+want me as a customer, so I made my own.
+
+
+
+## The inspiration
+
+Vimeo is best suited for small businesses, filmmakers, and agencies. The only
+other realistic option? YouTube…which is a Google product and I've been largely
+anti‑Google for at least a decade. At the top of this year though, I ended my
+anti‑Google stance to not only create a Gmail account, but create a new YouTube
+channel as well. The idea was that I'd just use them to grow my personal brand
+or whatever but that felt gross. I cringed every time I logged in.
+
+Around the same time, I remembered reading an article[1] where someone had a
+**ton** of video they were storing with Cloudflare and paying _pennies_. I
+finally re‑read the article and got the confidence to try it out for myself. The
+idea of having my own video platform always felt like an impossible dream, just
+out of reach. Not anymore, I did it!
+
+https://nickel.video/77C015N7N2N3[2]
+
+Few things to note: most of the site isn't done; internal links will show a nice
+"404, I'm working on it" message and the site is NOT responsive. This is for
+two reasons:
+
+1. I wanted to use this immediately
+2. I need to get over needing projects to be "perfect" before launching them
+
+My personal deadline was the launch date of Nintendo Switch 2 because I wanted
+to film an unboxing video. My son was a persistent micro‑manager during this
+time of immense frustration because guess what? Everything worked in development
+but not on my server…WTF?!!
+
+
+
+## What went wrong
+
+I develop on an M1 Max MacBook Pro with 32GB of RAM. Transcoding a 700MB video
+is fast af. Deciding to do so on a server with 2GB of RAM and watching my app
+crash again and again for no obvious (at the time) reason was excrutiating. What
+I know NOW is that the large video was being kept in memory and when memory
+fills up, a computer will crash. I had to learn how to chunk the video from my
+app and stream its parts to my transcoder before reassembling said parts so the
+transcoding could actually occur before sending _those_ bits to Cloudflare R2.
+
+WHEW!
+
+Switch 2 launched June 5th and I wasn't able to get my unboxing video onto
+Nickel until 5 or 6 days later…not terribly bad because I literally didn't know
+what I didn't know. I thought the 4GB Linode that's currently running my
+transcoder was good enough but I think I'll upgrade that to 8GB before I get my
+initial group of VIPs to find edge cases for me.
+
+Oh yeah, one of the avoidable issues I ran into was forgetting to install
+`ffmpeg` and wondering why the transcoder API wouldn't run LOL! Man, I felt like
+such a dummy.
+
+
+
+## What went well
+
+I'm having a blast figuring things out TBQH. Much of how the internet works
+remains a mystery to me, until I'm forced to learn something to develop
+a feature.
+
+For example, blob[3] URLs! They look more professional than having your CDN or
+raw playlist files be exposed in your video source tag. Transcoding is neat too!
+It basically creates several versions of your source video in different
+resolutions so you can serve video based on available bandwidth. I've gotta
+optimize my `ffmpeg` config some more to optimize for size, although I want to
+prioritize quality.
+
+Designing the video player took a few tries. I tried using Plyr[4] first but
+when I found that serving HLS content was proving difficult with it, I found the
+great `hls-video-element` and `media-chrome`[5] libraries. Fan‑freaking‑tastic
+libraries, they make themeing a _breeeeeze_.
+
+I made the video player add context when embedded[6] versus being on the site
+(you can see the title and username of the creator, along with a "NICKEL" button
+that'll take you to the video on the site). I haven't quite managed to get video
+to preview within Apple Messages or Discord but it seems like you need to be
+whitelisted to make that happen anyway. Nickel won't get that entitlement for
+quite some time (I thought adding Twitter meta tags would work but they don't so
+I'll remove them from the codebase in the next update).
+
+Speaking of updates, I thought I'd also record a video of me talking about the
+latest changes coming to Nickel and post under the official account there. Ya
+gotta dogfood your projects!
+
+
+
+## The future
+
+I've yet to setup a blog for Nickel so the next update or two about it will
+likely be here on my personal blog as I get basic site functionality done. I'm
+currently working on the pricing page and will get that responsive before fixing
+the rest of the ancillary pages.
+
+It was important for me to have a plan for sustainability because as we've all
+seen, ad‑supported always devolves into the worst possible experience for
+everyone who isn't an advertiser.
+
+It is my hope that Nickel can become the home of short‑form video for at least
+100,000 people; creators and the people that support them. Stay tuned!
+
+🕸️
+
+P.S.: For the tech stack nerds, nothing's changed. I'm using Gel, Deno, GraphQL,
+and SvelteKit (Typescript and Sass) on Linode.
+
+---
+
+[1]: https://screencasting.com/articles/cheap-video-hosting
+[2]: https://nickel.video/77C015N7N2N3
+[3]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
+[4]: https://plyr.io
+[5]: https://www.media-chrome.org/docs/en/get-started
+[6]: https://nickel.video/embed/e219nIE95330
