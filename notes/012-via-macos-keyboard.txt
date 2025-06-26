@@ -1,0 +1,29 @@
+---
+title: Getting your mechanical keyboard working VIA Mac
+date:  2025-06-26
+---
+
+Much thanks to u/theogdeltag[1], I was finally able to get my Wormier RD75[2]
+working on macOS like I'd expect it to (using Option + Command to quickly
+navigate tabs in Sublime Text and browsers being such a workflow).
+
+VIA[3] is basically how you remap keys, update firmware, &c for seemingly all
+indie keyboard manufacturers? Anyhoo:
+
+> To "force" a keyboard to work in the way you would expect it to on a Mac using
+> Via, these keys are the Mac equivalents
+>
+> Windows Key = Command
+>
+> Alt = Option
+>
+> Ctrl = Control
+>
+> Once I bound the left and right windows keys into the place I would expect
+> Command to be, my keyboard functioned as expected on my Mac.
+
+---
+
+[1]: https://www.reddit.com/r/MechanicalKeyboards/comments/m7g8cj/comment/m07sya6/
+[2]: https://womierkeyboard.com/products/womier-rd75-pro
+[3]: https://usevia.app
