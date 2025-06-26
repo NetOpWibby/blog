@@ -22,6 +22,9 @@ indie keyboard manufacturers? Anyhoo:
 > Once I bound the left and right windows keys into the place I would expect
 > Command to be, my keyboard functioned as expected on my Mac.
 
+I think by default, the remapping affects the Windows mode (my keyboard has
+toggles), which doesn't matter either way for me (just an FYI for you).
+
 ---
 
 [1]: https://www.reddit.com/r/MechanicalKeyboards/comments/m7g8cj/comment/m07sya6/
