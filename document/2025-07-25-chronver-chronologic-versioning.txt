@@ -1,0 +1,34 @@
+---
+title: ChronVer — Chronologic Versioning
+date:  2025-07-25
+tags:  programming, productivity
+tldr:  Versioning for the rest of us
+---
+
+Version numbers are commonplace in programming, in addition to READMEs,
+CHANGELOGs, &c. SemVer is the universal standard for versioning but _adherence_
+to it is loose at best. There’s no shortage of questions on how to use it
+properly and personally, I never cared to debate the merits of how much work
+quantifies a MINOR or PATCH version. My frustration with SemVer and my love for
+the **proper** date format (YYYY.MM.DD) led to me creating ChronVer in
+2019[1] (unbeknownst to me at the time, CalVer exists[2]).
+
+This first version did what I needed it to do and even spawned a Rust crate[3]
+from someone who happened to come across it. In the time since though, I fell in
+love with Deno and wanted to upgrade ChronVer. No new features to the library
+aside from the CLI being a proper executable now, and the homepage[4] for
+ChronVer is less technical and more personable. For my personal projects,
+ChronVer is perfect but I acknowledge that it’s not the best for _every_ type of
+project. Another fun feature of the homepage is that it uses the current date
+for its examples. Why merely talk about it when you can show it?
+
+Anyhoo, I hope you enjoy it as much as I do.
+
+🕸️
+
+---
+
+[1]: https://github.com/ChronVer/chronver-original
+[2]: https://calver.org
+[3]: https://github.com/dnaka91/chronver
+[4]: https://chronver.org
