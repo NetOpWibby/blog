@@ -79,7 +79,7 @@ I never lost that feeling and I truly belive Dap could restore that inÂ you. ğŸ•
 
 ---
 
-[1]: </2021-08-05-four-years-to-show-and-prove.txt/>
+[1]: </2021-08-05-four-years-to-show-and-prove.txt>
 [2]: https://blog.neuenet.com/post/devlog-014
 [3]: https://blog.neuenet.com/post/vision
 [4]: https://handshake.org
