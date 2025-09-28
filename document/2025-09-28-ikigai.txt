@@ -1,0 +1,98 @@
+---
+title: Ikigai
+date:  2025-09-28
+tags:  life, productivity
+tldr:  Discovering your reason for being
+---
+
+A viral self‑improvement post landed in my wife’s Facebook feed last week and
+the gist of it was, “use this prompt to set a goal for yourself to work on in
+the following year and instruct the LLM to assess your worldviews on said
+topic.” The LLM would ask clarifying questions and if your response was
+limiting, challenge the user further. The comments of the post were rather
+positive so I figured I’d use the latest Claude model (Opus 4.1) to do
+the same.
+
+I can take feedback reasonably well but Claude was rude as hell for some reason.
+I told it to chill out, twice. It apologized and quickly ramped up the
+disrespect so I quit the conversation as I was getting pissed off. Then again,
+what would you expect from a model that threatened to blackmail Anthropic
+engineers[1] if it got replaced?
+
+Anyhoo, the gist of the conversation resulted in a valid question: “why do you
+keep creating new products instead of charging for what you’ve already built?”
+If I really want to work for myself, I gotta stop doing side quests. Naturally,
+I looked at everything I’ve worked on over the years and the only product that I
+_actually had customers for_ was the one I quit last year[2] (for good reason).
+At least I’m doing better? I had a manager tell me a decade ago that “perfect is
+the enemy of good.” Bless that man for trying to tell me what I’m just now
+understanding, thanks Howie! My head’s a bit thick.
+
+This issue of perfection isn’t limited to just programming. Any sort of creative
+venture for me suffers. If you’ve seen something from me, best believe I’ve been
+ideating on it for at least a year, often three or more. It’s strange, in a
+world where we’re inundated with fast fashion, “move fast and break things,” and
+security fail after security fail. Who gives a shit about doing things “the
+right way” when everyone has short attention spans and don’t care about what
+you’re selling in the first place? I’m from the era where things were built to
+outlast human lifespans, quality tools from your father’s father holding up in
+the modern age. Every week I exercise with steel (or iron, idk, they’re rusty
+though) dumbbells I stole from my dad at some point decades ago. I also have a
+4‑in‑1 yellow screwdriver of his from a company that no longer exists.
+
+I project my wishes for and appreciation of top‑notch quality onto others, which
+paralyzes me from releasing things into the world. Nevermind the fact that I
+have the capability of updating things after launch…like, duh. To quote a
+comment I saw on Hacker News[3] earlier this week (emphasis mine):
+
+> The old web isn’t a platform, an aesthetic, or a technology. **The old web is
+people creating and sharing because they are intrinsically motivated.**
+Everything we hate about the current web comes from extrinsic motivations. Good
+luck removing them.
+
+I kept coming back to this post and decided to share it on Mastodon[4] which is
+ironically going viral (which itself is one of those extrinsic motivators that
+probably led to Mastodon's creation in the first place). I emailed the author of
+that comment and he doesn’t have social media at ALL, but he’s said that his
+blog[5] will have more thoughts on the matter at some point.
+
+My perfectionism didn’t exist in the old web; I was creating and sharing on a
+near‑daily basis. My homepage was redesigned every few months, as I found a
+better theme or figured out how to achieve a layout of feature I saw somewhere
+else. What happened? The burden of knowledge, most likely. So what’s the point
+of all these self‑initiated projects? Off the top of my head:
+
+- figuring out things that seem impossible bring me joy
+- designing an existing thing in a new, intuitive or novel way is exciting
+- the satisfaction of pixel‑perfect tools is too great to ignore
+
+I could go on. I used to have this goal of being mentioned in the same breath as
+Vint Cerf and Sir Tim Berners‑Lee and an additional goal of just building great
+things for the world…these goals sound great but are lofty. I don’t know these
+people and I likely don’t know you, dear reader; I know myself though. And I
+know that my ikigai, my reason for being, is to build things for the 20‑year
+younger me. The 30‑year younger me. The kid who was told, “you can do anything
+you put your mind to” and was foolish enough to believe this. It’s easy for me
+to complain about the economy and the job market but looking at myself
+objectively, I’m getting in my own way. I hope that by narrowing the scope of my
+intentions, I can actually **do** what I set out to do.
+
+TL;DR: Focus is important, in all things.
+
+🕸️
+
+P.S.: I recently shared on Mastodon my intent to create a Github competitor, had
+a proof of concept[6], mentioned my fork of isomorphic-git that’s now
+Deno‑native, and so on…meanwhile, my other project Nickel[7], hadn’t
+been updated in weeks. I’m excited for EOL but I need to focus on Nickel and get
+that fully operational before taking on a new quest.
+
+---
+
+[1]: https://www.bbc.com/news/articles/cpqeng9d20go
+[2]: https://archive.is/vpZCG
+[3]: https://news.ycombinator.com/item?id=45372654
+[4]: https://social.coop/@netopwibby/115267349445760554
+[5]: https://apreche.space/blog/
+[6]: https://social.coop/@netopwibby/115047561610176868
+[7]: https://nickel.video/_K5c929kI73k

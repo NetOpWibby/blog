@@ -11,3 +11,4 @@ draft
 .env
 *.lock
 *.log
+deploy.sh
