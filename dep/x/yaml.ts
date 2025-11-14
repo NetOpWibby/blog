@@ -1,24 +1,20 @@
 
 
 
-//// import
+/*** IMPORT ------------------------------------------- ***/
 
-import { default as jsYaml } from "npm:js-yaml@4.1.0";
+import { default as jsYaml } from "npm:js-yaml@4.1.1";
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 const regexTitle = /title:.*/g;
 const regexYaml = /^(-{3}(?:\n|\r)([\w\W]+?)(?:\n|\r)-{3})/;
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export const yaml = jsYaml;
 
-
-
-//// helper
+/*** HELPER ------------------------------------------- ***/
 
 yaml.parse = (text: string) => {
   const results = text.match(regexYaml);
@@ -30,7 +26,7 @@ yaml.parse = (text: string) => {
   const titleData = yamlOrJson.match(regexTitle)![0];
   const title = titleData.split(/title:/)[1];
 
-  /// escape ":" in titles
+  /*** escape ":" in titles ***/
   yamlOrJson = yamlOrJson.replace(titleData, `title: ${title.replace(":", "&#58;")}`);
 
   switch(true) {

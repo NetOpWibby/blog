@@ -1,7 +1,7 @@
 
 
 
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export default async(directory: string) => {
   const posts: string[] = [];
@@ -14,8 +14,8 @@ export default async(directory: string) => {
         files.push(dirEntry);
     }
 
-    /// Deno is weird in that if you do NOT call `.reverse()`
-    /// it will NOT load everything in the directory…WTF?!
+    /*** Deno is weird in that if you do NOT call `.reverse()`
+         it will NOT load everything in the directory…WTF?! ***/
 
     files.sort((a, b) => a.name.localeCompare(b.name)).reverse();
 
@@ -27,7 +27,7 @@ export default async(directory: string) => {
         posts.push(file.name);
     }
   } catch(error) {
-    console.error("Error reading directory for posts:", error);
+    console.error(`Error reading directory for posts: ${String(error)}`);
   } finally {
     // deno-lint-ignore no-unsafe-finally
     return posts;

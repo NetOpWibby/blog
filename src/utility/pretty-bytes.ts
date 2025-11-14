@@ -1,16 +1,14 @@
 
 
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 const BIBIT_UNITS = [ "b", "kibit", "Mibit", "Gibit", "Tibit", "Pibit", "Eibit", "Zibit", "Yibit" ];
 const BIBYTE_UNITS = [ "B", "kiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB" ];
 const BIT_UNITS = [ "b", "kbit", "Mbit", "Gbit", "Tbit", "Pbit", "Ebit", "Zbit", "Ybit" ];
 const BYTE_UNITS = [ "B", "kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" ];
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export default (number: number | string, options?: any) => {
   if (!Number.isFinite(number))
@@ -71,9 +69,7 @@ export default (number: number | string, options?: any) => {
   return `${prefix}${numberString} ${unit}`;
 }
 
-
-
-//// helper
+/*** HELPER ------------------------------------------- ***/
 
 function toLocaleString(number: number | string, locale: string | boolean, options?: any) {
   let result = number;
@@ -88,4 +84,4 @@ function toLocaleString(number: number | string, locale: string | boolean, optio
 
 
 
-//// via https://github.com/sindresorhus/pretty-bytes
+/*** via https://github.com/sindresorhus/pretty-bytes ***/

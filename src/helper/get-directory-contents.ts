@@ -1,17 +1,15 @@
 
 
 
-//// import
+/*** IMPORT ------------------------------------------- ***/
 
 import { join } from "dep/std.ts";
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 import prettyBytes from "src/utility/pretty-bytes.ts";
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export default async(directory: string) => {
   const posts: { file: string; size: string; }[] = [];
@@ -39,7 +37,7 @@ export default async(directory: string) => {
       }
     }
   } catch(error) {
-    console.error("Error reading directory contents:", error);
+    console.error(`Error reading directory contents: ${String(error)}`);
   } finally {
     // deno-lint-ignore no-unsafe-finally
     return posts;

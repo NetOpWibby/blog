@@ -1,11 +1,11 @@
 
 
 
-//// import
+/*** IMPORT ------------------------------------------- ***/
 
 import { dedent } from "dep/x/dedent.ts";
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 import {
   author,
@@ -14,9 +14,7 @@ import {
   urlNotes
 } from "src/utility/constant.ts";
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export default (suppliedContent: string) => {
   return dedent`

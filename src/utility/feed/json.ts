@@ -1,7 +1,7 @@
 
 
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 import { BaseFeed, type FeedOptions } from "./helper.ts";
 
@@ -13,9 +13,7 @@ interface JsonItem {
   url: string;
 }
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export class FeedJSON extends BaseFeed<JsonItem> {
   constructor(options: FeedOptions) {

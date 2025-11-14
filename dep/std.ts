@@ -1,7 +1,7 @@
 
 
 
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export * from "node:buffer";
 export * from "jsr:@std/fmt/colors";

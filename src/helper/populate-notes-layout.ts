@@ -1,13 +1,13 @@
 
 
 
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export default (suppliedArray: Array<{ file: string, size: number }>): string => {
-  /// The funky indentation in the backticks is just so the rendered HTML
-  /// looks good when viewing source. There really ought to be a module that
-  /// does this for you but the web industry only cares about build pipelines
-  /// and littering your front-end with endless amounts of <div>s. YUK.
+  /*** The funky indentation in the backticks is just so the rendered HTML
+       looks good when viewing source. There really ought to be a module that
+       does this for you but the web industry only cares about build pipelines
+       and littering your front-end with endless amounts of <div>s. YUK. ***/
 
   const tableItems = suppliedArray.map((arrayItem: { file: string, size: number }) => {
     if (!arrayItem)

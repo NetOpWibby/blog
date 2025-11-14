@@ -1,6 +1,6 @@
 
 
 
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
-export { marked } from "npm:marked@15.0.7";
+export { marked } from "npm:marked@17.0.0";

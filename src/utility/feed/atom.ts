@@ -1,7 +1,7 @@
 
 
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 import {
   BaseFeed,
@@ -22,9 +22,7 @@ interface AtomEntry {
   updated?: Date;
 }
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export class FeedAtom extends BaseFeed<AtomEntry> {
   constructor(options: FeedOptions) {

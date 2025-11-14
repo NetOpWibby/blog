@@ -1,6 +1,6 @@
 
 
 
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
-export { default as dedent } from "npm:dedent@1.5.1";
+export { default as dedent } from "npm:dedent@1.7.0";

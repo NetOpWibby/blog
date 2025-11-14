@@ -1,18 +1,16 @@
 
 
 
-//// import
+/*** IMPORT ------------------------------------------- ***/
 
 import { join } from "dep/std.ts";
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 const baseDirectory = await Deno.realPath(".");
 const isDevelopment = Deno.args.includes("development");
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export const author = "Paul Anthony Webb";
 export const description = "Welcome to Paul Anthony Webb's corner of the 'Net where he'll regale you with whatever he finds interesting.";
@@ -33,8 +31,8 @@ export async function getVersion() {
 
   try {
     version = await Deno.readTextFile("./version.txt");
-  } catch(_) {
-    /// ignore
+  } catch {
+    /*** ignore ***/
   }
 
   return version.trim();

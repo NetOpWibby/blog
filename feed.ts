@@ -1,14 +1,14 @@
 
 
 
-//// import
+/*** IMPORT ------------------------------------------- ***/
 
 import { ATOM, JSON, RSS } from "src/utility/feed/index.ts";
 import { join } from "dep/std.ts";
 import { marked } from "dep/x/marked.ts";
 import { yaml } from "dep/x/yaml.ts";
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 import {
   author,
@@ -61,9 +61,7 @@ const rssFeed = new RSS({
   title
 });
 
-
-
-//// program
+/*** PROGRAM ------------------------------------------ ***/
 
 createFeeds();
 

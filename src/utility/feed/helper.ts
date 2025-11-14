@@ -1,7 +1,7 @@
 
 
 
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export interface FeedOptions {
   authors: Array<{

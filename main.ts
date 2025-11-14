@@ -1,7 +1,7 @@
 
 
 
-//// import
+/*** IMPORT ------------------------------------------- ***/
 
 import {
   join,
@@ -12,7 +12,7 @@ import {
 
 import { dedent } from "dep/x/dedent.ts";
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 import {
   environment,
@@ -46,9 +46,7 @@ const errorMessage = dedent`
 const notePathRegex = /^\/(notes)\/\d{3}-[\w-]+\.txt$/;
 const postPathRegex = /^\/\d{4}-\d{2}-\d{2}-[\w-.]+\.txt$/;
 
-
-
-//// program
+/*** PROGRAM ------------------------------------------ ***/
 
 const version = await getVersion();
 
@@ -172,7 +170,7 @@ const server = Deno.serve({
           "content-type": "text/plain; charset=utf-8"
         }
       }
-    ); /// 404 by default
+    ); /*** 404 by default ***/
   },
   hostname: "0.0.0.0",
   onListen() {
@@ -193,12 +191,10 @@ const server = Deno.serve({
 Deno.addSignalListener("SIGINT", gracefulShutdown);
 Deno.addSignalListener("SIGTERM", gracefulShutdown);
 
-
-
-//// helper
+/*** HELPER ------------------------------------------- ***/
 
 function fit(input: string) {
-  const remainingSpace = 30 - input.length; /// 34 - 4 (border + one space each side)
+  const remainingSpace = 30 - input.length; /*** 34 - 4 (border + one space each side) ***/
   return input + " ".repeat(remainingSpace);
 }
 

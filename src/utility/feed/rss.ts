@@ -1,7 +1,7 @@
 
 
 
-//// util
+/*** UTILITY ------------------------------------------ ***/
 
 import {
   BaseFeed,
@@ -22,9 +22,7 @@ interface RssItem {
   updated?: Date;
 }
 
-
-
-//// export
+/*** EXPORT ------------------------------------------- ***/
 
 export class FeedRSS extends BaseFeed<RssItem> {
   constructor(options: FeedOptions) {
