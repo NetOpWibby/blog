@@ -5,8 +5,6 @@
 
 import { ATOM, JSON, RSS } from "src/utility/feed/index.ts";
 import { join } from "dep/std.ts";
-import { marked } from "dep/x/marked.ts";
-import { yaml } from "dep/x/yaml.ts";
 
 /*** UTILITY ------------------------------------------ ***/
 
@@ -15,12 +13,15 @@ import {
   description,
   email,
   feedDirectory,
-  postDirectory,
+  memoDirectory,
   title,
   url
 } from "src/utility/constant.ts";
 
+import { default as headerParser, type DocumentMeta } from "src/helper/parse-header.ts";
+
 import getDocuments from "src/helper/get-documents.ts";
+import populateDocument from "src/helper/populate-document.ts";
 
 const atomFeed = new ATOM({
   authors: [
@@ -32,7 +33,8 @@ const atomFeed = new ATOM({
   description,
   id: `${url}/feed/atom`,
   link: `${url}/feed/atom`,
-  title
+  title,
+  updated: undefined
 });
 
 const jsonFeed = new JSON({
@@ -68,34 +70,33 @@ createFeeds();
 async function createFeeds() {
   await Deno.mkdir(feedDirectory, { recursive: true });
 
-  const feedPosts = [];
-  const files = await getDocuments(postDirectory);
+  const feedPosts: DocumentMeta[] = [];
+  const filenames = await getDocuments(memoDirectory);
 
-  for await (const file of files) {
-    const filePath = join(postDirectory, file);
-    const postInfo = await yaml.loadFront(filePath);
+  if (!filenames)
+    return;
 
-    postInfo.url = `/${file}`;
+  for await (const filename of filenames) {
+    const document = await populateDocument({ filename });
+    const postInfo = headerParser(document);
+
     feedPosts.push(postInfo);
 
-    const post = await yaml.loadBack(filePath);
-
-    if (post) {
-      const fullUrl = `${url}${postInfo.url}`;
-      const postDate = new Date(postInfo.date);
-      const renderedPost = marked.parse(post);
+    if (document) {
+      const fullUrl = `${url}/${filename.split(".txt")[0]}`;
+      const postDate = new Date(new Date(postInfo.date).setHours(24, 0, 0, 0));
 
       atomFeed.addItem({
-        content: { body: renderedPost },
+        content: { body: postInfo.abstract },
         id: fullUrl,
         link: fullUrl,
-        summary: postInfo.tldr,
+        summary: postInfo.abstract,
         title: postInfo.title,
         updated: postDate
       });
 
       jsonFeed.addItem({
-        content_html: renderedPost,
+        content_html: postInfo.abstract,
         date_published: postDate,
         id: fullUrl,
         title: postInfo.title,
@@ -103,8 +104,8 @@ async function createFeeds() {
       });
 
       rssFeed.addItem({
-        content: { body: renderedPost },
-        description: postInfo.tldr,
+        content: { body: postInfo.abstract },
+        description: postInfo.abstract,
         id: fullUrl,
         link: fullUrl,
         title: postInfo.title,
@@ -113,10 +114,9 @@ async function createFeeds() {
     }
   }
 
-  const latestPostDate = feedPosts[0].date;
-
-  atomFeed.updated = new Date(latestPostDate);
-  rssFeed.updated = new Date(latestPostDate);
+  // const latestPostDate = feedPosts[0].date;
+  // atomFeed.updated = new Date(latestPostDate);
+  // rssFeed.updated = new Date(latestPostDate);
 
   Deno.writeTextFileSync(join(feedDirectory, "index.xml"), atomFeed.build());
   Deno.writeTextFileSync(join(feedDirectory, "index.json"), jsonFeed.build());

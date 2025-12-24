@@ -1,0 +1,148 @@
+
+
+
+
+
+
+
+Document: WM-069                                                 P. Webb
+Category: Computing                                           2025.05.14
+
+                       Next‑Generation Computing
+
+Abstract
+
+   What does it look like?
+
+Body
+
+   Typically a post like this would begin with the history of computing
+   but eff all that, here's what I want to see in a
+   next‑generation computer!
+
+   1. Hardware
+
+      Have you seen the Jonathan Computer[1]? No? I talk[2] about[3]
+      it[4] all[5] the[6] time[7]. John Buck published "Inventing The
+      Future," a massive collection of first‑hand accounts about the
+      technology that enabled Apple's rise and the products that
+      solidified Apple as a force to be reckoned with. After the
+      Macintosh, Apple was figuring out what to do next and had several
+      teams working to create the Next Big Thing.
+
+      One such Thing was the Jonathan (named after its creator, Jonathan
+      Fitch, and the strain of apple), a modular computer that was WAY
+      ahead of its time. You could have multiple operating systems and
+      peripherals in the same computer and it looked rad as fuck. The
+      CEO of Apple at the time, John Sculley, shut it down because he
+      lacked vision. Okay, he was worried (for some reason) that
+      customers using such an open system would actually prefer Windows
+      over Mac. This was 1985. 40 years ago.
+
+      Imagine what computing would look like today if the Jonathan was
+      given the chance to get to market.
+
+      I want this.
+
+   2. Software
+
+      In early 2016, Lennart Ziburski released his vision for a
+      forward‑thinking desktop interface called "Desktop Neo[8]." I've
+      been obsessed with its horizontally scrolling full‑screen
+      interface (just look at my homepage[9]). I was taken aback by its
+      insistence of replacing folders with tags and search (over the
+      past decade I've come around to many of the concepts
+      Ziburski presented).
+
+      The Mercury OS[10] vision presented by Jason Yuan is 2019 is
+      another take on a modern OS, albeit focused on tablet computers.
+      Like the Neo, it eschews the idea that we'll be futzing around
+      with folders, and apps take a backseat in terms of opinionated and
+      distinctive UI to being more of an API that the OS takes advantage
+      of. So then the importance of application design is less visual
+      and more technical…personally, I don't hate it but the product
+      designers of the world may balk.
+
+   3. Putting it Together
+
+      So we have the ideas of Desktop Neo rattling my brain and at some
+      point I stumble upon the Jonathan and Mercury OS and I go…what.
+      What if…no way, that'd be sick. WHOAH THAT'D BE SICK AF!! WHY IS
+      NO ONE DOING THIS, JUST COMBINE THEM!
+
+      About a month ago I get real antsy and mockup some logos for this
+      combined concept, ruminate on the feasibility of the
+      next‑generation interface I'm dreaming of, snag a domain name (now
+      you know I'm serious), and figure out a BOM (Bill Of Materials)
+      for the hardware. I'm no stranger to building a UI that feels good
+      to me but hardware is an intricate, opaque beast.
+
+      I've joked[5] about launching this computer in 28 years to account
+      for me not knowing what I don't know, but I really hope it doesn't
+      take that long.
+
+   4. Who wants this?
+
+      I want this.
+
+      Besides me though? Education, researchers, people who want a
+      desktop version of what the fine folks at Framework[11] are doing.
+
+      Looking at the computing landscape today, Apple is the **clear**
+      winner for creatives of all stripes and developers who are serious
+      about getting things done. Despite this, I feel systemSOFT[12] can
+      fit into spaces where Apple lacks interest (which, for a trillion
+      dollar corporation means several millions if not billions of
+      dollars worth of opportunity for focused upstarts).
+
+      I believe there's a market for open hardware and software and
+      services. To quote[13] Tom Toedtman, a developer who pleaded with
+      John Sculley to let the Jonathan continue development:
+
+      > **Obvious non‑obsolescence**
+      >
+      > This design REMOVES THE FEAR that this computer will be obsolete
+      > next year. It will also remove a similar cause of hesitation —
+      > “I’ll wait for the next model to be released”.
+      >
+      > System growth capability is far beyond marketplace offerings.
+      > This is a great point of sale asset, particularly for serious
+      > users, businesses with growth plans, and individuals with a
+      > growing future.
+      >
+      > True multi‑master coprocessing. The right architecture
+      > for tomorrow.
+      >
+      > Configuration flexibility is also far beyond the marketplace.
+      > Jonathan can be loaded in any mix of current and future hardware
+      > by the customer. Fileserver, process controller, and numerous
+      > other special applications are now viable.
+
+      How many times has Apple been accused of "planned obsolescence"?
+      How many times have their competitors mocked them for it, before
+      being accused of doing the same?
+
+      In our increasingly technological world, affordable (and
+      uncompromised) computing is vital. The system¹[14] hardware starts
+      small and expands over time, to fit your needs. Fixed
+      configurations have their place, sure, but incremental upgrades
+      are powerful. It's time for purpose‑built computing.
+
+      🕸️
+
+References
+
+   [1]  <https://512pixels.net/2024/03/apple-jonathan-modular-concept>
+   [2]  <https://social.coop/@netopwibby/111583005005189976>
+   [3]  <https://social.coop/@netopwibby/113677280089528388>
+   [4]  <https://social.coop/@netopwibby/114130235286514680>
+   [5]  <https://social.coop/@netopwibby/114138990961768889>
+   [6]  <https://social.coop/@netopwibby/114237545018335465>
+   [7]  <https://social.coop/@netopwibby/114303944297904635>
+   [8]  <https://desktopneo.com>
+   [9]  <https://webb.page>
+   [10] <https://www.mercuryos.com>
+   [11] <https://frame.work>
+   [12] <https://systemsoft.works>
+   [13] <https://512pixels.net/2024/10/defending-the-jonathan>
+   [14] </WM-066>

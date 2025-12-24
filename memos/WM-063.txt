@@ -1,0 +1,206 @@
+
+
+
+
+
+
+
+Document: WM-063                                                 P. Webb
+Category: Life                                                2024.12.31
+
+                             Year in Review
+
+Abstract
+
+   Where did the time go?!
+
+Body
+
+   For the past several years I haven't felt like doing one of these but
+   this year seems especially fitting to recap. High‑level, I largely
+   exited crypto, tended more to my personal spaces (webb.page and
+   blog.webb.page), lost my grandmother, and more. So it feels weird to
+   say that in this moment I am happy and hopeful for the future.
+
+   1. Handshake
+
+      Since late 2019 I've been working in the Handshake blockchain
+      space. It actually fulfills a lifelong dream[1] so I was
+      incredibly excited and incentivized to build the infrastructure
+      for the future I want. I learned a LOT. Like how to write a DNS
+      server! The heavy‑lifting was via a Node.js DNS packet module I
+      ported to Deno/TypeScript[2]. Unfortunately, I never figured out
+      how to handle cert files so I used PowerDNS for my authoritative
+      server instead.
+
+      I presented my work‑in‑progress at HandyCon[3], continued creating
+      mini modules to support features like NIC pages[4], and even got
+      my first customers! One of them immediately used their domains[5]
+      and this was easily a top 5 highlight of my year. Next, I started
+      work on a CDN[6]. What's interesting about creating your own
+      versions of infrastructure we depend on daily is that you realize
+      how complicated (or not) things are. And, how weird it is that
+      modern literature on such things is absent.
+
+      Four years working in this space…and I decided to quit[7]. The
+      TL;DR? Grifters and opportunists seek to subvert the blockchain
+      that was designed for the many, to financially benefit the few. I
+      cannot and will not support bad faith proposals or persons
+      supporting them.
+
+      The thought of leaving all this work behind hurt a lot and I found
+      myself wondering what I'd work on next. That's where Socii
+      comes in.
+
+   2. Socii
+
+      I was working on Socii[8], my social network concept, for about a
+      year when I discovered Handshake. It only made sense to return to
+      (re)developing it. When I was dusting off the codebase and trying
+      to make sense of it, the U.S. election concluded and I was in a
+      state of shock about the outcome. The fact that the entirety of
+      crypto and Big Business was celebrating the win[9] blindsided me.
+      I was (and still am) disgusted.
+
+      In a self‑serving world of sychophants and apathy, it seems we've
+      gotta make what we want to see/use/buy in the world. I'm under no
+      illusions that I'll get explosive growth and a billion users on my
+      platform and quite frankly, I don't want that. I want *customers*
+      who are willing to pay for a social network that empowers them to
+      do more with their online presence whilst providing a curated
+      private space for them and the people they care to connect with.
+      Building a sustainable business is actually not that
+      complicated…it's just the opposite of what's celebrated in the
+      market today and quite frankly…fuck the market.
+
+      Since the election, hordes of people have fled Twitter[10] and I
+      believe a subset of them would be delighted to use the spiritual
+      successor[11] to Myspace. We'll see!
+
+   3. Professional Life
+
+      I've utilized side projects my entire career as a way to better
+      my skills and have fun at the same time. The main reason is
+      because I have way too many ideas and I'm hella impatient. Why
+      wait for someone to build what I envision when I can do it myself
+      (and to my specifications)? Another benefit is simply keeping your
+      skills sharp because technology advances regularly, even if the
+      tools you use at work are in stasis.
+
+      How many times have you run `npm install` at work and seen a bunch
+      of messages in Terminal warning you of deprecated modules?
+
+      Certain parts of the company I work for are using parts of the
+      tech stack I use in my personal life, like Svelte/SvelteKit. I'm
+      stuck using Handlebars and old build systems. Navigating corporate
+      hierarchy to get onto other teams is an exercise in frustration.
+      I've gotten either no response or laugh reactions to my questions
+      about such in the company Slack (only for said reactor to rescind
+      when confronted). Strange how being part of a trillion dollar
+      company is lonelier than being part of a startup.
+
+      Aligning my values with what I work on is extremely important to
+      me. I certainly have the skills to find work with a company that
+      fits, if not launch my own! To that end, it is my hope that 2025
+      will see me working for myself and/or likeminded
+      individuals/companies. To some extent, this is a privileged
+      viewpoint and I pride myself on building up to this point. Our
+      purpose in life is to be in service to others. I have these
+      skills…why hoard them for myself?
+
+   4. Family
+
+      It's wild how death brings people together. My grandmother passed
+      recently[12] and I flew to Ohio for her memorial. Prior to this
+      trip I had been estranged (or pretty close to being estranged)
+      from my immediate family aside from my youngest sister (who,
+      unfortunately, couldn't make the trip). My only focus was honoring
+      my grandmother's memory. What I learned is that my experience was
+      not unique. A cousin mentioned feeling frustrated about being kept
+      away from grandma but was glad to have connected with her the last
+      time they had a conversation with her. Another cousin regretted
+      missing a graduation that occured a week prior to her passing. Yet
+      another cousin expressed the unconditional love she gave despite
+      his life choices that others judged him for.
+
+      My mom pulled me aside to recount the last conversation she had
+      with grandma and how they were able to finally move forward. I
+      told her grandma told me to forgive my mother and talk to her.
+      These two events happening the same week before her passing is
+      nuts…very TV‑like. Anyhoo, I enjoyed myself despite the initial
+      trepidation and sadness. Remembering our grandma with my cousins
+      was fun. Her love of fur coats and fashion and willingness to
+      always help someone in need were much talked about topics.
+
+      One of my cousins is a music producer now and he credits me for
+      inspiring him, which was bewildering to me. Apparently, my
+      beat‑making and raps and how I designed my bedroom as a teen was
+      enough to influence his career path. I largely stopped making
+      music because it just didn't fit with having a family at the time
+      and the internet wasn't as democratized for music as it is now.
+      I'm excited to build with him, we've got some things cooking.
+
+      At my grandma's memorial, the pastor said we shouldn't use
+      funerals as the only time to link up with family. Communicating
+      with family is something that should be done all the time, on a
+      regular basis. My problem is when people send weird energy my way.
+      I don't like that. Don't be weird or sideways with me. Say things
+      with your chest.
+
+   5. My Spaces
+
+      In 2022 and 2023, I wrote approximatly ONE post for the entire
+      year. Why? I've been using Twitter as my (micro‑)blogging platform
+      of choice. When I got banned[13] it was a slap in the face. 15
+      years on a platform that kicked me off almost as soon as ownership
+      changed hands. I eventually regained access[14] (ha, our bad, our
+      spam filters are too powerful) but after almost two years of using
+      other services, why the hell would I go back? In fact, why am I
+      posting all my good stuff on platforms I don't own/control?
+
+      I've been talking about my personalOS concept[15] for many years
+      now and have longed for my homepage to represent that. I've
+      recognized that my default of "things have to be perfect before
+      launching" is stupid so I decided to go ahead and relaunch
+      webb.page and update things manually vs via an API. It's lacking
+      features but who cares? YOU don't know what they are and even if
+      you can figure them out…who cares?! Perfection is something
+      corporations should strive for, not regular degular folks
+      like myself.
+
+      My homepage is my canvas. My blog is my notepad. `webb.page`
+      is my space.
+
+   6. 2026
+
+      My grandma's last words to me were about forgiveness. Thinking
+      about her life, she was fearless. If she had a goal, she made a
+      plan and met it. She had a dual business (barbershop/beauty salon)
+      and bought a house. No degree necessary, just hard work and
+      dedication. I want to live my life the same way. I'm a self‑taught
+      designer/developer and have built neat things thus far. But, while
+      I am generally fearless, I am still held back but a few things:
+      driving and swimming. I'm going to get my license next year and
+      possibly learn how to swim.
+
+      Eveything else is easy‑peasy. Success is merely a matter of time.
+
+      🕸️
+
+References
+
+   [1]  <https://archive.is/TMycF>
+   [2]  <https://github.com/NetOpWibby/packet>
+   [3]  <https://archive.is/HCJXc>
+   [4]  <https://archive.is/L4lBe>
+   [5]  <https://archive.is/nrUJt>
+   [6]  <https://archive.is/45rVS>
+   [7]  <https://archive.is/vpZCG>
+   [8]  <https://socii.network>
+   [9]  </WM-059>
+   [10] <https://pxlnv.com/linklog/similarweb-traffic-bluesky>
+   [11] <https://social.coop/@netopwibby/113329030542527807>
+   [12] </WM-062>
+   [13] </WM-055>
+   [14] </WM-061>
+   [15] </WM-042>

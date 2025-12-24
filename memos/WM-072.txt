@@ -1,0 +1,93 @@
+
+
+
+
+
+
+
+Document: WM-072                                                 P. Webb
+Category: LLM                                                 2025.07.07
+
+                           In Defense of "AI"
+
+Abstract
+
+   The hate train looks fun but maybe relax
+
+Body
+
+   Over the weekend I saw a post on Mastodon listing a few reasons why
+   LLMs are terrible (stolen data, power hungry, speculation bubble,
+   ruining your brain). I won't refute these points because everything
+   can be true and untrue at the same time, just depends on context; for
+   the record, replace "LLMs" with "people" and the solution isn't to
+   get rid of people.
+
+   I've been using LLMs (I dare not call it "AI" because…that's not
+   intelligence IMO so why scaremonger?) for maybe a year or two and
+   loving it for the most part. I started with ChatGPT, then spending
+   money on it, not liking the results, to trialing Anthropic's Claude,
+   to subscribing to their service ever since. For background, I am a
+   self‑taught design engineer. I got my start in the recession of 2008.
+   I couldn't find work so spent a lot of time on the internet imitating
+   the cool stuff my friends were doing on deviantART. Anyhoo,
+   fast‑forward a decade and I'm utilizing StackOverflow for answers to
+   questions I don't even know how to formulate sometimes…and getting
+   absolutely shit on for it. There was a time period after I was fired
+   this one time[^1] that every question I posted to the StackExchange
+   network got downvoted with no comments, and this happened
+   for months).
+
+   You know who doesn't give a shit about your dumbass questions? LLMs.
+
+   The best of humanity is great. We are the culmination of hopes,
+   dreams, aspirations, and the wide range of emotions that flourish
+   from that. On the flip side, when can get nasty and downright evil if
+   motivated enough. I don't need to suffer through YOUR bad day because
+   you happen upon my naive request while in a horrible mood and you
+   can't help but put me down, or whatever the case may be.
+
+   This is pretty much my argument for why LLMs aren't totally bad,
+   haha! There's not much space for nuance on the internet these days so
+   your opinion isn't swayed if you think LLMs are a scourge upon the
+   Earth. The same was said for television in defense of newspapers and
+   radio. It'll be fine. Railing against "AI" is fine but to pretend
+   that it isn't useful is a crock of shit. Speaking for myself, I am
+   not an expert so having an approximation of one at my disposal at any
+   time of day or night is an indispensable tool I happily utilize to
+   figure things out or get research about things I've wondered about.
+
+   Case in point, I'm thinking about starting a magazine. Claude
+   researched for about 5 minutes while I did something else. Could I
+   have done this myself? Of course. Would I have a comprehensive report
+   in 5 minutes or less? In this (search) economy? With Google,
+   absolutely not. With Kagi, possibly. I could also turn screws
+   manually or use a power tool. It doesn't matter.
+
+   For another recent project, I got Claude to scaffold me a video
+   transcoder built on ffmpeg and it didn't work, no matter how many
+   times I badgered it to fix its issues and stop adding mystery
+   functions. The transcoder works now of course, but the logic was
+   fixed by me, a human. An enthusistic junior developer could make the
+   same mistakes Claude makes but understands, "Hey, this isn't
+   working," doesn't mean tear down the entire project, rename some
+   variables, and call it a day.
+
+   I resent the phrase, "AI is stealing jobs," because no, they aren't.
+   Middle managers and CEOs who read articles light on substance about
+   the marvels of AI are firing people, realizing AI is not a
+   replacement for people, and hiring people back.
+
+   You still need to **understand how to code** to make LLMs work for
+   you. These tools are NOT a drop‑in replacement for people, nor will
+   they be for quite some time. As a replacement for elitist cis‑White
+   male dominated Q&A spaces, my Black ass will take an LLM any day.
+
+   🕸️
+
+References
+
+   [^1] In 2015, my wife (then girlfriend) and I experienced a
+        miscarriage and I didn't know I should take time off instead of
+        being depressed at work and after given a throwaway project to
+        work on (a website for the CEO's father), I was fired.

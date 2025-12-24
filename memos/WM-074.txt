@@ -1,0 +1,110 @@
+
+
+
+
+
+
+
+Document: WM-074                                                 P. Webb
+Category: Project                                             2025.08.21
+
+                      Dap, the Handshake successor
+
+Abstract
+
+   From the ashes like a phoenix
+
+Body
+
+   The irony isn't lost on me that four years ago[1] I blogged about the
+   opportunity I saw for the Handshake community to build a thriving
+   ecosystem while ICANN twiddles their thumbs doing whatever it is that
+   they do…and at this time of writing, I've stopped working on
+   Handshake[2] for a year. No amount of motivational speeches and
+   presentations will spur people into action unless they have
+   motivation to do anything. Even just this week I've tried to shake
+   people out of their WAGMI ("we're all gonna make it") mindset, to no
+   avail. Oh well.
+
+   I've had this dream[3] of an upgraded online world for most of my
+   life, which is wild to even think about; I just didn't know how to
+   get there. When I stumbled upon the Handshake blockchain[4] and it's
+   mission to democratize the issuance of top‑level domains, it hit me
+   that I could make that dream a reality. In the early days, it felt
+   like there was real progress and motion. It was exciting! I was so
+   focused on my mission that I wasn't able (or, willing) to see cracks
+   in the foundation.
+
+   Having had some time away from Handshake I am able to objectively see
+   what went well, what was terrible, and what could be improved. My
+   fork of Handshake is called, "Dap," another kind of handshake that us
+   Black guys use. Also, the dap.sh[5] domain was available and that
+   looks fantastic.
+
+   So how does Dap improve upon Handshake?
+
+   There are no "directors." The Handshake community likes to give that
+   title to anyone who even holds 1 HNS (their token). Which…sounds cool
+   and gives people warm and fuzzy feelings of importance but if
+   everyone's a director, who's building? Currently there's two
+   businesses and they're both focused on being a custodial wallet and
+   marketplace; Namebase and Shakestation (better Namebase). Namebase
+   was there since the beginning of Handshake's launch and got acquired
+   by Namecheap. It's no secret that most of the team is gone and it's
+   been hemorraging money. Shakestation is a two‑man operation and might
+   be breaking even. That's it. Everyone else left, including the guy
+   who proposed a takeover.
+
+   Aside from Bitcoin, every other successful blockchain has clear
+   leadership, which makes sense. The Handshake community feels that
+   because it's a fork of bcoin (and thus a fork of Bitcoin), it should
+   retain the same leaderless position, completely ignoring the fact
+   being first is a major advantage that cannot be replicated.
+
+   With Dap, I am the BDFL (benevolent dictator for life). Decisions
+   should be made, period. As like‑minded people discover Dap and start
+   building on it or exploring, the leadership team will fill out.
+   Decentralized purity tests are lame.
+
+   During the testnet, tools and SDKs for developers will be built.
+   Launching a blockchain for TLDs without giving people tools to
+   actually **use** said TLDs is nuts. I've open‑sourced the
+   registrar[6] I was building for Handshake. The one I build for Dap
+   will be much better but that's just an example of what should be
+   available at mainnet launch.
+
+   During my research on how to build blockchains better, I learned
+   about VDF (Verifiable Delay Functions) and VRF (Verifiable Random
+   Functions). Coupled with Blake3 Proof‑of‑Work, you get 95% energy
+   reduction versus traditional PoW with excellent security. Do I
+   understand the first sentence of this paragraph? Absolutely not. I
+   just know enough code to get things done and if I can build a
+   successor to Handshake that's also healthier for the environment, I'm
+   gonna figure it out (I have blockchain friends much smarter than me
+   and I bug them with my questions all the time).
+
+   Another area where Handshake suffers is the overabundance of
+   squatters. You will never get rid of squatters, look at Web2 domains.
+   The aftermarket industry makes billions annually. What I want to do
+   is make it uncomfortable to squat on TLDs and have that built into
+   the protocol.
+
+   I'm on version 4 of the whitepaper[7] and I'm pretty satisfied with
+   it thus far. The only thing I haven't quite figured out is how to
+   integrate VDF/VRF into my Deno fork of Handshake's
+   full node software.
+
+   Remember when you were excited to “go online”?
+
+   I never lost that feeling and I truly belive Dap could restore that
+   in you. 🕸️
+
+References
+
+   [1] </WM-052>
+   [2] <https://blog.neuenet.com/post/devlog-014>
+   [3] <https://blog.neuenet.com/post/vision>
+   [4] <https://handshake.org>
+   [5] <https://dap.sh>
+   [6] <https://github.com/beachfront-domains>
+   [7] <https://whitepaper.dap.sh>

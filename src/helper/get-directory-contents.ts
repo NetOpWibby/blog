@@ -1,45 +1,34 @@
 
 
 
-/*** IMPORT ------------------------------------------- ***/
-
-import { join } from "dep/std.ts";
-
-/*** UTILITY ------------------------------------------ ***/
-
-import prettyBytes from "src/utility/pretty-bytes.ts";
-
 /*** EXPORT ------------------------------------------- ***/
 
-export default async(directory: string) => {
-  const posts: { file: string; size: string; }[] = [];
+export default async(directory: string): Promise<{ filename: string; }[]> => {
+  const documentArray: { filename: string; }[] = [];
 
   try {
-    const files: Deno.DirEntry[] = [];
+    const documents: Deno.DirEntry[] = [];
 
     for await (const dirEntry of Deno.readDir(directory)) {
       if (dirEntry.isFile)
-        files.push(dirEntry);
+        documents.push(dirEntry);
     }
 
-    files.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+    documents.sort((a, b) => a.name.localeCompare(b.name)).reverse();
 
-    for (const file of files) {
-      if (file.name.startsWith("."))
-        return;
+    for (const document of documents) {
+      if (document.name.startsWith("."))
+        return [];
 
-      if (file.name.endsWith(".txt")) {
-        const filePath = join(directory, file.name);
-        const { size } = await Deno.stat(filePath);
-        const data = { file: file.name, size: prettyBytes(size) };
-
-        posts.push(data);
+      if (document.name.endsWith(".txt")) {
+        const data = { filename: document.name };
+        documentArray.push(data);
       }
     }
   } catch(error) {
     console.error(`Error reading directory contents: ${String(error)}`);
   } finally {
     // deno-lint-ignore no-unsafe-finally
-    return posts;
+    return documentArray;
   }
 }

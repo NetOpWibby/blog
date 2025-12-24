@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+Document: WR-010                                                 P. Webb
+                                                              2025.01.01
+
+                     The day the internet was born
+
+Body
+
+   Happy Birthday, internet!
+
+   > January 1, 1983 is considered the official birthday of the
+   > Internet. Prior to this, the various computer networks did not
+   > have a standard way to communicate with each other. A new
+   > communications protocol was established called Transfer Control
+   > Protocol/Internetwork Protocol (TCP/IP). This allowed different
+   > kinds of computers on different networks to "talk" to each other.
+   > ARPANET and the Defense Data Network officially changed to the
+   > TCP/IP standard on January 1, 1983, hence the birth of the
+   > Internet. All networks could now be connected by a
+   > universal language.
+
+   Found via Stefan Bohacek[1] on Mastodon (embedded source[2])
+
+References
+
+   [1] <https://stefanbohacek.online/@stefan/113754663565613650>
+   [2] <https://www.usg.edu/galileo/skills/unit07/internet07_02.phtml>

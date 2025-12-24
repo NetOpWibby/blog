@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+Document: WR-003                                                 P. Webb
+                                                              2024.11.05
+
+     setInterval - Type "Timer" is not assignable to type "number"
+
+Body
+
+   Ran into a linting issue with Typescript when using setInterval for
+   something. This comment from 2017[1] saved me:
+
+   > Use `window.setInterval` instead.
+
+References
+
+   [1] <https://github.com/TypeStrong/atom-typescript/issues/1053#issuecomment-321126192>

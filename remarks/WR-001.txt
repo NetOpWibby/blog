@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+Document: WR-001                                                 P. Webb
+                                                              2024.11.04
+
+                 Package Control issues? Here's a fix!
+
+Body
+
+   I recently updated my computers to macOS Sequoia and Sublime Text
+   went on the fritz. Being my IDE of choice, I spent the better part of
+   two days trying to get my plugins working. Thankfully, a year-old
+   issue on Github[1][2] got everything working again:
+
+   > FOR ANYONE STILL STRUGGLING WITH THIS PROBLEM
+   > Maintainer @deathaxe has explained several times in this thread
+   > that you can solve the problem simply by downloading the latest
+   > edition[3] (4.0+) of Package Control!
+
+   Clicking the second link will download
+   "Package.Control.sublime-package" but we need to replace the period
+   with a space ("Package Control.sublime-package"). Then we need to
+   place this file in the correct place.
+
+   The quickest method is to open Sublime Text and navigate to
+   Settings… → Browse Packages… to open that directory in Finder. Go one
+   level up, navigate to "Installed Packages," and move that
+   Package Control.sublime-package file there.
+
+   Restart Sublime Text and you should be back in business.
+
+   🕸
+
+References
+
+   [1] <https://github.com/wbond/package_control/issues/1612#issuecomment-1708802315
+   [2] <https://github.com/sublimehq/sublime_text/issues/6037#issuecomment-1674337039
+   [3] <https://github.com/wbond/package_control/releases/download/4.0.0-beta2/Package.Control.sublime-package

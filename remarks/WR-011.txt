@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+Document: WR-011                                                 P. Webb
+                                                              2025.03.27
+
+                       Pixel-perfect ffmpeg gifs
+
+Body
+
+   I recently decided to take a page from elle's[1] book and create some
+   88x31 banners for my homepage. I wanted them animated and to
+   incorporate Megaman Battle Network sprites. My initial ffmpeg
+   attempts were blurry af so I played around with arguments until I
+   figured out the winning incantations.
+
+   For the first[2] two[3] banners I used this incantation:
+
+   ```sh
+   ffmpeg -framerate 4 -pattern_type glob -i "*.png" -filter_complex "[0:v] split [a][b];[a] palettegen=reserve_transparent=on:transparency_color=ffffff [p];[b][p] paletteuse" pixel_art.gif
+   ```
+
+   There were only four frames so it made sense to my the FPS the same.
+   For the third[4] banner however, there were initially 44 frames of
+   the jack-in animation from MMBN6 but I removed some frames for a
+   better loop (36 frames in the end).
+
+   ```sh
+   ffmpeg -framerate 12 -pattern_type glob -i "*.png" -filter_complex "[0:v] split [a][b];[a] palettegen=reserve_transparent=on:transparency_color=ffffff [p];[b][p] paletteuse" pixel_art.gif
+   ```
+
+   To my eyes, an FPS of 12 looks good enough.
+
+   Now I gotta figure out where to put other peoples banners on
+   my homepage…
+
+   Oh fun fact, AVIF is terrible for pixel-perfect animations, GIF
+   remains king.
+
+   Thanks to Hank[5] I learned that putting
+   `image-rendering: pixelated;` on your pixel images via CSS make them
+   look crisp.
+
+References
+
+   [1] <https://ellesho.me/page>
+   [2] <https://webb.page/88x31/a.gif>
+   [3] <https://webb.page/88x31/b.gif>
+   [4] <https://webb.page/88x31/c.gif>
+   [5] <https://mastodon.design/@hank>

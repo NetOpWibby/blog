@@ -1,0 +1,399 @@
+
+
+
+
+
+
+
+Document: WM-068                                                 P. Webb
+Category: Self Hosting                                        2025.04.30
+
+                          Stalwart Email Setup
+
+Abstract
+
+   This is even better than my MiaB setup
+
+Body
+
+   Stalwart[1] is an all‑in‑one mail server built for JMAP[2], the
+   ultra‑modern email standard we **should** be using but the tech
+   industry is cowardly and hella slow to move. Anyhoo! I recently setup
+   a new mail server with Stalwart because updating my aging
+   Mail‑in‑a‑Box[3] instance was unappealing and I wanna use cool new
+   things like JMAP. Running a mail server is never simple but you're
+   not here for simplicity, you're here to experience the future and
+   benefit from my learnings.
+
+   Let's jump in.
+
+   1. Prerequisites
+
+      1. super dope domain
+      2. radical web host that supports sending email
+      3. an email address you aren't worried taking offline for a bit
+
+      For me, I'm using `pidge.email` for my domain, Linode[4] (you get
+      $100 credit if you use my link) for my web hosting, and I used my
+      `chronver.org` email for my first test. If you aren't switching
+      mail servers, you've got it easy, just ignore that part.
+
+      Linode requires you to open a support ticket if you want to send
+      email. No one wants to be labeled a spammy playground and they're
+      no exception. Thankfully, I was approved the following morning.
+
+      In their welcome email, they suggest enabling rDNS (reverse DNS)
+      to make deliverability easier. One of the mail server validators
+      we'll use later in this post will check for this.
+
+   2. Installation
+
+      This part is actually pretty straightforward, just follow the
+      tutorial[5]. There is actually a lot you could change for any
+      reason: running on Windows or Docker, changing the backend
+      database to SQLite or FoundationDB, whatever floats your boat.
+
+      After changing the password from the auto‑generated one, you need
+      to reboot the server for it to take effect.
+
+   3. Setup
+
+      When I setup[6] servers, Caddy[7] is installed as part of that
+      process so you'll need to install that if you haven't already. A
+      major perk of it over nginx is the automated certs and minimal
+      configuration. Here's my `Caddyfile`:
+
+      ```
+      pidge.email {
+        root * /var/www/html
+        file_server
+      }
+
+      mta-sts.pidge.email, mail.pidge.email {
+        reverse_proxy 127.0.0.1:8080
+      }
+      ```
+
+      A few notes here; the root path for your domain will be
+      `/usr/share/caddy` by default (which'll show you Caddy's "it's
+      working" screen with some tips on what to do next). The `mta-sts`
+      subdomain is necessary for other mail servers to view you as legit
+      and the `mail` subdomain is where the dashboard is (this is also
+      what you'll input to your favorite mail app when you add accounts
+      to it).
+
+      After running `service caddy reload` you won't need to add the
+      `8080` port to your domain to access the Stalwart interface
+      anymore, just use the domain. If you see an error, you'll need to
+      run `service caddy status` and work through it.
+
+      Stalwart's docs have some tips on using[8] Caddy but here's where
+      it's lacking: it wants you to create cron jobs to copy the certs
+      from Caddy to a directory within its scope but you need to do a
+      few things first.
+
+      Create the `certs` folder the cron job expects to exist:
+
+      ```sh
+      mkdir -p /opt/stalwart-mail/cert
+      ```
+
+      MANUALLY copy Caddy's certificate to Stalwart and convert to PEM
+      format (make sure you update `mail.pidge.email` to your
+      own domain).
+
+      ```sh
+      cat /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/mail.pidge.email/mail.pidge.email.crt > /opt/stalwart-mail/cert/mail.pidge.email.pem
+      ```
+
+      Do the same for the private key to said certificate (again, making
+      the necessary updates to your domain).
+
+      ```sh
+      cat /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/mail.pidge.email/mail.pidge.email.key > /opt/stalwart-mail/cert/mail.pidge.email.priv.pem
+      ```
+
+      _Now_ we can setup those cron jobs!
+
+      ```sh
+      # this command opens up the cron thingy
+      crontab -e
+      ```
+
+      Paste these lines in (don't make me remind you about your
+      domain again):
+
+      ```
+      # caddy crt > pem
+      0 3 * * * cat /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/mail.pidge.email/mail.pidge.email.crt > /opt/stalwart-mail/cert/mail.pidge.email.pem
+
+      # caddy key > pem
+      0 3 * * * cat /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/mail.pidge.email/mail.pidge.email.key > /opt/stalwart-mail/cert/mail.pidge.email.priv.pem
+      ```
+
+      These cron jobs will run at 3am every day.
+
+   4. Annoyances & Gotchas
+
+      Stalwart's sidebar is…confusing. Visually it's easy to get lost in
+      it because there's no distinction of depth when you activate
+      different sections, and trying to go back to another setting you
+      saw before is an exercise in frustration.
+
+      Thankfully, there's a search box at the top of the page and you
+      can generally get to where you wanna go quicker by using
+      that instead.
+
+      I thought the "Fallback Administrator" was a different user
+      account but it's the same user that you login as.
+
+      Whenever the sidebar trips you up and you just want to get back to
+      the domain list, click the "Management" link at the bottom. If you
+      don't see it, click "Maintenance" and then you'll see the
+      "Management" link toggle into view.
+
+      There are a handful of features that are only available for the
+      enterprise version, with no way to hide them. If I really wanted
+      to, I could just compile a new binary without these features but
+      this is a minor complaint. A dev's gotta eat!
+
+   5. Tips 'n Tricks
+
+      Stalwart wants you to add these TXT records to your mail
+      server's DNS:
+
+      - `"v=spf1 a ra=postmaster -all"` for `mail.your.domain`
+      - `"v=spf1 mx ra=postmaster -all" for `your.domain`
+
+      According to MailHardener's SPF Validator[9], you want to do
+      `"v=spf1 mx ~all"` instead, for reasons[10]:
+
+      > SPF 'hard' fail is no longer recommended. For domains using
+      > DMARC, SPF 'hard' fail does not offer any security benefits over
+      > softfail, but may cause deliverability issues, even with
+      > valid DKIM.
+
+      For domains I use my mail server for, I also add a TXT record for
+      the `www` subdomain with `"v=spf1 mx ~all"`. Note that I don't
+      have an A record for `www` this just makes the validator happy and
+      doesn't cost me anything, so why not?
+
+      Speaking of other domains, there's a CNAME record you'll want to
+      change from what Stalwart recommends. Using my domains as
+      examples, Stalwart wants `mta-sts.inc.sh` to be a CNAME pointing
+      to `mail.pidge.email` when it should actually be an A record
+      pointing to the IP address of `inc.sh`. Here's the relevant
+      portion of my `Caddyfile`:
+
+      ```
+      mta-sts.inc.sh, inc.sh {
+        root * /var/www/inc.sh
+        import common
+      }
+      ```
+
+      Inside of `/var/www/inc.sh` is a `.well-known` directory
+      containing a `mta-sts.txt` file.
+
+      But what if your site is a bit more fancy than regular degular
+      HTML? Your `Caddyfile` needs a lil' bit more. Here's `webb.page`:
+
+      ```
+      mta-sts.webb.page, webb.page {
+        handle_path /.well-known/* {
+          root * /var/www/html/.well-known
+          file_server
+        }
+
+        encode gzip
+        reverse_proxy localhost:6433
+        root * /var/www/html
+      }
+      ```
+
+      My homepage is a fancy web app that handles it's own routing so
+      the previous example wouldn't work. For my homepage, I handle the
+      `.well-known` path **first** and _then_ let the web app handle the
+      rest of the routes.
+
+      Your MTA‑STS policy should be reachable and that's just not
+      possible with a CNAME. Using a CNAME makes sense when the mail
+      server and domain name are one and the same.
+
+      This MTA‑STS validator[11] recommends a `max_age` of 28 days and
+      the `mode` should be "enforce." By default, Stalwart's `max_age`
+      is considerably less and the `mode` is "testing."
+
+      Here's the output when CURLing `mta-sts.inc.sh`:
+
+      ```sh
+      curl -k https://mta-sts.inc.sh/.well-known/mta-sts.txt
+
+      # max_age: 2419200
+      # mode: enforce
+      # mx: mail.pidge.email
+      # version: STSv1
+      ```
+
+      Changing Stalwart's defaults _should_ work in the UI but I found
+      better luck with modifying its config file at
+      `/opt/stalwart-mail/etc/config.toml`. When you're done, you should
+      run `service stalwart-mail restart` or reboot the server if the
+      changes aren't sticking.
+
+      Speaking of which, might as well share my
+      config (sans `authentication`):
+
+      ```toml
+      certificate.default.cert = "%{file:/opt/stalwart-mail/cert/mail.pidge.email.pem}%"
+      certificate.default.default = true
+      certificate.default.private-key = "%{file:/opt/stalwart-mail/cert/mail.pidge.email.priv.pem}%"
+      directory.internal.store = "rocksdb"
+      directory.internal.type = "internal"
+      queue.outbound.tls.starttls = "require"
+      report.analysis.addresses = ["dmarc@*", "abuse@*"]
+      report.analysis.forward = true
+      report.analysis.store = "30d"
+      report.tls.aggregate.contact-info = "'postmaster@pidge.email'"
+      report.tls.aggregate.from-name = "'TLS Report'"
+      report.tls.aggregate.max-size = 26214400 # 25 mb
+      report.tls.aggregate.org-name = "'Pidge'"
+      report.tls.aggregate.send = "daily"
+      report.tls.aggregate.sign = "['rsa']"
+      server.hostname = "mail.pidge.email"
+      server.listener.http.bind = "[::]:8080"
+      server.listener.http.protocol = "http"
+      server.listener.https.bind = "[::]:443"
+      server.listener.https.protocol = "http"
+      server.listener.https.tls.implicit = true
+      server.listener.imap.bind = "[::]:143"
+      server.listener.imap.protocol = "imap"
+      server.listener.imaptls.bind = "[::]:993"
+      server.listener.imaptls.protocol = "imap"
+      server.listener.imaptls.tls.implicit = true
+      server.listener.pop3.bind = "[::]:110"
+      server.listener.pop3.protocol = "pop3"
+      server.listener.pop3s.bind = "[::]:995"
+      server.listener.pop3s.protocol = "pop3"
+      server.listener.pop3s.tls.implicit = true
+      server.listener.sieve.bind = "[::]:4190"
+      server.listener.sieve.protocol = "managesieve"
+      server.listener.smtp.bind = "[::]:25"
+      server.listener.smtp.protocol = "smtp"
+      server.listener.submission.bind = "[::]:587"
+      server.listener.submission.protocol = "smtp"
+      server.listener.submissions.bind = "[::]:465"
+      server.listener.submissions.protocol = "smtp"
+      server.listener.submissions.tls.implicit = true
+      server.max-connections = 8192
+      server.socket.backlog = 1024
+      server.socket.nodelay = true
+      server.socket.reuse-addr = true
+      server.socket.reuse-port = true
+      server.tls.certificate = "default"
+      session.mta-sts.max-age = "28d"
+      session.mta-sts.mode = "enforce"
+      storage.blob = "rocksdb"
+      storage.data = "rocksdb"
+      storage.directory = "internal"
+      storage.fts = "rocksdb"
+      storage.lookup = "rocksdb"
+      store.rocksdb.compression = "lz4"
+      store.rocksdb.path = "/opt/stalwart-mail/data"
+      store.rocksdb.type = "rocksdb"
+      tracer.log.ansi = false
+      tracer.log.enable = true
+      tracer.log.level = "info"
+      tracer.log.lossy = false
+      tracer.log.multiline = false
+      tracer.log.path = "/opt/stalwart-mail/logs"
+      tracer.log.prefix = "stalwart.log"
+      tracer.log.rotate = "daily"
+      tracer.log.type = "log"
+      webadmin.auto-update = true
+      ```
+
+      Unfortunately, if you want your TOML to have headers/sections,
+      they'll get inlined automatically when Stalwart reloads. Alas.
+
+   6. Bonus Points
+
+      If you check out the `report.analysis.addresses` part of the
+      config, you'll see two email addresses you should setup for your
+      mail server: `dmarc@your.domain` and `abuse@your.domain`. You
+      should also setup `postmaster@your.domain`, and do the same for
+      the rest of the domains you connect to your mail server. The final
+      boss[12] and _final_ final boss[13] of mail validators are tough.
+
+      Run your domains through these[14] other[15] validators[16] too.
+      The last one wants DNSSEC on your domains, which is a one‑click
+      setup on Cloudflare. Thank goodness! In my previous life[17] as a
+      bright‑eyed domain registry operator, I dealt with DNSSEC a lot.
+      It's a pain but more than wonderful when someone else makes it
+      easy to be secure.
+
+      The neat thing about these `postmaster@your.domain` accounts is
+      getting aggregate TLS and DMARC reports from your usual suspects
+      (Amazon, Google, &c) but also from randos like me running their
+      own mail servers (hello `aperture-labs.org`)!
+
+      Should this post reach Hacker News, ignore the grumps who last
+      hosted an email server when Windows XP was the new hotness or
+      think hosting your own email is a fruitless endeavor. I ran my
+      previous email server for _checks notes_ 10 YEARS?! Holy moly,
+      where did the time go…this server upgrade needed to happen, haha!
+
+   FIN?
+
+      I hope this wasn't _too_ rambly. When I self‑host things for the
+      first time I keep an unsaved text file open for days and use it as
+      a scratch pad of sorts, to make sense of later. This post is the
+      result of that process.
+
+      One of my long‑standing backburner projects is a hosted email
+      service called, "Pidge," (from one of my favorite Pokémon
+      evolutions: Pidgey, Pigeotto, Pidgeot) and I registered
+      `pidge.email` seven years ago. Might as well use it now!
+
+      Oh yeah, one last note; I use MailMate[18] and when adding new
+      accounts, you'll need to manually set "Mailbox Type" of your Trash
+      folder to "Deleted Messages," otherwise when you delete things a
+      new "Deleted Messages" folder will get created and that
+      looks dumb.
+
+      Stalwart also gives you "Shared Folders"[19] which is a neat
+      feature of groups. Obviously this feature is suited
+      for work/enterprise.
+
+      Much thanks to Maurus[20] for spending years working on Stalwart,
+      it's pretty sweet. I'll most likely be using this for another
+      10 years.
+
+      EDIT: Knew I'd remember something else as soon as I pushed this to
+      my server! When creating new accounts in Stalwart, you should make
+      "Login name" and "Email" be the same, it'll make things less confusing.
+
+      🕸️
+
+References
+
+   [1]  <https://stalw.art>
+   [2]  <https://jmap.io>
+   [3]  <https://mailinabox.email>
+   [4]  <https://www.linode.com/lp/refer/?r=51586d44e8e552b02d211b9675cab9e4132ce836>
+   [5]  <https://stalw.art/docs/install/linux>
+   [6]  <https://script.webb.page/server.sh>
+   [7]  <https://caddyserver.com>
+   [8]  <https://stalw.art/docs/server/reverse-proxy/caddy>
+   [9]  <https://www.mailhardener.com/tools/spf-validator>
+   [10] <https://www.mailhardener.com/blog/why-mailhardener-recommends-spf-softfail-over-fail>
+   [11] <https://www.uriports.com/tools/mtasts-validator>
+   [12] <https://www.mail-tester.com>
+   [13] <https://email-security-scans.org>
+   [14] <https://www.mailhardener.com/tools/mta-sts-validator>
+   [15] <https://easydmarc.com/tools/mta-sts-check>
+   [16] <https://esmtp.email/tools/mta-sts>
+   [17] <https://blog.neuenet.com/post/vision>
+   [18] <https://freron.com>
+   [19] <https://stalw.art/docs/auth/principals/group>
+   [20] <https://github.com/mdecimus>

@@ -16,35 +16,21 @@ import { dedent } from "dep/x/dedent.ts";
 
 import {
   environment,
+  errorMessage,
   feedDirectory,
   getVersion,
-  notesDirectory,
+  memoDirectory,
   port,
-  postDirectory
+  remarkDirectory
 } from "src/utility/constant.ts";
 
 import createLayout from "src/helper/create-layout.ts";
-import createNotesLayout from "src/helper/create-notes-layout.ts";
+import getBinaryContents from "src/helper/get-binary-contents.ts";
 import getDirectoryContents from "src/helper/get-directory-contents.ts";
 import getDocuments from "src/helper/get-documents.ts";
 import getFileContents from "src/helper/get-file-contents.ts";
-import populateLayout from "src/helper/populate-layout.ts";
-import populateNotesLayout from "src/helper/populate-notes-layout.ts";
-
-const errorMessage = dedent`
-  ---
-  title: Not found
-  date:  20XX-XX-XX
-  tags:  fail, goof, womp
-  tldr:  What you are looking for does not exist
-  ---
-
-  Yeah, nah. Head back to the homepage and you may find something else
-  interesting though.
-`;
-
-const notePathRegex = /^\/(notes)\/\d{3}-[\w-]+\.txt$/;
-const postPathRegex = /^\/\d{4}-\d{2}-\d{2}-[\w-.]+\.txt$/;
+import populateDocument from "src/helper/populate-document.ts";
+import populateRecents from "src/helper/populate-recents.ts";
 
 /*** PROGRAM ------------------------------------------ ***/
 
@@ -55,10 +41,10 @@ const server = Deno.serve({
     const { pathname } = new URL(req.url);
 
     if (pathname === "/") {
-      const listings = await getDirectoryContents(postDirectory);
+      const listings = await getDirectoryContents(memoDirectory);
 
       return new Response(
-        createLayout(populateLayout(listings)), {
+        createLayout("memo", await populateDocument(listings[0]), populateRecents(listings, listings[0].filename)), {
           headers: {
             "content-type": "text/html; charset=utf-8"
           }
@@ -66,38 +52,13 @@ const server = Deno.serve({
       );
     }
 
-    if (pathname === "/notes") {
-      const listings = await getDirectoryContents(notesDirectory);
+    if (pathname === "/remarks") {
+      const listings = await getDirectoryContents(remarkDirectory);
 
       return new Response(
-        createNotesLayout(populateNotesLayout(listings)), {
+        createLayout("remark", await populateDocument(listings[0]), populateRecents(listings, listings[0].filename)), {
           headers: {
             "content-type": "text/html; charset=utf-8"
-          }
-        }
-      );
-    }
-
-    if (notePathRegex.test(pathname)) {
-      const slug = pathname.slice(1).replace("notes/", "");
-      const notes = await getDocuments(notesDirectory);
-
-      if (notes && notes.indexOf(slug) < 0) {
-        return new Response(
-          errorMessage, {
-            headers: {
-              "content-type": "text/plain; charset=utf-8"
-            }
-          }
-        );
-      }
-
-      const filePath = join(notesDirectory, slug);
-
-      return new Response(
-        await getFileContents(filePath), {
-          headers: {
-            "content-type": "text/plain; charset=utf-8"
           }
         }
       );
@@ -139,9 +100,61 @@ const server = Deno.serve({
       );
     }
 
-    if (postPathRegex.test(pathname)) {
-      const slug = pathname.slice(1);
-      const posts = await getDocuments(postDirectory);
+    if (pathname === "/type/400.woff2") {
+      const filePath = join("src", "asset", "type", "400.woff2");
+
+      return new Response(
+        await getBinaryContents(filePath), {
+          headers: {
+            "cache-control": "public, max-age=31536000, immutable",
+            "content-type": "font/woff2"
+          }
+        }
+      );
+    }
+
+    if (pathname === "/type/400i.woff2") {
+      const filePath = join("src", "asset", "type", "400i.woff2");
+
+      return new Response(
+        await getBinaryContents(filePath), {
+          headers: {
+            "cache-control": "public, max-age=31536000, immutable",
+            "content-type": "font/woff2"
+          }
+        }
+      );
+    }
+
+    if (pathname === "/type/600.woff2") {
+      const filePath = join("src", "asset", "type", "600.woff2");
+
+      return new Response(
+        await getBinaryContents(filePath), {
+          headers: {
+            "cache-control": "public, max-age=31536000, immutable",
+            "content-type": "font/woff2"
+          }
+        }
+      );
+    }
+
+    if (pathname === "/type/600i.woff2") {
+      const filePath = join("src", "asset", "type", "600i.woff2");
+
+      return new Response(
+        await getBinaryContents(filePath), {
+          headers: {
+            "cache-control": "public, max-age=31536000, immutable",
+            "content-type": "font/woff2"
+          }
+        }
+      );
+    }
+
+    if (/^\/(WM-\d*)$/.test(pathname)) {
+      const slug = pathname.slice(1) + ".txt";
+      const posts = await getDocuments(memoDirectory);
 
       if (posts && posts.indexOf(slug) < 0) {
         return new Response(
@@ -153,7 +166,82 @@ const server = Deno.serve({
         );
       }
 
-      const filePath = join(postDirectory, slug);
+      const listings = await getDirectoryContents(memoDirectory);
+
+      return new Response(
+        createLayout("memo", await populateDocument({ filename: slug }), populateRecents(listings, slug)), {
+          headers: {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      );
+    }
+
+    if (/^\/(WM-\d*).txt$/.test(pathname)) {
+      const slug = pathname.slice(1);
+      const posts = await getDocuments(memoDirectory);
+
+      if (posts && posts.indexOf(slug) < 0) {
+        return new Response(
+          errorMessage, {
+            headers: {
+              "content-type": "text/plain; charset=utf-8"
+            }
+          }
+        );
+      }
+
+      const filePath = join(memoDirectory, slug);
+
+      return new Response(
+        await getFileContents(filePath), {
+          headers: {
+            "content-type": "text/plain; charset=utf-8"
+          }
+        }
+      );
+    }
+
+    if (/^\/remarks\/(WR-\d*)$/.test(pathname)) {
+      const slug = pathname.split("/").pop() + ".txt";
+      const posts = await getDocuments(remarkDirectory);
+
+      if (posts && posts.indexOf(slug) < 0) {
+        return new Response(
+          errorMessage, {
+            headers: {
+              "content-type": "text/plain; charset=utf-8"
+            }
+          }
+        );
+      }
+
+      const listings = await getDirectoryContents(remarkDirectory);
+
+      return new Response(
+        createLayout("remark", await populateDocument({ filename: slug }), populateRecents(listings, slug)), {
+          headers: {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      );
+    }
+
+    if (/^\/remarks\/(WR-\d*).txt$/.test(pathname)) {
+      const slug = String(pathname.split("/").pop());
+      const documentArray = await getDocuments(remarkDirectory);
+
+      if (documentArray && documentArray.indexOf(slug) < 0) {
+        return new Response(
+          errorMessage, {
+            headers: {
+              "content-type": "text/plain; charset=utf-8"
+            }
+          }
+        );
+      }
+
+      const filePath = join(remarkDirectory, slug);
 
       return new Response(
         await getFileContents(filePath), {

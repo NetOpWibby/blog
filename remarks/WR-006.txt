@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+Document: WR-006                                                 P. Webb
+                                                              2024.11.12
+
+                      Export your Farcaster posts
+
+Body
+
+   I recently decided to quit Farcaster for several reasons. You can
+   read about them in the `elon-mind-virus.txt` post. Anyhoo, here's the
+   Deno script I made, adapted from Neynar's Node.js archiver script[1]:
+
+   ```ts
+   /*** IMPORT ------------------------------------------- ***/
+
+   import { appendFile } from "node:fs";
+   import { NeynarAPIClient } from "npm:@neynar/nodejs-sdk";
+
+   /*** UTILITY ------------------------------------------ ***/
+
+   const client = new NeynarAPIClient("YOUR_NEYNAR_API_KEY");
+   const fid = 16152; /// your Farcaster FID
+
+   const dumpCast = (cast) => {
+     const data = `${JSON.stringify(cast)}\n`;
+
+     appendFile(`${fid}_export.ndjson`, data, (err) => {
+       if (err)
+         throw err;
+
+       console.log(`${cast.hash} processed`);
+     });
+   };
+
+   const fetchAndDump = async(fid, cursor) => {
+     const data = await client.fetchAllCastsCreatedByUser(fid, {
+       cursor,
+       limit: 150
+     });
+
+     data.result.casts.map(dumpCast);
+
+     if (data.result.next.cursor === null)
+       return; /// if no cursor, fin
+
+     await fetchAndDump(fid, data.result.next.cursor);
+   };
+
+   /*** PROGRAM ------------------------------------------ ***/
+
+   fetchAndDump(fid);
+
+   /*** deno run --allow-env --allow-net --allow-write export_farcaster.ts ***/
+   ```
+
+   This will only export your public posts, not your DMs. If you don't
+   want to pay Neynar[2], you can use these[3] projects[4].
+
+References
+
+   [1] <https://github.com/neynarxyz/farcaster-examples/blob/6922ac07fe7b601e3b1712a7f9c54a396dad66f8/archiver-script/index.js>
+   [2] <https://neynar.com>
+   [3] <https://github.com/iammatthias/fcau>
+   [4] <https://github.com/vrypan/fario>

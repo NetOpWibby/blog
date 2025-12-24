@@ -3,11 +3,7 @@
 
 /*** UTILITY ------------------------------------------ ***/
 
-import {
-  BaseFeed,
-  escapeXML,
-  type FeedOptions
-} from "./helper.ts";
+import { BaseFeed, escapeXML, type FeedOptions } from "./helper.ts";
 
 interface AtomEntry {
   content?: {

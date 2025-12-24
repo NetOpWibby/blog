@@ -1,0 +1,222 @@
+
+
+
+
+
+
+
+Document: WM-078                                                 P. Webb
+Category: Life                                                2025-12-23
+
+              Planning and implementing the Neue Internet
+
+Abstract
+
+   Accidentally discovering that my disparate ideas have a unified theme
+
+Body
+
+   It appears that what I've been obsessed with for several years, the
+   idea of a "Neue Internet," is what I've been unintentionally building
+   towards. High-level: social network, domain registry/registrar,
+   payments, code hosting, video, operating systems, and hardware. In
+   other words, if the internet was invented in 2026, what would it look
+   like? What's the infrastructure?
+
+   Ideas are free, so I have no problem sharing them (especially when I
+   already have the best domains for them, hehe). Execution
+   is everything.
+
+   With that said, here's what I envision:
+
+   1. Payments
+
+      The RFC (7231)[1] for the HTTP 402 "Payment Required" code was
+      "published" June 2014, more than a decade ago at the time of this
+      writing. The word published is in quotes because the section for
+      it just says "The 402 (Payment Required) status code is reserved
+      for future use" (it was introduced in January 1997 in
+      RFC 2068[2]). Cloudflare and Coinbase recently teamed up to
+      release primitives for HTTP 402 based on crypto coins called x402.
+      Bitcoin (Lightning) also has a version of this called L402.
+      There's an opportunity for someone to abstract these into a single
+      API to make accepting payments easy; kinda like the crypto version
+      of Stripe (without the hidden requirement/mandate that one is
+      forced to use hosted iframes to process money; this is for PCI
+      compliance, lest you wish to fill out a 100+ page document that
+      absolves them of any fraudulent activity occurring from you using
+      their raw API instead).
+
+      This project will live at `neue.cash`.
+
+   2. Social (Part I)
+
+      Back in 2016 I became increasingly aware of social media making
+      people angry and irritable. With hindsight, we know that other
+      countries were intentionally sowing discord amongst us and
+      profiting from it (fear and anger is fantastic for engagement and
+      increased engagement = money). Cool. This was also the era where
+      news outlets couldn't get enough of the term "filter bubble" and I
+      decided that maybe filter bubbles are good. After all, I prefer to
+      talk to a large handful of people across different spaces...when
+      there's too many voices, things tend to get ugly; that's when I
+      discovered Dunbar's Number. In essence, a guy surmised that most
+      people only ever truly know roughly 150 people in their lifetime.
+      What if you had a social media platform where every group had a
+      150 person limit? They'd essentially be a bunch of self-contained
+      forums. I took that idea, added Myspace's top friends feature, and
+      started prototyping my social network. I had a decent beta but I
+      eventually realized that REST fucking sucks for relational data
+      retrieval so I shut it down while I learned GraphQL and start over
+      from scratch. I got distracted by a blockchain project for half a
+      decade and by the time I got back my social media platform,
+      Bluesky and Mastodon existed. I lost steam to work on a closed
+      platform while these open platforms were doing a decent job.
+
+      This project lived at `socii.network`.
+
+   3. Identity
+
+      My blockchain distraction was a DNS alt-root that launched late
+      2019. 15 years earlier, I was a high-school kid who frequently
+      skipped lunch to do research on the library computers (and
+      participate in DJing, music production, and Megaman Battle Network
+      forums). A random Ask Jeeves moment led to discovering what a TLD
+      was, ICANN, and the price to apply for a new TLD. I filed this
+      information in the back of my mind as a future dream. Well,
+      Handshake (the blockchain project) was the realization of a dream
+      I thought I'd never get the chance of achieving; creating TLDs and
+      building infrastructure for people to build cool shit and host
+      sites on dope domains!
+
+      I'm aware just how nerdy that sounds, and you're right to assume I
+      didn't get laid in high-school.
+
+      My time working on Handshake projects ended due to infighting,
+      greed, and more infighting. I sold my TLD portfolio, open sourced
+      code, and archived plenty of blog posts to help future builders. I
+      got so close to that dream and I refuse to let it die, so I'm
+      working on a better implementation, IMHO, called "Dap." It
+      addresses the primary technical complaints of Handshake (pre-mine
+      and squatters), increases security (Blake3 Proof-of-Work), and
+      massively reduces energy consumption compared to most blockchains
+      (Verifiable Delay and Verifiable Random Functions). You want and
+      need a solid foundation for the Neue Internet, after all.
+
+      This project lives at `dap.sh`.
+
+   4. Code Hosting
+
+      Github is owned by Microsoft and Microsoft supports AI replacing
+      humans, ICE, and war criminals. It's not difficult to understand
+      why I'd want an alternative. Even before Microsoft spent a $7.5
+      billion on acquiring Github, I dabbled in self-hosting my code and
+      using other services. I don't like any of them. Bitbucket is a
+      joke, Radicle is cool af but confusing (how tf do you do private
+      repos?), RhodeCode is old, cgit is too limited, Gitlab is too
+      bulky and power-hungry, Gitea is difficult to customize, and the
+      rest of them are just Github clones with lackluster design. For
+      me, simply being an alternative isn't enough.
+
+      I mocked up a repo UI in SvelteKit and refined it over a few
+      weeks. I'm pleased with the design direction and the new
+      terminology I created for this next-generation code forge. Looking
+      forward to getting it into production so I can move my code to it
+      and keep Github as my bookmark manager for useful repos.
+
+      This project will live at `eol.sh`.
+
+   5. Video (Social, Part II)
+
+      Man, video is hard. Especially when THE place to upload video is a
+      Google product; YouTube. Ugh.
+
+      I love YouTube, I use it literally every day. Am I logged in?
+      Absolutely not. I'm only logged into Google for clients that use
+      it and even then, I am only logged in using Brave browser. That's
+      all I use said browser for. Thankfully, YouTube employs "shadow
+      profiles," which essentially learns from my watch habits to
+      algorithmically curate a selection of content to watch. I'm also
+      subscribed to several creators via RSS (I'm surprised Google
+      hasn't yoinked that capability out of YouTube yet).
+
+      With that said, I felt gross about being logged in to Google while
+      in my main browser and uploading my gaming clips. I dreaded doing
+      it so much that I just wouldn't upload at all. Then I read a blog
+      post on Hacker News where someone claimed they saved millions (or
+      thousands, I forget) of dollars on video storage fees by using
+      Cloudflare R2. That piqued my interest so I asked Claude how to
+      programmatically use ffmpeg to create video playlists at varying
+      resolutions. I turned that into an API, tested it on a few videos,
+      and decided to make a new video platform.
+
+      Competing with YouTube (and Google) is a waste of time; they throw
+      away amounts of money that'd change my life, on an hourly basis.
+      Nah, a free platform is not sustainable, ESPECIALLY if it's
+      involving video. I think I have a winning solution:
+      subscription-based video platform where videos are capped at 5
+      seconds or 5 minutes. Supporters can tip Creators, Creators take
+      home 85% (highest in the industry), everyone's happy. I'm spending
+      2026 proving my thesis that this can become profitable. I'm also
+      taking some of my favorite ideas from my social network and
+      applying them here.
+
+      This project lives at `nickel.video`.
+
+   6. OS & Hardware
+
+      "Liquid Ass" is what people are calling Apple's Windows Vista
+      moment. Embarrassing. The guy who led the ass design just left to
+      work at Facebook. Microsoft literally puts ads into Windows and is
+      increasingly antagonistic with their customers. An aggressive
+      operating system is crazy in this age of AI. Good grief. Oh, and
+      Apple is also experimenting with ads in the OS. I've long resisted
+      uttering the phrase, "This wouldn't happen if Steve Jobs was still
+      alive," but man, it's true. The Apple I fell in love with had
+      taste and poise (mostly). I will say that Apple _hardware_ is
+      fucking phenomenal, no one has them beat on that front (I did send
+      back my year-old M2 Mac Studio because my M1 MacBook Pro is still
+      chugging along quite well).
+
+      Meanwhile, Linux is having a **fantastic** year. Framework and MNT
+      Reform laptops are beloved and Valve's upcoming gaming PC is an
+      internet darling. I think they proven that modular computing can
+      and will be profitable. This is the best time for Apple to
+      resurrect the Jonathan Computer, a modular marvel envisioned under
+      their roof in the mid-1980s. Current leadership would never do it
+      (I believe Phil Schiller would entertain the idea), so I intend to
+      sherlock them...in about 30 years or less. Hardware is hard and
+      what I lack in resources and recourse, I make up for in vision and
+      sheer force of will.
+
+      The "desktop" paradigm we've used since modern computing's
+      inception is tired. We compute on several devices with differing
+      form factors daily, either for work or leisure. We also interface
+      with remote systems and generate so much data, most of which is
+      governed on such systems. Technology has advanced enough for
+      local-first software to be the norm, not some niche feature for
+      nerds. "Oh noes, people will be confused, we have to save them
+      from themselves!!" Treat people with respect and teach them. If
+      you can't/won't do that, move aside. Better yet, close this tab
+      and angrily talk about me to your friend group, I need my legend
+      to grow.
+
+      The project lives at `systemsoft.works`.
+
+   I left out email and messaging and that's because I don't yet have a
+   compelling vision for either. I think JMAP is a solid improvement
+   over IMAP but also feel like it could be better. For messaging, I
+   just want a modern cross-platform Miranda IM. Or better yet, why not
+   combine the two? Email is just long-form messaging, right? A nicely
+   designed Delta Chat client would probably be enough for me tbh.
+
+   Most of my ideas start within the confines of legacy constraints
+   until I realize (or remember) that innovation lives _outside_ the
+   confines of existing infrastructures and norms. You don't need
+   permission to change the world, you can just...do it. Impossible is
+   not a word, it's an excuse. 🕸️
+
+References
+
+   [1] <https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.2>
+   [2] <https://datatracker.ietf.org/doc/html/rfc2068#section-10.4.3>

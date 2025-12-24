@@ -3,16 +3,12 @@
 
 /*** UTILITY ------------------------------------------ ***/
 
-import {
-  BaseFeed,
-  escapeXML,
-  type FeedOptions
-} from "./helper.ts";
+import { BaseFeed, escapeXML, type FeedOptions } from "./helper.ts";
 
 interface RssItem {
   content: {
     body: string;
-    type: string;
+    // type: string;
   };
   description: string;
   id: string;

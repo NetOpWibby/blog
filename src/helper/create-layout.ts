@@ -1,10 +1,6 @@
 
 
 
-/*** IMPORT ------------------------------------------- ***/
-
-import { dedent } from "dep/x/dedent.ts";
-
 /*** UTILITY ------------------------------------------ ***/
 
 import {
@@ -14,30 +10,34 @@ import {
   url
 } from "src/utility/constant.ts";
 
+import headerParser from "src/helper/parse-header.ts";
+
 /*** EXPORT ------------------------------------------- ***/
 
-export default (suppliedContent: string) => {
-  return dedent`
+export default (type: "memo" | "remark", memo: string, recents: string) => {
+  const { abstract, /*category,*/ document, title: documentTitle } = headerParser(memo);
+
+  return `
     <!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8"/>
-        <title>${title}</title>
+        <title>${title} &bull; ${String(documentTitle).toLowerCase()}</title>
 
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
         <meta content="${author}" name="author"/>
-        <meta content="${description}" name="description"/>
+        <meta content="${abstract || description}" name="description"/>
         <meta content="${title}" name="title"/>
         <meta content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5, viewport-fit=cover" name="viewport"/>
 
         <!--/ Open Graph /-->
-        <meta content="${description}" property="og:description"/>
+        <meta content="${abstract || description}" property="og:description"/>
         <meta content="https://🔥.pixels.wtf/blog/asset/og.png" property="og:image"/>
         <meta content="800" property="og:image:height"/>
         <meta content="1280" property="og:image:width"/>
         <meta content="en_US" property="og:locale"/>
         <meta content="${title}" property="og:site_name"/>
-        <meta content="${title}" property="og:title"/>
+        <meta content="${documentTitle}" property="og:title"/>
         <meta content="website" property="og:type"/>
         <meta content="${url}" property="og:url"/>
         <meta content="@netopwibby@social.coop" name="fediverse:creator"/>
@@ -60,6 +60,24 @@ export default (suppliedContent: string) => {
         <link href="https://uchu.style/color_expanded.css" rel="stylesheet"/>
 
         <style>
+          @font-face {
+            font-display: swap;
+            font-family: "WEBB MONO";
+            font-style: normal;
+            font-weight: 400;
+            src: url("/type/400.woff2") format("woff2");
+          }
+
+          @font-face {
+            font-display: swap;
+            font-family: "WEBB MONO";
+            font-style: italic;
+            font-weight: 400;
+            src: url("/type/400i.woff2") format("woff2");
+          }
+        </style>
+
+        <style>
           *,
           *::before,
           *::after {
@@ -80,26 +98,100 @@ export default (suppliedContent: string) => {
             color: var(--uchu-yin-9);
             display: flex;
             flex-direction: column;
-            font-family: monospace;
+            font-family: "WEBB MONO", monospace;
             font-size: 1.15rem;
             line-height: 1.33;
-            padding: 3rem 2rem;
           }
 
           main {
+            display: flex;
             flex: 1;
+            flex-direction: row;
+
+            > section {
+              max-width: 650px;
+              padding: 2rem;
+
+              > pre {
+                font-family: inherit;
+
+                > code {
+                  background-color: var(--uchu-yellow-1);
+                }
+
+                > pre {
+                  background-image: linear-gradient(90deg, var(--uchu-pink-1), transparent);
+                }
+              }
+
+              blockquote {
+                background-image: linear-gradient(90deg, var(--uchu-orange-1), transparent);
+                margin-bottom: -1.5rem;
+
+                a {
+                  color: var(--uchu-orange-7);
+
+                  &:visited {
+                    color: var(--uchu-blue-3);
+                  }
+                }
+              }
+
+              img {
+                padding-right: 4.75rem;
+                width: 100%;
+              }
+
+              hr {
+                background-image: linear-gradient(90deg, transparent, var(--uchu-yin-1), transparent);
+                border: 0;
+                height: 1px;
+              }
+
+              > a {
+                color: var(--uchu-blue-3);
+
+                &:visited {
+                  color: var(--uchu-purple-3);
+                }
+              }
+            }
+
+            aside {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              margin-left: 2rem;
+              padding-top: 17rem;
+              z-index: 1;
+
+              a {
+                background-color: var(--uchu-gray-1);
+                color: inherit;
+                padding: 0.5rem;
+
+                &.current {
+                  background-color: var(--uchu-yang);
+                  font-weight: 600;
+                  pointer-events: none;
+                }
+
+                &:not(:last-of-type) {
+                  margin-bottom: 0.75rem;
+                }
+              }
+            }
           }
 
-          header {
-            margin-bottom: 4rem;
-          }
-
+          header,
           footer {
-            margin-top: 4rem;
-            margin-bottom: 2rem;
+            background-color: var(--uchu-gray-1);
+            color: var(--uchu-yin-3);
+            padding: 0.5rem calc(2rem - 2px);
+            text-transform: uppercase;
 
             a {
-              color: inherit;
+              color: var(--uchu-yin-9);
               font-weight: 600;
 
               &:hover {
@@ -112,138 +204,36 @@ export default (suppliedContent: string) => {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
           }
-
-          /*————— grid */
-
-          .grid {
-            width: 100%;
-          }
-
-          @media (min-width: 901px) {
-            .grid {
-              display: table;
-              table-layout: fixed;
-            }
-          }
-
-          @media (max-width: 900px) {
-            .grid:first-of-type {
-              display: none;
-            }
-
-            .grid {
-              display: flex;
-              flex-direction: column-reverse;
-              padding: 0.75rem 1rem 0.75rem 0;
-            }
-
-            .grid:nth-child(2) {
-              padding-bottom: 1.25rem;
-            }
-
-            .grid:not(:first-of-type):not(:nth-child(2)) {
-              padding-top: 1rem;
-            }
-          }
-
-          @media (min-width: 451px) and (max-width: 850px) {
-            .grid:not(:first-of-type):not(:nth-child(2)) {
-              padding-bottom: 1.25rem;
-            }
-          }
-
-          @media (max-width: 450px) {
-            .grid:not(:first-of-type):not(:nth-child(2)) {
-              padding-bottom: 1rem;
-            }
-          }
-
-          .grid:first-of-type {
-            font-weight: 600;
-            letter-spacing: 0.05rem;
-            position: relative;
-          }
-
-          .grid:not(:first-of-type) {
-            border-bottom: 1px solid var(--uchu-gray-3);
-          }
-
-          /*————— column */
-
-          .col {
-            cursor: default;
-            overflow: hidden;
-
-            a {
-              white-space: pre-line;
-            }
-
-            &:not(:hover) {
-              a:not(:visited) {
-                color: var(--uchu-blue-3);
-              }
-
-              a:visited {
-                color: var(--uchu-purple-1);
-              }
-            }
-
-            &:hover {
-              a:not(:visited) {
-                color: var(--uchu-blue-6);
-              }
-
-              a:visited {
-                color: var(--uchu-purple-4);
-              }
-            }
-          }
-
-          @media (min-width: 901px) {
-            .col {
-              display: table-cell;
-              padding: 0.75rem 1rem 0.75rem 0;
-              vertical-align: middle;
-            }
-
-            .col:first-child {
-              padding-right: 3rem;
-              text-align: right;
-              width: 10rem;
-            }
-          }
         </style>
       </head>
 
       <body>
+        <header>
+          [<a href="https://webb.page">homepage</a>|<a href="https://cv.webb.page">cv</a>]
+          ${document} [<a href="${type === "memo" ? `/${document}` : `/remarks/${document}`}.txt">text</a>|<!--/<a href="">pdf</a>|/--><a href="${type === "memo" ? `/${document}` : `/remarks/${document}`}">html</a>]
+          ${type === "memo" ? `[<a href="/remarks">remarks</a>]` : `[<a href="/">memos</a>]`}
+        </header>
+
         <main>
-          <header>
-            <h1>index of /</h1>
-            <p>${description}</p>
-          </header>
-
           <section>
-            <div class="grid">
-              <div class="col">&nbsp;</div>
-              <div class="col">directory</div>
-            </div>
+            <pre>
+              ${memo}
+            </pre>
+          </section>
 
-            <div class="grid">
-              <div class="col">&nbsp;</div>
-              <div class="col"><a href="/notes">notes</a></div>
-            </div>
-          </section><br/><br/>
-          ${suppliedContent}
-
-          <footer>
-            <em>
-              <a href="/2019-12-02-a-personal-api.txt" title="blog post introducing the personalOS concept">personalOS</a><sup>α</sup> server running @ blog.webb.page &middot; <a href="https://github.com/NetOpWibby/blog" title="source code for this blog">source</a><br/>
-              feeds: <a href="/feed/atom" title="Atom feed for the webb blog">atom</a> &middot; <a href="/feed/json" title="JSON feed for the webb blog">json</a> &middot; <a href="/feed/rss" title="RSS feed for the webb blog">rss</a><br/>
-              socials: <a href="https://social.coop/@netopwibby">mastodon</a> &middot; <a href="https://bsky.app/profile/webb.page">bluesky</a> &middot;<a href="https://www.linkedin.com/in/paulanthonywebb/">linkedin</a>
-            </em>
-          </footer>
+          <aside>
+            ${recents}
+          </aside>
         </main>
-      </body>
-    </html>
+
+        <footer>
+          [<a href="https://github.com/NetOpWibby/blog" target="_blank" title="source code for this blog">source</a>]
+
+          [<a href="/feed/atom" title="Atom feed for the webb blog">atom</a>|<a href="/feed/json" title="JSON feed for the webb blog">json</a>|<a href="/feed/rss" title="RSS feed for the webb blog">rss</a>]
+
+          [<a href="https://social.coop/@netopwibby" target="_blank">mastodon</a>|<a href="https://cyberspace.online/netopwibby" target="_blank">cyberspace</a>|<a href="https://bsky.app/profile/webb.page" target="_blank">bluesky</a>|<a href="https://www.linkedin.com/in/paulanthonywebb/" target="_blank">linkedin</a>]
+        </footer>
+     </body>
+   </html>
   `;
 }
