@@ -46,12 +46,12 @@ export default (input: string): string => {
   processed = processed
     .replace(/(\n){6}/g, "")    /*** remove 6 lines from the top of the memo ***/
     .replace("References", "")  /*** remove reference to reference definitions from output ***/
-    // .replace(/(\`)(.*?)\1/g, `<code>$2</code>`) /*** code ***/
     .replace(/(\*\*|__)(.*?)\1/g, `<strong style="white-space: nowrap;">$2</strong>`) /*** bold ***/
     .replace(/(\*|_)(.*?)\1/g, "<em>$2</em>")   /*** italic ***/
     .replace(/(\~\~)(.*?)\1/g, `<del>$2</del>`) /*** strikethrough ***/
     .replace(/'/g, "’")         /*** fancy apostrophe ***/
     .replace(/(:nbhyp:)/g, "‑") /*** non‑breaking hyphen ***/
+    // deno-lint-ignore no-irregular-whitespace
     .replace(/(:nbsp:)/g, " ")  /*** non‑breaking space ***/
     .replace(/(\.\.\.)/g, "…")  /*** ellipsis ***/
     .replace(/---/g, "<hr/>")
