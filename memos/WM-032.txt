@@ -33,9 +33,9 @@ Body
       2010. It's been nearly a decade since then and clearly, that quote
       is timeless. The increasingly parasitic advertising industry is
       fed by a never-ending supply of user-data gathered and sold by
-      almost every ̶o̶n̶l̶i̶n̶e̶ o̶f̶f̶l̶i̶n̶e̶ service. Oh yeah, that's right; you
-      can be tracked o̶f̶f̶l̶i̶n̶e̶. The data gatherers are your usual
-      suspects: Facebook, Google, Twitter, as well as unknown data
+      almost every ~~online~~ ~~offline~~ service. Oh yeah, that's
+      right; you can be tracked ~~offline~~. The data gatherers are your
+      usual suspects: Facebook, Google, Twitter, as well as unknown data
       brokers of which new ones are launching seemingly weekly. Have you
       looked at the blacklist of your favorite ad blocker? It's
       a *mess*.
@@ -215,10 +215,11 @@ Body
       Getting your family, friends, and community onboard with what
       you've just learned is an uphill battle. You can lead by example
       though, so *do not feel discouraged* if/when they don't care about
-      the privacy implications of staying with w̶e̶l̶l̶deceptively-designed
-      services. We did not arrive at this clusterfuck of invasiveness
-      and moral ambiguity overnight…it took some time and it will likely
-      take some time to free ourselves from it.
+      the privacy implications of staying with
+      ~~well~~deceptively-designed services. We did not arrive at this
+      clusterfuck of invasiveness and moral ambiguity overnight…it took
+      some time and it will likely take some time to free ourselves
+      from it.
 
       Good luck. 🕸
 

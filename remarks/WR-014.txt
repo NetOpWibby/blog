@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+Document: WR-014                                                 P. Webb
+                                                              2026.01.04
+
+               Workarounds Apple's ScreenTime Workarounds
+
+Body
+
+   Teenagers think ScreenTime isn’t for them and **will** figure out a
+   way around them. They forget that we millennials used the internet
+   decades before they were even a thought. Anyway.
+
+   A popular method is to change the date and time. This is particularly
+   stressing when your teen has an iPhone and a MacBook.
+
+   From your teen’s MacBook, head to System Settings → General → Date &
+   Time. Ensure "Set time and date automatically" is checked. For us, it
+   was not, the date was set several weeks back and the time was totally
+   off. Restoring the time and date will also fix an issue in Screen
+   Time where you might see a message stating that your teen’s computer
+   cannot be seen or whatever.
+
+   Now you'll want to head to Users & Groups. From there, you can see if
+   they are an `Admin`[1]. **We don’t want that.** Create a new `Admin`
+   account for you, log out of your teen’s account, log into your’s, go
+   to the same place in settings, and change their account to
+   `Standard`. You also want to uncheck "Allow this user to administer
+   this computer."
+
+   As for iOS, go into your Settings → Family → Teen’s Name → Screen
+   Time → App Limits. You probably have a bunch of limits in here
+   already but you should add the Shortcuts app. For whatever reason,
+   there’s a way to circumvent limits with certain shortcuts that can be
+   easily downloaded from the internet. If your teen is an active user
+   of Shortcuts, they’ll just have to suffer until they move out.
+
+References
+
+   [1] <https://discussions.apple.com/thread/256108570>
