@@ -59,6 +59,10 @@ export default (input: string): string => {
       const url = refs.get(ref);
       return url ? `<img src="${url}" alt="${alt}" loading="lazy">` : match;
     })
+    .replace(/📼\[([^\]]+)\]\[(\w+)\]/g, (match, alt, ref) => {
+      const url = refs.get(ref);
+      return url ? `<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="${url}" title="${alt}"></iframe>` : match;
+    })
     .replace(/\[(\w+)\](?!\s+<|\()/g, (match, ref) => {
       const url = refs.get(ref);
       const isExternal = url && url.startsWith("http://") || url && url.startsWith("https://");

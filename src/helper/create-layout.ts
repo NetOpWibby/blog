@@ -137,9 +137,14 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
                 }
               }
 
+              iframe,
               img {
                 padding-right: 4.75rem;
                 width: 100%;
+              }
+
+              iframe {
+                aspect-ratio: 16 / 9;
               }
 
               hr {
