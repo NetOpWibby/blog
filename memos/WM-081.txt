@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+Document: WM-081                                                 P. Webb
+Category: Computing                                           2026-01-13
+
+            The Reason Why We'll Never Get Another Bell Labs
+
+Abstract
+
+   Or Xerox PARC, for that matter.
+
+Body
+
+   The technologies that underpin much of modern society were invented
+   by Bell Labs[1], Xerox PARC[2], and BBN[3]; the Unix operating
+   system, C and C++ programming langauges, laser printing, Ethernet,
+   modern computing paradigms, the mouse, e-paper, email, and the
+   precursor to the internet, just to name a *few*. These R&D labs
+   however, only existed because of the monopolies their parent
+   companies enjoyed (or DARPA contracts, in the case of BBN). With all
+   this extra money, why not put some of it toward being THE place for
+   attracting inventors, researchers, and engineers? Positive press from
+   next-generation discoveries makes the investors happy, the market is
+   happy, the stock price is happy.
+
+   Big Tech has shied away from that. Instead of "how great would this
+   be for the world?" it's "how great would this be for US?" In other
+   words, they fail the "just release cool shit" challenge.
+
+   Remember Phonebloks[4]? Remember Project Ara[5]? Modular smartphone
+   projects with the aim to reduce waste and make a phone feel like you
+   actually owned it? Google shut them down. Or maybe you remember
+   Dark Sky, the weather API that was so damn good that Apple acquired
+   and sunset it. You can still build on it, Dark Sky has been wrapped
+   into WeatherKit[6]. You just need to pay the annual $99 developer fee
+   and then API fees if you make more than half a million API calls a
+   month (your weather app gets popular).
+
+   _There are tons more examples, those are what comes to mind easily._
+
+   Software is eating the world[7] and Big Tech is eating software and
+   leaving us crumbs. What happened to leaving the world better than you
+   found it? Acquiring and exterminating great ideas is not the way.
+
+   The irony is that Big Tech is terrified of harboring the very
+   conditions that enabled its existence...curiousity, ingenuity,
+   and rejection of the status quo (and a smattering of luck).
+
+   I grew up an avid reader of Popular Science and Popular Mechanics
+   magazines and was enamored with depictions of future tech. Microsoft
+   regularly made videos[8] showcasing where they saw the future going
+   and it signaled to me that they might be a forward-thinking company
+   as well. I thought adults were the *coolest* because they were hard
+   at work building an awesome future for my generation to live, work,
+   and play in.
+
+   Boy was I fucking wrong.
+
+   No one talks about the immense disappointment that comes with
+   realizing you believed in a fantasy world that you were *taught* was
+   the real world. Instead, we share memes about "the future we were
+   promised" and laugh to hide the collective pain. I'll be 38 this year
+   and I'm more than a little disgruntled about all this.
+
+   Ink & Switch[9] is an R&D lab working on cool stuff and they aren't
+   attached to a corporation, they're a collection of like-minded folks
+   exploring the future. We need more of them. The era of cash-infused
+   ideological backers is long gone; which is unfortunate because the
+   cost of living is too damn high. I guess I'm just ranting that I
+   missed out on getting paid to create the future and am frustrated
+   that I gotta do it for free.
+
+   Ah well, it is what it is. I've pulled myself up by the bootstraps
+   before, I suppose I could do it again. 🕸️
+
+References
+
+   [1] <https://en.wikipedia.org/wiki/Bell_Labs?useskin=vector>
+   [2] <https://en.wikipedia.org/wiki/PARC_(company)?useskin=vector>
+   [3] <https://en.wikipedia.org/w/index.php?title=RTX_BBN_Technologies&useskin=vector>
+   [4] <https://www.onearmy.earth/project/phonebloks>
+   [5] <https://web.archive.org/web/20170821151058/http://atap.google.com/ara>
+   [6] <https://developer.apple.com/weatherkit>
+   [7] <https://a16z.com/why-software-is-eating-the-world>
+   [8] <https://www.youtube.com/watch?v=cEeht3nyhec>
+   [9] <https://www.inkandswitch.com>
