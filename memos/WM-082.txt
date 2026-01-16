@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+Document: WM-082                                                 P. Webb
+Category: Life                                                2026-01-16
+
+                      I hate the word "impossible"
+
+Abstract
+
+   Impossible is not a word, it's an excuse.
+
+Body
+
+   Sometime in my late teens, I came up with the mantra in the abstract
+   above. I wish I could remember the context behind these words forming
+   in my mind but alas, that's lost to the sands of time. However, as a
+   youth I was a regularly inspired by the inventions of the day being
+   created by people in the distant past.
+
+   📸[Insane Clown Posse asking how magnets work][IMG1]
+
+   This mantra has helped me navigate extraordinarily difficult periods
+   in my life and will sustain me up to the end.
+
+   I have some networking events coming up so I went over to Moo[1] to
+   see what they've got going on these days. Their half-sized cards look
+   neat. In addition to that, they have this thing called "Printfinity"
+   where you can have several designs for the backs of the cards so I
+   tried that out. Here's what they look like:
+
+   📸[card back][IMG2]
+
+   📸[card front][IMG3]
+
+   The icons are SVGs of the original NTT DoCoMo emoji[2] and the
+   gradients are from Asylab[3][4]. The main typography is Advercase[5]
+   with fonts extracted from MMBN1 (punctuation) and MMBN6 (@ symbol). I
+   don't remember where I downloaded the MMBN ones from, probably a
+   forum. Finally, the QR code is my email address. Business cards are
+   about communication, right? Reduce friction!
+
+   The extra space in the middle could be for writing lil' notes, idk.
+
+   In addition to my mantra, I also have immense dislike for the word
+   "can't" and I try not to use it. Pretty much anything self-limiting
+   rankles me. We've tricked sand to **think**, for crying out loud!
+
+   Anyhoo, I'm happy with how these business cards turned out and I'm
+   glad they won't take up space in my wallet[6]. 🕸
+
+   📸[three cards vertically in my wallet][IMG4]
+
+References
+
+   [1] <https://moo.com>
+   [2] <https://github.com/NeverCease/original-emoji>
+   [3] <https://www.asylab.com/resources/150-light-gradients-collection>
+   [4] <https://www.asylab.com/resources/150-dark-gradients-collection>
+   [5] <https://www.youworkforthem.com/font/T25140/advercase>
+   [6] <https://nikbentel.com/projects/untitled-folder-wallet>
+   [IMG1] <https://cdn.webb.page/blog/2026/wm-082-a.jpg>
+   [IMG2] <https://cdn.webb.page/blog/2026/wm-082-b.JPG>
+   [IMG3] <https://cdn.webb.page/blog/2026/wm-082-c.JPG>
+   [IMG4] <https://cdn.webb.page/blog/2026/wm-082-d.JPG>
