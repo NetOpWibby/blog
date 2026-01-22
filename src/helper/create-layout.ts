@@ -205,6 +205,22 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
             }
           }
 
+          @media (max-width: 800px) {
+            header {
+              position: relative;
+
+              &::after {
+                bottom: -5rem; left: 0;
+
+                background-color: var(--uchu-yellow-1);
+                color: var(--uchu-yellow-9);
+                content: "My blog is optimized for desktop only…yes, I know that’s annoying.";
+                padding: 1rem;
+                position: absolute;
+              }
+            }
+          }
+
           p {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
