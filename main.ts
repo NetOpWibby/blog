@@ -38,7 +38,10 @@ const version = await getVersion();
 
 const server = Deno.serve({
   handler: async(req) => {
-    const { pathname } = new URL(req.url);
+    const { origin, pathname } = new URL(req.url);
+
+    if (pathname === "/2019-12-02-a-personal-api.txt")
+      return Response.redirect(origin + "/WM-042", 302);
 
     if (pathname === "/") {
       const listings = await getDirectoryContents(memoDirectory);
