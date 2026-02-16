@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+Document: WM-083                                                 P. Webb
+Category: Computing                                           2026-02-15
+
+                               Neue Email
+
+Abstract
+
+   Why hasn’t something better come along yet?
+
+Body
+
+   The future of computing interactions is not a chat interface. Email
+   is not irrelevant. Desktops aren’t going away.
+
+   It’s reductive to look at current successes in tech and declare the
+   current way of doing things is gonna disappear in 5 years. Remember
+   NFTs? I have a lot of them collecting digital dust on an external
+   drive somewhere. Weren’t they supposed to make everyone rich? Empower
+   gamers to own in-game cosmetics and pave the way for Ready Player One
+   IRL? Change the way art ownership is democratized and experienced?
+
+   SIGH. I wish they took off, it was cool tech and I discovered amazing
+   artists. Anyway.
+
+   That being said, I love and hate email (does this segue make sense?).
+
+   _Love_ thinking about it, **hate** dealing with it. Self-hosting is
+   fine after you get it working but hoo boy, what a drag. Ideally, the
+   world should be signing their emails with GPG keys but only serious
+   nerds do that. Idk about you, but I’ve sent and received
+   approximately ONE GPG-signed email in my 20+ years of computing and
+   that was a few months ago (a guy wrote about domains as internet
+   handles[1] and I have thoughts/solution[2]).
+
+   Email is great because it stuck. Not sure it ever had competition at
+   its inception. The warts on it have congealed into something you can
+   touch but you feel gross doing so. Security is tacked on, the various
+   specs tying SMTP, DKIM, SPF, DMARC, &c are ancient and loosely
+   followed by the behemoths in the tech industry.
+
+   Gmail is great because people don’t have to think about email! In
+   fact, one of the coolest email apps is ACTUALLY a Gmail client[3].
+   That’s embarrassing. But, Gmail is a sensible API atop something so
+   archaic and complicated that most people don’t want to touch. I’ve
+   had at least a half dozen half starts with creating IMAP clients and
+   it occurred to me recently that the specs gross me out. There’s just
+   too much unpleasantry to deal with.
+
+   In the years since the inception of email, we’ve witnessed an
+   explosion of messaging apps/systems; WhatsApp, Signal, Discord,
+   Matrix/Element, Telegram, Snapchat, the list goes on. What a lot of
+   these have in common is built-in security and avail-/reachability
+   controls. Why can’t email? Wait a minute, what if email was invented
+   today, what would it look like?
+
+   Most importantly, what would it be called and how would it be
+   referenced? As much as I love Kagi, no one is ever saying, "just Kagi
+   it." Neeva, the search engine I used prior to Kagi, had the same
+   issue. "Queree"[4] (query) on the other hand, works (shameless plug).
+
+   I gave Claude a list of grievances and it spat out a spec[5][6] for
+   other LLMs to process. We’re humans though so I’ll walk y’all through
+   the Inbox Protocol. Nice name, right? "Just Inbox me" works well.
+
+   High-level, this is a secure and async messaging system boasting E2EE
+   (end-to-end encryption), reactions, and edits. Table stakes, right?
+
+   Here's what I'm thinking for managing spam:
+
+      1. sender authentication via Dap[2]
+      2. economic resistance in the form of an API[7] for HTTP 402
+
+   Even though both of these are projects of mine, there’s absolutely no
+   requirement to use them, you could use standard DNS and roll your own
+   HTTP 402 API. Actually, a future update to the spec will replace them
+   with generic terms.
+
+   Coupled with aliases the economic resistance could be powerful. Take
+   for instance, `paul@webb.page`; I could make it so unsolicitated
+   senders would need to pay $3 to get their message sent to me, unless
+   I already had them on my allowlist. `newsletter@webb.page` would have
+   no such paywall. No more paying for LinkedIn’s InMail when you could
+   just inbox someone directly.
+
+   So know some of you DNS nerds might wonder, "how the hell are you
+   gonna make discoverability happen? Clients need to find servers and
+   whatnot!" `SRV` and `TXT` records. I’ll figure out the rest later. 🕸️
+
+References
+
+   [1] <https://xn--gckvb8fzb.com/domains-as-internet-handles>
+   [2] <https://dap.sh>
+   [3] <https://mimestream.com>
+   [4] <https://queree.com>
+   [5] <https://useinbox.org>
+   [6] <https://xkcd.com/927>
+   [7] <https://neue.cash>
