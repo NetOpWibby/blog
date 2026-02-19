@@ -69,7 +69,7 @@ export default (input: string): string => {
 
       return url ?
         isExternal ?
-          `<a href="${url}?ref=blog.webb.page" target="_blank">[${ref}]</a>` :
+          `<a href="${url + (url.includes("?") ? "&" : "?")}ref=blog.webb.page" target="_blank">[${ref}]</a>` :
           `<a href="${url}">[${ref}]</a>` :
         match;
     })

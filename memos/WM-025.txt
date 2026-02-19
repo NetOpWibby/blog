@@ -86,9 +86,9 @@ Body
       You know what I love about coding tests? Finding a use for one-off
       code exercises in my own work so I feel like my time wasn't
       completely wasted. You know what else I love about them?
-      Absolutely nothing. These *tests and whiteboarding are not
-      indicative of your skill level*, they are *approximations* of what
-      you can do with what is likely to be limited information and
+      Absolutely nothing. These *tests and whiteboarding are not*
+      *indicative of your skill level*, they are *approximations* of
+      what you can do with what is likely to be limited information and
       ambiguous scope.
 
       Assuming you are gainfully employed, dear reader, think about your

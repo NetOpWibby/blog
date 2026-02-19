@@ -210,13 +210,14 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
               position: relative;
 
               &::after {
-                bottom: -5rem; left: 0;
+                bottom: -31px; left: 0;
 
                 background-color: var(--uchu-yellow-1);
                 color: var(--uchu-yellow-9);
                 content: "My blog is optimized for desktop only…yes, I know that’s annoying.";
-                padding: 1rem;
+                padding: 0.5rem 2rem;
                 position: absolute;
+                right: 0;
               }
             }
           }
