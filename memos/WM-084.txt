@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+Document: WM-084                                                 P. Webb
+Category: Computing                                           2026-02-23
+
+                         Weaning off GreedCorp™
+
+Abstract
+
+   Building a user-owned future for computing
+
+Body
+
+   I wrote an article for the latest issue of Good Internet[1] (volume
+   1, issue 2) entitled "Weaning off GreedCorp™" (the appropriate alias
+   for BigTech), where I outline the ills we're suffering from, a
+   possible solution in the form of systemSOFT (modular computing you
+   actually own), and personal APIs.
+
+   📸[my article in Good Internet magazine][IMG1]
+
+   If you've seen me around the 'Net, none of this is news to you. Buy
+   this issue[2] ($10 for digital, print versions sold out) and get
+   inspired by other neat people curating their own digital spaces. You
+   can also read my article online[3]. 🕸️
+
+References
+
+   [1] <https://goodinternetmagazine.com>
+   [2] <https://goodinternetmagazine.com/issues>
+   [3] <https://goodinternetmagazine.com/weaning-off-greedcorp-building-a-user-owned-future-for-computing/>
+   [IMG1] <https://cdn.webb.page/blog/2026/wm-084-a.jpg>

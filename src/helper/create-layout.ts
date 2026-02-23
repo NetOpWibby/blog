@@ -40,11 +40,11 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
         <meta content="${documentTitle}" property="og:title"/>
         <meta content="website" property="og:type"/>
         <meta content="${url}" property="og:url"/>
-        <meta content="@netopwibby@social.coop" name="fediverse:creator"/>
 
         <!--/ Social/App Stuff /-->
         <meta content="${title}" name="apple-mobile-web-app-title"/>
         <meta content="${title}" name="application-name"/>
+        <meta name="fediverse:creator" content="@netopwibby@social.coop"/>
 
         <!--/ Feeds /-->
         <link rel="alternate" href="/feed/atom" type="application/atom+xml"/>
