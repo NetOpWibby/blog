@@ -2,6 +2,12 @@
 default:
   @just --list
 
+# deploy to server
+deploy:
+  just version
+  just feed
+  ./deploy.sh
+
 # run blog for local development
 dev:
   deno run --allow-env --allow-net --allow-read main.ts development
