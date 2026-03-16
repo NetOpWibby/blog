@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+Document: WR-019                                                 P. Webb
+                                                              2026.03.15
+
+          Procreate app having weird pressure issues on iPad?
+
+Body
+
+   Your Apple-issued iPad case might be the issue. No, seriously[1].
+
+   Thought I was going insane, I never had this issue with previous
+   iPads and I've been using Procreate since the first iPad Pro.
+
+   I wonder if the current iPad Pro has this issue or if they're thick
+   enough to not? I'm currently on an iPad Air.
+
+References
+
+   [1] <https://folio.procreate.com/discussions/4/1/64229#:~:text=%2D%20Remove%20your%20iPad%20case%20if%20you%20have%20one.>
