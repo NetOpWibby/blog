@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+Document: WR-021                                                 P. Webb
+                                                              2026.03.24
+
+           Remove the egregious icons in menus on macOS Tahoe
+
+Body
+
+   ```sh
+   defaults write -g NSMenuEnableActionImages -bool NO
+   ```
+
+   Quit and reopen apps or restart your computer for this change to take
+   effect[1]. Huzzah!
+
+References
+
+   [1] <https://mastodon.social/@stroughtonsmith/116262411548746327>

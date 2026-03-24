@@ -1,0 +1,271 @@
+
+
+
+
+
+
+
+Document: WM-086                                                 P. Webb
+Category: Programming                                         2026-03-24
+
+                            How to write CSS
+
+Abstract
+
+   CSS is about structure and design, the code should reflect that.
+
+Body
+
+   I've been writing HTML and CSS for 20+ years at the time of this
+   writing. Along the way I've learned, discovered, and refined the way
+   I write CSS. In 2026, I'm so glad I don't need Sass anymore, as much
+   as I enjoyed writing it; nested code and variables are now readily
+   available in browsers without a precompilation step. Success!
+
+   However, I still run into codebases where the CSS irritates tf outta
+   me. I'm not just talking random projects on Github, I mean in Fortune
+   500 companies too. LLMs regurgitate bad practices so for all the new
+   coders discovering the joy and beauty of web development, here's some
+   tips from someone who survived the BEM syntax era and completely
+   side-stepped the "let's just chain variables" frenzy that's still
+   pervasive today.
+
+   What follows are examples of what I consider to be poorly written CSS
+   and how I fix them:
+
+   ```css
+   .board_icon {
+   	 text-align: center;
+   	 padding: 8px 4px 0px 4px;
+   	width: 60px;
+   	flex-shrink: 0;
+   }
+   .board_icon a {
+   	display: inline;
+   }
+   .board_icon a:hover, .board_icon a:focus{
+   	text-decoration: none;
+   }
+   .board_icon a::before {
+   	 display: inline;
+   	 font-family: "Font Awesome 6 Free";
+   	 font-size: 2em;
+   	 content: "\f086";
+   }
+   .board_icon a.board_on::before {
+   	 font-weight: 900;
+   }
+   .board_icon a.board_on2::before {
+   	font-weight: 900;
+   }
+   .board_icon a.board_off::before {
+   	font-weight: 400;
+   }
+   .board_icon a.board_redirect::before {
+   	font-weight: 900;
+   	content: "\f061";
+   }
+   ```
+
+   This physically pains me (if I look at it too long). Inconsistent
+   indentation and lack of space between rules are the most egregrious
+   errors in this for me, but you also have rules that can be
+   consolidated and a unit specifier on a zero value (`0px` is
+   unnecessary, just use `0`). Finally, the rules aren't in
+   alphabetical order.
+
+   Computers and browsers don't care but for humans, code you can scan
+   quickly is important for collaboration; even if that collaborator is
+   future you! Don't you wanna make future you's life at least a lil'
+   bit easier?
+
+   Here's how I would rewrite that code block:
+
+   ```css
+   .board_icon {
+     flex-shrink: 0;
+     padding: 8px 4px 0 4px;
+     text-align: center;
+     width: 60px;
+
+     a {
+       display: inline;
+
+       &::before {
+         content: "\f086";
+         display: inline;
+         font-family: "Font Awesome 6 Free";
+         font-size: 2rem;
+       }
+
+       &:focus,
+       &:hover {
+         text-decoration: none;
+       }
+
+       &.board_off::before {
+         font-weight: 400;
+       }
+
+       &.board_on,
+       &.board_on2,
+       &.board_redirect {
+         &::before {
+           font-weight: 900;
+         }
+       }
+
+       &.board_redirect::before {
+         content: "\f061";
+       }
+     }
+   }
+   ```
+
+   You might've noticed I replaced the `2em` `font-size` with `2rem`.
+   This is more of an aesthetic choice. Elastic Measure (`em`) and Root
+   Elastic Measure (`rem`) are similar in that they scale based on
+   something but `em` scales based on the parent element whereas `rem`
+   scales based on the root (`html`) font size.
+
+   When I'm building sites, I want everything to be cohesive and scale
+   uniformly. That way, when I decide to change the root font size, my
+   entire site won't look wonky.
+
+   Here's a list of other things I've seen in the particular codebase
+   I'm rewriting for my forum theme:
+
+   - `margin:0 0 10px 0;`: no space after the colon
+   - `border-color :rgb(199, 195, 191);`: space before the colon but not
+     after? Why?
+   - `border-top: 1px solid RGB(255, 255, 255);`: why is `RGB` all caps
+     here but not in the previous line? Why use `rgb` at all when this
+     could be represented as `#fff` or simply `white`?
+   - `font-weight: bold;` and `font-weight: 700;`: these both mean bold
+     and there's only system fonts declared so why specify `700` and not
+     `600` (the default)?
+   - `margin-top: 5px !important;`: if you have to use `!important;`,
+     something's wrong. It's possible this theme is trying to override
+     some styling of the core forum software so I'm willing to let this
+     slide but then again, proper nesting would eliminate the need
+     for this.
+   - `background: #fdfdfd;`: unless you also have a background image and
+     positioning, you should always use `background-color`.
+     Specificity wins.
+   - `font: 9px/15px verdana, sans-serif;`: I don't like this for a few
+     reasons. First, `font-size` and `line-height` are just easier to
+     read and should be declared in parent elements. Per element rules
+     like this leads to eventual divergence and tech debt. Second, the
+     font name is lowercase here and regular case elsewhere. Like so:
+     `font-family: Verdana, Helvetica, Arial, sans-serif;` and this is
+     applied to an `h1`, which makes sense to have a different font as
+     it's a headline. I rarely use `font` and the rare times I do, it's
+     to do `font: inherit` (browsers by default have buttons and inputs
+     use different fonts).
+   - `padding: 10px 10px;`: redundant; this is telling us that there's
+     10 pixels of padding to the top and bottom, as well as left and
+     right. This could be rewritten as `padding: 10px;` (10 pixels of
+     padding all around).
+
+   Now, there are certain conditions where I don't necessarily use
+   alphabetical order and that's when there are rule pairs present.
+
+   - `width` / `height`
+   - `margin` / `padding`
+   - `top` / `left` / `bottom` / `right`
+
+   Here's a simple example:
+
+   ```css
+   .profile_hd {
+     width: 2rem; height: 2rem;
+
+     &::before {
+       width: 100%; height: 100%;
+
+       background-image: url("../images/emoji/bust_in_silhouette_3d.png");
+       background-size: contain;
+     }
+   }
+   ```
+
+   And a more involved one (using CSS variables from my palette[1]). I
+   left the `color: rgb` rule in there because I haven't decided what to
+   replace it with (I don't like mixing color rules, stay consistent...
+   similarly, I'm not sure that `margin-top` needs to be there...oh and
+   `&::before` and `&::after` are grouped together in that order because
+   it makes sense):
+
+   ```css
+   ul {
+     background-color: var(--uchu-yang);
+     border: 1px solid var(--uchu-gray-3);
+     border-radius: 4px;
+     box-shadow: 3px 3px 4px oklch(var(--uchu-yin-raw) / 30%);
+     color: rgb(83, 100, 130);
+     line-height: 2.2rem;
+     margin-top: 2px;
+     min-width: 18.2rem;
+     padding: 0.5rem;
+     position: absolute;
+     z-index: 90;
+
+     &::before,
+     &::after {
+       width: 0; height: 0;
+
+       border-left: 0.5rem solid transparent;
+       border-right: 0.5rem solid transparent;
+       content: "";
+       position: absolute;
+     }
+
+     &::before {
+       top: -0.5rem; left: 1.25rem;
+       border-bottom: 0.5rem solid var(--uchu-yang);
+     }
+
+     &::after {
+       top: calc(calc(0.5rem + 1px) * -1); left: 1.25rem;
+
+       border-bottom: 0.5rem solid var(--uchu-gray-3);
+       z-index: -1;
+     }
+   }
+   ```
+
+   You can see `width` and `height` together at the top of a rule block,
+   separated by a blank line because there are multiple rules after
+   that. However, in the standalone `&::before` block, there's no blank
+   line after `top` and `left` because that'd look silly. The `&::after`
+   block has more than one rule after `top` and `left` so those lines
+   are grouped together.
+
+   I've dabbled in trying to get Prettier to format my CSS files back
+   when I was in the Node.js ecosystem, with middling results. I'm sure
+   I could get Claude to make a formatter to my specifications...hmm,
+   side project for now.
+
+   There are situations where I may have something like `padding: 1rem;`
+   and also have `margin-right: 2rem`. I wouldn't put these together
+   because of the `-right`. Non-dashed specifiers are in alphabetical
+   order like everything else (including `padding` in this instance).
+
+   This codebase has a lot of styling on IDs, which is something I don't
+   do. For me, IDs are for HTML and JavaScript, not styling; either use
+   the element name and style against that or apply a class to
+   said element.
+
+   For naming elements, I prefer using a dash or two and relying on
+   nesting (no more than three levels) when necessary. For this project,
+   I'm beholden to the existing HTML syntax in PHP files. They'll get
+   updated over time.
+
+   I'm probably missing a lot but this is just off the top of my head.
+   Multi-trillion-dollar corporations perpetuate these terrible code
+   choices too but at least in my personal projects I can have a curated
+   and maintainable experience. 🕸️
+
+References
+
+   [1] <https://uchu.style>
