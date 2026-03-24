@@ -28,7 +28,7 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
         <meta content="${author}" name="author"/>
         <meta content="${abstract || description}" name="description"/>
         <meta content="${title}" name="title"/>
-        <meta content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5, viewport-fit=cover" name="viewport"/>
+        <meta content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, viewport-fit=cover" name="viewport"/>
 
         <!--/ Open Graph /-->
         <meta content="${abstract || description}" property="og:description"/>
@@ -101,6 +101,12 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
             font-family: "WEBB MONO", monospace;
             font-size: 1.15rem;
             line-height: 1.33;
+
+            @media (max-width: 800px) {
+              @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+                overflow-x: hidden;
+              }
+            }
           }
 
           main {
@@ -109,11 +115,28 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
             flex-direction: row;
 
             > section {
-              max-width: 650px;
-              padding: 2rem;
+              @media (min-width: 801px) {
+                max-width: 650px;
+                padding: 2rem;
+              }
+
+              @media (max-width: 800px) {
+                margin-left: auto;
+                margin-right: auto;
+                width: 72ch;
+              }
 
               > pre {
                 font-family: inherit;
+
+                @media (max-width: 800px) {
+                  @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+                    font-size: 1ch;
+                    width: 72ch;
+                  }
+
+                  margin: 0 auto;
+                }
 
                 > code {
                   background-color: var(--uchu-yellow-1);
@@ -170,6 +193,11 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
               padding-top: 17rem;
               z-index: 1;
 
+              @media (max-width: 800px) {
+                display: none;
+                position: absolute;
+              }
+
               a {
                 background-color: var(--uchu-gray-1);
                 color: inherit;
@@ -195,29 +223,16 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
             padding: 0.5rem calc(2rem - 2px);
             text-transform: uppercase;
 
+            @media (max-width: 800px) {
+              text-align: center;
+            }
+
             a {
               color: var(--uchu-yin-9);
               font-weight: 600;
 
               &:hover {
                 color: var(--uchu-blue-3);
-              }
-            }
-          }
-
-          @media (max-width: 800px) {
-            header {
-              position: relative;
-
-              &::after {
-                bottom: -31px; left: 0;
-
-                background-color: var(--uchu-yellow-1);
-                color: var(--uchu-yellow-9);
-                content: "My blog is optimized for desktop only…yes, I know that’s annoying.";
-                padding: 0.5rem 2rem;
-                position: absolute;
-                right: 0;
               }
             }
           }
