@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+Document: WR-023                                                 P. Webb
+                                                              2026.03.25
+
+                  How to target Safari with CSS in 2026
+
+Body
+
+   I was trying to figure this out to make this blog look decent on iOS.
+   Thanks to Wojtek[1] for the solution!
+   ```css
+   @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+     .safari-only {
+       background-color: red;
+     }
+   }
+   ```
+
+References
+
+   [1] <https://wojtek.im/journal/targeting-safari-with-css-media-query>
