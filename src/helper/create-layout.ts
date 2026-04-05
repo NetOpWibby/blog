@@ -246,7 +246,7 @@ export default (type: "memo" | "remark", memo: string, recents: string) => {
 
       <body>
         <header>
-          [<a href="https://webb.page">homepage</a>|<a href="https://cv.webb.page">cv</a>]
+          [<a href="https://webb.page">homepage</a>|<a href="https://www.webb.page">forum</a>|<a href="https://cv.webb.page">cv</a>]
           ${document} [<a href="${type === "memo" ? `/${document}` : `/remarks/${document}`}.txt">text</a>|<!--/<a href="">pdf</a>|/--><a href="${type === "memo" ? `/${document}` : `/remarks/${document}`}">html</a>]
           ${type === "memo" ? `[<a href="/remarks">remarks</a>]` : `[<a href="/">memos</a>]`}
         </header>
